@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="459px" height="216px" viewBox="0 0 459 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>litsco_logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="litsco_logo" transform="translate(0.000000, -11.000000)">
+            <polygon id="Rectangle-218" fill="#2B3668" points="57 219.81218 51 227 51 161 57 168.446723"></polygon>
+            <rect id="Rectangle-217" fill="#2B3668" x="60" y="168" width="37" height="52"></rect>
+            <polygon id="Rectangle-218" fill="#2B3668" transform="translate(103.000000, 194.000000) scale(-1, 1) translate(-103.000000, -194.000000) " points="106 219.81218 100 227 100 161 106 168.446723"></polygon>
+            <polygon id="Rectangle-218" fill="#2B3668" points="157 219.81218 151 227 151 161 157 168.446723"></polygon>
+            <rect id="Rectangle-217" fill="#2B3668" x="9" y="161" width="39" height="66"></rect>
+            <rect id="Rectangle-217" fill="#2B3668" x="109" y="161" width="39" height="66"></rect>
+            <rect id="Rectangle-217" fill="#2B3668" x="160" y="168" width="37" height="52"></rect>
+            <polygon id="Rectangle-218" fill="#2B3668" transform="translate(203.000000, 194.000000) scale(-1, 1) translate(-203.000000, -194.000000) " points="206 219.81218 200 227 200 161 206 168.446723"></polygon>
+            <polygon id="Rectangle-218" fill="#2B3668" points="257 219.81218 251 227 251 161 257 168.446723"></polygon>
+            <rect id="Rectangle-217" fill="#2B3668" x="209" y="161" width="39" height="66"></rect>
+            <rect id="Rectangle-217" fill="#2B3668" x="260" y="168" width="37" height="52"></rect>
+            <polygon id="Rectangle-218" fill="#2B3668" transform="translate(303.000000, 194.000000) scale(-1, 1) translate(-303.000000, -194.000000) " points="306 219.81218 300 227 300 161 306 168.446723"></polygon>
+            <polygon id="Rectangle-218" fill="#2B3668" points="357 219.81218 351 227 351 161 357 168.446723"></polygon>
+            <rect id="Rectangle-217" fill="#2B3668" x="309" y="161" width="39" height="66"></rect>
+            <rect id="Rectangle-217" fill="#2B3668" x="360" y="168" width="37" height="52"></rect>
+            <polygon id="Rectangle-218" fill="#2B3668" transform="translate(403.000000, 194.000000) scale(-1, 1) translate(-403.000000, -194.000000) " points="406 219.81218 400 227 400 161 406 168.446723"></polygon>
+            <polygon id="Rectangle-218" fill="#2B3668" transform="translate(3.000000, 194.000000) scale(-1, 1) translate(-3.000000, -194.000000) " points="6 219.81218 0 227 0 161 6 168.446723"></polygon>
+            <text id="EST." font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#000000">
+                <tspan x="411" y="181">EST.</tspan>
+                <tspan x="411" y="215">1918</tspan>
+            </text>
+            <rect id="Rectangle-12" fill="#000000" x="0" y="113" width="459" height="40"></rect>
+            <text id="LONG-ISLAND-TINSMITH" font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" letter-spacing="1" fill="#FFFFFF">
+                <tspan x="13" y="138">LONG ISLAND TINSMITH SUPPLY CORP</tspan>
+                <tspan x="429.492188" y="138">.</tspan>
+            </text>
+            <text id="LITSCO" font-family="HiraMinPro-W6, Hiragino Mincho Pro" font-size="112" font-weight="500" letter-spacing="5.5999999" fill="#000000">
+                <tspan x="0" y="99">LITSCO</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

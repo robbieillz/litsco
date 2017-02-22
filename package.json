@@ -1,0 +1,21 @@
+{
+  "name": "litsco",
+  "version": "1.0.0",
+  "description": "new site",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "express": "^4.14.1",
+    "materialize-css": "^0.98.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "philip lucks",
+  "license": "ISC"
+}

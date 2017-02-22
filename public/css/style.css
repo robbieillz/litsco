@@ -1,0 +1,144 @@
+/*style.css*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.flex-center {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.brand-logo {
+	margin: 0 15px;
+}
+
+.logo-img {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 90px;
+	width: 250px;
+}
+
+.navbar-fixed nav {
+	height: 90px;
+}
+
+.nav-list {
+	height: 90px;
+	line-height: 90px;
+}
+
+li.link {
+	height: inherit;
+}
+
+li.link:hover {
+	box-shadow: inset 0 -2px 0 0 #ff8f00
+}
+
+#hamburger {
+	position: absolute;
+    height: 100%;
+}
+
+#menu-icon {
+	color: #90A4AE;
+    height: auto;
+    font-size: 38px;
+    line-height: 1;
+}
+
+#med-nav-hamburger{
+	height: inherit;
+}
+
+#med-nav-hamburger a {
+	height: inherit;
+}
+
+#side-logo {
+	display: block;
+	padding: 15px;
+	height: auto;
+}
+
+.side-nav-logo img {
+	display: block;
+	width: 50%;
+}
+
+.product-link {
+	color: black;
+	font-size: 1.1rem;
+}
+
+.dropdown-content.dropdown-full {
+	left: 0 !important;
+	right: 0 !important;
+	width: 100%;
+}
+
+.flex-row-around{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+.dropdown-item {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.collapsible-header.mobile-accordian{
+	border-bottom: 1px solid #ddd;
+}
+
+.mobile-nav-link-body{
+	padding: 0;
+}
+
+.mobile-nav-link-btns {
+	margin: 0 20px;
+
+}
+
+.mobile-nav-link-btns #nav-button-log-in a{
+	padding: 0 30px;
+}
+
+a.collection-item.mobile-nav-link-item{
+	height: initial;
+	padding: 15px 20px;
+}
+
+a.collection-item.mobile-nav-link-item:last-child{
+	border-bottom: 1px solid #e0e0e0;
+}
+
+@media only screen and (min-width: 993px) {
+	.button-collapse#hamburger {
+    	display: none;
+    }
+}
+
+.show-on-med-lrg-and-down{
+	display: none;
+}
