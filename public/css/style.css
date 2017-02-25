@@ -1,5 +1,6 @@
 /*style.css*/
 
+/***** GENERAL SITE *****/
 body {
   display: flex;
   min-height: 100vh;
@@ -19,6 +20,33 @@ main {
 	align-items: center;
 }
 
+.dropdown-content.dropdown-full {
+	left: 0 !important;
+	right: 0 !important;
+	width: 100%;
+}
+
+.flex-row-around{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+/***** NAV *****/
+#nav-background {
+	width: 100%;
+    height: 90px;
+    position: absolute;
+    opacity: 0.7;
+    background-color: #FFF !important;
+}
+
 .brand-logo {
 	margin: 0 15px;
 }
@@ -33,6 +61,7 @@ main {
 
 .navbar-fixed nav {
 	height: 90px;
+	background-color: none;
 }
 
 .nav-list {
@@ -63,10 +92,10 @@ li.link:hover {
 #med-nav-hamburger{
 	height: inherit;
 }
-
+/*
 #med-nav-hamburger a {
 	height: inherit;
-}
+}*/
 
 #side-logo {
 	display: block;
@@ -82,24 +111,6 @@ li.link:hover {
 .product-link {
 	color: black;
 	font-size: 1.1rem;
-}
-
-.dropdown-content.dropdown-full {
-	left: 0 !important;
-	right: 0 !important;
-	width: 100%;
-}
-
-.flex-row-around{
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	flex-direction: row;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	-webkit-justify-content: space-around;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
 }
 
 .dropdown-item {
@@ -133,12 +144,106 @@ a.collection-item.mobile-nav-link-item:last-child{
 	border-bottom: 1px solid #e0e0e0;
 }
 
+/***** HOME PAGE *****/
+#index-banner {
+	height: 60vh;
+}
+
+#index-banner:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('../img/eastchester_litsco_streamline_panels.jpg');
+	background-size: cover;
+	width: 100%;
+    height: 70vh;
+    z-index: -1;
+}
+
+#index-banner:after {
+	position: absolute;
+	content:" ";
+	top:0;
+	left:0;
+	width:100%;
+	height:70vh;
+	display: block;
+	z-index:0;
+	background-color: rgba(107, 130, 165, 0.5);
+	z-index: -1;
+}
+
+#index-banner-card {
+	font-size: 22px;
+	padding: 30px;
+	margin: 0;
+	text-align: center;
+}
+
+#index-cards-row {
+	background-color: #FFF;
+	border-radius: 2px 2px 0 0;
+}
+
+.card-bg-img {
+	display: block;
+	border-radius: 2px 2px 0 0;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 400px;
+}
+
+#card-image-1 {
+	background: url('../img/card1.jpg');
+	background-size: cover;
+}
+
+#card-image-2 {
+	background: url('../img/card2.jpg');
+	background-size: cover;
+}
+
+#card-image-3 {
+	background: url('../img/card3.jpg');
+	background-size: cover;
+}
+
+.card-title-background {
+	width: 100%;
+}
+
+i.point-right {
+	transform: rotate(90deg);
+	padding-top: 10px;
+}
+
+#index-how {
+	margin: 100px auto;
+}	
+
+/***** FOOTER *****/
+.footer-small-text {
+	font-size:12px;
+}
+
+.index-how-header {
+	margin: 0;
+}
+
+.collection-item i {
+	margin-right: 5px;
+	color: green;
+}
+
+/**** MEDIA QUERIES ****/
+
 @media only screen and (min-width: 993px) {
 	.button-collapse#hamburger {
     	display: none;
     }
-}
-
-.show-on-med-lrg-and-down{
-	display: none;
 }

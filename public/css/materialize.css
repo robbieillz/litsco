@@ -2817,6 +2817,13 @@ ul.staggered-list li {
   }
 }
 
+
+@media only screen and (min-width: 1080px) {
+  .hide-on-med-lrg-and-up {
+    display: none !important;
+  }
+}
+
 @media only screen and (min-width: 601px) {
   .hide-on-med-and-up {
     display: none !important;
@@ -2865,8 +2872,8 @@ ul.staggered-list li {
   }
 }
 
-@media only screen and (max-width: 1080px) {
-  .show-on-med-lrg-and-down {
+@media only screen and (min-width: 1080px) {
+  .show-on-med-lrg-and-up {
     display: block !important;
   }
 }
@@ -4022,7 +4029,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  /*background-color: #ee6e73;*/
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4162,8 +4169,8 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 
 nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
-  height: inherit;
-  line-height: inherit;
+  /*height: inherit;
+  line-height: inherit;*/
 }
 
 nav ul a:hover {
@@ -4210,8 +4217,9 @@ nav .input-field label.active i {
 }
 
 .navbar-fixed {
-  position: relative;
-  height: 56px;
+  position: absolute;
+  /*position: relative;*/
+  /*height: 56px;*/
   z-index: 998;
 }
 
@@ -7031,8 +7039,8 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav li > a > [class^="mdi-"], .side-nav li > a > [class*="mdi-"],
 .side-nav li > a > i.material-icons {
   float: left;
-  height: inherit;
-  line-height: inherit;
+  /*height: inherit;*/
+  /*line-height: inherit;*/
   margin: 0 32px 0 0;
   width: 24px;
   color: rgba(0, 0, 0, 0.54);
