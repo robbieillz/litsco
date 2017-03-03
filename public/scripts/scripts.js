@@ -1,8 +1,6 @@
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
 
-	// var $dropdowns = $('li.dropdown')
-
 	$('.product-link, .extra-nav').dropdown({
 	    inDuration: 300,
 	    outDuration: 225,
@@ -14,7 +12,5 @@ $( document ).ready(function(){
 	    stopPropagation: false // Stops event propagation
 	  }
 	);
-
-
 
 });

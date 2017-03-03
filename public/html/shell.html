@@ -18,7 +18,7 @@
     <!-- NAVIGATION -->
     <div class="navbar-fixed">
         <nav role="navigation">
-          <div class="blue-grey lighten-5" id="nav-background"></div>
+            <div class="blue-grey lighten-5" id="nav-background"></div>
             <div class="nav-wrapper">
                 <div class="col s12">
                     <a href="/" class="brand-logo"><img src="/img/litsco_logo_wide.svg" class=".show-on-large logo-img" alt=""></a>
@@ -28,7 +28,7 @@
                         <li class="link">
                             <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link" href="#">STREAMLINE METAL PANELS</a>
                             <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
-                                <div class="container dropdown-container flex-row-around">
+                                <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">Classic CR</a>
                                     </div>
@@ -53,7 +53,7 @@
                         <li class="link">
                             <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link" href="#">STREAMLINE METAL FLASHING</a>
                             <div id="streamline-flash-dropdown" class="dropdown-content dropdown-full full">
-                                <div class="container dropdown-container flex-row-around">
+                                <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">Locktight Coping</a>
                                     </div>
@@ -84,7 +84,7 @@
                         <li class="link">
                             <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link" href="#">BUILDING ENVELOPE</a>
                             <div id="building-dropdown" class="dropdown-content dropdown-full full">
-                                <div class="container dropdown-container flex-row-around">
+                                <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">Roofing</a>
                                     </div>
@@ -105,12 +105,9 @@
                         </li>
                         <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down" id="log-in-navbar">Log In</a>
                         </li>
-
-<!--                         <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4 hide-on-med-lrg-and-down"><i class="material-icons">shopping_cart</i></a>
-                        </li> -->
                         <li data-activates="med-nav-dropdown" class="extra-nav" id="med-nav-hamburger"><a href="#" data-activates="med-nav-dropdown" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4" id=""><i class="material-icons" id="view_module-icon">view_module</i></a>
                             <div id="med-nav-dropdown" class="dropdown-content dropdown-full full">
-                                <div class="container dropdown-container flex-row-around">
+                                <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">ABOUT US</a>
                                     </div>
@@ -176,19 +173,11 @@
                             <div class="collapsible-header mobile-accordian">PORTFOLIO</div>
                             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
-                        <!--                     <li class="product-link">
-                      <div class="collapsible-header mobile-accordian">LOG IN</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li class="product-link">
-                      <div class="collapsible-header mobile-accordian">E-STORE</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li> -->
                         <li class="product-link">
                             <div class="collapsible-header mobile-accordian active">CONTACT US</div>
                             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                         </li>
-                        <div class="mobile-nav-link-btns flex-row-around">
+                        <div class="mobile-nav-link-btns flex-row-around-center">
                             <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
                             </li>
                             <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
@@ -201,7 +190,7 @@
         </nav>
     </div>
     <!-- PAGE VIEW CONTENT BELOW-->
-      <div ng-view></div>
+    <div ng-view></div>
     <!-- FOOTER CONTENT BELOW-->
     <footer class="page-footer blue-text text-darken-4">
         <div class="container">
@@ -246,6 +235,9 @@
     <!--Import jQuery before materialize.js-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="scripts/materialize/materialize.min.js"></script>
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM&callback=initMap"></script> -->
+    <!-- Angular Imports -->
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
@@ -256,6 +248,7 @@
     <script src="scripts/factory_litsco.js"></script>
     <!-- Angular Controllers -->
     <script src="scripts/controller_shell.js"></script>
+    <script src="scripts/controller_index.js"></script>
     <!-- General JS -->
     <script src="scripts/scripts.js"></script>
 </body>

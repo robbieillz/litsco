@@ -3,7 +3,7 @@ angular.module('app_litsco')
 			$routeProvider
 			.when('/', {
 				templateUrl : '/html/index.html',
-				controller	: 'controller_shell'
+				controller	: 'controller_index'
 			})
 			// .when('/open', {
 			// 	templateUrl : '/html/open.html',
