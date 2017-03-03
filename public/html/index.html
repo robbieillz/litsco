@@ -195,16 +195,16 @@
                     map goes here
                     <script>
                     function initMap() {
-                        var uluru = {
-                            lat: -25.363,
-                            lng: 131.044
+                        var litsco = {
+                            lat: 40.706940,
+                            lng: -73.8613
                         };
                         var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 4,
-                            center: uluru
+                            zoom: 11,
+                            center: litsco
                         });
                         var marker = new google.maps.Marker({
-                            position: uluru,
+                            position: litsco,
                             map: map
                         });
                     }
@@ -213,6 +213,15 @@
                     </script>
                 </div>
                 <div class="col s4 m4 l4 right">
+                	<form class="col s12">
+                	      <div class="row">
+                	      	<h5>Get Directions to LITSCO</h5>
+                	        <div class="input-field col s12">
+                	          <input id="start_address" type="text" class="validate">
+                	          <label for="start_address">Your Address</label>
+                	        </div>
+                	      </div>
+                	    </form>
                 </div>
             </div>
         </div>
