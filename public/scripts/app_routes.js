@@ -1,12 +1,16 @@
 angular.module('app_litsco')
-	.config(['$routeProvider', function($routeProvider){
+	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 			$routeProvider
 			.when('/', {
 				templateUrl : '/html/index.html',
 				controller	: 'controller_index'
 			})
-			// .when('/open', {
-			// 	templateUrl : '/html/open.html',
-			// 	controller	: 'controlOpen'
-			// })
+			.when('/classic_cr', {
+				templateUrl : '/html/template_product.html',
+				controller	: 'controller_prods'
+			})
+
+		    $locationProvider.hashPrefix('!')
+
+
 	}])

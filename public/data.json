@@ -1,0 +1,143 @@
+    [{
+      "contentId": 1,
+      "name": "Streamline Metal Panels",
+      "contentTitle": "Streamline Metal Panels",
+      "productDetails": [
+        {
+          "productName": "Streamline Classic CR",
+          "subHeader": "CORRUGATED, EXPOSED FASTENER, LAP SEAM METAL WALL PANEL",
+          "overview": "date for headline 1 (set 1)",
+          "features": [
+            "features features features",
+            "features2 features2 features2",
+            "features3 features3 features3",
+            "features4 features4 features4",
+            "features5 features5 features5"
+          ],
+          "installation": {
+            "trim": "instructions for trim",
+            "substrate": "instructions for substrate",
+            "fasteners": "instructions for fasteners",
+            "panels": "instructions for panels"
+          },
+          "materials": [
+          "materials text for 1",
+          "materials text for 2",
+          "materials text for 3",
+          "materials text for 4"
+          ],
+          "jumboImg": "img/jumbo_cr_full.jpg",
+          "detailImg": "http://www.litsco.com/images/streamline_alt.gif"
+        }, 
+        {
+          "productName": "2",
+          "subHeader": "headline 1 (set 1)",
+          "overview": "date for headline 1 (set 1)",
+          "features": "",
+          "installation": "instructions for 1",
+          "materials": "text for 1"
+        }, 
+        {
+          "productName": "3",
+          "subHeader": "headline 1 (set 1)",
+          "overview": "date for headline 1 (set 1)",
+          "features": "",
+          "installation": "instructions for 1",
+          "materials": "text for 1"
+        }, 
+        {
+          "productName": "4",
+          "subHeader": "headline 1 (set 1)",
+          "overview": "date for headline 1 (set 1)",
+          "features": "",
+          "installation": "instructions for 1",
+          "materials": "text for 1"
+        }
+      ]       
+    },
+    {
+      "contentId": 2,
+      "name": "Streamline Metal Flashing",
+      "contentTitle": "Streamline Metal Flashing",
+      "productDetails": [
+        {
+          "productName": "1a",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)",
+          "features": "",
+          "installation": "instructions for 1",
+          "productText": "text for 1"
+        },
+        {
+          "productName": "2a",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)",
+          "features": "",
+          "installation": "instructions for 1",
+          "productText": "text for 1"
+        },
+        {
+          "productName": "3a",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)",
+          "features": "",
+          "installation": "instructions for 1",
+          "productText": "text for 1"
+        }
+      ]
+    },
+    {
+      "contentId": 3,
+      "name": "Building Envelope",
+      "contentTitle": "Pretaining to Streamline Metal Flashing",
+      "productName": 1,
+      "productDetails": [
+        {
+          "productName": "1b",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)"
+        },
+        {
+          "productName": "2b",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)"
+        },
+        {
+          "productName": "3b",
+          "subHeader": "headline 1 (set 2)",
+          "overview": "date for headline 1 (set 2)"
+        }
+      ]
+    },
+    {
+      "contentId": 4,
+      "name": "About Us",
+      "contentTitle": "Pretaining to Streamline Metal Flashing",
+      "productDetails": [
+        {
+          "productName": 1,
+          "productDetails": [
+              {
+                "subHeader": "headline 1 (set 2)",
+                "date": "date for headline 1 (set 2)"
+              }
+            ]
+        }
+      ]
+    },
+    {
+      "contentId": 5,
+      "name": "Portfolio",
+      "contentTitle": "Pretaining to Streamline Metal Flashing",
+      "productDetails": [
+        {
+          "productName": 1,
+          "productDetails": [
+              {
+                "subHeader": "headline 1 (set 2)",
+                "date": "date for headline 1 (set 2)"
+              }
+            ]
+        }
+      ]
+    }]

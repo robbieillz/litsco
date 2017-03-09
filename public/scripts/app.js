@@ -1,4 +1,5 @@
 angular.module('app_litsco',[
 	'ngRoute',
-	'ngResource'
+	'ngResource',
+	'ngMap'
 	])

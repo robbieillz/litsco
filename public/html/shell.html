@@ -2,6 +2,7 @@
 <html ng-app="app_litsco">
 
 <head>
+    <!-- <base href="/"> for Angular Refresh -->
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +31,7 @@
                             <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Classic CR</a>
+                                        <a href="#!/classic_cr" class="product-link">Classic CR</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">Omniwall MD</a>
@@ -125,6 +126,7 @@
                         </li>
                     </ul>
                     <!-- END: Navbar MAIN menu -->
+
                     <!-- START: Navbar menu mobile -->
                     <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
                         <li class="mobile-nav-logo">
@@ -200,7 +202,13 @@
                     <p class="grey-text text-lighten-4"><strong>Contact Us:</strong>
                         <br>76-11 88th St.
                         <br>Glendale, NY 11385</p>
-                    <div class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></p>
+                    <div class="flex-center" id="footer_tel">
+                      <ul>
+                          <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></li>
+                          <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                      </ul>
+                      
+                      </p>
                     </div>
                     <p class="grey-text text-lighten-4"><strong>Hours:</strong>
                         <br>M - F: 7am - 5pm</p>
@@ -232,15 +240,20 @@
             </div>
         </div>
     </footer>
-    <!--Import jQuery before materialize.js-->
+    <!--Imports-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="scripts/materialize/materialize.min.js"></script>
-    <!-- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM&callback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
+
+    <!-- General scripts -->
+    <script src="scripts/scripts.js"></script>
     <!-- Angular Imports -->
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
+
+    <script src="/node_modules/ngmap/build/scripts/ng-map.min.js"></script>
+
     <!-- Local AngularJS Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/app_routes.js"></script>
@@ -249,8 +262,8 @@
     <!-- Angular Controllers -->
     <script src="scripts/controller_shell.js"></script>
     <script src="scripts/controller_index.js"></script>
-    <!-- General JS -->
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/controller_prods.js"></script>
+
 </body>
 
 </html>

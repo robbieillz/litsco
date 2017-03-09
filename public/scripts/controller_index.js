@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_index',['$scope', '$route', function($scope, $route){
+	.controller('controller_index',['$scope', '$route', 'NgMap',function($scope, $route, NgMap){
 
 	$scope.$on('$routeChangeSuccess', function () {
 		$('.carousel.carousel-slider').carousel({
@@ -15,19 +15,11 @@ angular.module('app_litsco')
 	    }
 
 	    $('ul.tabs').tabs();
-
-	    function initMap() {
-	    	var uluru = {lat: -25.363, lng: 131.044};
-	    	var map = new google.maps.Map(document.getElementById('map'), {
-	    		zoom: 4,
-	    		center: uluru
-	    	});
-	    	var marker = new google.maps.Marker({
-	    		position: uluru,
-	    		map: map
-	    	});
-	    }
+	NgMap.getMap().then(function(map) {
+		$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM";
+	  });
 	});
+
 
 }]);
 

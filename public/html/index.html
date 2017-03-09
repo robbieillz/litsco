@@ -3,7 +3,7 @@
         <div class="container">
             <div class="col s12 m5">
                 <div class="card-panel" id="index-banner-card">
-                    <span class="blue-text text-darken-4" id="index-banner-card-text">Since 1918, LITSCO has been Streamlining Your Supply Experience in the Building Envelope
+                    <span class="blue-text text-darken-4" id="index-banner-card-text">Since 1918, LITSCO has been Streamlining Your Supply Experience of Building Envelope Products
               </span>
                 </div>
             </div>
@@ -129,8 +129,8 @@
             </div>
         </div>
     </section>
-    <section id="index-more" class="section-with-padding">
-        <div class="container">
+    <section id="index-more" class="">
+        <div class="">
             <div class="row col s12 m12 l12 index-more-main-row">
                 <div class="flex-column-around-center estore col s12 m12 l4">
                     <h4 class="preheader uppercase text-bold">Visit Our E-Store</h4>
@@ -189,29 +189,12 @@
         </div>
     </section>
     <section id="index-map">
-        <div class="container">
+        <div class="">
             <div class="row">
-                <div class="col s4 m8 l8 left" id="map">
-                    map goes here
-                    <script>
-                    function initMap() {
-                        var litsco = {
-                            lat: 40.706940,
-                            lng: -73.8613
-                        };
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 11,
-                            center: litsco
-                        });
-                        var marker = new google.maps.Marker({
-                            position: litsco,
-                            map: map
-                        });
-                    }
-                    </script>
-                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM&callback=initMap">
-                    </script>
-                </div>
+            	<div class="col s4 m8 l8 left" map-lazy-load="https://maps.google.com/maps/api/js"
+  map-lazy-load-params="{{googleMapsUrl}}">
+  <ng-map center="40.706940, -73.8613" zoom="12"></ng-map>
+            	</div>
                 <div class="col s4 m4 l4 right">
                 	<form class="col s12">
                 	      <div class="row">
@@ -221,7 +204,10 @@
                 	          <label for="start_address">Your Address</label>
                 	        </div>
                 	      </div>
-                	    </form>
+                	      <button class="btn waves-effect waves-light" type="submit" name="action">Let's Go
+                	          <i class="material-icons right">send</i>
+                	        </button>
+            	    </form>
                 </div>
             </div>
         </div>
