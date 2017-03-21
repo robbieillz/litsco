@@ -1,5 +1,102 @@
 <main class="top-margin-nav-height" id="main-product-content" ng-controller="controller_prods">
-	<section id="product-banner" class="container flex-center">
-		<img class="responsive-img" id="product-jumbo" src="{{ allData[0].productDetails[0].jumboImg }}">
+    <section id="product-banner" class="container flex-center">
+        <img class="responsive-img" id="product-jumbo" src="{{ productIdObj.jumboImg }}">
+    </section>
+    <div class="container full-width-slider-divider"></div>
+    <section>
+        <div class="container">
+            <!-- <div class="row"> -->
+            <div class="row center">
+                <div class="col s12">
+                    <h2>{{ productIdObj.productName }}</h2>
+                    <div class="divider"></div>
+                    <h6>{{ productIdObj.subHeader }}</h6>
+                    <!-- <div class="card"> -->
+                    <!-- <div class="card-content">
+                                <span class="card-title product-title">{{ productIdObj.productName }}</span>
+                                <p>{{ productIdObj.subHeader }}</p>
+                            </div> -->
+                    <!-- <div class="card-action grey lighten-4">
+                                <ul class="flex-row-around-center product-card-buttons">
+                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">insert_chart</i></a>
+                                        <p>Data Sheet</p>
+                                    </li>
+                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">format_quote</i></a>
+                                        <p>Quote Request</p>
+                                    </li>
+                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons dp48">invert_colors</i></a>
+                                        <p>Color Chart</p>
+                                    </li>
+                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">attach_file</i></a>
+                                        <p>Spec Sheet</p>
+                                    </li>
+                                </ul>
+                            </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div class="row flex-row-wrap">
+                <div class="prod-detail-div col s12 l8">
+                    <img class="prod-detail-img" src="{{ productIdObj.detailImg }}">
+                </div>
+                <div class="col s12 l4">
+                	<ul class="product-color-list">
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Dark Bronze" title="Dark Bronze" style="background-color:#211401;"></a></li>
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Sierra Tan" title="Sierra Tan" style="background-color:#998269;"></a></li>
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Almond" title="Almond" style="background-color:#e0d6b3;"></a></li>
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Charcoal Gray" title="Charcoal Gray" style="background-color:#3d4444;"></a></li>
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Stone White" title="Stone White" style="background-color:#e4e5e6;"></a></li>
+                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Zinc" title="Zinc" style="background-color:##66727a;"></a></li>
+                	</ul>
+                    <div class="card grey lighten-4">
+                        <ul class="product-card-buttons flex-row-around-center">
+                            <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">insert_chart</i></a>
+                                <p>Data Sheet</p>
+                            </li>
+                            <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">format_quote</i></a>
+                                <p>Quote Request</p>
+                            </li>
+                            <li class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="#!"><i class="material-icons dp48">invert_colors</i></a>
+                                <p>Color Chart</p>
+                            </li>
+                            <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">attach_file</i></a>
+                                <p>Spec Sheet</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p> {{ productIdObj.overview }}</p>
+                <div class="divider"></div>
+            </div>
+            <div class="row">
+                <h5 class="collection-header">Features</h5>
+                <ul class="collection with-header col sm12 l6 product-features-list" ng-repeat="column in columns">
+                    <li class="collection-item" ng-repeat="feature in productIdObj.features | slice:column.start:column.end">
+                        <a class="left"><i class="material-icons dp48 blue-text text-darken-4">play_circle_filled</i></a>
+                        <div>{{ feature }}</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s6"><a class="active" href="#test1">Installation</a></li>
+                        <li class="tab col s6"><a href="#test2">Materials</a></li>
+                    </ul>
+                </div>
+                <div id="test1" class="col s12">
+                    <ul>
+                        <li ng-repeat="(install, description) in productIdObj.installation"> {{ install }}: {{ description }}</li>
+                    </ul>
+                </div>
+                <div id="test2" class="col s12" ng-repeat="(material, types) in productIdObj.materials">
+                    <ul>
+                        <li>{{ material }}</li>
+                        <p ng-repeat="materials in types ">{{ materials }}</p>
+                    </ul>
+                </div>
+            </div>
     </section>
 </main>

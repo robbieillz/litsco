@@ -2,7 +2,7 @@
 <html ng-app="app_litsco">
 
 <head>
-    <!-- <base href="/"> for Angular Refresh -->
+    <base href="/">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,79 +27,79 @@
                     <!-- START: Navbar MAIN menu -->
                     <ul class="right hide-on-med-and-down nav-list" id="nav-bar">
                         <li class="link">
-                            <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link" href="#">STREAMLINE METAL PANELS</a>
+                            <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link">STREAMLINE METAL PANELS</a>
                             <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#!/classic_cr" class="product-link">Classic CR</a>
+                                        <a ui-sref="product({ id: 'classic_cr' })" class="product-link">Classic CR</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Omniwall MD</a>
+                                        <a ui-sref="product({ id: 'omniwall_md' })" class="product-link">Omniwall MD</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Omniwall CL</a>
+                                        <a ui-sref="product({ id: 'omniwall_cl' })" class="product-link">Omniwall CL</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Flatwall SM</a>
+                                        <a ui-sref="product({ id: 'flatwall_sm' })" class="product-link">Flatwall SM</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Flushwall TG</a>
+                                        <a ui-sref="product({ id: 'flushwall_tg' })" class="product-link">Flushwall TG</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Standing SM</a>
+                                        <a ui-sref="product({ id: 'standing_sm' })" class="product-link">Standing SM</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link" href="#">STREAMLINE METAL FLASHING</a>
+                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link">STREAMLINE METAL FLASHING</a>
                             <div id="streamline-flash-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Locktight Coping</a>
+                                        <a ui-sref="product({ id: 'locktight_coping' })" class="product-link">Locktight Coping</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Flashdown Fascia</a>
+                                        <a ui-sref="product({ id: 'flashdown_fascia' })" class="product-link">Flashdown Fascia</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Mortartight</a>
+                                        <a ui-sref="product({ id: 'mortartight_thruwall' })" class="product-link">Mortartight</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">2-Piece Lit-Lok</a>
+                                        <a ui-sref="product({ id: '2piece_litlok' })" class="product-link">2-Piece Lit-Lok</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Lead Tees</a>
+                                        <a ui-sref="product({ id: 'lead_tees' })" class="product-link">Lead Tees</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Gutters</a>
+                                        <a ui-sref="product({ id: 'box_gutters' })" class="product-link">Gutters</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Louvers</a>
+                                        <a ui-sref="product({ id: 'louvers' })" class="product-link">Louvers</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Skylights</a>
+                                        <a ui-sref="product({ id: 'nyc_skylights' })" class="product-link">Skylights</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link" href="#">BUILDING ENVELOPE</a>
+                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link">BUILDING ENVELOPE</a>
                             <div id="building-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Roofing</a>
+                                        <a ui-sref="product({ id: 'roofing_supplies' })" class="product-link">Roofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Waterproofing</a>
+                                        <a ui-sref="product({ id: 'waterproofing_supplies' })" class="product-link">Waterproofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Architectural Metal</a>
+                                        <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="product-link">Manufactured Metal Panels</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Sheet Metal</a>
+                                        <a ui-sref="product({ id: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">Division 7 Specialties</a>
+                                        <a ui-sref="product({ id: 'division_7' })" class="product-link">Division 7 Specialties</a>
                                     </div>
                                 </div>
                             </div>
@@ -110,13 +110,13 @@
                             <div id="med-nav-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">ABOUT US</a>
+                                        <a ui-sref="product({ id: 'about' })" class="product-link">ABOUT US</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">PORTFOLIO</a>
+                                        <a ui-sref="product({ id: 'portfolio' })" class="product-link">PORTFOLIO</a>
                                     </div>
                                     <div class="hide-on-med-lrg-and-up col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">LOG IN</a>
+                                        <a href="https://accounts.litsco.com/signon.php" class="product-link">LOG IN</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a href="#" class="product-link">E-STORE</a>
@@ -136,35 +136,35 @@
                         <li class="product-link">
                             <div class="collapsible-header mobile-accordian">STREAMLINE METAL PANELS</div>
                             <div class="collection collapsible-body mobile-nav-link-body">
-                                <a href="#!" class="collection-item mobile-nav-link-item">Classic CR</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">OmniWall MD</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">OmniWall CL</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">FlatWall SM</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">FlushWall TG</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Standing SM</a>
+                                <a ui-sref="product({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
+                                <a ui-sref="product({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
+                                <a ui-sref="product({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
+                                <a ui-sref="product({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
+                                <a ui-sref="product({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
+                                <a ui-sref="product({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
                             </div>
                         </li>
                         <li class="product-link">
                             <div class="collapsible-header mobile-accordian">STREAMLINE METAL FLASHING</div>
                             <div class="collection collapsible-body mobile-nav-link-body">
-                                <a href="#!" class="collection-item mobile-nav-link-item">Locktight Coping</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Mortartight</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Lead Tees</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Gutters</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Louvers</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Skylights</a>
+                                <a ui-sref="product({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
+                                <a ui-sref="product({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
+                                <a ui-sref="product({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
+                                <a ui-sref="product({ id: '2piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
+                                <a ui-sref="product({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
+                                <a ui-sref="product({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
+                                <a ui-sref="product({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
+                                <a ui-sref="product({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a>
                             </div>
                         </li>
                         <li class="product-link">
                             <div class="collapsible-header mobile-accordian">BUILDING ENVELOPE</div>
                             <div class="collection collapsible-body mobile-nav-link-body">
-                                <a href="#!" class="collection-item mobile-nav-link-item">Roofing</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Architectural Metal</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Sheet Metal</a>
-                                <a href="#!" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
+                                <a ui-sref="product({ id: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                                <a ui-sref="product({ id: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                                <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Manufactured Metal Panels</a>
+                                <a ui-sref="product({ id: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
+                                <a ui-sref="product({ id: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
                             </div>
                         </li>
                         <li class="product-link">
@@ -192,7 +192,7 @@
         </nav>
     </div>
     <!-- PAGE VIEW CONTENT BELOW-->
-    <div ng-view></div>
+    <ui-view></ui-view>
     <!-- FOOTER CONTENT BELOW-->
     <footer class="page-footer blue-text text-darken-4">
         <div class="container">
@@ -249,7 +249,9 @@
     <script src="scripts/scripts.js"></script>
     <!-- Angular Imports -->
     <script src="/node_modules/angular/angular.js"></script>
-    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <!-- <script src="/node_modules/angular-route/angular-route.js"></script> -->
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
 
     <script src="/node_modules/ngmap/build/scripts/ng-map.min.js"></script>

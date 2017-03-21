@@ -1,33 +1,53 @@
     [{
-      "contentId": 1,
+      "id": "classic_cr",
       "name": "Streamline Metal Panels",
       "contentTitle": "Streamline Metal Panels",
       "productDetails": [
         {
           "productName": "Streamline Classic CR",
-          "subHeader": "CORRUGATED, EXPOSED FASTENER, LAP SEAM METAL WALL PANEL",
-          "overview": "date for headline 1 (set 1)",
+          "subHeader": "Corrugated, Exposed Fastener, Lap Seam Metal Wall Panel",
+          "overview": "LITSCO's Streamline CR wall panel is an economical solution for exterior or parapet walls in need of restoration.  The narrow rib profile provides a clean, consistent appearance.  The panels be used in conjunction with Streamline Edge metal systems for a waterproof encapsulation of the structure while still allowing the structure to breath.",
           "features": [
-            "features features features",
-            "features2 features2 features2",
-            "features3 features3 features3",
-            "features4 features4 features4",
-            "features5 features5 features5"
+            "Standard 8ft or 10ft lengths",
+            "Stocked in Baked Enamel Painted Dark Bronze",
+            "12\"o.c. spacing improves load spans",
+            "Can be applied to multiple substrates",
+            "Kynar pained standard 20yr finish warranty",
+            "Custom painted panels available",
+            "Integrates with our LockTight Coping or Flashdown Fascia"
           ],
           "installation": {
-            "trim": "instructions for trim",
-            "substrate": "instructions for substrate",
-            "fasteners": "instructions for fasteners",
-            "panels": "instructions for panels"
+            "Trim": "All flashing and trim will be fabricated by LITSCO or a qualified fabricator. Flashing shall be .032\" - .040\" aluminum or 24ga steel.",
+            "Substrate": "Streamline Classic CR panels are intended to be installed directly onto 18GA (1/2\") or 20GA (7/8\") deep galvanized steel subgirts.  Maximum subgirt spacing is 30\".   Refer to the Load Span Table in data sheet for additional information.",
+            "Fasteners": "#12 hex head self-drilling stainless steel with neoprene washer.  Painted colors available to match panel.  Fasteners to be installed 12\"o.c.",
+            "Panels": "Set bottom closure, such as LITSCO's Lit-Lok, then set panels on top of bottom closure.  Side-laps to be 1 rib (1.5\")." 
           },
           "materials": [
-          "materials text for 1",
-          "materials text for 2",
-          "materials text for 3",
-          "materials text for 4"
+            {
+              "Aluminum" : [
+                ".032\" / .040\", Baked Enamel Painted",
+                ".032\" / .040\", Kynar Painted"
+                ],
+              "Copper" : [
+                "16oz / 20oz, Cold Rolled",
+                "16oz / 20oz, Lead Coated",
+                "16oz / 20oz, PrePatina",
+                "16oz / 20oz, Freedom Gray"
+                ],
+              "Rheinzink Zinc" : [
+                "0.8MM, Finish per specification"],
+              "Galvanized Steel / Galvalume" : [
+                "24GA., Kynar Painted"
+              ],
+              "Stainless Steel" : [
+                "0.18\" (26GA), #2D finish"
+              ]
+            }
           ],
           "jumboImg": "img/jumbo_cr_full.jpg",
-          "detailImg": "http://www.litsco.com/images/streamline_alt.gif"
+          "detailImg": "http://www.litsco.com/images/streamline_alt.gif",
+          "dataSheetLink" : "http://www.litsco.com/assets/streamline_classic_cr.pdf",
+          "quoteSheetLink" : "http://www.litsco.com/assets/print_approval_streamline.pdf"
         }, 
         {
           "productName": "2",
@@ -56,7 +76,7 @@
       ]       
     },
     {
-      "contentId": 2,
+      "id": 2,
       "name": "Streamline Metal Flashing",
       "contentTitle": "Streamline Metal Flashing",
       "productDetails": [
@@ -87,7 +107,7 @@
       ]
     },
     {
-      "contentId": 3,
+      "id": 3,
       "name": "Building Envelope",
       "contentTitle": "Pretaining to Streamline Metal Flashing",
       "productName": 1,
@@ -110,7 +130,7 @@
       ]
     },
     {
-      "contentId": 4,
+      "id": 4,
       "name": "About Us",
       "contentTitle": "Pretaining to Streamline Metal Flashing",
       "productDetails": [
@@ -126,7 +146,7 @@
       ]
     },
     {
-      "contentId": 5,
+      "id": 5,
       "name": "Portfolio",
       "contentTitle": "Pretaining to Streamline Metal Flashing",
       "productDetails": [

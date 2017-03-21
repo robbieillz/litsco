@@ -1,16 +1,18 @@
 angular.module('app_litsco')
-	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-			$routeProvider
-			.when('/', {
+	.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
+
+		$urlRouterProvider.otherwise('/');
+
+			$stateProvider
+			.state('home', {	
+				url : '/',
 				templateUrl : '/html/index.html',
 				controller	: 'controller_index'
 			})
-			.when('/classic_cr', {
+			.state('product', {
+				url : '/:id',
 				templateUrl : '/html/template_product.html',
 				controller	: 'controller_prods'
 			})
-
-		    $locationProvider.hashPrefix('!')
-
-
+		// $locationProvider.html5Mode(true)
 	}])

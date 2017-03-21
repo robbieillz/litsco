@@ -1,7 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_index',['$scope', '$route', 'NgMap',function($scope, $route, NgMap){
-
-	$scope.$on('$routeChangeSuccess', function () {
+	.controller('controller_index',['$scope', 'NgMap',function($scope, NgMap){
 		$('.carousel.carousel-slider').carousel({
 			fullWidth: true,
 			indicators: true
@@ -18,8 +16,5 @@ angular.module('app_litsco')
 	NgMap.getMap().then(function(map) {
 		$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM";
 	  });
-	});
-
-
 }]);
 

@@ -10,11 +10,11 @@ apiRouter.get('/', function (req, res){
 
 apiRouter.use('/', express.static('app', { redirect: false }));
 
-// Data Sends
-apiRouter.get('/api/lib', function(req, res){
-	res.json(prodData)
-	console.log('sending prodData from server', prodData)
-})
+// // Data Sends
+// apiRouter.get('/api/lib', function(req, res){
+// 	res.json(prodData)
+// 	console.log('sending prodData from server', prodData)
+// })
 
 // Exports
 module.exports = apiRouter;
