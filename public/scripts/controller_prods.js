@@ -5,15 +5,14 @@ angular.module('app_litsco')
 		$('.collapsible').collapsible();
 
 		$scope.productIdObj = factory_litsco.get($stateParams.id);
-		console.log('$scope.productIdObj === ', $scope.productIdObj)
 		
 		if(!$scope.productIdObj){
 			$state.go('home');
 		}
 
+// FEATURES COLUMN CALCULATION
 		$scope.columns = [];
 		$scope.columnCount = 2;
-
 		function calculateColumns() {
 		    var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
 		    for (var i=0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
@@ -22,6 +21,28 @@ angular.module('app_litsco')
 		    }
 		}
 		calculateColumns();
+
+// COLORS ROW CALCULATION
+		$scope.columns = [];
+		$scope.columnCount = 2;
+		function calculateColumns() {
+		    var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
+		    for (var i=0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
+		      var col = {start:i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
+		       $scope.columns.push(col);
+		    }
+		}
+		calculateColumns();
+
+		$scope.hoverColor = ' ';
+		$scope.hoverColorText = function(color) {
+			if (color) {
+				var stringReplacer = /_/gi;
+				$scope.hoverColor = color.replace(stringReplacer, ' ');
+			} else {
+				$scope.hoverColor = ' ';
+			}
+		}
 		
 }]);
 

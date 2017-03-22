@@ -5,61 +5,39 @@
     <div class="container full-width-slider-divider"></div>
     <section>
         <div class="container">
-            <!-- <div class="row"> -->
             <div class="row center">
                 <div class="col s12">
                     <h2>{{ productIdObj.productName }}</h2>
                     <div class="divider"></div>
                     <h6>{{ productIdObj.subHeader }}</h6>
-                    <!-- <div class="card"> -->
-                    <!-- <div class="card-content">
-                                <span class="card-title product-title">{{ productIdObj.productName }}</span>
-                                <p>{{ productIdObj.subHeader }}</p>
-                            </div> -->
-                    <!-- <div class="card-action grey lighten-4">
-                                <ul class="flex-row-around-center product-card-buttons">
-                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">insert_chart</i></a>
-                                        <p>Data Sheet</p>
-                                    </li>
-                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">format_quote</i></a>
-                                        <p>Quote Request</p>
-                                    </li>
-                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons dp48">invert_colors</i></a>
-                                        <p>Color Chart</p>
-                                    </li>
-                                    <li class="waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">attach_file</i></a>
-                                        <p>Spec Sheet</p>
-                                    </li>
-                                </ul>
-                            </div> -->
-                    <!-- </div> -->
                 </div>
             </div>
             <div class="row flex-row-wrap">
                 <div class="prod-detail-div col s12 l8">
                     <img class="prod-detail-img" src="{{ productIdObj.detailImg }}">
                 </div>
-                <div class="col s12 l4">
-                	<ul class="product-color-list">
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Dark Bronze" title="Dark Bronze" style="background-color:#211401;"></a></li>
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Sierra Tan" title="Sierra Tan" style="background-color:#998269;"></a></li>
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Almond" title="Almond" style="background-color:#e0d6b3;"></a></li>
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Charcoal Gray" title="Charcoal Gray" style="background-color:#3d4444;"></a></li>
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Stone White" title="Stone White" style="background-color:#e4e5e6;"></a></li>
-                		<li class="product-color-chip-container"><a href="" class="product-color-chip" onlick="return false" alt="Zinc" title="Zinc" style="background-color:##66727a;"></a></li>
-                	</ul>
+                <div class="col s12 l4 product-button-card">
+                    <div class="product-color-list">
+                        <!-- <h5>Color Visualizer</h5> -->
+                        <!-- <ul class="product-color-list"> -->
+                            <div ng-repeat="(color, hex) in productIdObj.colors" class="product-color-chip-container" style="margin: 10px;">
+                                <div ng-mouseover="hoverColorText(color)" ng-mouseleave="hoverColorText()" class="product-color-chip {{color}}" alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
+                            </div>
+                        <!-- </ul> -->
+                    </div>
+                        <p class="product-hover-color-text"> {{ hoverColor }} </p>
                     <div class="card grey lighten-4">
                         <ul class="product-card-buttons flex-row-around-center">
-                            <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">insert_chart</i></a>
+                            <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
                                 <p>Data Sheet</p>
                             </li>
-                            <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">format_quote</i></a>
+                            <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.quoteSheetLink }}"><i class="material-icons small">format_quote</i></a>
                                 <p>Quote Request</p>
                             </li>
-                            <li class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="#!"><i class="material-icons dp48">invert_colors</i></a>
+                            <li class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href=""><i class="material-icons dp48">invert_colors</i></a>
                                 <p>Color Chart</p>
                             </li>
-                            <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="#!"><i class="material-icons small">attach_file</i></a>
+                            <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}"><i class="material-icons small">attach_file</i></a>
                                 <p>Spec Sheet</p>
                             </li>
                         </ul>
@@ -87,15 +65,16 @@
                     </ul>
                 </div>
                 <div id="test1" class="col s12">
-                    <ul>
-                        <li ng-repeat="(install, description) in productIdObj.installation"> {{ install }}: {{ description }}</li>
-                    </ul>
+                    <div ng-repeat="(install, description) in productIdObj.installation">
+                        <h5> {{ install }}:</h5> 
+                        <p>{{ description }}</p>
+                    </div>
                 </div>
                 <div id="test2" class="col s12" ng-repeat="(material, types) in productIdObj.materials">
-                    <ul>
-                        <li>{{ material }}</li>
+                    <div>
+                        <h5>{{ material }}</h5>
                         <p ng-repeat="materials in types ">{{ materials }}</p>
-                    </ul>
+                    </div>
                 </div>
             </div>
     </section>
