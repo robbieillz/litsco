@@ -330,12 +330,13 @@ angular.module('app_litsco')
     	}
 		]
 
-		return {
-	        get:  function(id){
-	        	var prodIndex = allData.map(function(obj) {
-	        		return obj.id;
-	        	}).indexOf(id);
-	        	return allData[prodIndex]
-        	}
-        }
+		return allData
+		// {
+	        // get:  function(id){
+	        // 	var prodIndex = allData.map(function(obj) {
+	        // 		return obj.id;
+	        // 	}).indexOf(id);
+	        // 	return allData[prodIndex]
+        	// }
+        // }
 	}]);

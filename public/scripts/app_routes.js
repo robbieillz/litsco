@@ -14,5 +14,10 @@ angular.module('app_litsco')
 				templateUrl : '/html/template_product.html',
 				controller	: 'controller_prods'
 			})
+			// .state('streamline_panels', {
+			// 	url : '/streamline_panels',
+			// 	templateUrl : '/html/streamline_panels.html',
+			// 	controller	: 'controller_panels'
+			// })
 		// $locationProvider.html5Mode(true)
 	}])
