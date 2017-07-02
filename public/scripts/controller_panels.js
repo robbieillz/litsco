@@ -1,7 +1,8 @@
 angular.module('app_litsco')
-	.controller('controller_panels',['$scope', '$state', 'factory_litsco', function($scope, $state, factory_litsco){
+	.controller('controller_panels', ['$scope', 'factory_litsco', function($scope, factory_litsco) {
 debugger
- $scope.greeting = 'hi'
+		$scope.greeting = 'HI';
+ 
 	  	// //other routes
 	  	// var allData = factory_litsco;
 	  	// var cat = 1;

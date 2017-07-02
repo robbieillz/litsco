@@ -6,18 +6,19 @@ angular.module('app_litsco')
 			$stateProvider
 			.state('home', {	
 				url : '/',
-				templateUrl : '/html/index.html',
-				controller	: 'controller_index'
+				templateUrl : 'html/home.html',
+				controller	: 'controller_home'
 			})
 			.state('product', {
 				url : '/:id',
-				templateUrl : '/html/template_product.html',
+				templateUrl : 'html/template_product.html',
 				controller	: 'controller_prods'
 			})
-			// .state('streamline_panels', {
-			// 	url : '/streamline_panels',
-			// 	templateUrl : '/html/streamline_panels.html',
-			// 	controller	: 'controller_panels'
-			// })
-		// $locationProvider.html5Mode(true)
-	}])
+			.state('streamline_panels', {
+				url : '/streamline_metal_panels',
+				templateUrl : 'html/streamlinepanels.html',
+				controller	: 'controller_panels'
+			});
+
+		$locationProvider.html5Mode(true);
+	}]);

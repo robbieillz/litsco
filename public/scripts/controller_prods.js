@@ -1,11 +1,11 @@
 angular.module('app_litsco')
     .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
 
-        $('ul.tabs').tabs();
-        $('.collapsible').collapsible();
-
         var allData = factory_litsco;
         var id = $stateParams.id;
+
+        $('ul.tabs').tabs();
+        $('.collapsible').collapsible();
 
         function prodId(id) {
             var prodIndex = allData.map(function(obj) {
@@ -47,16 +47,22 @@ angular.module('app_litsco')
         calculateRows();
 
         $scope.hoverColor = ' ';
-        $scope.hoverColorText = function(color) {
+        $scope.hoverColorText = function(color) {            
             if (color) {
                 var stringReplacer = /_/gi;
                 $scope.hoverColor = color.replace(stringReplacer, ' ');
+                // updateSvgFill(this.hex);
             } else {
                 $scope.hoverColor = ' ';
             }
-        }
+        };
 
-    }]);
+        function updateSvgFill(hex) {           
+            var mainObject = document.getElementById('object-product-wrapper');
+
+            var paths = $(mainObject).find('.hover_color_change');
+        }
+}]);
 
 angular.module('app_litsco')
     .filter('slice', function() {

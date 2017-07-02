@@ -1,213 +1,272 @@
-<main id="main-index-content">
-    <section id="index-banner" class="container flex-center">
+<!doctype html>
+<html ng-app="app_litsco">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LITSCO: Long Island Tinsmith Supply Corp, since 1918</title>
+    <link rel="icon" type="image/png" href="/img/litsco_favicon.png">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body ng-controller="controller_index">
+    <!-- NAVIGATION -->
+    <div class="navbar-fixed">
+        <nav role="navigation">
+            <div class="blue-grey lighten-5" id="nav-background"></div>
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="/" class="brand-logo"><img src="/img/litsco_logo_wide.svg" class=".show-on-large logo-img" alt=""></a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse flex-center" id="hamburger"><i class="material-icons" id="menu-icon">menu</i></a>
+                    <!-- START: Navbar MAIN menu -->
+                    <ul class="right hide-on-med-and-down nav-list" id="nav-bar">
+                        <li class="link">
+                            <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link" ui-sref="streamline_panels">STREAMLINE METAL PANELS</a>
+                            <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
+                                <div class="container dropdown-container flex-row-around-center">
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'classic_cr' })" class="product-link">Classic CR</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'omniwall_md' })" class="product-link">Omniwall MD</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'omniwall_cl' })" class="product-link">Omniwall CL</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'flatwall_sm' })" class="product-link">Flatwall SM</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'flushwall_tg' })" class="product-link">Flushwall TG</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'standing_sm' })" class="product-link">Standing SM</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="link">
+                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link">STREAMLINE METAL FLASHING</a>
+                            <div id="streamline-flash-dropdown" class="dropdown-content dropdown-full full">
+                                <div class="container dropdown-container flex-row-around-center">
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'locktight_coping' })" class="product-link">Locktight Coping</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'flashdown_fascia' })" class="product-link">Flashdown Fascia</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'mortartight_thruwall' })" class="product-link">Mortartight</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: '2piece_litlok' })" class="product-link">2-Piece Lit-Lok</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'lead_tees' })" class="product-link">Lead Tees</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'box_gutters' })" class="product-link">Gutters</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'louvers' })" class="product-link">Louvers</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'nyc_skylights' })" class="product-link">Skylights</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="link">
+                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link">BUILDING ENVELOPE</a>
+                            <div id="building-dropdown" class="dropdown-content dropdown-full full">
+                                <div class="container dropdown-container flex-row-around-center">
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'roofing_supplies' })" class="product-link">Roofing</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'waterproofing_supplies' })" class="product-link">Waterproofing</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="product-link">Manufactured Metal Panels</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'division_7' })" class="product-link">Division 7 Specialties</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down" id="log-in-navbar">Log In</a>
+                        </li>
+                        <li data-activates="med-nav-dropdown" class="extra-nav" id="med-nav-hamburger"><a href="#" data-activates="med-nav-dropdown" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4" id=""><i class="material-icons" id="view_module-icon">view_module</i></a>
+                            <div id="med-nav-dropdown" class="dropdown-content dropdown-full full">
+                                <div class="container dropdown-container flex-row-around-center">
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'about' })" class="product-link">ABOUT US</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="product({ id: 'portfolio' })" class="product-link">PORTFOLIO</a>
+                                    </div>
+                                    <div class="hide-on-med-lrg-and-up col sm12 m3 text-center dropdown-item">
+                                        <a href="https://accounts.litsco.com/signon.php" class="product-link">LOG IN</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a href="#" class="product-link">E-STORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END: Navbar MAIN menu -->
+
+                    <!-- START: Navbar menu mobile -->
+                    <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
+                        <li class="mobile-nav-logo">
+                            <a href="/" class="side-nav-logo" id="side-logo"><img src="/img/litsco_logo_mobile.svg" class="center" alt=""></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian">STREAMLINE METAL PANELS</div>
+                            <div class="collection collapsible-body mobile-nav-link-body">
+                                <a ui-sref="product({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
+                                <a ui-sref="product({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
+                                <a ui-sref="product({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
+                                <a ui-sref="product({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
+                                <a ui-sref="product({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
+                                <a ui-sref="product({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
+                            </div>
+                        </li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian">STREAMLINE METAL FLASHING</div>
+                            <div class="collection collapsible-body mobile-nav-link-body">
+                                <a ui-sref="product({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
+                                <a ui-sref="product({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
+                                <a ui-sref="product({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
+                                <a ui-sref="product({ id: '2piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
+                                <a ui-sref="product({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
+                                <a ui-sref="product({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
+                                <a ui-sref="product({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
+                                <a ui-sref="product({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a>
+                            </div>
+                        </li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian">BUILDING ENVELOPE</div>
+                            <div class="collection collapsible-body mobile-nav-link-body">
+                                <a ui-sref="product({ id: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                                <a ui-sref="product({ id: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                                <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Manufactured Metal Panels</a>
+                                <a ui-sref="product({ id: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
+                                <a ui-sref="product({ id: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
+                            </div>
+                        </li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian">ABOUT US</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian">PORTFOLIO</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li class="product-link">
+                            <div class="collapsible-header mobile-accordian active">CONTACT US</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <div class="mobile-nav-link-btns flex-row-around-center">
+                            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
+                            </li>
+                            <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- END: Navbar menu mobile -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- PAGE VIEW CONTENT BELOW-->
+    <ui-view></ui-view>
+    <!-- FOOTER CONTENT BELOW-->
+    <footer class="page-footer blue-text text-darken-4">
         <div class="container">
-            <div class="col s12 m5">
-                <div class="card-panel" id="index-banner-card">
-                    <span class="blue-text text-darken-4" id="index-banner-card-text">Since 1918, LITSCO has been Streamlining Your Supply Experience of Building Envelope Products
-              </span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="index-cards" class="container">
-        <div class="row" id="index-cards-row">
-            <div class="col s12 m12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <div class="card-bg-img" id="card-image-1"></div>
-                        <span class="card-title">Streamline Metal Panels</span>
-                    </div>
-                    <div class="card-content index-3-cards">
-                        <p>Our Streamline panels are the original series of metal cladding in the Tri-State region. We've since expanded to a variety of panel systems, always handmade in Queens, New York.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="flex-center" ui-sref="streamline_panels"><i class="material-icons point-right">navigation</i>Click for more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <div class="card-bg-img" id="card-image-2"></div>
-                        <span class="card-title">Streamline Metal Flashing</span>
-                    </div>
-                    <div class="card-content index-3-cards">
-                        <p>To ensure your cladding and waterproofing systems remain protected from the elements, our ANSI/SPRI-ES1 tested metal flashings tie into a variety of systems.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="flex-center" href="#"><i class="material-icons point-right">navigation</i>Click for more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m12 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <div class="card-bg-img" id="card-image-3"></div>
-                        <span class="card-title">Division 7 Products</span>
-                    </div>
-                    <div class="card-content index-3-cards">
-                        <p>From below grade waterproofing, to air-and-vapor building wraps, to flat roofing, we pair with the best manufacturers in the industry.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="flex-center" href="#"><i class="material-icons point-right">navigation</i>Click for more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="index-how" class="section-with-padding">
-        <div class="container center">
-            <div class="row col s12 m12 l12">
-                <h3 class="index-how-header">Smart Products, Smarter Service</h3>
-                <h4>LITSCO has you covered.</h4>
-            </div>
-            <div class="row col s12 m12 l12">
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">thumb_up</i>
-                    </div>
-                    <h5>Relationship Driven</h5>
-                </div>
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">person_pin</i>
-                    </div>
-                    <h5>Personalized Services</h5>
-                </div>
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">star</i>
-                    </div>
-                    <h5>High Quality Products</h5>
-                </div>
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">verified_user</i>
-                    </div>
-                    <h5>Trustworthy Management</h5>
-                </div>
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">supervisor_account</i>
-                    </div>
-                    <h5>Exclusive Project Coordinators</h5>
-                </div>
-                <div class="col s6 m4 l4">
-                    <div class="btn-floating btn-large waves-effect waves-light blue darken-4 how-circle">
-                        <i class="white-text material-icons dp48">assignment</i>
-                    </div>
-                    <h5>Complete Package Solutions</h5>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section id="index-carousel">
-        <div class="carousel carousel-slider">
-            <a class="carousel-item" href="javascript:void(0);"><img src="img/carousel_min_7.png"></a>
-            <a class="carousel-item" href="javascript:void(0);"><img src="img/carousel_min_1.png"></a>
-            <a class="carousel-item" href="javascript:void(0);"><img src="img/carousel_min_2.png"></a>
-            <a class="carousel-item" href="javascript:void(0);"><img src="img/carousel_min_4.png"></a>
-        </div>
-    </section>
-    <section id="index-about" class="section-with-padding">
-        <div class="container">
-            <div class="row col sm12 m12 l12">
-                <div class="row">
-                    <div class="col s12" id="index-about-div-tabs">
-                        <ul class="tabs" id="index-about-tabs">
-                            <li class="tab col s4"><a class="amber-text text-darken-3" href="#test1">Since 1918</a></li>
-                            <li class="tab col s4"><a class="amber-text text-darken-3" class="active" href="#test2">Why the Building Envelope</a></li>
-                            <li class="tab col s4"><a class="amber-text text-darken-3" href="#test3">Project Services</a></li>
-                        </ul>
-                    </div>
-                    <div class="index-about-tab-text" id="test1">LITSCO has thrived on the philosophy as quality manufacturers of sheet metal for panels and edge metal and and distributors for roofing, waterproofing and sealants in the commercial construction industry. A four generation commitment to the industry, you can trust we will help you meet your construction challenges for fabrication or distribution anywhere in the U.S.
-                    </div>
-                    <div class="index-about-tab-text" id="test2">We keep your building protected from the outside, in: The physical components of the envelope include the foundation, roof, and walls. LITSCO is able to tie in all of these components as a single source supplier. We have teamed up with key vendors to supply you with the best products for roofing, waterproofing, metal panels, air-vapor barrier and sealants in the industry. When installed properly, these products will keep your building protected from the elements. Work with us and we will be glad to help you decide which product will be best for your specification.</div>
-                    <div class="index-about-tab-text" id="test3">Problem Solvers We are not just order takers. LITSCO's staff is extremely knowledgeable in all the systems we represent: Sheet Metal, Roofing, Waterproofing, and Sealants. Our services include: • Tapered Insulation Design • Job-site measuring for metal projects • Fast turnaround on metal fabrication • Boom & Spyder truck deliveries</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="index-more">
-            <div class="row index-more-main-row">
-                <div class="col s12 m12 l4 estore">
-                    <h4 class="preheader uppercase text-bold">Visit Our E-Store</h4>
-                    <div class="row estore-buttons">
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Solder</a>
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Torches</a>
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Rivets</a>
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Caulking</a>
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>Tools</a>
-                        <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>More...</a>
-                    </div>
-                </div>
-                <div class="carousel col s12 m12 l8 hide-on-med-lrg-and-down">
-                    <div class="card carousel-item index-carousel-testimonial" href="#one!">
-                        <div class="card-content">
-                            <h5>Contractor 1</h5>
-                            <p>The service & personal attention I get from LITSCO is hard to beat. I trust them with all of my projects to deliver on time and accurately.</p>
-                            <br/>
-                            <strong>Jim Bob, Owner</strong>
-                        </div>
-                    </div>
-                    <div class="carousel-item card carousel-item index-carousel-testimonial" href="#two!">
-                        <div class="card-content">
-                            <h5>Contractor 2</h5>
-                            <p>LITSCO's techincal support from all of their staff is unmatched in the rest of the industry. If I have a question, I know I can trust their answer.</p>
-                            <br/>
-                            <strong>Joe Dirt, Owner</strong>
-                        </div>
-                    </div>
-                    <div class="card carousel-item index-carousel-testimonial" href="#one!">
-                        <div class="card-content">
-                            <h5>Contractor 3</h5>
-                            <p>Lorem Ipsum goes here for a few lines of text to provide a testimonial section</p>
-                            <br/>
-                            <strong>Bob Johnson, Owner</strong>
-                        </div>
-                    </div>
-                    <div class="card carousel-item index-carousel-testimonial" href="#one!">
-                        <div class="card-content">
-                            <h5>Contractor 4</h5>
-                            <p>Lorem Ipsum goes here for a few lines of text to provide a testimonial section</p>
-                            <br/>
-                            <strong>John Doe, Owner</strong>
-                        </div>
-                    </div>
-                    <div class="card carousel-item index-carousel-testimonial" href="#one!">
-                        <div class="card-content">
-                            <h5>Contractor 5</h5>
-                            <p>Lorem Ipsum goes here for a few lines of text to provide a testimonial section</p>
-                            <br/>
-                            <strong>Carl's Jr, Owner</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section id="index-map">
-        <div class="">
             <div class="row">
-            	<div class="col s4 m8 l8 left" map-lazy-load="https://maps.google.com/maps/api/js"
-  map-lazy-load-params="{{googleMapsUrl}}">
-  <ng-map center="40.706940, -73.8613" zoom="12"></ng-map>
-            	</div>
-                <div class="col s4 m4 l4 right">
-                	<form class="col s12">
-                	      <div class="row">
-                	      	<h5>Get Directions to LITSCO</h5>
-                	        <div class="input-field col s12">
-                	          <input id="start_address" type="text" class="validate">
-                	          <label for="start_address">Your Address</label>
-                	        </div>
-                	      </div>
-                	      <button class="btn waves-effect waves-light" type="submit" name="action">Let's Go
-                	          <i class="material-icons right">send</i>
-                	        </button>
-            	    </form>
+                <div class="col s4">
+                    <h5 class="white-text">LITSCO</h5>
+                    <p class="grey-text text-lighten-4"><strong>Contact Us:</strong>
+                        <br>76-11 88th St.
+                        <br>Glendale, NY 11385</p>
+                    <div class="flex-center" id="footer_tel">
+                      <ul>
+                          <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></li>
+                          <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                      </ul>
+                      
+                      </p>
+                    </div>
+                    <p class="grey-text text-lighten-4"><strong>Hours:</strong>
+                        <br>M - F: 7am - 5pm</p>
+                </div>
+                <div class="col s4">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 1</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 2</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 3</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <div class="col s4">
+                    <h5 class="white-text">Product Data</h5>
+                    <ul>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 1</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 2</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 3</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 4</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+        <div class="footer-copyright">
+            <div class="container footer-small-text">
+                <div class="left"><a href="#" class="grey-text text-lighten-2">© 2017 Long Island Tinsmith Supply Corp.</a><span> | </span><a href="#" class="grey-text text-lighten-2">Privacy Policy</a></div>
+                <div class="grey-text text-lighten-2 right">Site by: <a class="grey-text text-lighten-4" href="http://phillucks.me" target="_blank">phillucks.me</a></div>
+            </div>
+        </div>
+    </footer>
+    <!--Imports-->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
+
+    <!-- General scripts -->
+    <script src="/scripts/scripts.js"></script>
+    <!-- Angular Imports -->
+    <script src="/node_modules/angular/angular.js"></script>
+    <!-- <script src=/node_modules/angular-route/angular-route.js"></script> -->
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="/node_modules/angular-resource/angular-resource.js"></script>
+
+    <script src="/node_modules/ngmap/build/scripts/ng-map.js"></script>
+
+    <!-- Local AngularJS Scripts -->
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/app_routes.js"></script>
+    <!-- Angular Factories -->
+    <script src="/scripts/factory_litsco.js"></script>
+    <!-- Angular Controllers -->
+    <script src="/scripts/controller_index.js"></script>
+    <script src="/scripts/controller_home.js"></script>
+    <script src="/scripts/controller_prods.js"></script>
+    <script src="/scripts/controller_panels.js"></script>
+
+</body>
+
+</html>

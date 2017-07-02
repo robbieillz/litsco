@@ -1,5 +1,6 @@
 $( document ).ready(function(){
-	$(".button-collapse").sideNav();
+	
+	$('.button-collapse').sideNav();
 
 	$('.product-link, .extra-nav').dropdown({
 	    inDuration: 300,

@@ -3,12 +3,11 @@ var apiRouter = require('express').Router();
 var express = require('express');
 
 // Page Routes
-// \\// SHELL
-apiRouter.get('/', function (req, res){
-    res.sendFile('shell.html', {root: './public/html'})
+apiRouter.get('/', function (req, res, next){
+    res.sendFile('index.html', {root: './public/html'});
 });
 
-apiRouter.use('/', express.static('app', { redirect: false }));
+// apiRouter.use('/', express.static('app', { redirect: false }));
 
 // // Data Sends
 // apiRouter.get('/api/lib', function(req, res){
