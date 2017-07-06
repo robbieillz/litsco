@@ -11,7 +11,7 @@ angular.module('app_litsco')
             var prodIndex = allData.map(function(obj) {
                 return obj.id;
             }).indexOf(id);
-            $scope.productIdObj = allData[prodIndex]
+            $scope.productIdObj = allData[prodIndex];
         }
         prodId(id);
         // factory_litsco.get($stateParams.id);
@@ -51,16 +51,14 @@ angular.module('app_litsco')
             if (color) {
                 var stringReplacer = /_/gi;
                 $scope.hoverColor = color.replace(stringReplacer, ' ');
-                // updateSvgFill(this.hex);
+                updateSvgFill(this.hex);
             } else {
                 $scope.hoverColor = ' ';
             }
         };
 
-        function updateSvgFill(hex) {           
-            var mainObject = document.getElementById('object-product-wrapper');
-
-            var paths = $(mainObject).find('.hover_color_change');
+        function updateSvgFill(hex) {     
+            var paths = $('.hover_color_change').attr('fill', hex);
         }
 }]);
 

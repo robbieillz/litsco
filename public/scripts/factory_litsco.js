@@ -50,7 +50,7 @@ angular.module('app_litsco')
 			"Dark_Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
 			"Silver_Metallic" : "#66727a",
-			"Slate Gray" : "##2f2e2c",
+			"Slate Gray" : "#2f2e2c",
 			"Matte_Black" : "#232021",
 			"Custom_Painted" : "#FFF"
 		},
@@ -107,7 +107,7 @@ angular.module('app_litsco')
 			"Dark_Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
 			"Silver_Metallic" : "#66727a",
-			"Slate Gray" : "##2f2e2c",
+			"Slate Gray" : "#2f2e2c",
 			"Matte_Black" : "#232021",
 			"Custom_Painted" : "#FFF"
 		},
@@ -208,7 +208,7 @@ angular.module('app_litsco')
 			"Dark_Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
 			"Silver_Metallic" : "#66727a",
-			"Slate Gray" : "##2f2e2c",
+			"Slate Gray" : "#2f2e2c",
 			"Matte_Black" : "#232021",
 			"Custom_Painted" : "#FFF"
 		},
@@ -263,7 +263,7 @@ angular.module('app_litsco')
 			"Dark_Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
 			"Silver_Metallic" : "#66727a",
-			"Slate Gray" : "##2f2e2c",
+			"Slate Gray" : "#2f2e2c",
 			"Matte_Black" : "#232021",
 			"Custom_Painted" : "#FFF"
 		},
@@ -319,7 +319,7 @@ angular.module('app_litsco')
 			"Dark_Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
 			"Silver_Metallic" : "#66727a",
-			"Slate Gray" : "##2f2e2c",
+			"Slate Gray" : "#2f2e2c",
 			"Matte_Black" : "#232021",
 			"Custom_Painted" : "#FFF"
 		},
