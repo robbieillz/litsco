@@ -13,6 +13,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.css" media="screen,projection" />
     <link rel="stylesheet" href="/css/style.css">
+    <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Oswald');</style>
 </head>
 
 <body ng-controller="controller_index">
@@ -127,7 +128,12 @@
                     </ul>
                     <!-- END: Navbar MAIN menu -->
 
-                    <!-- START: Navbar menu mobile -->
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- START: Navbar menu mobile -->
                     <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
                         <li class="mobile-nav-logo">
                             <a href="/" class="side-nav-logo" id="side-logo"><img src="/img/litsco_logo_mobile.svg" class="center" alt=""></a>
@@ -187,10 +193,6 @@
                         </div>
                     </ul>
                     <!-- END: Navbar menu mobile -->
-                </div>
-            </div>
-        </nav>
-    </div>
     <!-- PAGE VIEW CONTENT BELOW-->
     <ui-view></ui-view>
     <!-- FOOTER CONTENT BELOW-->

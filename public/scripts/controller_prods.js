@@ -3,6 +3,7 @@ angular.module('app_litsco')
 
         var allData = factory_litsco;
         var id = $stateParams.id;
+        $scope.current_tab = 1;
 
         $('ul.tabs').tabs();
         $('.collapsible').collapsible();
@@ -14,7 +15,6 @@ angular.module('app_litsco')
             $scope.productIdObj = allData[prodIndex];
         }
         prodId(id);
-        // factory_litsco.get($stateParams.id);
 
         if (!$scope.productIdObj) {
             $state.go('home');
@@ -60,11 +60,20 @@ angular.module('app_litsco')
         function updateSvgFill(hex) {     
             var paths = $('.hover_color_change').attr('fill', hex);
         }
+
+        $scope.currentTab = function(tab) {
+            if (tab === 1) {
+                $scope.current_tab = 1;
+            } else if (tab === 2) {
+                $scope.current_tab = 2;
+            }
+        }
+
 }]);
 
 angular.module('app_litsco')
     .filter('slice', function() {
         return function(arr, start, end) {
             return arr.slice(start, end);
-        };
-    });
+    };
+});
