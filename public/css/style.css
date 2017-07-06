@@ -524,6 +524,18 @@ ng-map {
 	.logo-img {
     	width: 200px;
     }
+
+    #nav-button-log-in{
+		display: none;
+	}
+
+	.product-link {
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
 }
 
 @media only screen and (max-width: 993px) {
