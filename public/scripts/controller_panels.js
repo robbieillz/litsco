@@ -1,6 +1,6 @@
 angular.module('app_litsco')
 	.controller('controller_panels', ['$scope', '$state', 'factory_litsco', function($scope, $state, factory_litsco) {
-debugger
+
 		$scope.greeting = 'HI';
  
 	  	// //other routes
