@@ -5,6 +5,8 @@ var express  		= require('express');
 var app      		= express();
 var port     		= 80;
 var apiRoutes 		= require('./app/routes.js');
+var $ 				= global.jQuery = require('jquery');
+global.jQuery 		= $; 
 
 // configuration ===============================================================
 
@@ -16,8 +18,6 @@ app.use('/css', express.static(__dirname + '/public/css/'));
 app.use('/html', express.static(__dirname + '/public/html'));
 app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/fonts', express.static(__dirname + '/public/fonts'));
-
-
 
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
