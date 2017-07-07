@@ -3,7 +3,7 @@
 // set up ======================================================================
 var express  		= require('express');
 var app      		= express();
-var port     		= process.env.PORT || 9000;
+var port     		= 80;
 var apiRoutes 		= require('./app/routes.js');
 
 // configuration ===============================================================
@@ -18,7 +18,6 @@ app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/fonts', express.static(__dirname + '/public/fonts'));
 
 
-// // app.use('/scripts/materialize', express.static(__dir name + '/scripts/materialize'));
 
 app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
