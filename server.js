@@ -5,7 +5,6 @@ var express  		= require('express');
 var app      		= express();
 var port     		= 80;
 var apiRoutes 		= require('./app/routes.js');
-var $ 				= window.jQuery = require('jquery');
 
 // configuration ===============================================================
 

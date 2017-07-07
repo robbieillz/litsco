@@ -1,3 +1,5 @@
+var $ = global.jQuery = require('jquery');
+
 $( document ).ready(function(){
 	
 	$('.button-collapse').sideNav();
