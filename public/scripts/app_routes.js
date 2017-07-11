@@ -18,7 +18,7 @@ angular.module('app_litsco')
 				url : '/streamline_metal_panels',
 				templateUrl : 'html/streamlinepanels.html',
 				controller	: 'controller_panels'
-			});
+			})
 
 		$locationProvider.html5Mode(true);
 	}]);

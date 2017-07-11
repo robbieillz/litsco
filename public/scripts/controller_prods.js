@@ -49,15 +49,14 @@ angular.module('app_litsco')
         $scope.hoverColor = ' ';
         $scope.hoverColorText = function(color) {            
             if (color) {
-                var stringReplacer = /_/gi;
-                $scope.hoverColor = color.replace(stringReplacer, ' ');
+                $scope.hoverColor = color;
                 updateSvgFill(this.hex);
             } else {
                 $scope.hoverColor = ' ';
             }
         };
 
-        function updateSvgFill(hex) {     
+        function updateSvgFill(hex) {    
             var paths = $('.hover_color_change').attr('fill', hex);
         }
 

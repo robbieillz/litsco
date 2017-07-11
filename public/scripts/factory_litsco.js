@@ -19,8 +19,8 @@ angular.module('app_litsco')
 		],
 		"installation": {
 			"Trim": "All flashing and trim will be fabricated by LITSCO or a qualified fabricator. Flashing shall be .032\" - .040\" aluminum or 24ga steel.",
-			"Substrate": "Streamline Omniwall CL panels are intended to be installed directly onto 18GA (1/2\") or 20GA (7/8\") deep galvanized steel subgirts.  Maximum subgirt spacing is 30\".",
-			"Fasteners": "#12 pancake Phillips head, self-drilling stainless steel fastener.  Fasteners to be installed 12\"o.c.",
+			"Substrate": "Streamline Omniwall CR panels are intended to be installed directly onto 18GA (1/2\") or 20GA (7/8\") deep galvanized steel subgirts.  Maximum subgirt spacing is 30\".",
+			"Fasteners": "#12 pancake Phillips head, self-drilling stainless steel fastener, painted to match panel.  Fasteners to be installed 12\"o.c.",
 			"Panels": "Starting from the bottom, panels are recommended to be installed in a staggered design.  Caulk seams with approved urethane or silicone sealant."
 		},
 		"materials": {
@@ -46,14 +46,15 @@ angular.module('app_litsco')
 		},
 		"colors" : {
 			"Almond" : "#e0d6b3",
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
+			"Silver Metallic" : "#66727a",
 			"Slate Gray" : "#2f2e2c",
-			"Matte_Black" : "#232021",
-			"Custom_Painted" : "#FFF"
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "classic_cr",
 		"jumboImg": "img/jumbo_cr_full.jpg",
 		"detailImg": "http://www.litsco.com/images/streamline_alt.gif",
 		"dataSheetLink" : "http://www.litsco.com/assets/streamline_classic_cr.pdf",
@@ -103,14 +104,15 @@ angular.module('app_litsco')
 		},
 		"colors" : {
 			"Almond" : "#e0d6b3",
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
+			"Silver Metallic" : "#66727a",
 			"Slate Gray" : "#2f2e2c",
-			"Matte_Black" : "#232021",
-			"Custom_Painted" : "#FFF"
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "omniwall_md",
 		"jumboImg": "http://litsco.com/images/w60th_litsco_omniwallmd_panels-1-crop-u28651.jpg",
 		"detailImg": "http://www.litsco.com/images/streamline_omniwall_md_alt.gif",
 		"dataSheetLink" : "http://www.litsco.com/assets/streamline_omniwall_md.pdf",
@@ -148,13 +150,14 @@ angular.module('app_litsco')
 		  ]
 		},
 		"colors" : {
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
-			"Matte_Black" : "#232021",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
+			"Matte Black" : "#232021",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
-			"Custom_Painted" : "#FFF"
+			"Silver Metallic" : "#66727a",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "omniwall_cl",
 		"jumboImg": "http://litsco.com/images/kutz_cl_22.jpg",
 		"detailImg": "http://www.litsco.com/images/streamline_omniwall_cl_alt.gif",
 		"dataSheetLink" : "http://www.litsco.com/assets/streamline_omniwall_cl.pdf",
@@ -204,14 +207,15 @@ angular.module('app_litsco')
 		},
 		"colors" : {
 			"Almond" : "#e0d6b3",
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
+			"Silver Metallic" : "#66727a",
 			"Slate Gray" : "#2f2e2c",
-			"Matte_Black" : "#232021",
-			"Custom_Painted" : "#FFF"
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "flatwall_sm",
 		"jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-15.jpg",
 		"detailImg": "http://litsco.com/images/streamline_flush_tg_alt.gif",
 		"dataSheetLink" : "http://litsco.com/assets/streamline_flush_tg.pdf"
@@ -257,16 +261,17 @@ angular.module('app_litsco')
 		},
 		"colors" : {
 			"Copper" : "#af6818",
-			"Pre_Patina_Zinc" : "#646566",
+			"Pre Patina Zinc" : "#646566",
 			"Almond" : "#e0d6b3",
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
+			"Silver Metallic" : "#66727a",
 			"Slate Gray" : "#2f2e2c",
-			"Matte_Black" : "#232021",
-			"Custom_Painted" : "#FFF"
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "flatwall_sm",
 		"jumboImg": "http://litsco.com/images/camba2.jpg",
 		"detailImg": "http://litsco.com/images/streamline_flatwall_sm_alt.gif",
 		"quoteSheetLink" : "http://litsco.com/assets/print_approval_flatwallsm.pdf",
@@ -313,16 +318,17 @@ angular.module('app_litsco')
 		},
 		"colors" : {
 			"Copper" : "#af6818",
-			"Pre_Patina_Zinc" : "#646566",
+			"Pre Patina Zinc" : "#646566",
 			"Almond" : "#e0d6b3",
-			"Bone_White" : "#f4f4f4",
-			"Dark_Bronze" : "#211401",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
 			"Sandstone" : "#c6b999",
-			"Silver_Metallic" : "#66727a",
+			"Silver Metallic" : "#66727a",
 			"Slate Gray" : "#2f2e2c",
-			"Matte_Black" : "#232021",
-			"Custom_Painted" : "#FFF"
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
 		},
+		"illustration": "standing_sm",
 		"jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-55-crop-u28692.jpg",
 		"detailImg": "http://litsco.com/images/standingseam_alt.gif",
 		"quoteSheetLink" : "http://litsco.com/assets/print_approval_standingsm.pdf",

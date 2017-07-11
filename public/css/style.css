@@ -10,6 +10,13 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+
+ #index-banner-card-text {
+ 	font-family: 'Oswald', sans-serif;
+ 	font-size: 1.5em;
+ 	text-transform: uppercase;
+ }
  
 /*MATERIALIZE OVERRIDES*/
 .blue-text.text-darken-4 {
@@ -19,10 +26,6 @@ main {
 .page-footer {
   padding-top: 20px;
   background-color: #2B3668;
-}
-
-.container {
-	max-width:auto;
 }
 
 nav {
@@ -174,6 +177,10 @@ li.link:hover {
 	text-align: center;
 }
 
+.dropdown-item a {
+	font-size: 1em;
+}
+
 .collapsible-header.mobile-accordian{
 	border-bottom: 1px solid #ddd;
 }
@@ -253,6 +260,10 @@ a.collection-item.mobile-nav-link-item:last-child{
 	text-align: center;
 	background-color: rgba(255, 255, 255, .8);
 	font-weight: 500;
+}
+
+#index-banner .container {
+	width: 100%;
 }
 
 #index-cards-row {
@@ -440,6 +451,7 @@ ng-map {
 
  .product-card-buttons {
  	text-align: center;
+ 	margin-top: 32px;
  }
 
  .product-color-list {
@@ -509,6 +521,14 @@ ng-map {
 	margin-bottom: 24px;
 }
 
+.prod-illustration-div {
+	max-height: 500px;
+}
+
+.prod-svg-wrapper, .prod-svg-wrapper svg {
+	max-height: inherit;
+}
+
 /***** FOOTER *****/
 .footer-small-text {
 	font-size:12px;
@@ -535,7 +555,13 @@ ng-map {
 }
 
 @media only screen and (max-width: 1024px) {
+	#index-banner-card {
+		padding: 16px;
+	}
 
+	#index-banner-card-text {
+	 	font-size: .8em;
+	}
 }
 
 @media only screen and (max-width: 993px) {

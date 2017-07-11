@@ -13,8 +13,8 @@
                 </div>
             </div>
             <div class="row flex-row-wrap">
-                <div class="prod-detail-div col s12 l8">
-                    <div ng-include="'/img/omniwall_md_illustration.svg'"></div>
+                <div class="prod-illustration-div col s12 l8">
+                    <div class="prod-svg-wrapper" ng-include="'/img/illustrations/illustration_' + productIdObj.illustration + '.svg'"></div>
                 </div>
                 <div class="col s12 l4 product-button-card">
                     <div class="product-color-list" ng-init="calculateRows()">
@@ -23,7 +23,10 @@
                         </div>
                     </div>
                         <p class="product-hover-color-text"> {{ hoverColor }} </p>
-                    <div class="card grey lighten-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="card grey lighten-4">
                         <ul class="product-card-buttons flex-row-around-center">
                             <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
                                 <p>Data Sheet</p>
@@ -39,7 +42,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
             </div>
             <div class="row">
                 <p class="product-overview"> {{ productIdObj.overview }}</p>

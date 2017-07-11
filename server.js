@@ -3,10 +3,8 @@
 // set up ======================================================================
 var express  		= require('express');
 var app      		= express();
-var port     		= 80;
+var port     		= 9000;
 var apiRoutes 		= require('./app/routes.js');
-var $ 				= global.jQuery = require('jquery');
-global.jQuery 		= $; 
 
 // configuration ===============================================================
 
