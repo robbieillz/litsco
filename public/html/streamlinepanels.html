@@ -1,3 +1,22 @@
 <main class="top-margin-nav-height" id="main-product-table-of-contents">
-    <h1>HIHI</h1>
+    <div class="container row center">
+        <div class="col s12">
+            <h2 class="product-name-heading">Streamline Metal Panels</h2>
+            <div class="divider"></div>
+        </div>
+    </div>
+    <div class="container row">
+        <div class="col l4 s3" ng-repeat="panels in streamlinePanelList">
+            <div class="card product-list-cards">
+                <div class="card-image">
+                    <img src="{{panels.detailImg}}">
+                </div>
+                <div class="card-content">
+                    <a class="btn-floating product-list-fab btn-large halfway-fab waves-effect waves-light amber darken-3"><i class="material-icons">eject</i></a>
+                    <span class="card-title">{{ panels.productName }}</span>
+                    <p>{{ panels.subHeader }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>

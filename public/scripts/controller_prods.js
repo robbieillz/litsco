@@ -16,9 +16,9 @@ angular.module('app_litsco')
         }
         prodId(id);
 
-        if (!$scope.productIdObj) {
-            $state.go('home');
-        }
+        // if (!$scope.productIdObj) {
+        //     $state.go('home');
+        // }
 
         // FEATURES COLUMN CALCULATION
         $scope.columns = [];

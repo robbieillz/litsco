@@ -14,7 +14,7 @@ main {
 
  #index-banner-card-text {
  	font-family: 'Oswald', sans-serif;
- 	font-size: 1.5em;
+ 	font-size: 2.5em;
  	text-transform: uppercase;
  }
  
@@ -169,7 +169,7 @@ li.link:hover {
 
 .product-link {
 	color: black;
-	font-size: 1.25em;
+	font-size: 1.15em;
 }
 
 .dropdown-item {
@@ -254,7 +254,6 @@ a.collection-item.mobile-nav-link-item:last-child{
 }
 
 #index-banner-card {
-	font-size: 32px;
 	padding: 30px;
 	margin: 0;
 	text-align: center;
@@ -529,6 +528,25 @@ ng-map {
 	max-height: inherit;
 }
 
+.product-list-cards .card-image {
+	max-height: 175px;
+	min-height: 175px;
+	height: 175px;
+	overflow: hidden;
+}
+
+.product-list-fab.btn-floating {
+	top: 146px;
+}
+
+.product-list-fab.btn-floating i {
+	    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 /***** FOOTER *****/
 .footer-small-text {
 	font-size:12px;
@@ -560,7 +578,7 @@ ng-map {
 	}
 
 	#index-banner-card-text {
-	 	font-size: .8em;
+	 	font-size: 1.5em;
 	}
 }
 
