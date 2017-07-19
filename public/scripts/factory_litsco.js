@@ -215,7 +215,7 @@ angular.module('app_litsco')
 			"Matte Black" : "#232021",
 			"Custom Painted" : "#FFF"
 		},
-		"illustration": "flatwall_sm",
+		"illustration": "flushwall_tg",
 		"jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-15.jpg",
 		"detailImg": "http://litsco.com/images/streamline_flush_tg_alt.gif",
 		"dataSheetLink" : "http://litsco.com/assets/streamline_flush_tg.pdf"
