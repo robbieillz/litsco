@@ -577,12 +577,29 @@ ng-map {
 		padding: 16px;
 	}
 
+	#nav-button-estore a {
+		padding: 10px;
+		margin: 10px 15px;
+	}
+
+	#nav-button-estore a i {
+		line-height: 40px;
+		margin: 0;
+		float: none;
+	}
+
 	#index-banner-card-text {
 	 	font-size: 1.5em;
 	}
 }
 
 @media only screen and (max-width: 993px) {
+	#log-in-navbar {
+		height: 46px;
+	    line-height: 46px;
+	    margin: 15px;
+	}
+
 	.product-name-heading {
  		font-size: 2em;
  	}

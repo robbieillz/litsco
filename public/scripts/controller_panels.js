@@ -1,17 +1,17 @@
 angular.module('app_litsco')
-	.controller('controller_panels', ['$scope', '$state', 'factory_litsco', function($scope, $state, factory_litsco) {
+	.controller('controller_panels', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
  
-	  	//other routes
-	  	var allData = factory_litsco;
-	  	var cat = 1;
+ 	  	var allData = factory_litsco;
+	  	var cat = $stateParams.cat;
+	  	var catInt = cat === 'streamline_metal_panels' ? 1 : 2;
 	  	$scope.streamlinePanelList = [];
 
-	  	function catId(cat) {
+	  	function catId(catInt) {
 	  	    var prodIndex = allData.map(function(obj) {
 	  	        $scope.streamlinePanelList.push(obj);
-	  	    }).indexOf(cat);
+	  	    }).indexOf(catInt);
 	  	}
-	  	catId(cat);
+	  	catId(catInt);
 	  	// if($scope.streamlinePanelList.length === 0){
 	  	// 	$state.go('home');
 	  	// }

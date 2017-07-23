@@ -333,6 +333,65 @@ angular.module('app_litsco')
 		"detailImg": "http://litsco.com/images/standingseam_alt.gif",
 		"quoteSheetLink" : "http://litsco.com/assets/print_approval_standingsm.pdf",
 		"dataSheetLink" : "http://litsco.com/assets/streamline_flatwall_sm.pdf"
+    	}, {
+		"id": "locktight_coping",
+		"cat" : 2,
+		"productName": "LockTight Coping",
+		"subHeader": "Concealed Fastener Snap-On Coping System.  ANSI/SPRI/FM 4435/ES-1 Certified",
+		"overview": "LITSCO's LockTight coping system is a snap-on metal system with anchor plates and a spring clip.  It provides faster installation times than traditional \"continuous cleat\" copings due to the anchor plate providing consistent substrate as opposed to measuring with a cleat. LockTight coping is an ideal solution to weatherproof any of the Streamline wall panel systems.  <br>LockTight coping is ANSI/SPRI/FM 4435/ES-1 Certified.",
+		"features": [
+			"Standard 10ft lengths",
+			"Standard exterior leg 4.5\" length, Standard interior leg 4\" length.",
+			"Easy snap-on installation with all concealed fastening",
+			"Coping covers are manufactured for positive drainage",
+			"Aluminum / Galvanized Steel anchor plates can accommodate inconsistencies in wall width",
+			"Kynar pained standard 20yr finish warranty",
+			"Face extenders, custom miters and profiles available."
+		],
+		"installation": {
+    		"Anchor Plates": "Typical system requires two 18GA anchor plates for each length of coping.  Additional pieces may be required to achieve higher wind ratings or for special jobsite conditions.",
+    		"Splice Plates": "Typical system requires 1 splice plate for each length of coping.  Set beads of silicone on each side to create a waterdam.",
+    		"Coping Cover": "Once Anchor Plates and Splice Plates have been set, set cover and press down at anchor plate locations to engage legs.",
+    		"Fasteners": "Appropriate fasteners for substrate.  Fasteners to be installed as indicated with pre-punched locations.",
+    		"Miters": "Standard corner units pre-fabricated with a \"Cut-n-Tab\" miter.  Caulk and rivet in field.  Welded covers available upon request."
+		},
+		"materials": {
+		  "Aluminum" : [
+		    ".040\", .050\", .063\", Kynar Painted",
+		  ],
+		  "Copper" : [
+		    "16oz / 20oz, Cold Rolled",
+		    "16oz / 20oz, Lead Coated",
+		    "16oz / 20oz, Freedom Gray",
+		  ],
+		  "Rheinzink Zinc" : [
+		    "0.8MM, PrePatina",
+		    "1.0MM, PrePatina",
+		  ],
+		  "Stainless Steel" : [
+		    ".018\" (26GA), Type 304 #2D",
+		    "26GA, Type 316 #2B",
+		    "24GA, Type 304 #2B",
+		  ],
+		},
+		"colors" : {
+			"Copper" : "#af6818",
+			"Pre Patina Zinc" : "#646566",
+			"Almond" : "#e0d6b3",
+			"Bone White" : "#f4f4f4",
+			"Dark Bronze" : "#211401",
+			"Sandstone" : "#c6b999",
+			"Silver Metallic" : "#66727a",
+			"Slate Gray" : "#2f2e2c",
+			"Matte Black" : "#232021",
+			"Custom Painted" : "#FFF"
+		},
+		"illustration": "standing_sm",
+		"jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-55-crop-u28692.jpg",
+		"detailImg": "http://litsco.com/images/locktite_alt_pdf_image.gif",
+		"quoteSheetLink" : "http://litsco.com/assets/print_approval_locktight.pdf",
+		"dataSheetLink" : "http://litsco.com/assets/streamline_flatwall_sm.pdf",
+		"specPageLink" : "http://litsco.com/assets/section-077100-streamline-locktight-coping.docx",
     	}
 		]
 

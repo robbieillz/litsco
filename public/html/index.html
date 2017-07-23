@@ -13,7 +13,9 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.css" media="screen,projection" />
     <link rel="stylesheet" href="/css/style.css">
-    <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Oswald');</style>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Oswald');
+    </style>
 </head>
 
 <body ng-controller="controller_index">
@@ -28,7 +30,7 @@
                     <!-- START: Navbar MAIN menu -->
                     <ul class="right hide-on-med-and-down nav-list" id="nav-bar">
                         <li class="link">
-                            <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link" ui-sref="streamline_panels">STREAMLINE METAL PANELS</a>
+                            <a data-activates="streamline-panel-dropdown" class="blue-text text-darken-4 product-link" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">STREAMLINE METAL PANELS</a>
                             <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
@@ -53,7 +55,7 @@
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link">STREAMLINE METAL FLASHING</a>
+                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link">METAL FLASHING</a>
                             <div id="streamline-flash-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
@@ -107,92 +109,66 @@
                         </li>
                         <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down" id="log-in-navbar">Log In</a>
                         </li>
-                        <li data-activates="med-nav-dropdown" class="extra-nav" id="med-nav-hamburger"><a href="#" data-activates="med-nav-dropdown" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4" id=""><i class="material-icons" id="view_module-icon">view_module</i></a>
-                            <div id="med-nav-dropdown" class="dropdown-content dropdown-full full">
-                                <div class="container dropdown-container flex-row-around-center">
-                                    <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'about' })" class="product-link">ABOUT US</a>
-                                    </div>
-                                    <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'portfolio' })" class="product-link">PORTFOLIO</a>
-                                    </div>
-                                    <div class="hide-on-med-lrg-and-up col sm12 m3 text-center dropdown-item">
-                                        <a href="https://accounts.litsco.com/signon.php" class="product-link">LOG IN</a>
-                                    </div>
-                                    <div class="col sm12 m3 text-center dropdown-item">
-                                        <a href="#" class="product-link">E-STORE</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
                         </li>
                     </ul>
                     <!-- END: Navbar MAIN menu -->
-
-                    
                 </div>
             </div>
         </nav>
     </div>
     <!-- START: Navbar menu mobile -->
-                    <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
-                        <li class="mobile-nav-logo">
-                            <a href="/" class="side-nav-logo" id="side-logo"><img src="/img/logo/litsco_logo_mobile.svg" class="center" alt=""></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian">STREAMLINE METAL PANELS</div>
-                            <div class="collection collapsible-body mobile-nav-link-body">
-                                <a ui-sref="product({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
-                                <a ui-sref="product({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
-                                <a ui-sref="product({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
-                                <a ui-sref="product({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
-                                <a ui-sref="product({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
-                                <a ui-sref="product({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
-                            </div>
-                        </li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian">STREAMLINE METAL FLASHING</div>
-                            <div class="collection collapsible-body mobile-nav-link-body">
-                                <a ui-sref="product({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
-                                <a ui-sref="product({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
-                                <a ui-sref="product({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
-                                <a ui-sref="product({ id: '2piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
-                                <a ui-sref="product({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
-                                <a ui-sref="product({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
-                                <a ui-sref="product({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
-                                <a ui-sref="product({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a>
-                            </div>
-                        </li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian">BUILDING ENVELOPE</div>
-                            <div class="collection collapsible-body mobile-nav-link-body">
-                                <a ui-sref="product({ id: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
-                                <a ui-sref="product({ id: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                                <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Manufactured Metal Panels</a>
-                                <a ui-sref="product({ id: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
-                                <a ui-sref="product({ id: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
-                            </div>
-                        </li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian">ABOUT US</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian">PORTFOLIO</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li class="product-link">
-                            <div class="collapsible-header mobile-accordian active">CONTACT US</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <div class="mobile-nav-link-btns flex-row-around-center">
-                            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
-                            </li>
-                            <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
-                            </li>
-                        </div>
-                    </ul>
-                    <!-- END: Navbar menu mobile -->
+    <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
+        <li class="mobile-nav-logo">
+            <a href="/" class="side-nav-logo" id="side-logo"><img src="/img/logo/litsco_logo_mobile.svg" class="center" alt=""></a>
+        </li>
+        <li class="divider"></li>
+        <li class="product-link">
+            <div class="collapsible-header mobile-accordian">STREAMLINE METAL PANELS</div>
+            <div class="collection collapsible-body mobile-nav-link-body">
+                <a ui-sref="product({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
+                <a ui-sref="product({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
+                <a ui-sref="product({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
+                <a ui-sref="product({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
+                <a ui-sref="product({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
+                <a ui-sref="product({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
+            </div>
+        </li>
+        <li class="product-link">
+            <div class="collapsible-header mobile-accordian">METAL FLASHING</div>
+            <div class="collection collapsible-body mobile-nav-link-body">
+                <a ui-sref="product({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
+                <a ui-sref="product({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
+                <a ui-sref="product({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
+                <a ui-sref="product({ id: '2piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
+                <a ui-sref="product({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
+                <a ui-sref="product({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
+                <a ui-sref="product({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
+                <a ui-sref="product({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a>
+            </div>
+        </li>
+        <li class="product-link">
+            <div class="collapsible-header mobile-accordian">BUILDING ENVELOPE</div>
+            <div class="collection collapsible-body mobile-nav-link-body">
+                <a ui-sref="product({ id: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                <a ui-sref="product({ id: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Manufactured Metal Panels</a>
+                <a ui-sref="product({ id: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
+                <a ui-sref="product({ id: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
+            </div>
+        </li>
+        <li class="product-link">
+            <div class="collapsible-header mobile-accordian active">CONTACT US</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <div class="mobile-nav-link-btns flex-row-around-center">
+            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
+            </li>
+            <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
+            </li>
+        </div>
+    </ul>
+    <!-- END: Navbar menu mobile -->
     <!-- PAGE VIEW CONTENT BELOW-->
     <ui-view></ui-view>
     <!-- FOOTER CONTENT BELOW-->
@@ -205,12 +181,11 @@
                         <br>76-11 88th St.
                         <br>Glendale, NY 11385</p>
                     <div class="flex-center" id="footer_tel">
-                      <ul>
-                          <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></li>
-                          <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
-                      </ul>
-                      
-                      </p>
+                        <ul>
+                            <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></li>
+                            <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                        </ul>
+                        </p>
                     </div>
                     <p class="grey-text text-lighten-4"><strong>Hours:</strong>
                         <br>M - F: 7am - 5pm</p>
@@ -242,32 +217,26 @@
             </div>
         </div>
     </footer>
-    <!--Imports-->
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
-
-    <!-- General scripts -->
-    <script src="/scripts/scripts.js"></script>
-    <!-- Angular Imports -->
-    <script src="/node_modules/angular/angular.js"></script>
-    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-
-    <script src="/node_modules/angular-resource/angular-resource.js"></script>
-
-    <script src="/node_modules/ngmap/build/scripts/ng-map.js"></script>
-
-    <!-- Local AngularJS Scripts -->
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/app_routes.js"></script>
-    <!-- Angular Factories -->
-    <script src="/scripts/factory_litsco.js"></script>
-    <!-- Angular Controllers -->
-    <script src="/scripts/controller_index.js"></script>
-    <script src="/scripts/controller_home.js"></script>
-    <script src="/scripts/controller_prods.js"></script>
-    <script src="/scripts/controller_panels.js"></script>
-
 </body>
+<!--Imports-->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
+<!-- General scripts -->
+<script src="/scripts/scripts.js"></script>
+<!-- Angular Imports -->
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/node_modules/ngmap/build/scripts/ng-map.js"></script>
+<!-- Local AngularJS Scripts -->
+<script src="/scripts/app.js"></script>
+<script src="/scripts/app_routes.js"></script>
+<!-- Angular Factories -->
+<script src="/scripts/factory_litsco.js"></script>
+<!-- Angular Controllers -->
+<script src="/scripts/controller_index.js"></script>
+<script src="/scripts/controller_home.js"></script>
+<script src="/scripts/controller_prods.js"></script>
+<script src="/scripts/controller_panels.js"></script>
 
 </html>

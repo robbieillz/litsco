@@ -20,20 +20,5 @@ angular.module('app_litsco')
 			$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM";
 	  	});
 
-	  	// //other routes
-	  	// var allData = factory_litsco;
-	  	// var cat = 1;
-	  	// $scope.streamlinePanelList = []
-
-	  	// function catId(cat) {
-	  	//     var prodIndex = allData.map(function(obj) {
-	  	//         $scope.streamlinePanelList.push(obj);
-	  	//     }).indexOf(cat);
-	  	// }
-	  	// catId(cat);
-	  	
-	  	// if(!$scope.streamlinePanelList){
-	  	// 	$state.go('home');
-	  	// }
 }]);
 
