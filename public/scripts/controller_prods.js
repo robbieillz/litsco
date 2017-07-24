@@ -17,61 +17,66 @@ angular.module('app_litsco')
         //     $state.go('home');
         // }
 
-        // if(angular.isDefined($scope.productIdObj)) {
-            // FEATURES COLUMN CALCULATION
-            $scope.columns = [];
-            $scope.columnCount = 2;
+        // FEATURES COLUMN CALCULATION
+        $scope.columns = [];
+        $scope.columnCount = 2;
 
-            function calculateColumns() {
-                var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
-                for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
-                    var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
-                    $scope.columns.push(col);
-                }
+        function calculateColumns() {
+            var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
+            for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
+                var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
+                $scope.columns.push(col);
             }
-            calculateColumns();
+        }
+        calculateColumns();
 
-            // COLORS ROW CALCULATION
-            $scope.columns = [];
-            $scope.columnCount = 2;
+        // COLORS ROW CALCULATION
+        $scope.columns = [];
+        $scope.columnCount = 2;
 
-            function calculateRows() {
-                var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
-                for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
-                    var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
-                    $scope.columns.push(col);
-                }
+        function calculateRows() {
+            var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
+            for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
+                var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
+                $scope.columns.push(col);
             }
-            calculateRows();
+        }
+        calculateRows();
 
-            $scope.hoverColor = ' ';
-            $scope.hoverColorText = function(color) {            
-                if (color) {
-                    $scope.hoverColor = color;
-                    updateSvgFill(this.hex);
-                } else {
-                    $scope.hoverColor = ' ';
-                }
-            };
-
-            function updateSvgFill(hex) {    
-                var paths = $('.hover_color_change').attr('fill', hex);
+        $scope.hoverColor = ' ';
+        $scope.hoverColorText = function(color) {
+            if (color) {
+                $scope.hoverColor = color;
+                updateSvgFill(this.hex);
+            } else {
+                $scope.hoverColor = ' ';
             }
+        };
 
-            $scope.currentTab = function(tab) {
-                if (tab === 1) {
-                    $scope.current_tab = 1;
-                } else if (tab === 2) {
-                    $scope.current_tab = 2;
-                }
+        function updateSvgFill(hex) {
+            var paths = $('.hover_color_change').attr('fill', hex);
+        }
+
+        $scope.currentTab = function(tab) {
+            if (tab === 1) {
+                $scope.current_tab = 1;
+            } else if (tab === 2) {
+                $scope.current_tab = 2;
             }
-        // }
+        }
 
-}]);
+        if ($scope.productIdObj.installVideo) {
+            $scope.installVideoCode = function(code) {
+                return $scope.code = code;
+            }
+        }
+
+
+    }]);
 
 angular.module('app_litsco')
     .filter('slice', function() {
         return function(arr, start, end) {
             return arr.slice(start, end);
-    };
-});
+        };
+    });

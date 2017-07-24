@@ -547,6 +547,14 @@ ng-map {
     transform: rotate(90deg);
 }
 
+.product-video.video-container {
+	margin: 32px 0;
+}
+
+.youtube-wrapper iframe {
+	margin-top: 64px;
+}
+
 /***** FOOTER *****/
 .footer-small-text {
 	font-size:12px;

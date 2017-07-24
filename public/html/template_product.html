@@ -22,13 +22,13 @@
                             <div ng-mouseover="hoverColorText(color)" ng-mouseleave="hoverColorText()" class="product-color-chip {{color}}" alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
                         </div>
                     </div>
-                        <p class="product-hover-color-text"> {{ hoverColor }} </p>
+                    <p class="product-hover-color-text"> {{ hoverColor }} </p>
                 </div>
             </div>
             <div class="row">
                 <div class="card grey lighten-4">
-                        <ul class="product-card-buttons flex-row-around-center">
-                            <li><span>Downloads:<span></li>
+                    <ul class="product-card-buttons flex-row-around-center">
+                        <li><span>Downloads:<span></li>
                             <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
                                 <p>Data Sheet</p>
                             </li>
@@ -76,6 +76,11 @@
                         <h5 class="product-tab-details-heading">{{ material }}</h5>
                         <p class="product-tab-details-description" ng-repeat="materials in types ">{{ materials }}</p>
                     </div>
+                </div>
+            </div>
+                <div ng-if="productIdObj.installVideo" class="row product-video video-container">
+                    <h4>Installation Guide Video</h4>
+                    <div my-youtube code="installVideoCode(productIdObj.installVideo)" class="youtube-wrapper"></div>
                 </div>
             </div>
     </section>
