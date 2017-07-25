@@ -10,14 +10,19 @@ angular.module('app_litsco')
                 controller: 'controller_home'
             })
             .state('product', {
-                url: '/streamline_panels/:id',
+                url: '/streamline_metal_panels/:id',
                 templateUrl: 'html/template_product.html',
                 controller: 'controller_prods'
             })
             .state('streamline_panels', {
                 url: '/:cat',
-                templateUrl: 'html/streamlinepanels.html',
+                templateUrl: 'html/template_productlist.html',
                 controller: 'controller_panels'
+            })
+            .state('contact', {
+                url: '/contact',
+                templateUrl: 'html/contact.html',
+                controller: 'controller_contact'
             })
 
         $locationProvider.html5Mode(true);
