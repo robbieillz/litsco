@@ -10,7 +10,7 @@ angular.module('app_litsco')
                 controller: 'controller_home'
             })
             .state('product', {
-                url: '/:id',
+                url: '/streamline_panels/:id',
                 templateUrl: 'html/template_product.html',
                 controller: 'controller_prods'
             })

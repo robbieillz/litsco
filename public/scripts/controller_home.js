@@ -36,4 +36,3 @@ angular.module('app_litsco')
 	  	// 	$state.go('home');
 	  	// }
 }]);
-
