@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row center">
                 <div class="col s12">
-                    <h2 class="product-name-heading">{{ productIdObj.productName }}</h2>
+                    <h2 class="product-name-heading oswald">{{ productIdObj.productName }}</h2>
                     <div class="divider"></div>
                     <h6 class="product-name-subhead">{{ productIdObj.subHeader }}</h6>
                 </div>
@@ -19,7 +19,7 @@
                 <div class="col s12 l4 product-button-card">
                     <div class="product-color-list" ng-init="calculateRows()">
                         <div ng-repeat="(color, hex) in productIdObj.colors" class="product-color-chip-container" style="margin: 10px;">
-                            <div ng-mouseover="hoverColorText(color)" ng-mouseleave="hoverColorText()" class="product-color-chip {{color}}" alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
+                            <div ng-mouseover="hoverColorText(color)" ng-mouseleave="hoverColorText()" class="z-depth-2 product-color-chip {{color}}" alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
                         </div>
                     </div>
                     <p class="product-hover-color-text"> {{ hoverColor }} </p>
@@ -28,21 +28,23 @@
             <div class="row">
                 <div class="card grey lighten-4">
                     <ul class="product-card-buttons flex-row-around-center">
-                        <li><p>Downloads:</p></li>
-                            <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
-                                <p>Data Sheet</p>
-                            </li>
-                            <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.quoteSheetLink }}"><i class="material-icons small">format_quote</i></a>
-                                <p>Quote Request</p>
-                            </li>
-                            <li class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href=""><i class="material-icons dp48">invert_colors</i></a>
-                                <p>Color Chart</p>
-                            </li>
-                            <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}"><i class="material-icons small">attach_file</i></a>
-                                <p>Spec Sheet</p>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <h5 class="download oswald">Downloads:</h5>
+                        </li>
+                        <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
+                            <p>Data Sheet</p>
+                        </li>
+                        <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.quoteSheetLink }}"><i class="material-icons small">format_quote</i></a>
+                            <p>Quote Request</p>
+                        </li>
+                        <li class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href=""><i class="material-icons dp48">invert_colors</i></a>
+                            <p>Color Chart</p>
+                        </li>
+                        <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}"><i class="material-icons small">attach_file</i></a>
+                            <p>Spec Sheet</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="row">
                 <p class="product-overview"> {{ productIdObj.overview }}</p>
@@ -67,7 +69,7 @@
                 </div>
                 <div ng-show="current_tab === 1" id="tab_1" class="product-tab-details col s12">
                     <div ng-repeat="(install, description) in productIdObj.installation">
-                        <h5 class="product-tab-details-heading"> {{ install }}:</h5> 
+                        <h5 class="product-tab-details-heading"> {{ install }}:</h5>
                         <p class="product-tab-details-description">{{ description }}</p>
                     </div>
                 </div>
@@ -78,10 +80,22 @@
                     </div>
                 </div>
             </div>
-                <div ng-if="productIdObj.installVideo" class="row product-video video-container">
-                    <h4>Installation Guide Video</h4>
-                    <div my-youtube code="installVideoCode(productIdObj.installVideo)" class="youtube-wrapper"></div>
-                </div>
+            <div ng-if="productIdObj.installVideo" class="row product-video video-container">
+                <h4>Installation Guide Video</h4>
+                <div my-youtube code="installVideoCode(productIdObj.installVideo)" class="youtube-wrapper"></div>
             </div>
+            <!-- <div ng-if="productIdObj.portfolio" class="row portfolio-container">
+                <div class="responsive-img">
+                    <img src="" alt="" class="materialboxed">
+                </div>
+                <ul class="collection">
+                    <li class="col s2 collection-item gallery-thumbnail" ng-repeat="photo in productIdObj.portfolio">
+                        <img class="portfolio-thumbail-image" ng-src="/img/portfolio/portfolio_{{ photo }}.jpg">
+                    {{photo}}
+                    </li>
+                    
+                </ul>
+            </div> -->
+        </div>
     </section>
 </main>

@@ -57,7 +57,9 @@ angular.module('app_litsco')
                 "jumboImg": "img/jumbo_cr_full.jpg",
                 "detailImg": "http://www.litsco.com/images/streamline_alt.gif",
                 "dataSheetLink": "http://www.litsco.com/assets/streamline_classic_cr.pdf",
-                "quoteSheetLink": "http://www.litsco.com/assets/print_approval_streamline.pdf"
+                "quoteSheetLink": "http://www.litsco.com/assets/print_approval_streamline.pdf",
+                "portfolio": ['classic_cr_0', 'classic_cr_1', 'classic_cr_2', 'classic_cr_4', 'classic_cr_5'
+                ]
             },
             {
                 "id": "omniwall_md",
@@ -430,6 +432,48 @@ angular.module('app_litsco')
                 "dataSheetLink": "http://litsco.com/assets/flashdown_fascia.pdf",
                 "specPageLink": "http://litsco.com/assets/section-077120-streamline-flashdown-fascia2.docx",
                 "installVideo": "1GMUaw2bUZ0"
+            }, {
+                "id": "mortartight_thruwall",
+                "cat": 2,
+                "productName": "Mortartight Thruwall",
+                "subHeader": "3-Way Keyed/Sawtooth, Masonry Thru-Wall and Cap Flashing",
+                "overview": "LITSCO'S  Mortartight is a metal counterflashing with optional 2-piece receiver and base flashing insert.  This style is very useful when masonry wall construction and roof installation occur at different times.  Saw-tooth patterned metal with interlocking side laps cuts off moisture that can seep into masonry construction.  For smooth thru-wall receiver, please visit our Lit-Lok page.",
+                "features": [
+                    "Provides 3-way mechanical bond in all directions in the mortar setting bed and weep-hole drainage.",
+                    "Commonly found under coping stones, thru-wall flashing in masonry walls and elsewhere.",
+                    "Notched insert and receiver allows for smooth sidelap between pieces",
+                    "Caps are machine fabricated in 54\" lengths",
+                    "Longer 8\'-0\" (96\") lengths for the optional insert",
+                    "Automated manufacturing increases productivity"
+                ],
+                "installation": {
+                    "MortarTight": "Set in masonry mortar.  If 2 piece design, see insert below.",
+                    "Side Laps": "3” as 2-piece receiver or 1.5” for typical profile.",
+                    "Insert": "Offset joints from receiver, insert to maximum depth as metal allows.",
+                    "Miters": "Standard corner units are pre-fabricated welded units."
+                },
+                "materials": {
+                    "Copper": [
+                        "16oz / 20oz, Cold Rolled",
+                        "16oz / 20oz, Lead Coated",
+                        "16oz / 20oz, Freedom Gray",
+                    ],
+                    "Stainless Steel": [
+                        ".018\" (26GA), Type 304 #2D",
+                        "26GA, Type 316 #2B",
+                    ]
+                },
+                "colors": {
+                    "Copper": "#af6818",
+                    "Freedom Gray": "#646566",
+                    "Lead Coated": "#66727a",
+                    "Stainless Steel": "#c5c4c4"
+                },
+                "illustration": "mortartight",
+                "jumboImg": "",
+                "detailImg": "http://litsco.com/images/mortar_tight_allt.gif",
+                "quoteSheetLink": "http://litsco.com/assets/print_approval_mortartight.pdf",
+                "dataSheetLink": "http://litsco.com/assets/mortartight_flashing.pdf",
             }
         ]
 

@@ -4,15 +4,13 @@ angular.module('app_litsco')
  	  	var allData = factory_litsco;
 	  	var cat = $stateParams.cat;
 	  	var catInt = cat === 'streamline_metal_panels' ? 1 : 2;
-	  	$scope.streamlinePanelList = [];
+	  	$scope.productList = [];
+	  	$scope.productHeader = cat === 'streamline_metal_panels' ? 'Streamline Metal Panels' : 'Metal Flashing';
 
 	  	function catId(catInt) {
 	  	    var prodIndex = allData.map(function(obj) {
-	  	        $scope.streamlinePanelList.push(obj);
+	  	        $scope.productList.push(obj);
 	  	    }).indexOf(catInt);
 	  	}
 	  	catId(catInt);
-	  	// if($scope.streamlinePanelList.length === 0){
-	  	// 	$state.go('home');
-	  	// }
 }]);
