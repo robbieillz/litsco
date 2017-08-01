@@ -6,16 +6,13 @@ angular.module('app_litsco')
         $scope.current_tab = 1;
 
         function prodId(id) {
-            var prodIndex = allData.map(function(obj) {
-                return obj.id;
-            }).indexOf(id);
-            $scope.productIdObj = allData[prodIndex];
+            allData.filter(function(obj) {
+                if (obj.id === id) {
+                    $scope.productIdObj = obj
+                }
+            })
         }
         prodId(id);
-
-        // if (!$scope.productIdObj) {
-        //     $state.go('home');
-        // }
 
         // FEATURES COLUMN CALCULATION
         $scope.columns = [];

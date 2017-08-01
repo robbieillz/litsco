@@ -543,6 +543,11 @@ angular.module('app_litsco')
                 "detailImg": "http://litsco.com/images/lead_tee.gif",
                 "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
                 "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
+            }, {
+                "id": "roofing_supplies",
+                "cat": 3,
+                "vendorName": "Johns Manville",
+                "vendorLogo": "jm.png"
             }
         ]
 

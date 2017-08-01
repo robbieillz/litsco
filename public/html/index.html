@@ -34,75 +34,75 @@
                             <div id="streamline-panel-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'classic_cr' })" class="product-link">Classic CR</a>
+                                        <a ui-sref="product_streamline({ id: 'classic_cr' })" class="product-link">Classic CR</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'omniwall_md' })" class="product-link">Omniwall MD</a>
+                                        <a ui-sref="product_streamline({ id: 'omniwall_md' })" class="product-link">Omniwall MD</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'omniwall_cl' })" class="product-link">Omniwall CL</a>
+                                        <a ui-sref="product_streamline({ id: 'omniwall_cl' })" class="product-link">Omniwall CL</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'flatwall_sm' })" class="product-link">Flatwall SM</a>
+                                        <a ui-sref="product_streamline({ id: 'flatwall_sm' })" class="product-link">Flatwall SM</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'flushwall_tg' })" class="product-link">Flushwall TG</a>
+                                        <a ui-sref="product_streamline({ id: 'flushwall_tg' })" class="product-link">Flushwall TG</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'standing_sm' })" class="product-link">Standing SM</a>
+                                        <a ui-sref="product_streamline({ id: 'standing_sm' })" class="product-link">Standing SM</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link">METAL FLASHING</a>
+                            <a data-activates="streamline-flash-dropdown" class="blue-text text-darken-4 product-link" ui-sref="streamline_panels({ cat: 'metal_flashing' })">METAL FLASHING</a>
                             <div id="streamline-flash-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'locktight_coping' })" class="product-link">Locktight Coping</a>
+                                        <a ui-sref="product_flashing({ id: 'locktight_coping' })" class="product-link">Locktight Coping</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'flashdown_fascia' })" class="product-link">Flashdown Fascia</a>
+                                        <a ui-sref="product_flashing({ id: 'flashdown_fascia' })" class="product-link">Flashdown Fascia</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'mortartight_thruwall' })" class="product-link">Mortartight</a>
+                                        <a ui-sref="product_flashing({ id: 'mortartight_thruwall' })" class="product-link">Mortartight</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: '2-piece_litlok' })" class="product-link">2-Piece Lit-Lok</a>
+                                        <a ui-sref="product_flashing({ id: '2-piece_litlok' })" class="product-link">2-Piece Lit-Lok</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'lead_tees' })" class="product-link">Lead Tees</a>
+                                        <a ui-sref="product_flashing({ id: 'lead_tees' })" class="product-link">Lead Tees</a>
                                     </div>
                                     <!-- <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'box_gutters' })" class="product-link">Gutters</a>
+                                        <a ui-sref="product_flashing({ id: 'box_gutters' })" class="product-link">Gutters</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'louvers' })" class="product-link">Louvers</a>
+                                        <a ui-sref="product_flashing({ id: 'louvers' })" class="product-link">Louvers</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'nyc_skylights' })" class="product-link">Skylights</a>
+                                        <a ui-sref="product_flashing({ id: 'nyc_skylights' })" class="product-link">Skylights</a>
                                     </div> -->
                                 </div>
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link">BUILDING ENVELOPE</a>
+                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link">BUILDING SUPPLIES</a>
                             <div id="building-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'roofing_supplies' })" class="product-link">Roofing</a>
+                                        <a ui-sref="supplies({ vendorType: 'roofing' })" class="product-link">Roofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'waterproofing_supplies' })" class="product-link">Waterproofing</a>
+                                        <a ui-sref="supplies({ vendorType: 'waterproofing_supplies' })" class="product-link">Waterproofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="product-link">Manufactured Metal Panels</a>
+                                        <a ui-sref="supplies({ vendorType: 'manufactured_metal_panels' })" class="product-link">Architectural Metal Panels</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
+                                        <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="product({ id: 'division_7' })" class="product-link">Division 7 Specialties</a>
+                                        <a ui-sref="supplies({ vendorType: 'division_7' })" class="product-link">Division 7 Specialties</a>
                                     </div>
                                 </div>
                             </div>
@@ -126,35 +126,35 @@
         <li class="product-link">
             <div class="collapsible-header mobile-accordian">STREAMLINE METAL PANELS</div>
             <div class="collection collapsible-body mobile-nav-link-body">
-                <a ui-sref="product({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
-                <a ui-sref="product({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
-                <a ui-sref="product({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
-                <a ui-sref="product({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
-                <a ui-sref="product({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
-                <a ui-sref="product({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
+                <a ui-sref="product_streamline({ id: 'classic_cr' })" class="collection-item mobile-nav-link-item">Classic CR</a>
+                <a ui-sref="product_streamline({ id: 'omniwall_md' })" class="collection-item mobile-nav-link-item">OmniWall MD</a>
+                <a ui-sref="product_streamline({ id: 'omniwall_cl' })" class="collection-item mobile-nav-link-item">OmniWall CL</a>
+                <a ui-sref="product_streamline({ id: 'flatwall_sm' })" class="collection-item mobile-nav-link-item">FlatWall SM</a>
+                <a ui-sref="product_streamline({ id: 'flushwall_tg' })" class="collection-item mobile-nav-link-item">FlushWall TG</a>
+                <a ui-sref="product_streamline({ id: 'standing_sm' })" class="collection-item mobile-nav-link-item">Standing SM</a>
             </div>
         </li>
         <li class="product-link">
             <div class="collapsible-header mobile-accordian">METAL FLASHING</div>
             <div class="collection collapsible-body mobile-nav-link-body">
-                <a ui-sref="product({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
-                <a ui-sref="product({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
-                <a ui-sref="product({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
-                <a ui-sref="product({ id: '2-piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
-                <a ui-sref="product({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
-<!--                 <a ui-sref="product({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
-                <a ui-sref="product({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
-                <a ui-sref="product({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a> -->
+                <a ui-sref="product_flashing({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
+                <a ui-sref="product_flashing({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
+                <a ui-sref="product_flashing({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
+                <a ui-sref="product_flashing({ id: '2-piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
+                <a ui-sref="product_flashing({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
+<!--                 <a ui-sref="product_flashing({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
+                <a ui-sref="product_flashing({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
+                <a ui-sref="product_flashing({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a> -->
             </div>
         </li>
         <li class="product-link">
-            <div class="collapsible-header mobile-accordian">BUILDING ENVELOPE</div>
+            <div class="collapsible-header mobile-accordian">BUILDING SUPPLIES</div>
             <div class="collection collapsible-body mobile-nav-link-body">
-                <a ui-sref="product({ id: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
-                <a ui-sref="product({ id: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                <a ui-sref="product({ id: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Manufactured Metal Panels</a>
-                <a ui-sref="product({ id: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
-                <a ui-sref="product({ id: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
+                <a ui-sref="supplies({ vendorType: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                <a ui-sref="supplies({ vendorType: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                <a ui-sref="supplies({ vendorType: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Architectural Panels</a>
+                <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
+                <a ui-sref="supplies({ vendorType: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
             </div>
         </li>
         <li class="product-link">
@@ -194,10 +194,10 @@
                     <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="blue-grey-text text-lighten-5" ui-sref="contact()">Contact Us</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Streamline Metal Panels</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a></li>
                         <li><a class="blue-grey-text text-lighten-5" href="#!">Metal Flashing</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Account Login</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Careers</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div class="col s4">
@@ -240,5 +240,6 @@
 <script src="/scripts/controller_prods.js"></script>
 <script src="/scripts/controller_productlist.js"></script>
 <script src="/scripts/controller_contact.js"></script>
+<script src="/scripts/controller_supplies.js"></script>
 
 </html>

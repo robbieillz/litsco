@@ -1,16 +1,28 @@
 angular.module('app_litsco')
-	.controller('controller_panels', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
+debugger
+        var allData = factory_litsco;
+        var cat = $stateParams.cat;
+        var catInt = getCategoryInteger(cat);
+        $scope.productList = [];
 
- 	  	var allData = factory_litsco;
-	  	var cat = $stateParams.cat;
-	  	var catInt = cat === 'streamline_metal_panels' ? 1 : 2;
-	  	$scope.productList = [];
-	  	$scope.productHeader = cat === 'streamline_metal_panels' ? 'Streamline Metal Panels' : 'Metal Flashing';
+        function catId(catInt) {
+            allData.filter(function(obj) {
+                if (obj.cat === catInt) {
+                    $scope.productList.push(obj);
+                }
+            });
+        }
+        catId(catInt);
 
-	  	function catId(catInt) {
-	  	    var prodIndex = allData.map(function(obj) {
-	  	        $scope.productList.push(obj);
-	  	    }).indexOf(catInt);
-	  	}
-	  	catId(catInt);
-}]);
+        function getCategoryInteger(cat) {
+			if (cat === 'streamline_metal_panels') {
+				$scope.productHeader = 'Streamline Metal Panels';
+				return 1;
+			} else if (cat === 'metal_flashing') {
+				$scope.productHeader = 'Metal Flashing';
+				return 2;
+			}
+
+        }
+    }]);

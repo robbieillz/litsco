@@ -573,11 +573,22 @@ ng-map {
     max-height: inherit;
 }
 
+.product-list-wrapper {
+	height: 350px;
+	/*max-height: 350px;*/
+	min-height: 350px;
+	margin:	15px 0;
+}
+
 .product-list-cards .card-image {
     max-height: 175px;
     min-height: 175px;
     height: 175px;
     overflow: hidden;
+}
+
+.product-list-cards .card-content {
+	min-height: 175px;
 }
 
 .product-list-fab.btn-floating {
