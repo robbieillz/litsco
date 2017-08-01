@@ -474,6 +474,75 @@ angular.module('app_litsco')
                 "detailImg": "http://litsco.com/images/mortar_tight_allt.gif",
                 "quoteSheetLink": "http://litsco.com/assets/print_approval_mortartight.pdf",
                 "dataSheetLink": "http://litsco.com/assets/mortartight_flashing.pdf",
+            }, {
+                "id": "2-piece_litlok",
+                "cat": 2,
+                "productName": "Lit-Lok Flashing",
+                "subHeader": "2 Piece, Smooth, Thru-Wall Masonry Flashing",
+                "overview": "LITSCO'S  LIT-LOK is a Metal counterflashing with separate masonry flashing receiver and base flashing insert.  This style is very useful when masonry wall construction and roof installation occur at different times.  For 3 way keyed/sawtooth mortar receiver, please visit our MortarTight page.",
+                "features": [
+                    "Insert locks in without additional fasteners installed after roof flashing to allow proper construction staging.",
+                    "Notched insert and receiver allows for smooth sidelap between pieces.",
+                    "Button punched insert locks in to receiver for strong bond.",
+                    "Insert can be removed for roof base flashing maintenance or repair.",
+                    "Standard 8\'-0\" (96\") lengths for the optional insert",
+                    "Receiver available in standard profiles: Thru-wall, Surface Mount, Panel Closure, Under-coping types."
+                ],
+                "installation": {
+                    "Receiver": "Set in masonry mortar.",
+                    "Insert": "Offset joints from receiver, insert to maximum depth as metal allows.",
+                    "Miters": "Standard corner units are pre-fabricated welded units."
+                },
+                "materials": {
+                    "Aluminum": [
+                        ".032\" / .040\", Mill Finish",
+                        ".032\" / .040\", Kynar Painted",
+                    ],
+                    "Copper": [
+                        "16oz / 20oz, Cold Rolled",
+                        "16oz / 20oz, Lead Coated",
+                        "16oz / 20oz, Freedom Gray",
+                    ],
+                    "Stainless Steel": [
+                        ".018\" (26GA), Type 304 #2D",
+                        "26GA, Type 316 #2B",
+                    ]
+                },
+                "colors": {
+                    "Copper": "#af6818",
+                    "Freedom Gray": "#646566",
+                    "Lead Coated": "#66727a",
+                    "Stainless Steel": "#c5c4c4"
+                },
+                "illustration": "litlok",
+                "jumboImg": "",
+                "detailImg": "http://litsco.com/images/litlok_alt.jpg",
+                "quoteSheetLink": "http://litsco.com/assets/print_approval_litlok.pdf",
+                "dataSheetLink": "http://litsco.com/assets/litlok_flashing.pdf",
+            }, {
+                "id": "lead_tees",
+                "cat": 2,
+                "productName": "Lead Tees",
+                "subHeader": "Extruded Joint Closure for Coping Stones",
+                "overview": "Closes joints between parapet cap stones permanently and maintains old-world landmark or any coping stone replacement projects.  The Lead Tee can be used in all coping stone joints.",
+                "features": [
+                    "Available in two sizes: 1-1/2\" & 7/8\" wide profiles.",
+                    "6'-0\" (72\") lengths."
+                ],
+                "installation": {
+                    "Sealant": "Ensure clean joint, then set in high performance Silicone sealant.",
+                    "Lead Tee": "Wrap around coping stone, cut to required length in field.",
+                },
+                "materials": {
+                    "Lead": [
+                        "High purity grade lead meets Federal Specification QQ-L-171 grade B"
+                    ]
+                },
+                "illustration": "lead_tee",
+                "jumboImg": "http://litsco.com/images/lead_tee_alt.gif",
+                "detailImg": "http://litsco.com/images/lead_tee.gif",
+                "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
+                "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
             }
         ]
 
