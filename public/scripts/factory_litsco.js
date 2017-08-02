@@ -547,17 +547,74 @@ angular.module('app_litsco')
                 "id": "roofing_supplies",
                 "cat": 3,
                 "vendorName": "Johns Manville",
-                "vendorLogo": "jm.png"
-            }
+                "vendorLogo": "jm.png",
+                "vendorUrl": "http://specjm.com/",
+                "subHeader": "Manufactures commercial insulation and commercial roofing systems",
+                "alt": "Johns Manville Roofing"
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Firestone",
+                "vendorLogo": "firestone.png",
+                "vendorUrl": "http://firestonebpco.com/",
+                "subHeader": "Manufactures commercial insulation and commercial roofing systems",
+                "alt": "Firestone Building Products"
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Soprema",
+                "vendorLogo": "soprema.png",
+                "vendorUrl": "http://soprema.us/",
+                "subHeader": "Innovative commercial roofing systems for the building envelope",
+                "alt": "Soprema Building Envelope"
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Georgia Pacific",
+                "vendorLogo": "gp_dens.png",
+                "vendorUrl": "http://www.buildgp.com/densdeck-roof-board-products",
+                "subHeader": "Gypsum Products for roofing applications",
+                "alt": "Georgia Pacific Dens Deck"
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Hunter Insulation",
+                "vendorLogo": "hunter.png",
+                "vendorUrl": "https://www.hunterpanels.com/",
+                "subHeader": "High quality roofing insulation"
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Laureco Waterproofing",
+                "vendorLogo": "laurenco.png",
+                "vendorUrl": "http://laurencowaterproofing.com/",
+                "subHeader": "The original monolithic waterproofing system"
+            }, , {
+                "id": "waterproofing",
+                "cat": 4,
+                "vendorName": "Laureco Waterproofing",
+                "vendorLogo": "laurenco.png",
+                "vendorUrl": "http://laurencowaterproofing.com/",
+                "subHeader": "The original monolithic waterproofing system"
+            }, {
+                "id": "waterproofing",
+                "cat": 4,
+                "vendorName": "Soprema",
+                "vendorLogo": "soprema.png",
+                "vendorUrl": "http://soprema.us/",
+                "subHeader": "Innovative commercial roofing systems for the building envelope",
+                "alt": "Soprema Building Envelope"
+            }, {
+                "id": "commercial_metal",
+                "cat": 5,
+                "vendorName": "Centria",
+                "vendorLogo": "centria.png",
+                "vendorUrl": "http://soprema.us/",
+                "subHeader": "Factory-foamed, insulated metal wall and roof panel systems for architectural and industrial applications",
+                "alt": "Centria metal panels"
+            },
         ]
 
         return allData
-        // {
-        // get:  function(id){
-        // 	var prodIndex = allData.map(function(obj) {
-        // 		return obj.id;
-        // 	}).indexOf(id);
-        // 	return allData[prodIndex]
-        // }
-        // }
+
     }]);

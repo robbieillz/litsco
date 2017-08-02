@@ -1,6 +1,6 @@
 angular.module('app_litsco')
     .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
-debugger
+
         var allData = factory_litsco;
         var cat = $stateParams.cat;
         var catInt = getCategoryInteger(cat);

@@ -13,13 +13,11 @@ main {
     flex: 1 0 auto;
 }
 
-
 #index-banner-card-text {
     font-family: 'Oswald', sans-serif;
     font-size: 2.5em;
     text-transform: uppercase;
 }
-
 
 /*MATERIALIZE OVERRIDES*/
 
@@ -455,7 +453,7 @@ ng-map {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     object-fit: cover;
     width: 100%;
-    height: 40vh;
+    height: 33vh;
 }
 
 .full-width-slider-divider {

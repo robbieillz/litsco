@@ -93,10 +93,10 @@
                                         <a ui-sref="supplies({ vendorType: 'roofing' })" class="product-link">Roofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'waterproofing_supplies' })" class="product-link">Waterproofing</a>
+                                        <a ui-sref="supplies({ vendorType: 'waterproofing' })" class="product-link">Waterproofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'manufactured_metal_panels' })" class="product-link">Architectural Metal Panels</a>
+                                        <a ui-sref="supplies({ vendorType: 'commercial_metal' })" class="product-link">Commercial Metal Panels</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
                                         <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
@@ -150,15 +150,15 @@
         <li class="product-link">
             <div class="collapsible-header mobile-accordian">BUILDING SUPPLIES</div>
             <div class="collection collapsible-body mobile-nav-link-body">
-                <a ui-sref="supplies({ vendorType: 'roofing_supplies' })" class="collection-item mobile-nav-link-item">Roofing</a>
-                <a ui-sref="supplies({ vendorType: 'waterproofing_supplies' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                <a ui-sref="supplies({ vendorType: 'manufactured_metal_panels' })" class="collection-item mobile-nav-link-item">Architectural Panels</a>
+                <a ui-sref="supplies({ vendorType: 'roofing' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                <a ui-sref="supplies({ vendorType: 'waterproofing' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                <a ui-sref="supplies({ vendorType: 'commercial_metal' })" class="collection-item mobile-nav-link-item">Commercial Metal Panels</a>
                 <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
                 <a ui-sref="supplies({ vendorType: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
             </div>
         </li>
         <li class="product-link">
-            <div class="collapsible-header mobile-accordian active">CONTACT US</div>
+            <div class="collapsible-header mobile-accordian active" ui-sref="contact" ui-sref="contact">CONTACT US</div>
             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
         <div class="mobile-nav-link-btns flex-row-around-center">
@@ -193,9 +193,9 @@
                 <div class="col s4">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="blue-grey-text text-lighten-5" ui-sref="contact()">Contact Us</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" ui-sref="contact">Contact Us</a></li>
                         <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Metal Flashing</a></li>
+                        <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'metal_flashing' })">Metal Flashing</a></li>
                         <li><a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a></li>
                         <li><a class="blue-grey-text text-lighten-5" href="#">Careers</a></li>
                     </ul>

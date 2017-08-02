@@ -30,12 +30,12 @@ angular.module('app_litsco')
                 controller: 'controller_productlist'
             })
             .state('contact', {
-                url: '/contact',
+                url: '/contact/',
                 templateUrl: 'html/contact.html',
                 controller: 'controller_contact'
             })
             .state('supplies', {
-                url: '/supplies/:vendorType',
+                url: '/:vendorType/',
                 templateUrl: 'html/template_supplies.html',
                 controller: 'controller_supplies'
             })

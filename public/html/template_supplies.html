@@ -5,18 +5,18 @@
             <div class="divider"></div>
         </div>
     </div>
-    <!-- <div class="container row">
-        <div class="col l4 m6 product-list-wrapper" ng-repeat="panels in productList">
+    <div class="container row">
+        <div class="col l3 m6 product-list-wrapper" ng-repeat="vendor in vendorList  | orderBy : 'vendorName'">
             <div class="card product-list-cards">
                 <div class="card-image">
-                    <img src="{{panels.detailImg}}">
+                    <img ng-src="/img/vendor_img/logo_{{ vendor.vendorLogo}}">
                 </div>
                 <div class="card-content">
-                    <a class="btn-floating product-list-fab btn-large halfway-fab waves-effect waves-light amber darken-3"><i class="material-icons">eject</i></a>
-                    <span class="card-title oswald">{{ panels.productName }}</span>
-                    <p>{{ panels.subHeader }}</p>
+                    <a class="btn-floating product-list-fab btn-large halfway-fab waves-effect waves-light amber darken-3" href="{{vendor.vendorUrl}}" target="_blank"><i class="material-icons">eject</i></a>
+                    <span class="card-title oswald">{{ vendor.vendorName }}</span>
+                    <p>{{ vendor.subHeader }}</p>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </main>
