@@ -544,7 +544,7 @@ angular.module('app_litsco')
                 "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
                 "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
             }, {
-                "id": "roofing_supplies",
+                "id": "roofing",
                 "cat": 3,
                 "vendorName": "Johns Manville",
                 "vendorLogo": "jm.png",
@@ -569,6 +569,14 @@ angular.module('app_litsco')
                 "alt": "Soprema Building Envelope"
             }, {
                 "id": "roofing",
+                "cat": 6,
+                "vendorName": "Soprema",
+                "vendorLogo": "soprema.png",
+                "vendorUrl": "http://soprema.us/",
+                "subHeader": "Innovative air vapor barriers building envelope",
+                "alt": "Soprema Building Envelope"
+            }, {
+                "id": "roofing",
                 "cat": 3,
                 "vendorName": "Georgia Pacific",
                 "vendorLogo": "gp_dens.png",
@@ -576,6 +584,14 @@ angular.module('app_litsco')
                 "subHeader": "Gypsum Products for roofing applications",
                 "alt": "Georgia Pacific Dens Deck"
             }, {
+                "id": "envelope",
+                "cat": 6,
+                "vendorName": "Georgia Pacific",
+                "vendorLogo": "gp_dens.png",
+                "vendorUrl": "http://www.buildgp.com/densdeck-roof-board-products",
+                "subHeader": "Gypsum Products for vertical exterior wall applications",
+                "alt": "Georgia Pacific Dens Glass"
+            },{
                 "id": "roofing",
                 "cat": 3,
                 "vendorName": "Hunter Insulation",
@@ -583,13 +599,44 @@ angular.module('app_litsco')
                 "vendorUrl": "https://www.hunterpanels.com/",
                 "subHeader": "High quality roofing insulation"
             }, {
+                "id": "envelope",
+                "cat": 6,
+                "vendorName": "Hunter XCI",
+                "vendorLogo": "hunter_xci.png",
+                "vendorUrl": "https://www.hunterpanels.com/",
+                "subHeader": "High quality insulation for vertical and below grade applications"
+            }, {
                 "id": "roofing",
                 "cat": 3,
                 "vendorName": "Laureco Waterproofing",
                 "vendorLogo": "laurenco.png",
                 "vendorUrl": "http://laurencowaterproofing.com/",
                 "subHeader": "The original monolithic waterproofing system"
-            }, , {
+            }, {
+                "id": "roofing",
+                "cat": 3,
+                "vendorName": "Carlisle CCW",
+                "vendorLogo": "ccw.png",
+                "vendorUrl": "http://www.carlisleccw.com/",
+                "subHeader": "Ideal systems for protected roof membranes",
+                "alt": "Carlisle Coatings and Waterproofing"
+            }, {
+                "id": "waterproofing",
+                "cat": 4,
+                "vendorName": "Carlisle CCW",
+                "vendorLogo": "ccw.png",
+                "vendorUrl": "http://www.carlisleccw.com/",
+                "subHeader": "Waterpoofing and Coatings for wide range of applications",
+                "alt": "Carlisle Coatings and Waterproofing"
+            }, {
+                "id": "envelope",
+                "cat": 6,
+                "vendorName": "Carlisle CCW",
+                "vendorLogo": "ccw.png",
+                "vendorUrl": "http://www.carlisleccw.com/",
+                "subHeader": "Air Vapor barriers and wateproofings for the vertical building envelope",
+                "alt": "Carlisle Coatings and Waterproofing"
+            }, {
                 "id": "waterproofing",
                 "cat": 4,
                 "vendorName": "Laureco Waterproofing",
@@ -602,8 +649,16 @@ angular.module('app_litsco')
                 "vendorName": "Soprema",
                 "vendorLogo": "soprema.png",
                 "vendorUrl": "http://soprema.us/",
-                "subHeader": "Innovative commercial roofing systems for the building envelope",
+                "subHeader": "Innovative commercial systems for the building envelope",
                 "alt": "Soprema Building Envelope"
+            }, {
+                "id": "division_7",
+                "cat": 7,
+                "vendorName": "Karnak",
+                "vendorLogo": "karnak.png",
+                "vendorUrl": "http://www.karnakcorp.com",
+                "subHeader": "Get text & link",
+                "alt": "Karnak Corp sealants"
             }, {
                 "id": "commercial_metal",
                 "cat": 5,
@@ -612,9 +667,71 @@ angular.module('app_litsco')
                 "vendorUrl": "http://soprema.us/",
                 "subHeader": "Factory-foamed, insulated metal wall and roof panel systems for architectural and industrial applications",
                 "alt": "Centria metal panels"
-            },
-        ]
+            }, {
+                "id": "commercial_metal",
+                "cat": 5,
+                "vendorName": "Fabral",
+                "vendorLogo": "fabral.png",
+                "vendorUrl": "http://www.fabral.com",
+                "subHeader": "get text",
+                "alt": "Fabral metal panels"
+            }, {
+                "id": "commercial_metal",
+                "cat": 5,
+                "vendorName": "Pac-Clad",
+                "vendorLogo": "pacclad.png",
+                "vendorUrl": "http://pac-clad.com",
+                "subHeader": "get text",
+                "alt": "Petersen Pac-Clad metal panels"
+            }, {
+                "id": "commercial_metal",
+                "cat": 5,
+                "vendorName": "ATAS",
+                "vendorLogo": "atas.png",
+                "vendorUrl": "http://atas.com",
+                "subHeader": "get text",
+                "alt": "ATAS metal panels"
+            }, {
+                "id": "flatsheets",
+                "cat": 8,
+                "vendorName": "Revere Copper",
+                "vendorLogo": "revere.png",
+                "vendorUrl": "http://www.reverecopper.com",
+                "subHeader": "get text",
+                "alt": "Revere Copper and Freedom Gray"
+            }, {
+                "id": "flatsheets",
+                "cat": 8,
+                "vendorName": "Rheinzink Zinc",
+                "vendorLogo": "rheinzink.png",
+                "vendorUrl": "http://www.rheinzink.com",
+                "subHeader": "get text",
+                "alt": "Rheinzink Zinc"
+            }, {
+                "id": "flatsheets",
+                "cat": 8,
+                "vendorName": "Firestone",
+                "vendorLogo": "firestone.png",
+                "vendorUrl": "http://firestonebpco.com/",
+                "subHeader": "LITSCO stocks Firestone Kynar painted aluminum and galvalume",
+                "alt": "Firestone metal"
+            }, {
+                "id": "flatsheets",
+                "cat": 8,
+                "vendorName": "Aluminum",
+                "vendorLogo": "aluminum.png",
+                "subHeader": "LITSCO stocks mill finish aluminum and baked enamel painted sheets in a wide range of thicknesses",
+                "alt": "aluminum flatsheets"
+            }, {
+                "id": "flatsheets",
+                "cat": 8,
+                "vendorName": "Galvanized Steel",
+                "vendorLogo": "galvanized.png",
+                "subHeader": "LITSCO stocks unpainted galvanized steel sheets",
+                "alt": "galvanized flatsheets"
+            }, 
+        ];
 
-        return allData
+        return allData;
 
     }]);

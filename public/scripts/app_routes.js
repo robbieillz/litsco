@@ -34,11 +34,21 @@ angular.module('app_litsco')
                 templateUrl: 'html/contact.html',
                 controller: 'controller_contact'
             })
-            .state('supplies', {
-                url: '/:vendorType/',
+            .state('supply_item', {
+                url: '/division_7_supplies/:vendorType/',
                 templateUrl: 'html/template_supplies.html',
                 controller: 'controller_supplies'
             })
+            .state('supplies', {
+                url: '/division_7_supplies/',
+                templateUrl: 'html/template_productlist.html',
+                controller: 'controller_supplies'
+            })
+            .state('about', {
+                url: '/about/',
+                templateUrl: 'html/about.html',
+                controller: 'controller_about'
+            });
 
         $locationProvider.html5Mode(true);
-    }])
+    }]);

@@ -11,10 +11,11 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.css" media="screen,projection"
+    />
     <link rel="stylesheet" href="/css/style.css">
     <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Oswald');
+        @import url('https://fonts.googleapis.com/css?family=Oswald');
     </style>
 </head>
 
@@ -86,28 +87,32 @@
                             </div>
                         </li>
                         <li class="link">
-                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link">BUILDING SUPPLIES</a>
+                            <a data-activates="building-dropdown" class="blue-text text-darken-4 product-link" ui-sref="supplies">DIVISION 7 SUPPLIES</a>
                             <div id="building-dropdown" class="dropdown-content dropdown-full full">
                                 <div class="container dropdown-container flex-row-around-center">
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'roofing' })" class="product-link">Roofing</a>
+                                        <a ui-sref="supply_item({ vendorType: 'roofing' })" class="product-link">Roofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'waterproofing' })" class="product-link">Waterproofing</a>
+                                        <a ui-sref="supply_item({ vendorType: 'waterproofing' })" class="product-link">Waterproofing</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'commercial_metal' })" class="product-link">Commercial Metal Panels</a>
+                                        <a ui-sref="supply_item({ vendorType: 'envelope' })" class="product-link">Building Envelope</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="product-link">Sheet Metal</a>
+                                        <a ui-sref="supply_item({ vendorType: 'commercial_metal' })" class="product-link">Commercial Metal Panels</a>
                                     </div>
                                     <div class="col sm12 m3 text-center dropdown-item">
-                                        <a ui-sref="supplies({ vendorType: 'division_7' })" class="product-link">Division 7 Specialties</a>
+                                        <a ui-sref="supply_item({ vendorType: 'flatsheets' })" class="product-link">Sheet Metal</a>
+                                    </div>
+                                    <div class="col sm12 m3 text-center dropdown-item">
+                                        <a ui-sref="supply_item({ vendorType: 'division_7' })" class="product-link">Division 7 Specialties</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down" id="log-in-navbar">Log In</a>
+                        <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down"
+                                id="log-in-navbar">Log In</a>
                         </li>
                         <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
                         </li>
@@ -142,19 +147,20 @@
                 <a ui-sref="product_flashing({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
                 <a ui-sref="product_flashing({ id: '2-piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
                 <a ui-sref="product_flashing({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
-<!--                 <a ui-sref="product_flashing({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
+                <!--                 <a ui-sref="product_flashing({ id: 'box_gutters' })" class="collection-item mobile-nav-link-item">Gutters</a>
                 <a ui-sref="product_flashing({ id: 'louvers' })" class="collection-item mobile-nav-link-item">Louvers</a>
                 <a ui-sref="product_flashing({ id: 'nyc_skylights' })" class="collection-item mobile-nav-link-item">Skylights</a> -->
             </div>
         </li>
         <li class="product-link">
-            <div class="collapsible-header mobile-accordian">BUILDING SUPPLIES</div>
+            <div class="collapsible-header mobile-accordian">DIVISION 7 SUPPLIES</div>
             <div class="collection collapsible-body mobile-nav-link-body">
-                <a ui-sref="supplies({ vendorType: 'roofing' })" class="collection-item mobile-nav-link-item">Roofing</a>
-                <a ui-sref="supplies({ vendorType: 'waterproofing' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                <a ui-sref="supplies({ vendorType: 'commercial_metal' })" class="collection-item mobile-nav-link-item">Commercial Metal Panels</a>
-                <a ui-sref="supplies({ vendorType: 'flatsheet_metal' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
-                <a ui-sref="supplies({ vendorType: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
+                <a ui-sref="supply_item({ vendorType: 'roofing' })" class="collection-item mobile-nav-link-item">Roofing</a>
+                <a ui-sref="supply_item({ vendorType: 'waterproofing' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
+                <a ui-sref="supply_item({ vendorType: 'envelope' })" class="product-link">Building Envelope</a>
+                <a ui-sref="supply_item({ vendorType: 'commercial_metal' })" class="collection-item mobile-nav-link-item">Commercial Metal Panels</a>
+                <a ui-sref="supply_item({ vendorType: 'flatsheets' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
+                <a ui-sref="supply_item({ vendorType: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a>
             </div>
         </li>
         <li class="product-link">
@@ -162,7 +168,8 @@
             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
         <div class="mobile-nav-link-btns flex-row-around-center">
-            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
+            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4"
+                    id="log-in-navbar">Log In</a>
             </li>
             <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
             </li>
@@ -175,45 +182,51 @@
     <footer class="page-footer blue-text text-darken-4">
         <div class="container">
             <div class="row">
-                <div class="col s4">
+                <div class="footer-section col s12 m6 l4">
                     <h5 class="white-text">LITSCO</h5>
-                    <p class="grey-text text-lighten-4"><strong>Contact Us:</strong>
-                        <br>76-11 88th St.
-                        <br>Glendale, NY 11385</p>
-                    <div class="flex-center" id="footer_tel">
+                    <div class="col s6 footer-col-contents">
                         <ul>
-                            <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a></li>
-                            <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                            <li class="blue-grey-text text-lighten-5">76-11 88th St. <br>Glendale, NY 11385</li>
+                            <li class="grey-text text-lighten-4">Hours:<br>M - F: 7am - 5pm</li>
                         </ul>
-                        </p>
                     </div>
-                    <p class="grey-text text-lighten-4"><strong>Hours:</strong>
-                        <br>M - F: 7am - 5pm</p>
+                    <div class="col s6 footer-col-contents">
+                        <div class="flex-center" id="footer_tel">
+                            <ul>
+                                <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4"
+                                        href="tel:718-846-0400">718-846-0400</a></li>
+                                <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col s4">
+                <div class="footer-section col s12 m6 l8">
                     <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="blue-grey-text text-lighten-5" ui-sref="contact">Contact Us</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'metal_flashing' })">Metal Flashing</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col s4">
-                    <h5 class="white-text">Product Data</h5>
-                    <ul>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 1</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 2</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 3</a></li>
-                        <li><a class="blue-grey-text text-lighten-5" href="#!">Link 4</a></li>
-                    </ul>
+                    <div class="col s6 footer-col-contents">
+                        <ul>
+                            <li><a class="blue-grey-text text-lighten-5" ui-sref="contact">Contact Us</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'metal_flashing' })">Metal Flashing</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s6 footer-col-contents">
+                        <ul>
+                            <li><a class="blue-grey-text text-lighten-5" ui-sref="about">About Us</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" href="#">Careers</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" href="#!">Download our Line Card</a></li>
+                            <li><a class="blue-grey-text text-lighten-5" href="#!">NEMEON member</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container footer-small-text">
-                <div class="left"><a href="#" class="grey-text text-lighten-2">© 2017 Long Island Tinsmith Supply Corp.</a><span> | </span><a href="#" class="grey-text text-lighten-2">Privacy Policy</a></div>
+                <div class="left"><a href="#" class="grey-text text-lighten-2">© 2017 Long Island Tinsmith Supply Corp.</a><span> | </span>
+                    <a href="#" class="grey-text text-lighten-2">Privacy Policy</a>
+                </div>
                 <div class="grey-text text-lighten-2 right">Site by: <a class="grey-text text-lighten-4" href="http://phillucks.me" target="_blank">phillucks.me</a></div>
             </div>
         </div>
@@ -241,5 +254,6 @@
 <script src="/scripts/controller_productlist.js"></script>
 <script src="/scripts/controller_contact.js"></script>
 <script src="/scripts/controller_supplies.js"></script>
+<script src="/scripts/controller_others.js"></script>
 
 </html>
