@@ -597,21 +597,24 @@ angular.module('app_litsco')
                 "vendorName": "Hunter Insulation",
                 "vendorLogo": "hunter.png",
                 "vendorUrl": "https://www.hunterpanels.com/",
-                "subHeader": "High quality roofing insulation"
+                "subHeader": "High quality and value added roofing insulation",
+                "alt": "Hunter Insulation"
             }, {
                 "id": "envelope",
                 "cat": 6,
                 "vendorName": "Hunter XCI",
                 "vendorLogo": "hunter_xci.png",
                 "vendorUrl": "https://www.hunterpanels.com/",
-                "subHeader": "High quality insulation for vertical and below grade applications"
+                "subHeader": "High quality insulation for vertical and below grade applications",
+                "alt": "Hunter XCI"
             }, {
                 "id": "roofing",
                 "cat": 3,
                 "vendorName": "Laureco Waterproofing",
                 "vendorLogo": "laurenco.png",
                 "vendorUrl": "http://laurencowaterproofing.com/",
-                "subHeader": "The original monolithic waterproofing system"
+                "subHeader": "The original monolithic waterproofing system",
+                "alt": "Laurenco Waterproofing"
             }, {
                 "id": "roofing",
                 "cat": 3,
@@ -656,15 +659,15 @@ angular.module('app_litsco')
                 "cat": 7,
                 "vendorName": "Karnak",
                 "vendorLogo": "karnak.png",
-                "vendorUrl": "http://www.karnakcorp.com",
-                "subHeader": "Get text & link",
+                "vendorUrl": "http://karnakcorp.com",
+                "subHeader": "Roofing products, Reflective Coatings, Roofing Cements",
                 "alt": "Karnak Corp sealants"
             }, {
                 "id": "commercial_metal",
                 "cat": 5,
                 "vendorName": "Centria",
                 "vendorLogo": "centria.png",
-                "vendorUrl": "http://soprema.us/",
+                "vendorUrl": "http://www.centriaperformance.com/",
                 "subHeader": "Factory-foamed, insulated metal wall and roof panel systems for architectural and industrial applications",
                 "alt": "Centria metal panels"
             }, {
@@ -673,39 +676,39 @@ angular.module('app_litsco')
                 "vendorName": "Fabral",
                 "vendorLogo": "fabral.png",
                 "vendorUrl": "http://www.fabral.com",
-                "subHeader": "get text",
+                "subHeader": "FABRAL provides industry leading metal roofing, metal siding and wall panel systems for all types of applications",
                 "alt": "Fabral metal panels"
             }, {
                 "id": "commercial_metal",
                 "cat": 5,
                 "vendorName": "Pac-Clad",
                 "vendorLogo": "pacclad.png",
-                "vendorUrl": "http://pac-clad.com",
-                "subHeader": "get text",
+                "vendorUrl": "https://www.pac-clad.com/",
+                "subHeader": "PAC-CLAD is a metal roofing panel and metal wall panel supplier to the architectural metal industry",
                 "alt": "Petersen Pac-Clad metal panels"
             }, {
                 "id": "commercial_metal",
                 "cat": 5,
                 "vendorName": "ATAS",
                 "vendorLogo": "atas.png",
-                "vendorUrl": "http://atas.com",
-                "subHeader": "get text",
+                "vendorUrl": "https://www.atas.com/",
+                "subHeader": "ATAS offers metal roofs, metal wall panels and energy-efficient building envelope technology for commercial and residential buildings",
                 "alt": "ATAS metal panels"
             }, {
                 "id": "flatsheets",
                 "cat": 8,
-                "vendorName": "Revere Copper",
+                "vendorName": " ",
                 "vendorLogo": "revere.png",
                 "vendorUrl": "http://www.reverecopper.com",
-                "subHeader": "get text",
+                "subHeader": "When the world needs architectural copper, the world turns to Revere Copper Products",
                 "alt": "Revere Copper and Freedom Gray"
             }, {
                 "id": "flatsheets",
                 "cat": 8,
                 "vendorName": "Rheinzink Zinc",
                 "vendorLogo": "rheinzink.png",
-                "vendorUrl": "http://www.rheinzink.com",
-                "subHeader": "get text",
+                "vendorUrl": "https://www.rheinzink.com/en/home/",
+                "subHeader": "For over 45 years the RHEINZINK Group has produced top-quality titanium zinc at its Datteln site offering different surface qualities",
                 "alt": "Rheinzink Zinc"
             }, {
                 "id": "flatsheets",
@@ -726,10 +729,53 @@ angular.module('app_litsco')
                 "id": "flatsheets",
                 "cat": 8,
                 "vendorName": "Galvanized Steel",
-                "vendorLogo": "galvanized.png",
+                "vendorLogo": "galvanized.jpg",
                 "subHeader": "LITSCO stocks unpainted galvanized steel sheets",
                 "alt": "galvanized flatsheets"
-            }, 
+            }, {
+                "id": "roofing",
+                "cat": 99,
+                "linkTo": 3,
+                "productName": "Roofing Supplies",
+                "detailImg": "",
+                "alt": "LITSCO supplies Roofing products"
+            }, {
+                "id": "waterproofing",
+                "cat": 99,
+                "linkTo": 4,
+                "productName": "Waterpoofing Supplies",
+                "detailImg": "",
+                "alt": "LITSCO supplies Waterproofing products"
+            }, {
+                "id": "commercial_metal",
+                "cat": 99,
+                "linkTo": 5,
+                "productName": "Commecial Metal Panels",
+                "detailImg": "",
+                "alt": "LITSCO supplies Commecial Metal panels"
+            }, {
+                "id": "envelope",
+                "cat": 99,
+                "linkTo": 6,
+                "productName": "Building Envelope",
+                "detailImg": "",
+                "alt": "LITSCO supplies Building Envelope products"
+            }, {
+                "id": "division_7",
+                "cat": 99,
+                "linkTo": 7,
+                "productName": "Division 7 Specialties",
+                "detailImg": "",
+                "alt": "LITSCO supplies Division 7 Specialties"
+            }, {
+                "id": "flatsheets",
+                "cat": 99,
+                "linkTo": 8,
+                "productName": "Flatsheet Metal",
+                "detailImg": "",
+                "alt": "LITSCO supplies Flatsheet metal"
+            },
+
         ];
 
         return allData;

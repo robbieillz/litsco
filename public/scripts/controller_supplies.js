@@ -2,7 +2,7 @@ angular.module('app_litsco')
 	.controller('controller_supplies', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
 
 		var allData = factory_litsco;
-        var cat = $stateParams.vendorType;
+		var cat = $stateParams.vendorType;
         var catInt = getCategoryInteger(cat);
         $scope.vendorList = [];
 
@@ -29,11 +29,13 @@ angular.module('app_litsco')
 				$scope.productHeader = 'Building Envelope';
 				return 6;
 			} else if (cat === 'division_7') {
-				$scope.productHeader = 'Division 7 Products';
+				$scope.productHeader = 'Division 7 Specialties';
 				return 7;
 			} else if (cat === 'flatsheets') {
 				$scope.productHeader = 'Flatsheet Metal';
 				return 8;
+			} else if (cat === 99) {
+				$scope.productHeader = 'Division 7 Building Products';
 			}
 		}
 

@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-content">
                     <a class="card-title card-link oswald" ui-sref="{{goToItemLink(product)}}({ id: product.id })">{{ product.productName }}</a>
-                    <p>{{ product.subHeader }}</p>
+                    <p ng-if=product.subHeader>{{ product.subHeader }}</p>
                 </div>
             </div>
         </div>

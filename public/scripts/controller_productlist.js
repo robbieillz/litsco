@@ -32,8 +32,6 @@ angular.module('app_litsco')
                 cat_name = 'product_streamline';
             } else if (product.cat === 2) {
                 cat_name = 'product_flashing';
-            } else {
-                cat_name = 'division_7_supplies';
             }
             
             return cat_name;
