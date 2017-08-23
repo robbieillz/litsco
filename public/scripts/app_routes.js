@@ -45,7 +45,7 @@ angular.module('app_litsco')
                 controller: 'controller_supplies'
             })
             .state('about', {
-                url: '/about',
+                url: '/about/',
                 templateUrl: 'html/about.html',
                 controller: 'controller_about'
             });
