@@ -1,16 +1,16 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
 
         var allData = factory_litsco;
         var id = $stateParams.id;
         $scope.current_tab = 1;
 
         function prodId(id) {
-            allData.filter(function(obj) {
+            allData.filter(function (obj) {
                 if (obj.id === id) {
-                    $scope.productIdObj = obj
+                    $scope.productIdObj = obj;
                 }
-            })
+            });
         }
         prodId(id);
 
@@ -41,7 +41,7 @@ angular.module('app_litsco')
         calculateRows();
 
         $scope.hoverColor = ' ';
-        $scope.hoverColorText = function(color) {
+        $scope.hoverColorText = function (color) {
             if (color) {
                 $scope.hoverColor = color;
                 updateSvgFill(this.hex);
@@ -54,26 +54,32 @@ angular.module('app_litsco')
             var paths = $('.hover_color_change').attr('fill', hex);
         }
 
-        $scope.currentTab = function(tab) {
+        $scope.currentTab = function (tab) {
             if (tab === 1) {
                 $scope.current_tab = 1;
             } else if (tab === 2) {
                 $scope.current_tab = 2;
             }
-        }
+        };
 
         if ($scope.productIdObj.installVideo) {
-            $scope.installVideoCode = function(code) {
+            $scope.installVideoCode = function (code) {
                 return $scope.code = code;
-            }
+            };
         }
 
-
+        $scope.test = function(){
+            console.log("test executed");
+       
+            if ($scope.productIdObj.portfolio) {
+                lightGallery(document.getElementById('lightgallery'));
+            }
+        }
     }]);
 
 angular.module('app_litsco')
-    .filter('slice', function() {
-        return function(arr, start, end) {
+    .filter('slice', function () {
+        return function (arr, start, end) {
             return arr.slice(start, end);
         };
     });

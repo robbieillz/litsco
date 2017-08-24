@@ -76,6 +76,11 @@
                     
                 </ul>
             </div> -->
+            <div id="lightgallery">
+                    <a ng-repeat="photo in productIdObj.portfolio" href="/img/portfolio/portfolio_{{ photo }}.jpg" on-finish-render="test()">
+                        <img src="http://via.placeholder.com/100x100">
+                    </a>
+                </div>
         </div>
     </section>
 </main>

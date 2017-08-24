@@ -9,6 +9,7 @@
     "express": "^4.14.1",
     "install": "^0.10.1",
     "jquery": "^2.2.4",
+    "lightgallery.js": "^1.0.1",
     "materialize-css": "^0.98.0",
     "ngmap": "^1.18.4",
     "npm": "^5.1.0",
