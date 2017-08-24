@@ -40,7 +40,7 @@ angular.module('app_litsco')
                 controller: 'controller_supplies'
             })
             .state('supplies', {
-                url: '/division_7_supplies',
+                url: '/:type',
                 templateUrl: 'html/template_supplylist.html',
                 controller: 'controller_supplylist'
             })
