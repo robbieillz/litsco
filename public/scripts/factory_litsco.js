@@ -735,6 +735,7 @@ angular.module('app_litsco')
             }, {
                 "id": "roofing",
                 "cat": 99,
+                "type": "division_7_supplies",
                 "linkTo": 3,
                 "productName": "Roofing Supplies",
                 "detailImg": "",
@@ -742,6 +743,7 @@ angular.module('app_litsco')
             }, {
                 "id": "waterproofing",
                 "cat": 99,
+                "type": "division_7_supplies",
                 "linkTo": 4,
                 "productName": "Waterpoofing Supplies",
                 "detailImg": "",
@@ -749,6 +751,7 @@ angular.module('app_litsco')
             }, {
                 "id": "commercial_metal",
                 "cat": 99,
+                "type": "division_7_supplies",
                 "linkTo": 5,
                 "productName": "Commecial Metal Panels",
                 "detailImg": "",
@@ -756,20 +759,16 @@ angular.module('app_litsco')
             }, {
                 "id": "envelope",
                 "cat": 99,
+                "type": "division_7_supplies",
                 "linkTo": 6,
                 "productName": "Building Envelope",
                 "detailImg": "",
                 "alt": "LITSCO supplies Building Envelope products"
-            }, {
-                "id": "division_7",
-                "cat": 99,
-                "linkTo": 7,
-                "productName": "Division 7 Specialties",
-                "detailImg": "",
-                "alt": "LITSCO supplies Division 7 Specialties"
-            }, {
+            },
+            {
                 "id": "flatsheets",
                 "cat": 99,
+                "type": "division_7_supplies",
                 "linkTo": 8,
                 "productName": "Flatsheet Metal",
                 "detailImg": "",
