@@ -67,14 +67,7 @@ angular.module('app_litsco')
                 return $scope.code = code;
             };
         }
-
-        $scope.test = function(){
-            console.log("test executed");
-       
-            if ($scope.productIdObj.portfolio) {
-                lightGallery(document.getElementById('lightgallery'));
-            }
-        }
+        
     }]);
 
 angular.module('app_litsco')

@@ -16,16 +16,4 @@ angular.module('app_litsco',[
         });
     }
   };
-})
-.directive('onFinishRender', function () {
-    return {
-        restrict: 'A',        
-        link: function (scope, element, attr) {
-            if (scope.$last === true) {
-                element.ready(function () {                    
-                    scope.test();
-                });
-            }
-        }
-    };
 });
