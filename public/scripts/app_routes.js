@@ -40,7 +40,10 @@ angular.module('app_litsco')
                 controller: 'controller_supplies'
             })
             .state('supplies', {
-                url: '/:type',
+                url: '/division_7_supplies/',
+                params : {
+                    type: 'division_7_supplies'
+                },
                 templateUrl: 'html/template_supplylist.html',
                 controller: 'controller_supplylist'
             })
@@ -48,6 +51,11 @@ angular.module('app_litsco')
                 url: '/about/',
                 templateUrl: 'html/about.html',
                 controller: 'controller_about'
+            })
+            .state('careers', {
+                url: '/careers/',
+                templateUrl: 'html/careers.html',
+                controller: 'controller_careers'
             });
 
         $locationProvider.html5Mode(true);
