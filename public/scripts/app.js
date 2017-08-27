@@ -16,4 +16,11 @@ angular.module('app_litsco',[
         });
     }
   };
+})
+.config(function(NgMapProvider) {
+  NgMapProvider.setDefaultOptions({
+    marker: {
+      optimized: false
+    }
+  });
 });

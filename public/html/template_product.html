@@ -75,7 +75,6 @@
 
                 <div class="card" ng-repeat="pictureItem in photoList">
                     <div class="card-image portfolio-item" ng-show="$index === activeImg">
-                        <!-- <div class="portfolio-left" ng-click="prevSlide()"></div> -->
                         <img class="portfolio-image" alt="{{ pictureItem.alt }}" ng-src="/img/portfolio/portfolio_{{ pictureItem.url }}.jpg">
                         <div class="">
                             <i class="material-icons dp48 portfolio-left-icon" ng-click="prevSlide()">chevron_left</i>
