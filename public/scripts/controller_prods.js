@@ -67,7 +67,26 @@ angular.module('app_litsco')
                 return $scope.code = code;
             };
         }
-        
+
+        if ($scope.productIdObj.portfolio) {
+            $scope.photoList = $scope.productIdObj.portfolio;
+        }
+        $scope.activeImg = 0;
+        $scope.nextSlide = function () {
+            if ($scope.activeImg !== $scope.photoList.length - 1) {
+                $scope.activeImg++;
+            }
+        };
+        $scope.prevSlide = function() {
+            if($scope.activeImg > 0) {
+                $scope.activeImg--;
+            }
+        };
+
+        $scope.modalImg = function() {
+            $('.materialboxed').materialbox();
+        };
+
     }]);
 
 angular.module('app_litsco')

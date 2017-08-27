@@ -630,18 +630,36 @@ ng-map {
     margin-top: 64px;
 }
 
-.collection-item.gallery-thumbnail {
-    padding: 0;
+.portfolio-left, .portfolio-right {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 4em;
+    display: flex;
 }
 
-.portfolio-container .collection {
-    border: none;
+.portfolio-left {
+    left: 0;
+    z-index: 100;
 }
 
-.portfolio-thumbail-image {
-    width: 100%;
+.portfolio-right {
+    right: 0;
 }
 
+.portfolio-left-icon, .portfolio-right-icon {
+    cursor: pointer;
+    font-size: 4em;
+    line-height: inherit;
+}
+
+.portfolio-right-icon {
+    float: right
+}
+
+.portfolio-image {
+    max-height: 700px;
+}
 
 /***** FOOTER *****/
 
