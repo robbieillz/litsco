@@ -9,10 +9,10 @@
         <div class="col l4 m6 product-list-wrapper" ng-repeat="vendor in vendorList">
             <div class="card product-list-cards">
                 <div class="card-image">
-                    <!-- <img src="{{vendor.detailImg}}" alt="{{vendor.productName}}"> -->
+                    <img ng-src="/img/vendor_img/supplies_{{vendor.detailImg}}" alt="{{vendor.productName}}">
                 </div>
                 <div class="card-content">
-                    <a class="card-title card-link oswald" ui-sref="supply_item({ vendorType: 'roofing' })">{{ vendor.productName }}</a>
+                    <a class="card-title card-link oswald" ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })">{{ vendor.productName }}</a>
                 </div>
             </div>
         </div>

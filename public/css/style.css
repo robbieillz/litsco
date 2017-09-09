@@ -343,7 +343,7 @@ i.point-right {
 }
 
 #index-how,
-#index-about {
+#index-about, #section-contact {
     /*background-color: #e0e0e0;*/
     background: #e0e0e0;
     /* For browsers that do not support gradients */
@@ -452,6 +452,11 @@ i.point-right {
 
 .map-directions-wrapper {
     max-height: 450px;
+}
+
+#directions-panel.directionsTrue {
+    margin-top: 8px;
+    max-height: 400px;
     overflow: scroll;
 }
 
@@ -682,6 +687,11 @@ map {
 
 .portfolio-image {
     max-height: 700px;
+}
+
+/***** CONTACT ****/
+.contact-form {
+
 }
 
 /***** FOOTER *****/

@@ -15,15 +15,15 @@ angular.module('app_litsco')
 		    $('.carousel.carousel-slider').carousel('next');
 		    setTimeout(autoplay, 6000);
 	    }
-
-		$('ul.tabs').tabs();
 		
 		$scope.showDirections = function(origin) {
+			$('#directions-panel').addClass('directionsTrue');
 			$scope.originTrue = true;
 			$scope.originAddress = origin;
 		};
 
 		$scope.hideDirections = function() {
+			$('#directions-panel').removeClass('directionsTrue');
 			$scope.originTrue = false;
 			$scope.originAddress = '';
 		};
