@@ -115,8 +115,6 @@
                         <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down"
                                 id="log-in-navbar">Log In</a>
                         </li>
-                        <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
-                        </li>
                     </ul>
                     <!-- END: Navbar MAIN menu -->
                 </div>
@@ -158,7 +156,7 @@
             <div class="collection collapsible-body mobile-nav-link-body">
                 <a ui-sref="supply_item({ vendorType: 'roofing' })" class="collection-item mobile-nav-link-item">Roofing</a>
                 <a ui-sref="supply_item({ vendorType: 'waterproofing' })" class="collection-item mobile-nav-link-item">Waterproofing</a>
-                <a ui-sref="supply_item({ vendorType: 'envelope' })" class="product-link">Building Envelope</a>
+                <a ui-sref="supply_item({ vendorType: 'envelope' })" class="collection-item">Building Envelope</a>
                 <a ui-sref="supply_item({ vendorType: 'commercial_metal' })" class="collection-item mobile-nav-link-item">Commercial Metal Panels</a>
                 <a ui-sref="supply_item({ vendorType: 'flatsheets' })" class="collection-item mobile-nav-link-item">Sheet Metal</a>
                 <!-- <a ui-sref="supply_item({ vendorType: 'division_7' })" class="collection-item mobile-nav-link-item">Division 7 Specialties</a> -->
@@ -171,8 +169,6 @@
         <div class="mobile-nav-link-btns flex-row-around-center">
             <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4"
                     id="log-in-navbar">Log In</a>
-            </li>
-            <li id="nav-button-estore"><a href="http://litsco.com/estore/" class="btn-floating btn-large waves-effect waves-light amber darken-3 grey-text text-darken-4"><i class="material-icons">shopping_cart</i></a>
             </li>
         </div>
     </ul>
@@ -236,7 +232,7 @@
 <!--Imports-->
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDJIjIX9488l2royVsdim2mbemLpsf5AvM"></script>
 <!-- General scripts -->
 <script src="/scripts/scripts.js"></script>
 <!-- Angular Imports -->

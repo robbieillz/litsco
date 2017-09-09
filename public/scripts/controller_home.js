@@ -22,4 +22,9 @@ angular.module('app_litsco')
 			$scope.originTrue = true;
 			$scope.originAddress = origin;
 		};
+
+		$scope.hideDirections = function() {
+			$scope.originTrue = false;
+			$scope.originAddress = '';
+		};
 }]);

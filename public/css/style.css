@@ -15,7 +15,7 @@ main {
 
 #index-banner-card-text {
     font-family: 'Oswald', sans-serif;
-    font-size: 2.5em;
+    font-size: 3em;
     text-transform: uppercase;
 }
 
@@ -291,6 +291,21 @@ a.collection-item.mobile-nav-link-item:last-child {
     border-radius: 2px 2px 0 0;
 }
 
+.card.main-category .card-image .btn-floating {
+    width: 64px;
+    height: 64px;
+}
+
+.card.main-category .card-content {
+    padding-top: 32px;
+    height: auto;
+}
+
+.card.main-category .btn-floating i {
+    line-height: 64px;
+    font-size: 2.5em;
+}
+
 .card-bg-img {
     display: block;
     border-radius: 2px 2px 0 0;
@@ -342,25 +357,44 @@ i.point-right {
     /* Standard syntax */
 }
 
+.index-how-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 32px;
+}
+
 .index-how-header {
     margin: 0;
 }
 
-.wrapper-how-circle {
-    margin-top: 16px;
+.index-how-wrapper .wrapper-how-circle {
+    padding: 32px 0;
+    border-bottom: 2px solid #d1d1d1;
+    border-right: 2px solid #d1d1d1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.wrapper-how-circle .index-how-text{
+    padding: 0 32px;
+    font-size: 1.2em;
+}
+
+.wrapper-how-circle .btn-floating {
+    cursor: default;
 }
 
 .btn-large.how-circle {
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
     border-radius: 50%;
-    /* margin-top: 16px; */
 }
 
 .btn-large.how-circle i {
-    line-height: 150px;
-    font-size: 4rem;
+    line-height: 100px;
+    font-size: 2.5rem;
 }
 
 .index-how-collection,
@@ -373,7 +407,11 @@ i.point-right {
     color: green;
 }
 
-#index-more {
+#index-carousel .carousel {
+    max-height: 70vh;
+}
+
+#index-map {
     /*background-color: #e0e0e0;*/
     background: #e0e0e0;
     /* For browsers that do not support gradients */
@@ -385,34 +423,6 @@ i.point-right {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(#e0e0e0, #FFF);
     /* Standard syntax */
-}
-
-.estore i {
-    font-size: 35px;
-    height: 400px;
-}
-
-.estore-buttons {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: row wrap;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.estore-buttons .btn-large {
-    margin: 10px;
-    width: 200px;
-    flex-basis: auto;
-}
-
-.index-carousel-testimonial {
-    width: 400px !important;
 }
 
 #index-about-div-tabs {
@@ -436,7 +446,16 @@ i.point-right {
     margin: 0 40px;
 }
 
-ng-map {
+#map-wrapper {
+    max-height: 600px;
+}
+
+.map-directions-wrapper {
+    max-height: 450px;
+    overflow: scroll;
+}
+
+map {
     display: block;
     width: 100%;
     height: 500px;
@@ -686,10 +705,6 @@ ng-map {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .logo-img {
         width: 200px;
-    }
-
-    #nav-button-log-in {
-        display: none;
     }
 
     .product-link {
