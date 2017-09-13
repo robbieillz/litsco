@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
 var transporter = nodemailer.createTransport({
+    pool: true,
     host: safeKey.emailHost,
     port: safeKey.emailPort,
     secure: true,
@@ -40,9 +41,8 @@ app.get('/*', function (req, res, next) {
 // // routes ======================================================================
 app.use('/', apiRoutes);
 
-app.post('/api/contact', function (req, res) {
+app.post('/api/contact', function (req, res) {    
     var data = req.body;
-
     var mailOptions = {
         from: data.email,
         to: 'info@litsco.com',
@@ -56,7 +56,7 @@ app.post('/api/contact', function (req, res) {
             res.json({ error: 'Email not sent' });
         } else {
             console.log('Message sent: ' + info.response);
-            console.log('Data:' + data.contactName);
+            console.log('Data sent:' + data);
             res.json({ success: 'Email has been sent.' });
         }
     });
