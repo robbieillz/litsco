@@ -28,7 +28,7 @@ angular.module('app_litsco')
 			} else if (cat === 'envelope') {
 				$scope.productHeader = 'Building Envelope';
 				return 6;
-			} else if (cat === 'division_7') {
+			} else if (cat === 'division_7_specialties') {
 				$scope.productHeader = 'Division 7 Specialties';
 				return 7;
 			} else if (cat === 'flatsheets') {

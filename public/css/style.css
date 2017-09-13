@@ -11,6 +11,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    min-height: 100vh;
 }
 
 #index-banner-card-text {
@@ -133,7 +134,6 @@ nav {
 .navbar-fixed,
 .navbar-fixed nav {
     height: 90px;
-    background-color: none;
 }
 
 .nav-list {
@@ -508,6 +508,10 @@ map {
     text-transform: uppercase;
 }
 
+.product-subheader {
+    font-size: 2em;
+}
+
 .product-name-subhead,
 .product-overview,
 .product-features-list,
@@ -692,6 +696,27 @@ map {
 /***** CONTACT ****/
 .contact-form {
 
+}
+
+.about-heading {
+    font-size: 1.4em;
+    display: block;
+    min-height: 3em;
+    line-height: 3em;
+    padding: 0 1em;
+    background-color: #fff;
+    webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.about-heading i {
+    /* width: 2rem; */
+    font-size: inherit;
+    line-height: inherit;
+    display: block;
+    float: left;
+    text-align: center;
+    margin-right: 1em;
 }
 
 /***** FOOTER *****/

@@ -3,8 +3,21 @@
 // set up ======================================================================
 var express  		= require('express');
 var app      		= express();
-var port     		= 8080;
+var port     		= process.env.PORT || 8080;
 var apiRoutes 		= require('./app/routes.js');
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
+var fs = require('fs');
+var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
+
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: safeKey.emailUser + '@gmail.com',
+        pass: safeKey.emailPass
+    }
+});
+
 
 // configuration ===============================================================
 
@@ -25,7 +38,27 @@ app.all('/*', function(req, res, next) {
 // // routes ======================================================================
 app.use('/', apiRoutes);
 
-// app.use('/api/lib', apiRoutes) // Initialize routes to use
+app.post('/sendcontact', function (req, res) {
+    console.log('hi, inside POST of /api/sendcontact');
+    var data = req.body;
+
+    var mailOptions = {
+        from: data.email,
+        to: 'lucksp@gmail.com',
+        subject: '[LITSCO CONTACT FORM] Email sent by ' + data.name,
+        text: data.message
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+        console.log('Data:' + data.contactName);
+    });
+    res.json(data);
+});
+
 
 // launch ======================================================================
 app.listen(port);

@@ -732,6 +732,14 @@ angular.module('app_litsco')
             "subHeader": "Gypsum Products for roofing applications",
             "alt": "Georgia Pacific Dens Deck"
         }, {
+            "id": "roofing",
+            "cat": 3,
+            "vendorName": "USG Securock",
+            "vendorLogo": "securock.png",
+            "vendorUrl": "https://www.usg.com/content/usgcom/en/products-solutions/products/roofing/roof-boards/usg-securock-gypsum-fiber-roof-board.html",
+            "subHeader": "Gypsum fiber board for use in low-slope commercial roofing systems",
+            "alt": "USG Securock Brand Gypsum Fiber Roof Board"
+        }, {
             "id": "envelope",
             "cat": 6,
             "vendorName": "Georgia Pacific",
@@ -747,6 +755,14 @@ angular.module('app_litsco')
             "vendorUrl": "https://www.hunterpanels.com/",
             "subHeader": "High quality and value added roofing insulation",
             "alt": "Hunter Insulation"
+        }, {
+            "id": "roofing",
+            "cat": 3,
+            "vendorName": "OMG Olympic",
+            "vendorLogo": "omg.png",
+            "vendorUrl": "https://www.omgroofing.com/",
+            "subHeader": "North America’s first choice of commercial roof fastening products",
+            "alt": "OMG fasteners"
         }, {
             "id": "envelope",
             "cat": 6,
@@ -788,12 +804,45 @@ angular.module('app_litsco')
             "subHeader": "Air Vapor barriers and wateproofings for the vertical building envelope",
             "alt": "Carlisle Coatings and Waterproofing"
         }, {
+            "id": "envelope",
+            "cat": 6,
+            "vendorName": "OC Foamular",
+            "vendorLogo": "oc.png",
+            "vendorUrl": "https://www.owenscorning.com/insulation/commercial",
+            "subHeader": "Extruded polystyrene (XPS) rigid foam board insulation for a variety of applications",
+            "alt": "Owens Corning Foamular XPS insulation"
+        }, {
+            "id": "envelope",
+            "cat": 6,
+            "vendorName": "Pecora",
+            "vendorLogo": "pecora.png",
+            "vendorUrl": "http://www.pecora.com/",
+            "subHeader": "Pecora offers high quality silicone sealants, urethane sealants and more for all components of a building ",
+            "alt": "Pecora sealants"
+        }, {
+            "id": "envelope",
+            "cat": 6,
+            "vendorName": "Insulfoam",
+            "vendorLogo": "insulfoam.png",
+            "vendorUrl": "http://insulfoam.com/",
+            "subHeader": "Expanded polystyrene (EPS) rigid foam board insulation for a variety of applications",
+            "alt": "Insulfoam EPS insulation"
+        }, {
             "id": "waterproofing",
             "cat": 4,
             "vendorName": "Laureco Waterproofing",
             "vendorLogo": "laurenco.png",
             "vendorUrl": "http://laurencowaterproofing.com/",
-            "subHeader": "The original monolithic waterproofing system"
+            "subHeader": "The original monolithic waterproofing system",
+            "alt": "Laurenco Waterproofing"
+        }, {
+            "id": "waterproofing",
+            "cat": 4,
+            "vendorName": "Willseal",
+            "vendorLogo": "willseal.png",
+            "vendorUrl": "https://willseal.com",
+            "subHeader": "Pre-compressed, state-of-the-art expansion joints",
+            "alt": "WillSeal expansion joints"
         }, {
             "id": "waterproofing",
             "cat": 4,
@@ -810,6 +859,70 @@ angular.module('app_litsco')
             "vendorUrl": "http://karnakcorp.com",
             "subHeader": "Roofing products, Reflective Coatings, Roofing Cements",
             "alt": "Karnak Corp sealants"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Hanover",
+            "vendorLogo": "hanover.png",
+            "vendorUrl": "https://www.hanoverpavers.com/",
+            "subHeader": "Hanover has been providing quality concrete unit paving products since 1971",
+            "alt": "Hanover roof pavers"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Babcock Davis",
+            "vendorLogo": "babcock.png",
+            "vendorUrl": "https://www.babcockdavis.com/",
+            "subHeader": "The industry's largest selection of commercial grade Access Doors and Panels",
+            "alt": "Babcock Davis hatches"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Bilco",
+            "vendorLogo": "bilco.png",
+            "vendorUrl": "http://www.bilco.com/",
+            "subHeader": "Bilco's products, including Roof Hatches and Smoke Vents, provide many years of trouble-free service",
+            "alt": "Bilco hatches and vents"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Roofblok",
+            "vendorLogo": "roofblok.gif",
+            "vendorUrl": "http://www.roofblok.com/",
+            "subHeader": "Designed for use with standard pedestal systems and drainage boards",
+            "alt": "Roofblok roof pavers"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Conproco",
+            "vendorLogo": "conproco.jpg",
+            "vendorUrl": "http://conproco.com/",
+            "subHeader": "Premium concrete and masonry products with field proven performance",
+            "alt": "Conproco concrete and stone repair"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "York Manufacturing",
+            "vendorLogo": "york.png",
+            "vendorUrl": "http://www.yorkmfg.com/",
+            "subHeader": "York Manufacturing produces a full line of moisture control products and systems",
+            "alt": "York manufacturing"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Sunnybrook",
+            "vendorLogo": "sunnybrook.png",
+            "vendorUrl": "http://www.sunnybrookpressedconcrete.com/",
+            "subHeader": "Architectural Pavers for Walkways, Plazas, Roofs, and more",
+            "alt": "Sunnybrook roof pavers"
+        }, {
+            "id": "division_7",
+            "cat": 7,
+            "vendorName": "Berger",
+            "vendorLogo": "berger.png",
+            "vendorUrl": "http://www.bergerbp.com/",
+            "subHeader": "Specializing in roof drainage systems, moisture protection, snow retention systems, and ventilation products",
+            "alt": "Berger Building Products"
         }, {
             "id": "commercial_metal",
             "cat": 5,
@@ -845,7 +958,7 @@ angular.module('app_litsco')
         }, {
             "id": "flatsheets",
             "cat": 8,
-            "vendorName": " ",
+            "vendorName": "Rever Copper",
             "vendorLogo": "revere.png",
             "vendorUrl": "http://www.reverecopper.com",
             "subHeader": "When the world needs architectural copper, the world turns to Revere Copper Products",
@@ -853,10 +966,26 @@ angular.module('app_litsco')
         }, {
             "id": "flatsheets",
             "cat": 8,
+            "vendorName": "Aurubis Copper",
+            "vendorLogo": "aurubis.png",
+            "vendorUrl": "https://www.aurubis.com/en",
+            "subHeader": "Aurubis' NORDIC copper provides unique factory-applied patina finish options",
+            "alt": "Aurubis copper"
+        }, {
+            "id": "flatsheets",
+            "cat": 8,
+            "vendorName": "Fabral",
+            "vendorLogo": "fabral.jpg",
+            "vendorUrl": "http://www.fabral.com/architectural/color-and-finishes/standard-architectural-colors/",
+            "subHeader": "Fabral's flatsheets colors are available in aluminum and galvalume",
+            "alt": "Fabral flatsheets"
+        }, {
+            "id": "flatsheets",
+            "cat": 8,
             "vendorName": "Rheinzink Zinc",
             "vendorLogo": "rheinzink.png",
             "vendorUrl": "https://www.rheinzink.com/en/home/",
-            "subHeader": "For over 45 years the RHEINZINK Group has produced top-quality titanium zinc at its Datteln site offering different surface qualities",
+            "subHeader": "RHEINZINK produces top-quality titanium zinc offering different surface qualities",
             "alt": "Rheinzink Zinc"
         }, {
             "id": "flatsheets",
@@ -912,8 +1041,15 @@ angular.module('app_litsco')
             "productName": "Building Envelope",
             "detailImg": "buildingenvelope.png",
             "alt": "LITSCO supplies Building Envelope products"
-        },
-        {
+        }, {
+            "id": "division_7_specialties",
+            "cat": 99,
+            "type": "division_7_specialties",
+            "linkTo": 7,
+            "productName": "Division 7 Specialties",
+            "detailImg": "d7specialties.jpg",
+            "alt": "LITSCO supplies Division 7 Specialty products"
+        }, {
             "id": "flatsheets",
             "cat": 99,
             "type": "division_7_supplies",

@@ -14,32 +14,32 @@
                 </div>
             </div>
             <div class="row">
-                <form class="col s12">
+                <form class="col s12" ng-submit="postMail(contactData)">
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text">
+                            <input id="icon_prefix" type="text" ng-model="contactData.name">
                             <label for="icon_prefix">Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">phone</i>
-                            <input id="icon_telephone" type="tel" class="validate">
+                            <input id="icon_telephone" type="tel" class="validate" ng-model="contactData.phone">
                             <label for="icon_telephone" data-error="Please enter a valid phone number">Telephone</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">email</i>
-                            <input id="icon_email" type="email" class="validate">
+                            <input id="icon_email" type="email" class="validate" ng-model="contactData.email">
                             <label for="icon_email" data-error="Please enter a valid Email address">Email</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">business</i>
-                            <input id="icon_business" type="tel">
+                            <input id="icon_business" type="tel" ng-model="contactData.company">
                             <label for="icon_business">Company</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="textarea1" class="materialize-textarea"  ng-model="contactData.message"></textarea>
                             <label for="textarea1">Tell us why you are contacting us</label>
                         </div>
                     </div>
