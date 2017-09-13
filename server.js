@@ -6,7 +6,6 @@ var app = express();
 var port = 9000;
 var apiRoutes = require('./app/routes.js');
 var nodemailer = require('nodemailer');
-var bodyParser = require('body-parser');
 var fs = require('fs');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
@@ -19,8 +18,6 @@ var transporter = nodemailer.createTransport({
 });
 
 // configuration ===============================================================
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(logger('dev'));
 // set up our express application
 app.use(express.static(__dirname + '/public/'));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
