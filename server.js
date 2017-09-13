@@ -11,9 +11,11 @@ var bodyParser = require('body-parser');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
 var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: safeKey.emailHost,
+    port: safeKey.emailPort,
+    secure: true,
     auth: {
-        user: safeKey.emailUser + '@gmail.com',
+        user: safeKey.emailUser,
         pass: safeKey.emailPass
     }
 });
@@ -30,7 +32,7 @@ app.use('/fonts', express.static(__dirname + '/public/fonts'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.all('/*', function (req, res, next) {
+app.get('/*', function (req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
     res.sendFile('index.html', { root: __dirname + '/public/html' });
 });
@@ -38,14 +40,12 @@ app.all('/*', function (req, res, next) {
 // // routes ======================================================================
 app.use('/', apiRoutes);
 
-app.post('/contact', function (req, res) {
-    console.log('hi, inside POST of /api/sendcontact');
-    console.log(req);
+app.post('/api/contact', function (req, res) {
     var data = req.body;
 
     var mailOptions = {
         from: data.email,
-        to: 'lucksp@gmail.com',
+        to: 'info@litsco.com',
         subject: '[LITSCO CONTACT FORM] Email sent by ' + data.name,
         text: data.message
     };

@@ -33,7 +33,7 @@ angular.module('app_litsco')
 
 			var req = {
 				method: 'POST',
-				url: '/contact',
+				url: '/api/contact',
 				headers: {
 					'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 				},
