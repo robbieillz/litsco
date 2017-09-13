@@ -7,6 +7,7 @@ var port = 9000;
 var apiRoutes = require('./app/routes.js');
 var nodemailer = require('nodemailer');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
 var transporter = nodemailer.createTransport({
@@ -26,6 +27,8 @@ app.use('/css', express.static(__dirname + '/public/css/'));
 app.use('/html', express.static(__dirname + '/public/html'));
 app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/fonts', express.static(__dirname + '/public/fonts'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.all('/*', function (req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
@@ -37,6 +40,7 @@ app.use('/', apiRoutes);
 
 app.post('/contact', function (req, res) {
     console.log('hi, inside POST of /api/sendcontact');
+    console.log(req);
     var data = req.body;
 
     var mailOptions = {
@@ -61,3 +65,6 @@ app.post('/contact', function (req, res) {
 // launch ======================================================================
 app.listen(port);
 console.log('Up and running on Port: ' + port);
+
+// Expose app
+exports = module.exports = app;
