@@ -16,7 +16,7 @@
                 <div class="prod-illustration-div col s12" ng-class="{l8: productIdObj.colors}">
                     <div class="prod-svg-wrapper" ng-include="'/img/illustrations/illustration_' + productIdObj.illustration + '.svg'"></div>
                 </div>
-                <div ng-if="productIdObj.colors" class="col s12 l4 product-button-card">
+                <div ng-if="defaultFill(productIdObj.colors)" class="col s12 l4 product-button-card">
                     <h5>Select Your Color</h5>
                     <div class="product-color-list" ng-init="calculateRows()">
                         <div ng-repeat="(color, hex) in productIdObj.colors" class="product-color-chip-container" style="margin: 10px;">

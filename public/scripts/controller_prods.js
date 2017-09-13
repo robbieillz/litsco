@@ -45,8 +45,14 @@ angular.module('app_litsco')
             if (color) {
                 $scope.hoverColor = color;
                 updateSvgFill(this.hex);
-            } else {
-                $scope.hoverColor = ' ';
+            }
+        };
+
+        $scope.defaultFill = function (colors) {
+            if (colors) {
+                var defaultColor = colors[Object.keys(colors)[0]];
+                $('.hover_color_change').attr('fill', defaultColor);
+                return true;
             }
         };
 
