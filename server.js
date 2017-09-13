@@ -7,7 +7,6 @@ var port = 9000;
 var apiRoutes = require('./app/routes.js');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
-var logger = require('morgan');
 var fs = require('fs');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
