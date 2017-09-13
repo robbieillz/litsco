@@ -165,12 +165,6 @@ li.link:hover {
     height: inherit;
 }
 
-
-/*
-#med-nav-hamburger a {
-	height: inherit;
-}*/
-
 #side-logo {
     display: block;
     padding: 15px;
@@ -220,12 +214,6 @@ a.collection-item.mobile-nav-link-item {
 a.collection-item.mobile-nav-link-item:last-child {
     border-bottom: 1px solid #e0e0e0;
 }
-
-
-/*
-.top-margin-nav-height {
-	margin-top: 90px;
-}*/
 
 .product-color-chip.Custom_Painted {
     background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
@@ -298,7 +286,6 @@ a.collection-item.mobile-nav-link-item:last-child {
 
 .card.main-category .card-content {
     padding-top: 32px;
-    height: auto;
 }
 
 .card.main-category .btn-floating i {
@@ -368,38 +355,21 @@ i.point-right {
     margin: 0;
 }
 
-.index-how-wrapper .wrapper-how-circle {
-    padding: 32px 0;
+.wrapper-how-circle {
     border-bottom: 2px solid #d1d1d1;
     border-right: 2px solid #d1d1d1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 16px 24px !important;
 }
 .wrapper-how-circle .index-how-text{
     padding: 0 32px;
     font-size: 1.2em;
 }
 
-.wrapper-how-circle .btn-floating {
-    cursor: default;
-}
-
-.btn-large.how-circle {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    border-radius: 50%;
-}
-
-.btn-large.how-circle i {
-    line-height: 100px;
-    font-size: 2.5rem;
-}
-
-.index-how-collection,
-.index-how-collection>.collection-item {
-    border: 0;
+.about-svg-wrapper {
+    width: 120px;
 }
 
 .collection-item i {
@@ -423,27 +393,6 @@ i.point-right {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(#e0e0e0, #FFF);
     /* Standard syntax */
-}
-
-#index-about-div-tabs {
-    margin-bottom: 20px;
-}
-
-#index-about-tabs li a {
-    font-size: 24px;
-}
-
-#index-about-tabs {
-    background-color: transparent !important;
-}
-
-#index-about-tabs .indicator {
-    background-color: #ff8f00;
-}
-
-.index-about-tab-text {
-    font-size: 20px;
-    margin: 0 40px;
 }
 
 #map-wrapper {
@@ -788,7 +737,7 @@ map {
     .button-collapse#hamburger {
         display: none;
     }
-    .index-3-cards {
+    .card-content.index-3-cards {
         height: 180px;
     }
     .product-name-heading {

@@ -1,12 +1,13 @@
 // server.js
 
 // set up ======================================================================
-var express  		= require('express');
-var app      		= express();
-var port     		= 9000;
-var apiRoutes 		= require('./app/routes.js');
+var express = require('express');
+var app = express();
+var port = 8888;
+var apiRoutes = require('./app/routes.js');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
+var logger = require('morgan');
 var fs = require('fs');
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
@@ -18,9 +19,9 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-
 // configuration ===============================================================
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(logger('dev'));
 // set up our express application
 app.use(express.static(__dirname + '/public/'));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
@@ -30,7 +31,7 @@ app.use('/html', express.static(__dirname + '/public/html'));
 app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/fonts', express.static(__dirname + '/public/fonts'));
 
-app.all('/*', function(req, res, next) {
+app.all('/*', function (req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
     res.sendFile('index.html', { root: __dirname + '/public/html' });
 });
@@ -38,7 +39,7 @@ app.all('/*', function(req, res, next) {
 // // routes ======================================================================
 app.use('/', apiRoutes);
 
-app.post('/sendcontact', function (req, res) {
+app.post('/contact', function (req, res) {
     console.log('hi, inside POST of /api/sendcontact');
     var data = req.body;
 
@@ -51,14 +52,15 @@ app.post('/sendcontact', function (req, res) {
 
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-            return console.log(error);
+            console.log(error);
+            res.json({ error: 'Email not sent' });
+        } else {
+            console.log('Message sent: ' + info.response);
+            console.log('Data:' + data.contactName);
+            res.json({ success: 'Email has been sent.' });
         }
-        console.log('Message sent: ' + info.response);
-        console.log('Data:' + data.contactName);
     });
-    res.json(data);
 });
-
 
 // launch ======================================================================
 app.listen(port);

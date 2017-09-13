@@ -31,13 +31,26 @@ angular.module('app_litsco')
 			// wrap all your input values in $scope.postData
 			$scope.postData = angular.copy(contact);
 
-			$http.post('/sendcontact', $scope.postData)
-				.then(function (data) {
-					console.log(data)
-					// Show success message
-					console.log('sent OK');
+			var req = {
+				method: 'POST',
+				url: '/contact',
+				headers: {
+					'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+				},
+				data: $scope.postData
+			};
+
+			$http(req)
+				.then(function successCallback(response) {
+					console.log('success');
+					//do something after success
+					// this callback will be called asynchronously
+					// when the response is available
 				}, function errorCallback(response) {
-					console.log('error! ', response);
+					console.log('error');
+					//do something after error
+					// called asynchronously if an error occurs
+					// or server returns response with an error status.
 				});
 		};
 	}]);
