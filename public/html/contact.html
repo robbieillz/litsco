@@ -13,44 +13,48 @@
                     </h6>
                 </div>
             </div>
-            <div class="row">
-                <form class="col s12" ng-submit="postMail(contactData)">
+            <div class="row contact-form-wrapper">
+                <form ng-hide="formSubmit" name="contactForm" id="form-contact" class="col s12" ng-submit="postMail(contactData)">
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" ng-model="contactData.name">
+                            <input class="form-contact-input-field" id="icon_prefix" type="text" ng-model="contactData.name">
                             <label for="icon_prefix">Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">phone</i>
-                            <input id="icon_telephone" type="tel" class="validate" ng-model="contactData.phone">
+                            <input class="form-contact-input-field" id="icon_telephone" type="tel" class="validate" ng-model="contactData.phone">
                             <label for="icon_telephone" data-error="Please enter a valid phone number">Telephone</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">email</i>
-                            <input id="icon_email" type="email" class="validate" ng-model="contactData.email">
+                            <input class="form-contact-input-field" id="icon_email" type="email" class="validate" ng-model="contactData.email">
                             <label for="icon_email" data-error="Please enter a valid Email address">Email</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">business</i>
-                            <input id="icon_business" type="tel" ng-model="contactData.company">
+                            <input class="form-contact-input-field" id="icon_business" type="tel" ng-model="contactData.company">
                             <label for="icon_business">Company</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"  ng-model="contactData.message"></textarea>
+                            <textarea id="textarea1" class="materialize-textarea form-contact-input-field" ng-model="contactData.message"></textarea>
                             <label for="textarea1">Tell us why you are contacting us</label>
                         </div>
                     </div>
                     <div class="row right">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <button class="btn waves-effect waves-light form-contact-submit" type="submit" name="action">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
                 </form>
+                <div ng-show="formSubmit" class="contact-form-success">
+                    <div ng-show="formSubmitSuccess">
+                        <h5 class="oswald">Thank you for contacting us</h5>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
         <div class="container row flex-row-around-center" id="map-wrapper">
             <map class="col s12 m8 l8" center="{{ litsco }}" zoom="12" pan-control="false" zoom-control="true">

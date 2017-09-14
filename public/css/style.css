@@ -643,8 +643,10 @@ map {
 }
 
 /***** CONTACT ****/
-.contact-form {
-
+.contact-form-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-heading {

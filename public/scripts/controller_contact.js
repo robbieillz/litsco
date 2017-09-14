@@ -24,6 +24,9 @@ angular.module('app_litsco')
 		};
 
 		$scope.postMail = function (contact) {
+			var contactFormHeight = $('.contact-form-wrapper').height();	
+			$scope.formSubmit = true;
+			$('.contact-form-success').height(contactFormHeight);
 			// Check form validation
 			// if ($scope.contactForm.$invalid === true) {
 			// 	return;
@@ -49,7 +52,10 @@ angular.module('app_litsco')
 						company: '',
 						message: ''
 					};
-					$scope.$contactData.$setPristine(true);
+					$scope.contactForm.$setPristine();
+					$('.form-contact-input-field, .form-contact-submit').prop('disabled', true);
+
+					$scope.formSubmitSuccess = true;
 					//do something after success
 					// this callback will be called asynchronously
 					// when the response is available

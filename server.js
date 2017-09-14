@@ -41,7 +41,7 @@ app.get('/*', function (req, res, next) {
 // // routes ======================================================================
 app.use('/', apiRoutes);
 
-app.post('/api/contact', function (req, res) {    
+app.post('/api/contact', function (req, res) {
     var data = req.body;
     var mailOptions = {
         from: data.email,
@@ -53,11 +53,23 @@ app.post('/api/contact', function (req, res) {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
-            res.json({ error: 'Email not sent' });
+            res.json(
+                { 
+                    info: 'Email not sent'
+                }, {
+                    error: error
+                });
         } else {
             console.log('Message sent: ' + info.response);
             console.log('Data sent:' + data);
-            res.json({ success: 'Email has been sent.' });
+            res.json(
+                {
+                    success: 'Email has been sent.'
+                }, {
+                    response: info.response
+                }, {
+                    data: data
+                });
         }
     });
 });
