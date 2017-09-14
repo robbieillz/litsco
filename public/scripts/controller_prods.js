@@ -51,13 +51,13 @@ angular.module('app_litsco')
         $scope.defaultFill = function (colors) {
             if (colors) {
                 var defaultColor = colors[Object.keys(colors)[0]];
-                $('.hover_color_change').attr('fill', defaultColor);
+                updateSvgFill(defaultColor);
                 return true;
             }
         };
 
         function updateSvgFill(hex) {
-            var paths = $('.hover_color_change').attr('fill', hex);
+            $('.hover_color_change').attr('fill', hex);
         }
 
         $scope.currentTab = function (tab) {

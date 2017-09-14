@@ -42,12 +42,18 @@ angular.module('app_litsco')
 
 			$http(req)
 				.then(function successCallback(response) {
-					console.log('success');
+					$scope.contactData = {
+						phone: '',
+						email: '',
+						name: '',
+						company: '',
+						message: ''
+					};
+					$scope.$contactData.$setPristine(true);
 					//do something after success
 					// this callback will be called asynchronously
 					// when the response is available
 				}, function errorCallback(response) {
-					console.log('error');
 					//do something after error
 					// called asynchronously if an error occurs
 					// or server returns response with an error status.
