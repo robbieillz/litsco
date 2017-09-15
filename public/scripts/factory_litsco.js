@@ -54,7 +54,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "classic_cr",
-            "jumboImg": "img/jumbo_cr_full.jpg",
+            "jumboImg": "cr_full.jpg",
             "detailImg": "http://www.litsco.com/images/streamline_alt.gif",
             "dataSheetLink": "http://www.litsco.com/assets/streamline_classic_cr.pdf",
             "quoteSheetLink": "http://www.litsco.com/assets/print_approval_streamline.pdf",
@@ -130,7 +130,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "omniwall_md",
-            "jumboImg": "http://litsco.com/images/w60th_litsco_omniwallmd_panels-1-crop-u28651.jpg",
+            "jumboImg": "md_full.jpg",
             "detailImg": "http://www.litsco.com/images/streamline_omniwall_md_alt.gif",
             "dataSheetLink": "http://www.litsco.com/assets/streamline_omniwall_md.pdf",
             "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-md.docx",
@@ -198,7 +198,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "omniwall_cl",
-            "jumboImg": "http://litsco.com/images/kutz_cl_22.jpg",
+            "jumboImg": "cl_full.jpg",
             "detailImg": "http://www.litsco.com/images/streamline_omniwall_cl_alt.gif",
             "dataSheetLink": "http://www.litsco.com/assets/streamline_omniwall_cl.pdf",
             "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-cl.docx",
@@ -271,7 +271,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "flushwall_tg",
-            "jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-15.jpg",
+            "jumboImg": "tg_full.jpg",
             "detailImg": "http://litsco.com/images/streamline_flush_tg_alt.gif",
             "dataSheetLink": "http://litsco.com/assets/streamline_flush_tg.pdf",
             "portfolio": [
@@ -345,7 +345,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "flatwall_sm",
-            "jumboImg": "http://litsco.com/images/camba2.jpg",
+            "jumboImg": "sm_full.jpg",
             "detailImg": "http://litsco.com/images/streamline_flatwall_sm_alt.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_flatwallsm.pdf",
             "dataSheetLink": "http://litsco.com/assets/streamline_flatwall_sm.pdf",
@@ -432,7 +432,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "standing_sm",
-            "jumboImg": "http://litsco.com/images/laightst_litsco_zinc_metal_panels-55-crop-u28692.jpg",
+            "jumboImg": "stand_full.jpg",
             "detailImg": "http://litsco.com/images/standingseam_alt.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_standingsm.pdf",
             "dataSheetLink": "http://litsco.com/assets/streamline_flatwall_sm.pdf",
@@ -501,7 +501,7 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "locktight",
-            "jumboImg": "http://litsco.com/images/brh5.jpg",
+            "jumboImg": "lt_full.jpg",
             "detailImg": "http://litsco.com/images/locktite_alt_pdf_image.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_locktight.pdf",
             "dataSheetLink": "http://litsco.com/assets/locktight_coping.pdf",
@@ -618,7 +618,7 @@ angular.module('app_litsco')
                 "Stainless Steel": "#c5c4c4"
             },
             "illustration": "mortartight",
-            "jumboImg": "",
+            "jumboImg": "mt_full.jpg",
             "detailImg": "http://litsco.com/images/mortar_tight_allt.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_mortartight.pdf",
             "dataSheetLink": "http://litsco.com/assets/mortartight_flashing.pdf",
@@ -687,7 +687,7 @@ angular.module('app_litsco')
                 ]
             },
             "illustration": "lead_tee",
-            "jumboImg": "http://litsco.com/images/lead_tee_alt.gif",
+            "jumboImg": "tee_full.gif",
             "detailImg": "http://litsco.com/images/lead_tee.gif",
             "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
             "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
