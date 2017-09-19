@@ -2,12 +2,12 @@
 
 // set up ======================================================================
 var express = require('express');
-var app = express();
-var port = 9000;
 var apiRoutes = require('./app/routes.js');
 var nodemailer = require('nodemailer');
-var fs = require('fs');
 var bodyParser = require('body-parser');
+var fs = require('fs');
+var app = express();
+var port = 9000;
 var safeKey = JSON.parse(fs.readFileSync('./safekey.json', 'utf-8'));
 
 var transporter = nodemailer.createTransport({
