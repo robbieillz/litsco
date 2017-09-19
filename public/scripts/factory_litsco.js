@@ -455,6 +455,9 @@ angular.module('app_litsco')
                 }, {
                     url: 'standing_sm_5',
                     alt: 'Streamline Standing SM metal panel'
+                }, {
+                    url: 'standing_sm_6',
+                    alt: 'Streamline Standing SM metal panel'
                 }
             ]
         }, {
@@ -692,6 +695,51 @@ angular.module('app_litsco')
             "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
             "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
         }, {
+            "id": "specialty_metal",
+            "cat": 2,
+            "productName": "Specialty Metal",
+            "subHeader": "Custom sheet metal fabrication solutions",
+            "overview": "Our sheetmetal shop also handles custom metal fabrications to meet a wide range of applications.  From cornices to louvers, to shells & crests, to Custom Fascia Wraps, to chimney covers, LITSCO's on-site sheet metal shop can handle your project with confidence.",
+            "jumboImg": "special_full.jpg",
+            "features": [
+                "Corninces",
+                "Louvers",
+                "Chimney Covers",
+                "Fascia Wraps",
+                "Gutters",
+                "Leaders",
+                "Pier Covers",
+                "Skylights",
+                "Finials"
+
+            ],
+            "portfolio": [
+                {
+                    url: 'custom_1',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_2',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_3',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_4',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_5',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_6',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
+                    url: 'custom_7',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }
+            ]
+        },
+        
+        {
             "id": "roofing",
             "cat": 3,
             "vendorName": "Johns Manville",

@@ -18,27 +18,13 @@ angular.module('app_litsco')
         $scope.columns = [];
         $scope.columnCount = 2;
 
-        function calculateColumns() {
+        $scope.calculateColumns = function() {
             var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
             for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
                 var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
                 $scope.columns.push(col);
             }
-        }
-        calculateColumns();
-
-        // COLORS ROW CALCULATION
-        $scope.columns = [];
-        $scope.columnCount = 2;
-
-        function calculateRows() {
-            var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
-            for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
-                var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
-                $scope.columns.push(col);
-            }
-        }
-        calculateRows();
+        };
 
         $scope.hoverColor = ' ';
         $scope.hoverColorText = function (color) {
@@ -58,20 +44,6 @@ angular.module('app_litsco')
 
         function updateSvgFill(hex) {
             $('.hover_color_change').attr('fill', hex);
-        }
-
-        $scope.currentTab = function (tab) {
-            if (tab === 1) {
-                $scope.current_tab = 1;
-            } else if (tab === 2) {
-                $scope.current_tab = 2;
-            }
-        };
-
-        if ($scope.productIdObj.installVideo) {
-            $scope.installVideoCode = function (code) {
-                return $scope.code = code;
-            };
         }
 
         if ($scope.productIdObj.portfolio) {
