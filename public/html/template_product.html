@@ -33,7 +33,7 @@
                         <li>
                             <h5 class="download oswald">Downloads:</h5>
                         </li>
-                        <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
+                        <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="/pdf/{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
                             <p>Data Sheet</p>
                         </li>
                         <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.quoteSheetLink }}" target="_blank" ><i class="material-icons small">format_quote</i></a>

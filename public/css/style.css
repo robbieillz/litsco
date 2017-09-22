@@ -11,6 +11,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    height: 100%;
     min-height: 100vh;
 }
 
@@ -330,7 +331,7 @@ i.point-right {
 }
 
 #index-how,
-#index-about, #section-contact {
+#index-about, #section-contact, #main-product-list {
     /*background-color: #e0e0e0;*/
     background: #e0e0e0;
     /* For browsers that do not support gradients */
@@ -564,27 +565,29 @@ map {
 }
 
 .product-list-wrapper {
-	height: 350px;
+	/* height: 350px; */
 	/*max-height: 350px;*/
-	min-height: 350px;
+	/* min-height: 350px; */
 	margin:	15px 0;
 }
 
 .product-list-cards .card-image {
-    max-height: 175px;
-    min-height: 175px;
-    height: 175px;
+    max-height: 300px;
+    min-height: 300px;
+    height: 300px;
     overflow: hidden;
+    padding-top: 8px;
+}
+
+.card-image #productlist-image {
+    height: 100%;
+    width: auto;
     display: flex;
-    align-items: center;
+    margin: 0 auto;
 }
 
 .card-image.supplies {
     padding: 8px;
-}
-
-.product-list-cards .card-content {
-	min-height: 175px;
 }
 
 .product-list-fab.btn-floating {

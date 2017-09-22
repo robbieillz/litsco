@@ -1,5 +1,6 @@
 angular.module('app_litsco')
 	.controller('controller_home',['$scope', 'NgMap', function($scope, NgMap){
+		$scope.pageTitle = 'LITSCO, since 1918, the original Streamline Metal Panel and distributor of roofing, waterproofing, and sheetmetal products';
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';
 

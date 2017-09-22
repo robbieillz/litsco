@@ -55,8 +55,9 @@ angular.module('app_litsco')
             },
             "illustration": "classic_cr",
             "jumboImg": "cr_full.jpg",
-            "detailImg": "http://www.litsco.com/images/streamline_alt.gif",
-            "dataSheetLink": "http://www.litsco.com/assets/streamline_classic_cr.pdf",
+            "thumbImg": "classic_cr.png",
+            "detailImg": "/img/illustrations/detail_thumb_classic_cr.png",
+            "dataSheetLink": "streamline_classic_cr.pdf",
             "quoteSheetLink": "http://www.litsco.com/assets/print_approval_streamline.pdf",
             "portfolio": [
                 {
@@ -132,7 +133,8 @@ angular.module('app_litsco')
             "illustration": "omniwall_md",
             "jumboImg": "md_full.jpg",
             "detailImg": "http://www.litsco.com/images/streamline_omniwall_md_alt.gif",
-            "dataSheetLink": "http://www.litsco.com/assets/streamline_omniwall_md.pdf",
+            "thumbImg": "omniwall_md.png",
+            "dataSheetLink": "streamline_omniwall_md.pdf",
             "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-md.docx",
             "quoteSheetLink": "http://www.litsco.com/assets/print_approval_omniwall_md.pdf",
             "portfolio": [
@@ -200,7 +202,8 @@ angular.module('app_litsco')
             "illustration": "omniwall_cl",
             "jumboImg": "cl_full.jpg",
             "detailImg": "http://www.litsco.com/images/streamline_omniwall_cl_alt.gif",
-            "dataSheetLink": "http://www.litsco.com/assets/streamline_omniwall_cl.pdf",
+            "thumbImg": "omniwall_cl.png",
+            "dataSheetLink": "streamline_omniwall_cl.pdf",
             "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-cl.docx",
             "quoteSheetLink": "http://www.litsco.com/assets/print_approval_omniwall_cl.pdf",
             "portfolio": [
@@ -223,7 +226,7 @@ angular.module('app_litsco')
             "id": "flushwall_tg",
             "cat": 1,
             "productName": "Streamline Flushwall TG",
-            "subHeader": "Concealed Fastener, Lap Seam Metal Panel",
+            "subHeader": "Concealed Fastener, Lap Seam Metal Panel.  Flush or reveal",
             "overview": "LITSCO's Streamline Flush TG panel is an ideal solution for exterior, parapet walls or soffits in need of restoration.  The interlocking Tongue-n-Groove installation is fast and hides the fasteners making the 11\" wide profile a clean, consistent appearance.",
             "features": [
                 "Vertical or horizontal panel orientation allows this panel to fit to your design requirements",
@@ -273,7 +276,8 @@ angular.module('app_litsco')
             "illustration": "flushwall_tg",
             "jumboImg": "tg_full.jpg",
             "detailImg": "http://litsco.com/images/streamline_flush_tg_alt.gif",
-            "dataSheetLink": "http://litsco.com/assets/streamline_flush_tg.pdf",
+            "thumbImg": "flushwall_tg.png",
+            "dataSheetLink": "streamline_flush_tg.pdf",
             "portfolio": [
                 {
                     url: 'flushwall_tg_0',
@@ -347,8 +351,9 @@ angular.module('app_litsco')
             "illustration": "flatwall_sm",
             "jumboImg": "sm_full.jpg",
             "detailImg": "http://litsco.com/images/streamline_flatwall_sm_alt.gif",
+            "thumbImg": "flatwall_sm.png",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_flatwallsm.pdf",
-            "dataSheetLink": "http://litsco.com/assets/streamline_flatwall_sm.pdf",
+            "dataSheetLink": "streamline_flatwall_sm.pdf",
             "specPageLink": "http://litsco.com/assets/section-074113-streamline-flatwall-sm.docx",
             "portfolio": [
                 {
@@ -434,8 +439,9 @@ angular.module('app_litsco')
             "illustration": "standing_sm",
             "jumboImg": "stand_full.jpg",
             "detailImg": "http://litsco.com/images/standingseam_alt.gif",
+            "thumbImg": "standing_sm.png",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_standingsm.pdf",
-            "dataSheetLink": "http://litsco.com/assets/streamline_flatwall_sm.pdf",
+            "dataSheetLink": "streamline_standing_sm.pdf",
             "portfolio": [
                 {
                     url: 'standing_sm_0',
@@ -506,8 +512,9 @@ angular.module('app_litsco')
             "illustration": "locktight",
             "jumboImg": "lt_full.jpg",
             "detailImg": "http://litsco.com/images/locktite_alt_pdf_image.gif",
+            "thumbImg": "locktight.png",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_locktight.pdf",
-            "dataSheetLink": "http://litsco.com/assets/locktight_coping.pdf",
+            "dataSheetLink": "locktight_coping.pdf",
             "specPageLink": "http://litsco.com/assets/section-077100-streamline-locktight-coping.docx",
             "installVideo": "uvqErM1BzQw",
             "portfolio": [
@@ -578,9 +585,10 @@ angular.module('app_litsco')
             },
             "illustration": "flashdown",
             "jumboImg": "http://litsco.com/images/brh5.jpg",
+            "thumbImg": "flashdown.png",
             "detailImg": "http://litsco.com/images/flashdown_alt.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_flashdown.pdf",
-            "dataSheetLink": "http://litsco.com/assets/flashdown_fascia.pdf",
+            "dataSheetLink": "flashdown_fascia.pdf",
             "specPageLink": "http://litsco.com/assets/section-077120-streamline-flashdown-fascia2.docx",
             "installVideo": "1GMUaw2bUZ0"
         }, {
@@ -623,8 +631,9 @@ angular.module('app_litsco')
             "illustration": "mortartight",
             "jumboImg": "mt_full.jpg",
             "detailImg": "http://litsco.com/images/mortar_tight_allt.gif",
+            "thumbImg": "mortartight.png",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_mortartight.pdf",
-            "dataSheetLink": "http://litsco.com/assets/mortartight_flashing.pdf",
+            "dataSheetLink": "mortartight_flashing.pdf",
         }, {
             "id": "2-piece_litlok",
             "cat": 2,
@@ -668,8 +677,9 @@ angular.module('app_litsco')
             "illustration": "litlok",
             "jumboImg": "",
             "detailImg": "http://litsco.com/images/litlok_alt.jpg",
+            "thumbImg": "litlok.png",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_litlok.pdf",
-            "dataSheetLink": "http://litsco.com/assets/litlok_flashing.pdf",
+            "dataSheetLink": "litlok_flashing.pdf",
         }, {
             "id": "lead_tees",
             "cat": 2,
@@ -692,8 +702,8 @@ angular.module('app_litsco')
             "illustration": "lead_tee",
             "jumboImg": "tee_full.gif",
             "detailImg": "http://litsco.com/images/lead_tee.gif",
-            "quoteSheetLink": "http://litsco.com/estore/#!/Sheetmetal-Flashings/c/9007032/offset=0&sort=nameAsc",
-            "dataSheetLink": "http://litsco.com/assets/joint_lead_tee.pdf",
+            "thumbImg": "lead_tee.png",
+            "dataSheetLink": "joint_lead_tee.pdf",
         }, {
             "id": "specialty_metal",
             "cat": 2,
@@ -701,6 +711,8 @@ angular.module('app_litsco')
             "subHeader": "Custom sheet metal fabrication solutions",
             "overview": "Our sheetmetal shop also handles custom metal fabrications to meet a wide range of applications.  From cornices to louvers, to shells & crests, to Custom Fascia Wraps, to chimney covers, LITSCO's on-site sheet metal shop can handle your project with confidence.",
             "jumboImg": "special_full.jpg",
+            "detailImg": "http://litsco.com/images/lead_tee.gif",
+            "thumbImg": "specialty.jpg",
             "features": [
                 "Corninces",
                 "Louvers",
