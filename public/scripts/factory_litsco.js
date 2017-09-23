@@ -1013,7 +1013,7 @@ angular.module('app_litsco')
             "id": "commercial_metal",
             "cat": 5,
             "vendorName": "Fabral",
-            "vendorLogo": "fabral.png",
+            "vendorLogo": "fabral.jpg",
             "vendorUrl": "http://www.fabral.com",
             "subHeader": "FABRAL provides industry leading metal roofing, metal siding and wall panel systems for all types of applications",
             "alt": "Fabral metal panels"
@@ -1031,7 +1031,7 @@ angular.module('app_litsco')
             "vendorName": "ATAS",
             "vendorLogo": "atas.png",
             "vendorUrl": "https://www.atas.com/",
-            "subHeader": "ATAS offers metal roofs, metal wall panels and energy-efficient building envelope technology for commercial and residential buildings",
+            "subHeader": "ATAS offers metal roofs and metal wall panels for commercial and residential buildings",
             "alt": "ATAS metal panels"
         }, {
             "id": "flatsheets",
@@ -1101,7 +1101,7 @@ angular.module('app_litsco')
             "type": "division_7_supplies",
             "linkTo": 4,
             "productName": "Waterpoofing Supplies",
-            "detailImg": "waterproofing.png",
+            "detailImg": "waterproofing.jpg",
             "alt": "LITSCO supplies Waterproofing products"
         }, {
             "id": "commercial_metal",
