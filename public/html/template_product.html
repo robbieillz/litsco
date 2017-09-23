@@ -1,6 +1,6 @@
 <main class="top-margin-nav-height" id="main-product-content">
     <section id="product-banner" class="flex-center">
-        <img class="responsive-img" id="product-jumbo" src="img/jumbo_{{ productIdObj.jumboImg }}" alt="jumbo {{ productIdObj.productName }}" imageonload="defaultFill(productIdObj.colors)">
+        <img class="responsive-img" id="product-jumbo" src="img/jumbo_{{ productIdObj.jumboImg }}" alt="jumbo {{ productIdObj.productName }}">
     </section>
     <div class="full-width-slider-divider"></div>
     <section>
@@ -14,7 +14,7 @@
             </div>
             <div ng-if="productIdObj.colors" class="row flex-row-wrap">
                 <div class="prod-illustration-div col s12" ng-class="{l8: productIdObj.colors}">
-                    <div class="prod-svg-wrapper" ng-include="'/img/illustrations/illustration_' + productIdObj.illustration + '.svg'"></div>
+                    <div class="prod-svg-wrapper" ng-include="'/img/illustrations/illustration_' + productIdObj.illustration + '.svg'" onload="defaultFill(productIdObj.colors)"></div>
                 </div>
                 <div class="col s12 l4 product-button-card">
                     <h5>Select Your Color</h5>

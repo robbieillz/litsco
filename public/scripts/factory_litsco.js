@@ -584,13 +584,28 @@ angular.module('app_litsco')
                 "Custom Painted": "#FFF"
             },
             "illustration": "flashdown",
-            "jumboImg": "http://litsco.com/images/brh5.jpg",
+            "jumboImg": "flashdown_full.jpg",
             "thumbImg": "flashdown.png",
             "detailImg": "http://litsco.com/images/flashdown_alt.gif",
             "quoteSheetLink": "http://litsco.com/assets/print_approval_flashdown.pdf",
             "dataSheetLink": "flashdown_fascia.pdf",
             "specPageLink": "http://litsco.com/assets/section-077120-streamline-flashdown-fascia2.docx",
-            "installVideo": "1GMUaw2bUZ0"
+            "installVideo": "1GMUaw2bUZ0",
+            "portfolio": [
+                {
+                    url: 'flashdown_0',
+                    alt: 'Flashdown Fascia by LITSCO'
+                }, {
+                    url: 'flashdown_1',
+                    alt: 'Flashdown Fascia by LITSCO'
+                }, {
+                    url: 'flashdown_2',
+                    alt: 'Flashdown Fascia by LITSCO'
+                }, {
+                    url: 'flashdown_3',
+                    alt: 'Flashdown Fascia by LITSCO'
+                }
+            ]
         }, {
             "id": "mortartight_thruwall",
             "cat": 2,
@@ -698,6 +713,9 @@ angular.module('app_litsco')
                 "Lead": [
                     "High purity grade lead meets Federal Specification QQ-L-171 grade B"
                 ]
+            },
+            "colors": {
+                "Standard": "#c5c4c4"
             },
             "illustration": "lead_tee",
             "jumboImg": "tee_full.gif",
