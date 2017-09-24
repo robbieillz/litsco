@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -7,32 +7,62 @@ angular.module('app_litsco')
             .state('home', {
                 url: '/',
                 templateUrl: 'html/home.html',
-                controller: 'controller_home'
+                controller: 'controller_home',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('product_streamline', {
                 url: '/streamline_metal_panels/:id',
                 templateUrl: 'html/template_product.html',
-                controller: 'controller_prods'
+                controller: 'controller_prods',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('product_flashing', {
                 url: '/metal_flashing/:id',
                 templateUrl: 'html/template_product.html',
-                controller: 'controller_prods'
+                controller: 'controller_prods',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('streamline_panels', {
                 url: '/:cat',
                 templateUrl: 'html/template_productlist.html',
-                controller: 'controller_productlist'
+                controller: 'controller_productlist',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('metal_flashing', {
                 url: '/:cat',
                 templateUrl: 'html/template_productlist.html',
-                controller: 'controller_productlist'
+                controller: 'controller_productlist',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('contact', {
                 url: '/contact/',
                 templateUrl: 'html/contact.html',
-                controller: 'controller_contact'
+                controller: 'controller_contact',
+                resolve: {
+                    title: ['$rootScope', function ($rootScope) {
+                        return $rootScope.title;
+                    }]
+                }
             })
             .state('supply_item', {
                 url: '/division_7_supplies/:vendorType/',
@@ -41,7 +71,7 @@ angular.module('app_litsco')
             })
             .state('supplies', {
                 url: '/division_7_supplies/',
-                params : {
+                params: {
                     type: 'division_7_supplies'
                 },
                 templateUrl: 'html/template_supplylist.html',
@@ -59,4 +89,10 @@ angular.module('app_litsco')
             });
 
         $locationProvider.html5Mode(true);
-    }]);
+    }])
+.run(function($rootScope) {
+    $rootScope.$on("$routeChangeSuccess", function(currentRoute, previousRoute){
+    //Change page title, based on Route information
+    $rootScope.title = $route.current.title;
+  })
+});

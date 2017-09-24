@@ -1,21 +1,18 @@
 angular.module('app_litsco')
-	.controller('controller_supplies', ['$scope', '$state', '$stateParams', 'factory_litsco', function($scope, $state, $stateParams, factory_litsco) {
+	.controller('controller_supplies', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
 
 		var allData = factory_litsco;
 		var cat = $stateParams.vendorType;
-        var catInt = getCategoryInteger(cat);
-        $scope.vendorList = [];
+		var catInt = getCategoryInteger(cat);
+		$scope.vendorList = allData.filter(function (obj) {
+			if (obj.cat === catInt) {
+				return obj;
+			}
+		});
 
-		function catId(catInt) {
-            allData.filter(function(obj) {
-                if (obj.cat === catInt) {
-                    $scope.vendorList.push(obj);
-                }
-            });
-        }
-        catId(catInt);
+		$rootScope.title = $scope.productHeader;
 
-        function getCategoryInteger(cat) {
+		function getCategoryInteger(cat) {
 			if (cat === 'roofing') {
 				$scope.productHeader = 'Roofing Supplies';
 				return 3;
@@ -40,12 +37,12 @@ angular.module('app_litsco')
 		}
 
 		$scope.goToItemLink = function goToItemLink(product) {
-            var cat_name;
-            if (product.cat !== 1 || product.cat !== 2) {
-                cat_name = 'supplies';
-            }
-            
+			var cat_name;
+			if (product.cat !== 1 || product.cat !== 2) {
+				cat_name = 'supplies';
+			}
+
 			return cat_name;
 		};
 
-}]);
+	}]);

@@ -1,19 +1,16 @@
 angular.module('app_litsco')
-    .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_productlist', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
 
         var allData = factory_litsco;
         var cat = $stateParams.cat;
         var catInt = getCategoryInteger(cat);
-        $scope.productList = [];
+        $scope.productList = allData.filter(function (obj) {
+            if (obj.cat === catInt) {
+                return obj;
+            }
+        });
 
-        function catId(catInt) {
-            allData.filter(function (obj) {
-                if (obj.cat === catInt) {
-                    $scope.productList.push(obj);
-                }
-            });
-        }
-        catId(catInt);
+        $rootScope.title = $scope.productSubheader;
 
         function getCategoryInteger(cat) {
             if (cat === 'streamline_metal_panels') {
@@ -37,7 +34,7 @@ angular.module('app_litsco')
             } else if (product.cat === 2) {
                 cat_name = 'product_flashing';
             }
-            
+
             return cat_name;
         };
     }]);

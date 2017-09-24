@@ -1,24 +1,22 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_prods', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
 
         var allData = factory_litsco;
         var id = $stateParams.id;
-        $scope.current_tab = 1;
 
-        function prodId(id) {
-            allData.filter(function (obj) {
-                if (obj.id === id) {
-                    $scope.productIdObj = obj;
-                }
-            });
-        }
-        prodId(id);
+        $scope.productIdObj = allData.find(function (obj) {
+            if (obj.id === id) {
+                return obj;
+            }
+        });
+
+        $rootScope.title = $scope.productIdObj.productName;
 
         // FEATURES COLUMN CALCULATION
         $scope.columns = [];
         $scope.columnCount = 2;
 
-        $scope.calculateColumns = function() {
+        $scope.calculateColumns = function () {
             var itemsPerColumn = Math.ceil($scope.productIdObj.features.length / $scope.columnCount);
             for (var i = 0; i < $scope.productIdObj.features.length; i += itemsPerColumn) {
                 var col = { start: i, end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length) };
@@ -55,13 +53,13 @@ angular.module('app_litsco')
                 $scope.activeImg++;
             }
         };
-        $scope.prevSlide = function() {
-            if($scope.activeImg > 0) {
+        $scope.prevSlide = function () {
+            if ($scope.activeImg > 0) {
                 $scope.activeImg--;
             }
         };
 
-        $scope.modalImg = function() {
+        $scope.modalImg = function () {
             $('.materialboxed').materialbox();
         };
 

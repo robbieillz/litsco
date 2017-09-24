@@ -1,5 +1,7 @@
 angular.module('app_litsco')
-	.controller('controller_contact', ['$scope', '$state', '$http', function ($scope, $state, $http) {
+	.controller('controller_contact', ['$rootScope', '$scope', '$state', '$http', function ($rootScope, $scope, $state, $http) {
+		$rootScope.title = 'Contact Us';
+
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';
 		$scope.contactData = {
@@ -24,7 +26,7 @@ angular.module('app_litsco')
 		};
 
 		$scope.postMail = function (contact) {
-			var contactFormHeight = $('.contact-form-wrapper').height();	
+			var contactFormHeight = $('.contact-form-wrapper').height();
 			$scope.formSubmit = true;
 			$('.contact-form-success').height(contactFormHeight);
 			// Check form validation
