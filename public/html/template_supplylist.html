@@ -13,6 +13,10 @@
                 </div>
                 <div class="card-content">
                     <a class="card-title card-link oswald" ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })">{{ vendor.productName }}</a>
+                    <p ng-if=product.subHeader>{{ product.subHeader }}</p>
+                </div>
+                <div class="card-action center">
+                    <a class="waves-effect waves-light btn blue darken-4" ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })">learn more</a>
                 </div>
             </div>
         </div>

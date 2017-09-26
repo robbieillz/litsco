@@ -579,8 +579,13 @@ map {
     overflow: hidden;
 }
 
+.card-image.supplies, .card-image.product-list {
+    padding: 8px;
+}
+
 .card.product-list-cards .card-content {
     height: 160px;
+    overflow: auto;
 }
 
 .product-list-cards .card-image.vendor-list {
