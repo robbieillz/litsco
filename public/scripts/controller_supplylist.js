@@ -8,8 +8,6 @@ angular.module('app_litsco')
 			}
 		});
 
-		$rootScope.title = 'Distributor of roofing, wateproofing, and sheet metal supplies';
-
 		function getCategoryInteger(type) {
 			if (type === 'division_7_supplies') {
 				$scope.productHeader = 'Division 7 Building Supplies';
