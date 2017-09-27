@@ -718,7 +718,7 @@ angular.module('app_litsco')
                 "Standard": "#c5c4c4"
             },
             "illustration": "lead_tee",
-            "jumboImg": "tee_full.gif",
+            "jumboImg": "tee_full.jpg",
             "detailImg": "http://litsco.com/images/lead_tee.gif",
             "thumbImg": "lead_tee.png",
             "dataSheetLink": "joint_lead_tee.pdf",
