@@ -135,7 +135,7 @@ angular.module('app_litsco')
             "detailImg": "streamline_omniwall_md_alt.png",
             "thumbImg": "omniwall_md.png",
             "dataSheetLink": "streamline_omniwall_md.pdf",
-            "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-md.docx",
+            "specPageLink": "/docs/section-074113-streamline-omniwall-md.docx",
             "quoteSheetLink": "print_approval_omniwall_md.pdf",
             "portfolio": [
                 {
@@ -204,7 +204,7 @@ angular.module('app_litsco')
             "detailImg": "streamline_omniwall_cl_alt.png",
             "thumbImg": "omniwall_cl.png",
             "dataSheetLink": "streamline_omniwall_cl.pdf",
-            "specPageLink": "http://www.litsco.com/assets/section-074113-streamline-omniwall-cl.docx",
+            "specPageLink": "/docs/section-074113-streamline-omniwall-cl.docx",
             "quoteSheetLink": "print_approval_omniwall_cl.pdf",
             "portfolio": [
                 {
@@ -352,9 +352,9 @@ angular.module('app_litsco')
             "jumboImg": "sm_full.jpg",
             "detailImg": "streamline_flatwall_sm_alt.png",
             "thumbImg": "flatwall_sm.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_flatwallsm.pdf",
+            "quoteSheetLink": "print_approval_flatwallsm.pdf",
             "dataSheetLink": "streamline_flatwall_sm.pdf",
-            "specPageLink": "http://litsco.com/assets/section-074113-streamline-flatwall-sm.docx",
+            "specPageLink": "/docs/section-074113-streamline-flatwall-sm.docx",
             "portfolio": [
                 {
                     url: 'flatwall_sm_0',
@@ -440,7 +440,7 @@ angular.module('app_litsco')
             "jumboImg": "stand_full.jpg",
             "detailImg": "standingseam_alt.png",
             "thumbImg": "standing_sm.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_standingsm.pdf",
+            "quoteSheetLink": "print_approval_standingsm.pdf",
             "dataSheetLink": "streamline_standing_sm.pdf",
             "portfolio": [
                 {
@@ -513,9 +513,9 @@ angular.module('app_litsco')
             "jumboImg": "lt_full.jpg",
             "detailImg": "locktite_alt.png",
             "thumbImg": "locktight.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_locktight.pdf",
+            "quoteSheetLink": "print_approval_locktight.pdf",
             "dataSheetLink": "locktight_coping.pdf",
-            "specPageLink": "http://litsco.com/assets/section-077100-streamline-locktight-coping.docx",
+            "specPageLink": "/docs/section-077100-streamline-locktight-coping.docx",
             "installVideo": "uvqErM1BzQw",
             "portfolio": [
                 {
@@ -587,9 +587,9 @@ angular.module('app_litsco')
             "jumboImg": "flashdown_full.jpg",
             "thumbImg": "flashdown.png",
             "detailImg": "flashdown_alt.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_flashdown.pdf",
+            "quoteSheetLink": "print_approval_flashdown.pdf",
             "dataSheetLink": "flashdown_fascia.pdf",
-            "specPageLink": "http://litsco.com/assets/section-077120-streamline-flashdown-fascia2.docx",
+            "specPageLink": "/docs/section-077120-streamline-flashdown-fascia2.docx",
             "installVideo": "1GMUaw2bUZ0",
             "portfolio": [
                 {
@@ -647,7 +647,7 @@ angular.module('app_litsco')
             "jumboImg": "mt_full.jpg",
             "detailImg": "mortar_tight_alt.png",
             "thumbImg": "mortartight.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_mortartight.pdf",
+            "quoteSheetLink": "print_approval_mortartight.pdf",
             "dataSheetLink": "mortartight_flashing.pdf",
         }, {
             "id": "2-piece_litlok",
@@ -693,7 +693,7 @@ angular.module('app_litsco')
             "jumboImg": "",
             "detailImg": "litlok_alt.png",
             "thumbImg": "litlok.png",
-            "quoteSheetLink": "http://litsco.com/assets/print_approval_litlok.pdf",
+            "quoteSheetLink": "print_approval_litlok.pdf",
             "dataSheetLink": "litlok_flashing.pdf",
         }, {
             "id": "lead_tees",
