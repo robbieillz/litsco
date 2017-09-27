@@ -1,6 +1,7 @@
 angular.module('app_litsco', [
   'ui.router',
-  'ngMap'
+  'ngMap',
+  'ui.router.title'
 ])
   .directive('myYoutube', function ($sce) {
     return {

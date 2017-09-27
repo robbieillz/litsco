@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-    .controller('controller_productlist', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
 
         var allData = factory_litsco;
         var cat = $stateParams.cat;
@@ -9,8 +9,6 @@ angular.module('app_litsco')
                 return obj;
             }
         });
-
-        $rootScope.title = $scope.productSubheader;
 
         function getCategoryInteger(cat) {
             if (cat === 'streamline_metal_panels') {

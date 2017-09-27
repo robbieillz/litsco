@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_supplies', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
+	.controller('controller_supplies', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
 
 		var allData = factory_litsco;
 		var cat = $stateParams.vendorType;
@@ -8,9 +8,7 @@ angular.module('app_litsco')
 			if (obj.cat === catInt) {
 				return obj;
 			}
-		});
-
-		$rootScope.title = $scope.productHeader;
+		});		
 
 		function getCategoryInteger(cat) {
 			if (cat === 'roofing') {

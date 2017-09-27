@@ -1,7 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_home', ['$rootScope', '$scope', 'NgMap', function ($rootScope, $scope, NgMap) {
-
-		$rootScope.title = 'LITSCO, since 1918';
+	.controller('controller_home', ['$scope', 'NgMap', function ($scope, NgMap) {
 
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';

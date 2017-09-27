@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_supplylist', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
+	.controller('controller_supplylist', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
 		var allData = factory_litsco;
 		var cat = getCategoryInteger($stateParams.type);
 		$scope.vendorList = allData.filter(function (obj) {

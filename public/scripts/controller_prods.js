@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$rootScope', '$scope', '$state', '$stateParams', 'factory_litsco', function ($rootScope, $scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
 
         var allData = factory_litsco;
         var id = $stateParams.id;
@@ -9,8 +9,6 @@ angular.module('app_litsco')
                 return obj;
             }
         });
-
-        $rootScope.title = $scope.productIdObj.productName;
 
         // FEATURES COLUMN CALCULATION
         $scope.columns = [];

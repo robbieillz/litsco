@@ -9,9 +9,7 @@ angular.module('app_litsco')
                 templateUrl: 'html/home.html',
                 controller: 'controller_home',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
-                    }]
+                    $title: function () { return 'LITSCO, since 1918'; }
                 }
             })
             .state('product_streamline', {
@@ -19,8 +17,16 @@ angular.module('app_litsco')
                 templateUrl: 'html/template_product.html',
                 controller: 'controller_prods',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
+                    product: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
+                        var productIdObj = factory_litsco.find(function (obj) {
+                            if (obj.id === $stateParams.id) {
+                                return obj;
+                            }
+                        });
+                        return productIdObj;
+                    }],
+                    $title: ['product', function (product) {
+                        return product.productName;
                     }]
                 }
             })
@@ -29,8 +35,16 @@ angular.module('app_litsco')
                 templateUrl: 'html/template_product.html',
                 controller: 'controller_prods',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
+                    product: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
+                        var productIdObj = factory_litsco.find(function (obj) {
+                            if (obj.id === $stateParams.id) {
+                                return obj;
+                            }
+                        });
+                        return productIdObj;
+                    }],
+                    $title: ['product', function (product) {
+                        return product.productName;
                     }]
                 }
             })
@@ -39,8 +53,18 @@ angular.module('app_litsco')
                 templateUrl: 'html/template_productlist.html',
                 controller: 'controller_productlist',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
+                    productlist: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
+                        var catTitle;
+                        var cat = $stateParams.cat;
+                        if (cat === 'streamline_metal_panels') {
+                            catTitle = 'Streamline Metal Panels';
+                        } else if (cat === 'metal_flashing') {
+                            catTitle = 'Metal Flashing';
+                        }
+                        return catTitle;
+                    }],
+                    $title: ['productlist', function (productlist) {
+                        return productlist;
                     }]
                 }
             })
@@ -49,8 +73,18 @@ angular.module('app_litsco')
                 templateUrl: 'html/template_productlist.html',
                 controller: 'controller_productlist',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
+                    productlist: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
+                        var catTitle;
+                        var cat = $stateParams.cat;
+                        if (cat === 'streamline_metal_panels') {
+                            catTitle = 'Streamline Metal Panels';
+                        } else if (cat === 'metal_flashing') {
+                            catTitle = 'Metal Flashing';
+                        }
+                        return catTitle;
+                    }],
+                    $title: ['productlist', function (productlist) {
+                        return productlist;
                     }]
                 }
             })
@@ -59,15 +93,38 @@ angular.module('app_litsco')
                 templateUrl: 'html/contact.html',
                 controller: 'controller_contact',
                 resolve: {
-                    title: ['$rootScope', function ($rootScope) {
-                        return $rootScope.title;
-                    }]
+                    $title: function () { return 'Contact Us'; }
                 }
             })
             .state('supply_item', {
                 url: '/division_7_supplies/:vendorType/',
                 templateUrl: 'html/template_supplies.html',
-                controller: 'controller_supplies'
+                controller: 'controller_supplies',
+                resolve: {
+                    vendorList: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
+                        var vendorTitle;
+                        var vendorType = $stateParams.vendorType;
+                        if (vendorType === 'roofing') {
+                            vendorTitle = 'Roofing Supplies';
+                        } else if (vendorType === 'waterproofing') {
+                            vendorTitle = 'Waterproofing Supplies';
+                        } else if (vendorType === 'commercial_metal') {
+                            vendorTitle = 'Commecial Metal Panels';
+                        } else if (vendorType === 'envelope') {
+                            vendorTitle = 'Building Envelope';
+                        } else if (vendorType === 'division_7_specialties') {
+                            vendorTitle = 'Division 7 Specialties';
+                        } else if (vendorType === 'flatsheets') {
+                            vendorTitle = 'Flatsheet Metal';
+                        } else if (vendorType === 99) {
+                            vendorTitle = 'Division 7 Building Products';
+                        }
+                        return vendorTitle;
+                    }],
+                    $title: ['vendorList', function (vendorList) {
+                        return vendorList;
+                    }]
+                }
             })
             .state('supplies', {
                 url: '/division_7_supplies/',
@@ -75,24 +132,27 @@ angular.module('app_litsco')
                     type: 'division_7_supplies'
                 },
                 templateUrl: 'html/template_supplylist.html',
-                controller: 'controller_supplylist'
+                controller: 'controller_supplylist',
+                resolve: {
+                    $title: function () { return 'Division 7 Products & Supplies'; }
+                }
             })
             .state('about', {
                 url: '/about/',
                 templateUrl: 'html/about.html',
-                controller: 'controller_about'
+                controller: 'controller_about',
+                resolve: {
+                    $title: function () { return 'About Us'; }
+                }
             })
             .state('careers', {
                 url: '/careers/',
                 templateUrl: 'html/careers.html',
-                controller: 'controller_careers'
+                controller: 'controller_careers',
+                resolve: {
+                    $title: function () { return 'Careers and Employment'; }
+                }
             });
 
         $locationProvider.html5Mode(true);
-    }])
-.run(function($rootScope) {
-    $rootScope.$on("$routeChangeSuccess", function(currentRoute, previousRoute){
-    //Change page title, based on Route information
-    $rootScope.title = $route.current.title;
-  })
-});
+    }]);

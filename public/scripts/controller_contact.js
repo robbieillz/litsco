@@ -1,6 +1,5 @@
 angular.module('app_litsco')
-	.controller('controller_contact', ['$rootScope', '$scope', '$state', '$http', function ($rootScope, $scope, $state, $http) {
-		$rootScope.title = 'Contact Us';
+	.controller('controller_contact', ['$scope', '$state', '$http', function ($scope, $state, $http) {
 
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';
