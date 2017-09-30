@@ -346,6 +346,7 @@ angular.module('app_litsco')
                 "Silver Metallic": "#66727a",
                 "Slate Gray": "#2f2e2c",
                 "Matte Black": "#232021",
+                "Pre-Patina Green": "#599671",
                 "Custom Painted": "#FFF"
             },
             "illustration": "flatwall_sm",

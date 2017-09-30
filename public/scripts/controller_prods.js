@@ -23,23 +23,57 @@ angular.module('app_litsco')
         };
 
         $scope.hoverColor = ' ';
-        $scope.hoverColorText = function (color) {
-            if (color) {
-                $scope.hoverColor = color;
-                updateSvgFill(this.hex);
+        $scope.hoverColorText = function (selectedHover) {
+            if (selectedHover.hex) {
+                $scope.hoverColor = selectedHover.color;
+                updateGradient(selectedHover.hex);
+                updateSvgFill();
             }
         };
 
         $scope.defaultFill = function (colors) {
             if (colors) {
                 var defaultColor = colors[Object.keys(colors)[0]];
-                updateSvgFill(defaultColor);
+                createGradient($('svg')[0], 'MyGradient', [
+                    { offset: '10%', 'stop-color': createShade(defaultColor, 0.2) },
+                    { offset: '100%', 'stop-color': defaultColor }
+                ]);
+                updateSvgFill();
                 return true;
             }
         };
 
+        function updateGradient(color) {
+            $('linearGradient#MyGradient #stop-0').attr('stop-color', createShade(color, 0.2));
+            $('linearGradient#MyGradient #stop-1').attr('stop-color', color);
+        }
+
+
+        function createGradient(svg, id, stops) {
+            var svgNS = svg.namespaceURI;
+            var grad = document.createElementNS(svgNS, 'linearGradient');
+            grad.setAttribute('id', id);
+            for (var i = 0; i < stops.length; i++) {
+                var attrs = stops[i];
+                var stop = document.createElementNS(svgNS, 'stop');
+                stop.id = 'stop-' + i;
+                for (var attr in attrs) {
+                    if (attrs.hasOwnProperty(attr)) stop.setAttribute(attr, attrs[attr]);
+                }
+                grad.appendChild(stop);
+            }
+
+            var defs = svg.querySelector('defs') || svg.insertBefore(document.createElementNS(svgNS, 'defs'), svg.firstChild);
+            return defs.appendChild(grad);
+        }
+
+        function createShade(color, percent) {
+            var f = parseInt(color.slice(1), 16), t = percent < 0 ? 0 : 255, p = percent < 0 ? percent * -1 : percent, R = f >> 16, G = f >> 8 & 0x00FF, B = f & 0x0000FF;
+            return "#" + (0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) * 0x100 + (Math.round((t - B) * p) + B)).toString(16).slice(1);
+        }
+
         function updateSvgFill(hex) {
-            $('.hover_color_change').attr('fill', hex);
+            $('.hover_color_change').attr('fill', 'url(#MyGradient)');
         }
 
         if ($scope.productIdObj.portfolio) {

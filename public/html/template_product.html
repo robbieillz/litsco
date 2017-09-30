@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row center">
                 <div class="col s12">
-                    <h2 class="product-name-heading oswald">{{ productIdObj.productName }}</h2>
+                    <h1 class="product-name-heading oswald">{{ productIdObj.productName }}</h1>
                     <div class="divider"></div>
-                    <h6 class="product-name-subhead">{{ productIdObj.subHeader }}</h6>
+                    <h2 class="product-name-subhead">{{ productIdObj.subHeader }}</h2>
                 </div>
             </div>
             <div ng-if="productIdObj.colors" class="row flex-row-wrap">
@@ -20,7 +20,7 @@
                     <h5>Select Your Color</h5>
                     <div class="product-color-list">
                         <div ng-repeat="(color, hex) in productIdObj.colors" class="product-color-chip-container" style="margin: 10px;">
-                            <div ng-mouseover="hoverColorText(color)" ng-mouseleave="hoverColorText()" class="z-depth-2 product-color-chip {{color}}"
+                            <div ng-mouseover="hoverColorText(this)" class="z-depth-2 product-color-chip {{color}}"
                                 alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
                         </div>
                     </div>
