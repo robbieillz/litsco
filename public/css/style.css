@@ -674,6 +674,62 @@ map {
     margin-right: 1em;
 }
 
+/***** CAREERS *****/
+
+#section-career-overview {
+    font-size: 1.25em;
+}
+
+#section-career-positions {
+    font-size: 1.1em;
+}
+
+#section-career-overview, #section-career-positions {
+    padding-top: 32px;
+}
+
+.career-position-head {
+    font-size: 1.2em;
+    text-transform: uppercase;    
+}
+
+#career-features {
+    font-size: .9em;
+}
+
+#career-features li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 1.75;
+}
+
+.career-features-bullet {
+    margin-right: 16px;
+}
+
+.career-position-titles {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+.career-requirements-list {
+    margin-left: 24px;
+}
+
+.career-position-body ul.career-requirements-list li {
+    list-style-type: circle;
+}
+
+.career-position-body {
+    background-color: #FDFDFD;
+}
+
 /***** FOOTER *****/
 
 .footer-small-text {
