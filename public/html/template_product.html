@@ -39,11 +39,14 @@
                         <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="/pdf/{{ productIdObj.quoteSheetLink }}" target="_blank" ><i class="material-icons small">format_quote</i></a>
                             <p>Quote Request</p>
                         </li>
-                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="#"><i class="material-icons dp48">invert_colors</i></a>
-                            <p>Color Chart</p>
-                        </li>
                         <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}" target="_blank"><i class="material-icons small">attach_file</i></a>
                             <p>Spec Sheet</p>
+                        </li>
+                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/firestone_color_chart.pdf" target="_blank"><i class="material-icons dp48">invert_colors</i></a>
+                            <p>Firestone Color Chart</p>
+                        </li>
+                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/fabral_color_chart.pdf" target="_blank"><i class="material-icons dp48">format_color_fill</i></a>
+                            <p>Fabral Color Chart</p>
                         </li>
                     </ul>
                 </div>

@@ -337,8 +337,7 @@ i.point-right {
 }
 
 #index-how,
-#index-about, #section-contact, #main-product-list {
-    /*background-color: #e0e0e0;*/
+#index-about, #section-contact, #main-product-list, #index-map {
     background: #e0e0e0;
     /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#FFF, #e0e0e0);
@@ -387,20 +386,6 @@ i.point-right {
 
 #index-carousel .carousel {
     max-height: 70vh;
-}
-
-#index-map {
-    /*background-color: #e0e0e0;*/
-    background: #e0e0e0;
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#e0e0e0, #FFF);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#e0e0e0, #FFF);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#e0e0e0, #FFF);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#e0e0e0, #FFF);
-    /* Standard syntax */
 }
 
 #map-wrapper {
@@ -573,9 +558,6 @@ map {
 }
 
 .product-list-wrapper {
-	/* height: 350px; */
-	/*max-height: 350px;*/
-	/* min-height: 350px; */
 	margin:	15px 0;
 }
 
@@ -584,6 +566,10 @@ map {
     min-height: 300px;
     height: 300px;
     overflow: hidden;
+}
+
+.product-list-cards .card-image.supplies {
+    overflow: visible;
 }
 
 .card-image.supplies, .card-image.product-list {
@@ -675,12 +661,11 @@ map {
     line-height: 3em;
     padding: 0 1em;
     background-color: #fff;
-    webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    --webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 .about-heading i {
-    /* width: 2rem; */
     font-size: inherit;
     line-height: inherit;
     display: block;
@@ -761,7 +746,7 @@ map {
     }
 
     h5.download {
-    	display: none;	
+    	display: none;
     }
 }
 

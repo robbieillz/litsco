@@ -741,10 +741,12 @@ angular.module('app_litsco')
                 "Pier Covers",
                 "Skylights",
                 "Finials"
-
             ],
             "portfolio": [
                 {
+                    url: 'custom_0',
+                    alt: 'LITSCO\'s custom specialty sheet metal'
+                }, {
                     url: 'custom_1',
                     alt: 'LITSCO\'s custom specialty sheet metal'
                 }, {
@@ -930,8 +932,8 @@ angular.module('app_litsco')
             "subHeader": "Innovative commercial systems for the building envelope",
             "alt": "Soprema Building Envelope"
         }, {
-            "id": "division_7",
-            "cat": 7,
+            "id": "roofing",
+            "cat": 3,
             "vendorName": "Karnak",
             "vendorLogo": "karnak.png",
             "vendorUrl": "http://karnakcorp.com",
@@ -970,16 +972,16 @@ angular.module('app_litsco')
             "subHeader": "Designed for use with standard pedestal systems and drainage boards",
             "alt": "Roofblok roof pavers"
         }, {
-            "id": "division_7",
-            "cat": 7,
+            "id": "waterproofing",
+            "cat": 4,
             "vendorName": "Conproco",
             "vendorLogo": "conproco.jpg",
             "vendorUrl": "http://conproco.com/",
             "subHeader": "Premium concrete and masonry products with field proven performance",
             "alt": "Conproco concrete and stone repair"
         }, {
-            "id": "division_7",
-            "cat": 7,
+            "id": "waterproofing",
+            "cat": 4,
             "vendorName": "York Manufacturing",
             "vendorLogo": "york.png",
             "vendorUrl": "http://www.yorkmfg.com/",
@@ -1070,7 +1072,7 @@ angular.module('app_litsco')
             "cat": 8,
             "vendorName": "Firestone",
             "vendorLogo": "firestone.png",
-            "vendorUrl": "http://firestonebpco.com/",
+            "vendorUrl": "http://firestonebpco.com/technical-information/colors/",
             "subHeader": "LITSCO stocks Firestone Kynar painted aluminum and galvalume",
             "alt": "Firestone metal"
         }, {
@@ -1094,7 +1096,8 @@ angular.module('app_litsco')
             "linkTo": 3,
             "productName": "Roofing Supplies",
             "detailImg": "roofing.png",
-            "alt": "LITSCO supplies Roofing products"
+            "alt": "LITSCO supplies Roofing products",
+            "description": "Cold Fluid Applied, PMMA, EPDM, SBS, Modified Bitumen, Hot Asphalt, TPO, PVC, Insulation, Energy Star White"
         }, {
             "id": "waterproofing",
             "cat": 99,
@@ -1102,7 +1105,9 @@ angular.module('app_litsco')
             "linkTo": 4,
             "productName": "Waterpoofing Supplies",
             "detailImg": "waterproofing.jpg",
-            "alt": "LITSCO supplies Waterproofing products"
+            "alt": "LITSCO supplies Waterproofing products",
+            "description": "PMMA, Hot Applied, Cold Fluid Applied, Drainage Matt, Insulation, Extruded Polystyrene, Expanded Polystyrene"
+            
         }, {
             "id": "commercial_metal",
             "cat": 99,
@@ -1110,7 +1115,8 @@ angular.module('app_litsco')
             "linkTo": 5,
             "productName": "Commecial Metal Panels",
             "detailImg": "commercialmetal.jpg",
-            "alt": "LITSCO supplies Commecial Metal panels"
+            "alt": "LITSCO supplies Commecial Metal panels",
+            "description": "Insulated Metal Wall Panels, Insulated Metal Roof Panels, Standing Seam, Concealed Fastener Systems"
         }, {
             "id": "envelope",
             "cat": 99,
@@ -1118,7 +1124,9 @@ angular.module('app_litsco')
             "linkTo": 6,
             "productName": "Building Envelope",
             "detailImg": "buildingenvelope.png",
-            "alt": "LITSCO supplies Building Envelope products"
+            "alt": "LITSCO supplies Building Envelope products",
+            "description": "Air Vapor Barriers, Sheet Membrane, Fluid Applied Membrane, Silicone Sealants, Extruded Polystyrene"
+            
         }, {
             "id": "division_7_specialties",
             "cat": 99,
@@ -1126,7 +1134,9 @@ angular.module('app_litsco')
             "linkTo": 7,
             "productName": "Division 7 Specialties",
             "detailImg": "d7specialties.jpg",
-            "alt": "LITSCO supplies Division 7 Specialty products"
+            "alt": "LITSCO supplies Division 7 Specialty products",
+            "description": "Roof and Plaza Paver systems, Garden Roofing, Hatches, Vents, Gutters"
+            
         }, {
             "id": "flatsheets",
             "cat": 99,
@@ -1134,7 +1144,8 @@ angular.module('app_litsco')
             "linkTo": 8,
             "productName": "Flatsheet Metal",
             "detailImg": "flatsheets.jpg",
-            "alt": "LITSCO supplies Flatsheet metal"
+            "alt": "LITSCO supplies Flatsheet metal",
+            "description": "Kynar painted Aluminum, Copper Sheets, Zinc Sheets, Flatsheet Metal"     
         },
 
         ];
