@@ -152,6 +152,22 @@ angular.module('app_litsco')
                 resolve: {
                     $title: function () { return 'Careers and Employment'; }
                 }
+            })
+            .state('privacy', {
+                url: '/privacy_policy/',
+                templateUrl: 'html/privacy_policy.html',
+                controller: 'controller_privacy',
+                resolve: {
+                    $title: function () { return 'Privacy Policy'; }
+                }
+            })
+            .state('copyright', {
+                url: '/copyright/',
+                templateUrl: 'html/copyright.html',
+                controller: 'controller_copyright',
+                resolve: {
+                    $title: function () { return 'Privacy Policy'; }
+                }
             });
 
         $locationProvider.html5Mode(true);
