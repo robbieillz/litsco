@@ -582,6 +582,7 @@ angular.module('app_litsco')
                 "Silver Metallic": "#66727a",
                 "Slate Gray": "#2f2e2c",
                 "Matte Black": "#232021",
+                "Copper": "#af6818",
                 "Custom Painted": "#FFF"
             },
             "illustration": "flashdown",
@@ -691,11 +692,20 @@ angular.module('app_litsco')
                 "Stainless Steel": "#c5c4c4"
             },
             "illustration": "litlok",
-            "jumboImg": "",
+            "jumboImg": "litlok_full.jpg",
             "detailImg": "litlok_alt.png",
             "thumbImg": "litlok.png",
             "quoteSheetLink": "print_approval_litlok.pdf",
             "dataSheetLink": "litlok_flashing.pdf",
+            "portfolio": [
+                {
+                    url: 'litlok_0',
+                    alt: 'LitLok ThruWall Flashing by LITSCO'
+                }, {
+                    url: 'litlok_1',
+                    alt: 'LitLok ThruWall Flashing by LITSCO'
+                }
+            ]
         }, {
             "id": "lead_tees",
             "cat": 2,
@@ -723,6 +733,68 @@ angular.module('app_litsco')
             "detailImg": "lead_tee.png",
             "thumbImg": "lead_tee.png",
             "dataSheetLink": "joint_lead_tee.pdf",
+        }, {
+            "id": "gard_n_edge",
+            "cat": 2,
+            "productName": "Gard-N-Edge",
+            "subHeader": "Green Roof and Plaza Edge Restraintrs",
+            "overview": "Gard-N-Edge is the ideal solution for garden roof projects where transition and soil retention is needed between the vegetation and hardscapes such as conventional roofing systems or plaza pavers.",
+            "features": [
+                "Fabricated in 10ft lengths",
+                "Integrated Splice Plate means No additional pieces, Improves installation times",
+                "Cut-Tab Corners allow for minor adjustments at corners. Just set and rivet to keep in place",
+                "Custom miters and profiles available",
+                "Drainage Outlets 3/8\” wide x 1\” high, spaced 1\” O.C. to provide maximum drainage beneath the vegetative roof system",
+                "Height of slots accounts for the thickness of most drainage mats."
+            ],
+            "installation": {
+                "Edge Restraint": "Edge restraint is loosely laid on top of roofing system as specified and held in place by the weight of the growing media placed over it. Do not mechanically attach through roof system."
+            },
+            "materials": {
+                "Aluminum": [
+                    ".063\" / .080\" / .125\", Mill Finish",
+                    ".063\" / .080\" / .125\", Custom Painted",
+                    ".063\" Standard Kynar Painted",
+                ],
+                "Copper": [
+                    "16oz / 20oz, Cold Rolled",
+                    "16oz / 20oz, Freedom Gray",
+                ],
+                "Stainless Steel": [
+                    "22GA / 20GA Type 304 #2D",
+                ],
+                "Rheinzink Zinc": [
+                    "1.0MM, PrePatina",
+                ]
+            },
+            "colors": {
+                "Copper": "#af6818",
+                "Freedom Gray": "#646566",
+                "Lead Coated": "#66727a",
+                "Stainless Steel": "#c5c4c4",
+                "Pre Patina Zinc": "#646566",
+                "Bone White": "#f4f4f4",
+                "Dark Bronze": "#211401",
+                "Matte Black": "#232021"
+            },
+            "illustration": "gard_n_edge",
+            "jumboImg": "gardnedge_full.jpg",
+            // "detailImg": "lead_tee.png",
+            "thumbImg": "gardnedge.png",
+            "dataSheetLink": "gard_n_edge.pdf",
+            "quoteSheetLink": "print_approval_gard_n_edge.pdf",
+            "portfolio": [
+                {
+                    url: 'gardnedge_0',
+                    alt: 'Gard-n-Edge by LITSCO'
+                }, {
+                    url: 'gardnedge_1',
+                    alt: 'Gard-n-Edge by LITSCO'
+                }, {
+                    url: 'gardnedge_2',
+                    alt: 'Gard-n-Edge by LITSCO'
+                },
+            ]
         }, {
             "id": "specialty_metal",
             "cat": 2,
