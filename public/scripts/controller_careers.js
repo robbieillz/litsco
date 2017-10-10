@@ -21,14 +21,12 @@ angular.module('app_litsco')
             $scope.selectedPosition = true;
             $scope.positionName = name;
             angular.element(document.querySelector('#position-label')).addClass('active');
+            setTimeout(function(){scrollIntoView();},200);
         };
 
-        $scope.$on("fileSelected", function (event, args) {
-            $scope.$apply(function () {            
-                //add the file object to the scope's files collection
-                $scope.files.push(args.file);
-            });
-        });
+        function scrollIntoView() {
+            document.querySelector('#careers-application-form').scrollIntoView({ behavior: 'smooth' });
+        }
 
         $scope.postCareers = function (careerData) {
             $scope.careerData.position = $scope.positionName;
