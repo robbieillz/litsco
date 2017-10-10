@@ -32,55 +32,33 @@ angular.module('app_litsco')
 
         $scope.postCareers = function (careerData) {
             $scope.careerData.position = $scope.positionName;
-            // $scope.careerData.file = $scope.file;
 
             // var contactFormHeight = $('.contact-form-wrapper').height();
 			// $scope.formSubmit = true;
 			// $('.contact-form-success').height(contactFormHeight);
 			// Check form validation
 			// if ($scope.contactForm.$invalid === true) {
-			// 	return;
+			// 	return false;
 			// }
 			// wrap all your input values in $scope.postData
 			$scope.postData = angular.copy(careerData);
 
-			var req = {
+			var formData = new FormData();
+            Object.keys($scope.postData).forEach(function(key) {
+                formData.append(key, $scope.careerData[key]);
+            });
+
+            var req = {
 				method: 'POST',
-				url: '/api/career_submit',
-                headers: {
-                    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-                },
-                // transformRequest: function (data, headersGetter) {
-                //     var formData = new FormData();
-                //     angular.forEach(data, function (value, key) {
-                //         formData.append(key, value);
-                //     });
-    
-                //     var headers = headersGetter();
-                //     delete headers['Content-Type'];
-    
-                //     return formData;
-                // },
-                data: {
-                    model: $scope.postData,
-                    file: $scope.file
-                },
-                // transformRequest: function (data, headersGetter) {
-                //     var formData = new FormData();
-                //     angular.forEach(data, function (value, key) {
-                //         formData.append(key, value);
-                //     });
-    
-                //     var headers = headersGetter();
-                //     delete headers['Content-Type'];
-    
-                //     return formData;
-                // }
-    
+                url: '/api/career_submit',
+                transformRequest: angular.identity,
+				headers: 
+					{'Content-Type': undefined},
+				data: formData
 			};
 
 			$http(req)
-				.then(function successCallback(response) {
+				.then(function(data, status) {
 					$scope.careerData = {
                         first: '',
                         last: '',
@@ -97,10 +75,11 @@ angular.module('app_litsco')
 					//do something after success
 					// this callback will be called asynchronously
 					// when the response is available
-				}, function errorCallback(response) {
+				}, function(data, status) {
 					//do something after error
 					// called asynchronously if an error occurs
 					// or server returns response with an error status.
 				});
 		};
     }]);
+    

@@ -779,7 +779,6 @@ angular.module('app_litsco')
             },
             "illustration": "gard_n_edge",
             "jumboImg": "gardnedge_full.jpg",
-            // "detailImg": "lead_tee.png",
             "thumbImg": "gardnedge.png",
             "dataSheetLink": "gard_n_edge.pdf",
             "quoteSheetLink": "print_approval_gard_n_edge.pdf",

@@ -2,6 +2,8 @@ angular.module('app_litsco')
 	.controller('controller_contact', ['$scope', '$state', '$http', function ($scope, $state, $http) {
 
 		$scope.originTrue = false;
+		$scope.formSubmitSuccess = false;
+		$scope.formSubmit = false;
 		$scope.litsco = '40.706940, -73.8613';
 		$scope.contactData = {
 			phone: '',
