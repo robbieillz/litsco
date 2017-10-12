@@ -43,10 +43,22 @@
                             <label for="textarea1">Tell us why you are contacting us</label>
                         </div>
                     </div>
-                    <div class="row right">
-                        <button class="btn waves-effect waves-light form-contact-submit" type="submit" name="action">Submit
+                    <div class="row col s12">
+                        <div class="row">
+                            To Verify You are a Human:
+                        </div>
+                        <div>
+                            <div class="input-field col s6">
+                                <input id="human" type="text" class="validate" ng-model="human" ng-change="validateHuman(human)">
+                                <label for="human">What is 2 + 2?</label>
+                            </div>
+                            <div class="col s6">
+                                <button class="btn waves-effect waves-light form-contact-submit right" type="submit" name="action" id="contact-submit-button"
+                                    disabled>Submit
                             <i class="material-icons right">send</i>
                         </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 <div ng-show="formSubmit" class="contact-form-success">

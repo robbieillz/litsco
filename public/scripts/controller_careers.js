@@ -28,12 +28,19 @@ angular.module('app_litsco')
             document.querySelector('#careers-application-form').scrollIntoView({ behavior: 'smooth' });
         }
 
+        $scope.validateHuman = function(input) {
+            if (input == 4) {
+                angular.element(document.querySelector('#career-submit-button')).removeAttr('disabled');
+            }
+        };
+
         $scope.postCareers = function (careerData) {
             $scope.careerData.position = $scope.positionName;
+            $scope.whileLoading = true;
+            $scope.formSubmit = true;
 
-            // var contactFormHeight = $('.contact-form-wrapper').height();
-			// $scope.formSubmit = true;
-			// $('.contact-form-success').height(contactFormHeight);
+            var contactFormHeight = $('.careers-form-wrapper').height();
+			$('.form-loading').height(contactFormHeight);
 			// Check form validation
 			// if ($scope.contactForm.$invalid === true) {
 			// 	return false;
@@ -53,10 +60,11 @@ angular.module('app_litsco')
 				headers: 
 					{'Content-Type': undefined},
 				data: formData
-			};
-
+            };
+            
 			$http(req)
 				.then(function(data, status) {
+                    $scope.whileLoading = false;
 					$scope.careerData = {
                         first: '',
                         last: '',
@@ -66,10 +74,11 @@ angular.module('app_litsco')
                         position: '',
                         message: ''
 					};
-					$scope.contactForm.$setPristine();
+					$scope.careersForm.$setPristine();
 					$('.form-career-input-field, .form-career-submit').prop('disabled', true);
 
-					$scope.formSubmitSuccess = true;
+                    $scope.formSubmitSuccess = true;
+                    $('.career-form-success').height(contactFormHeight);
 					//do something after success
 					// this callback will be called asynchronously
 					// when the response is available

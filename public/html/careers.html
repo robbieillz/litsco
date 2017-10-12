@@ -136,7 +136,8 @@
                             <span class="career-position-titles">We're always looking for talented individuals</span>
                             <p>If you don't see a position that fits your needs, please feel free to fill out the below contact
                                 form with your resume attached. If an opportunity becomes available we will reach out to
-                                you.</p>
+                                you.
+                            </p>
                             <div class="center">
                                 <a class="waves-effect waves-light btn amber darken-4 hide-on-med-lrg-and-down" id="apply-3" ng-click="applicationClick('')">Apply</a>
                             </div>
@@ -146,66 +147,135 @@
             </div>
         </section>
         <section id="careers-application-form" ng-show="selectedPosition">
-            <div class="row">
-                <form class="col s12" ng-submit="postCareers(careerData)">
+            <div class="row careers-form-wrapper">
+                <form id="form-careers" class="col s12" name="careersForm" ng-submit="postCareers(careerData)" ng-hide="formSubmit">
                     <div class="row">
                         <p class="application-header">About You:</p>
                         <div class="input-field col s6">
-                            <input id="first_name" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.first">
+                            <input required id="first_name" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.first">
                             <label for="first_name">First Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.last">
+                            <input required id="last_name" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.last">
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="email" type="email" class="validate form-career-input-field" aria-required="true" ng-model="careerData.email">
+                            <input required id="email" type="email" class="validate form-career-input-field" aria-required="true" ng-model="careerData.email">
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="telephone" type="tel" class="validate form-career-input-field" aria-required="true" ng-model="careerData.phone">
+                            <input required id="telephone" type="tel" class="validate form-career-input-field" aria-required="true" ng-model="careerData.phone">
                             <label for="telephone">Telephone</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="address" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.address">
+                            <input required id="address" type="text" class="validate form-career-input-field" aria-required="true" ng-model="careerData.address">
                             <label for="address">Address</label>
                         </div>
                     </div>
                     <div class="row">
                         <p class="application-header">Position Information:</p>
                         <div class="input-field col s12">
-                            <input id="position" type="text" class="validate form-career-input-field" ng-model="positionName" aria-required="true">
+                            <input required id="position" type="text" class="validate form-career-input-field" ng-model="positionName" aria-required="true">
                             <label for="position" id="position-label">Position You Are Applying For</label>
                         </div>
                     </div>
                     <div class="row">
-                            <div class="input-field col s12">
-                              <textarea id="textarea1" class="materialize-textarea form-career-input-field" aria-required="true" ng-model="careerData.message"></textarea>
-                              <label for="textarea1">Why Are You Interested?</label>
-                            </div>
-                          </div>
+                        <div class="input-field col s12">
+                            <textarea required id="textarea1" class="materialize-textarea form-career-input-field" aria-required="true" ng-model="careerData.message"></textarea>
+                            <label for="textarea1">Why Are You Interested?</label>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="file-field input-field col s12 m6">
                             <div class="btn flex-center amber darken-4">
                                 <i class="material-icons dp48">attach_file</i>
                                 <span>Upload</span>
-                                <input type="file" file-model="careerData.attachment" aria-required="true" name="attachment">
+                                <input required type="file" file-model="careerData.attachment" aria-required="true" name="attachment">
                             </div>
                             <div class="file-path-wrapper">
-                                <input class="file-path validate form-career-input-field" type="text" placeholder="Attach File: PDF, DOC types only">
+                                <input required class="file-path validate form-career-input-field" type="text" placeholder="Attach File: PDF, DOC types only">
                             </div>
                         </div>
                     </div>
-                    <div class="row right">
-                            <button class="btn waves-effect waves-light form-career-submit" type="submit" name="action">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
+                    <div class="row col s12">
+                        <div class="row">
+                            To Verify You are a Human:
                         </div>
+                        <div>
+                            <div class="input-field col s6">
+                                <input required id="human" type="text" class="validate" ng-model="human" ng-change="validateHuman(human)">
+                                <label for="human">What is 2 + 2?</label>
+                            </div>
+                            <div class="col s6">
+                                <button class="btn waves-effect waves-light form-career-submit right" type="submit" name="action" id="career-submit-button"
+                                    disabled>Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
                 </form>
+                <div class="form-loading flex-center-center" ng-show="whileLoading">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="career-form-success flex-center-center" ng-hide="formSubmit" ng-show="formSubmitSuccess">
+                    <div ng-show="formSubmitSuccess">
+                        <h5 class="oswald">Thank you for contacting us for the {{ postData.position }} position. If your qualifications match
+                            we wil be in contact with you shortly, using the information you provided us.</h5>
+                    </div>
+                </div>
             </div>
         </section>
 </main>

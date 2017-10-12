@@ -57,7 +57,8 @@ apiRouter.post('/api/contact', function (req, res) {
     });
 });
 
-var upload = multer();
+var storage = multer.memoryStorage();
+var upload = multer({ storage: storage });
 
 apiRouter.post('/api/career_submit', upload.single('attachment'), function (req, res) {
     var formData = req.body;
@@ -78,26 +79,20 @@ apiRouter.post('/api/career_submit', upload.single('attachment'), function (req,
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-            res.json(
-                {
-                    info: 'Email not sent'
-                }, {
-                    error: error
-                });
+        var output = {
+                flag: 1
+            };
+        if(error) {
+            console.log('** ERROR: ' + error);
+            output.flag = 0;
+            output.error = error;
         } else {
-            console.log('Message sent: ' + info.response);
-            console.log('Data sent:' + data);
-            res.json(
-                {
-                    success: 'Email has been sent.'
-                }, {
-                    response: info.response
-                }, {
-                    data: data
-                });
+            console.log('** Message sent: ' + info.response);
+            output.response = info.response;
+            output.success = true;
         }
+
+        res.json(output);
     });
 });
 // Exports

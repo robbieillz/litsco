@@ -1,6 +1,14 @@
 angular.module('app_litsco')
 	.controller('controller_contact', ['$scope', '$state', '$http', function ($scope, $state, $http) {
 
+		$("#form-contact").validate({
+			rules: {
+				humanValidate: {
+					equalTo: 4
+				}
+			}
+		});
+			
 		$scope.originTrue = false;
 		$scope.formSubmitSuccess = false;
 		$scope.formSubmit = false;
@@ -25,6 +33,12 @@ angular.module('app_litsco')
 			$scope.originTrue = false;
 			$scope.originAddress = '';
 		};
+
+		$scope.validateHuman = function(input, that) {
+            if (input == 4) {
+                angular.element(document.querySelector('#contact-submit-button')).removeAttr('disabled');
+            }
+        };
 
 		$scope.postMail = function (contact) {
 			var contactFormHeight = $('.contact-form-wrapper').height();
