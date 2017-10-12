@@ -294,6 +294,12 @@ angular.module('app_litsco')
                 }, {
                     url: 'flushwall_tg_4',
                     alt: 'Streamline Flushwall TG metal panel'
+                }, {
+                    url: 'flushwall_tg_5',
+                    alt: 'Streamline Flushwall TG metal panel'
+                }, {
+                    url: 'flushwall_tg_6',
+                    alt: 'Streamline Flushwall TG metal panel'
                 }
             ]
         },
