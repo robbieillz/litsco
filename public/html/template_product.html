@@ -29,8 +29,8 @@
             </div>
             <div ng-if="productIdObj.dataSheetLink" class="row">
                 <div class="card grey lighten-4">
-                    <ul class="product-card-buttons flex-row-around-center">
-                        <li>
+                    <ul class="product-card-buttons flex">
+                        <li class="bullet-download">
                             <h5 class="download oswald">Downloads:</h5>
                         </li>
                         <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="/pdf/{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
@@ -56,7 +56,7 @@
                 <div class="divider"></div>
             </div>
             <div class="row center" ng-if="productIdObj.detailImg">
-                <img ng-src="/img/illustrations/{{productIdObj.detailImg}}" alt="{{productIdObj.productName}}">
+                <img class="product-detail-image" ng-src="/img/illustrations/{{productIdObj.detailImg}}" alt="{{productIdObj.productName}}">
             </div>
             <div class="row">
                 <h5 class="collection-header features oswald" ng-init="calculateColumns()">Features:</h5>

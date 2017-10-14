@@ -49,6 +49,12 @@ nav {
     font-weight: 700;
 }
 
+.flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .flex-center {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -397,8 +403,12 @@ i.point-right {
     max-height: 70vh;
 }
 
-#map-wrapper {
+#home-map-wrapper {
     max-height: 600px;
+}
+
+.home-map {
+    width: 100%;
 }
 
 .map-directions-wrapper {
@@ -489,6 +499,9 @@ map {
 .product-card-buttons {
     text-align: center;
     margin-top: 32px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
 }
 
 .product-color-list {
@@ -549,11 +562,13 @@ map {
     margin-top: 15px;
 }
 
-.prod-detail-img {
-    display: block;
-    margin: auto;
+.product-detail-image {
     max-width: 100%;
-    margin-bottom: 24px;
+}
+
+
+.bullet-download {
+    margin: auto 0;
 }
 
 .prod-illustration-div {
@@ -656,6 +671,10 @@ map {
 }
 
 /***** CONTACT ****/
+
+.contact-map {
+    width: 100%;
+}
 
 .contact-form-success {
     display: flex;
@@ -822,9 +841,18 @@ map {
         font-size: 2em;
     }
 
-    h5.download {
-    	display: none;
+    .bullet-download {
+        display: none;
     }
+
+    .product-download-btns {
+        flex: 1 2 50%;
+    }
+    
+    .contact-map map {
+        height: 200px;
+    }
+    
 }
 
 @media only screen and (min-width: 993px) {

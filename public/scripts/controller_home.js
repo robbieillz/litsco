@@ -3,6 +3,7 @@ angular.module('app_litsco')
 
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';
+		$scope.litscoAddress = 'LITSCO, 76-11 88th St, Glendale, NY 11385';
 
 		$('.carousel.carousel-slider').carousel({
 			fullWidth: true,
@@ -28,4 +29,5 @@ angular.module('app_litsco')
 			$scope.originTrue = false;
 			$scope.originAddress = '';
 		};
+		
 	}]);
