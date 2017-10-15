@@ -6,7 +6,7 @@ var apiRoutes = require('./app/routes.js');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var app = express();
-// var port = process.env.PORT || 9000;
+var port = process.env.PORT || 80;
 
 // configuration ===============================================================
 // set up our express application
@@ -29,8 +29,8 @@ app.get('/*', function (req, res, next) {
 app.use('/', apiRoutes);
 
 // launch ======================================================================
-app.set('port', process.env.PORT || 9000);
-console.log('Up and running on Port: ' + app.get('port'));
+app.listen(port);
+console.log('Up and running on Port: ' + port);
 
 // Expose app
 exports = module.exports = app;
