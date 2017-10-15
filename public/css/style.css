@@ -824,12 +824,6 @@ map {
 
 }
 
-@media only screen and (min-width: 993px) {
-    #careers-application-form {
-        margin-top: 64px;
-    }
-}
-
 @media only screen and (max-width: 993px) {
     #log-in-navbar {
         height: 46px;
@@ -867,6 +861,20 @@ map {
     .card-image .card-title.home-cards-title {
         padding-bottom: 40px;
     }
+
+    #careers-application-form {
+        margin-top: 64px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .card-panel#index-banner-card {
+        font-size: 1.6em;
+    }
+
+    .card-title.home-cards-title {
+        font-size: 2em;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
@@ -878,5 +886,15 @@ map {
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .product-color-chip-container {
         width: 18%;
+    }
+
+    .index-cards-text {
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (min-width: 1025px) {   
+    .index-cards-text {
+        height: 9em;
     }
 }
