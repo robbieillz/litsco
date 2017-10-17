@@ -1,5 +1,7 @@
 angular.module('app_litsco')
 	.controller('controller_contact', ['$scope', '$state', '$http', function ($scope, $state, $http) {
+
+		angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("/img/jumbo_contact.jpg")');		
 			
 		$scope.originTrue = false;
 		$scope.formSubmitSuccess = false;

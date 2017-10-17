@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) { 
 
         var allData = factory_litsco;
         var id = $stateParams.id;
@@ -9,6 +9,8 @@ angular.module('app_litsco')
                 return obj;
             }
         });
+
+        angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("img/jumbo_' + $scope.productIdObj.jumboImg + '")').attr('alt', $scope.productIdObj.productName);       
 
         // FEATURES COLUMN CALCULATION
         $scope.columns = [];
