@@ -2,6 +2,8 @@ angular.module('app_litsco')
     .controller('controller_careers', ['$scope', '$state', '$http', function ($scope, $state, $http) {
         $('.collapsible').collapsible();
 
+        angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("img/jumbo_contact.jpg")');
+
         $scope.selectedPosition = false;
         $scope.positionName = '';
         $scope.careerData = {
