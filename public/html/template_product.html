@@ -1,6 +1,6 @@
 <main class="top-margin-nav-height" id="main-product-content">
     <section id="product-banner" class="flex-center">
-        <div class="jumbo-div"></div>            
+        <div class="jumbo-div"></div>
     </section>
     <div class="full-width-slider-divider"></div>
     <section>
@@ -20,8 +20,7 @@
                     <h5>Select Your Color</h5>
                     <div class="product-color-list">
                         <div ng-repeat="(color, hex) in productIdObj.colors" class="product-color-chip-container" style="margin: 10px;">
-                            <div ng-mouseover="hoverColorText(this)" class="z-depth-2 product-color-chip {{color}}"
-                                alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
+                            <div ng-mouseover="hoverColorText(this)" class="z-depth-2 product-color-chip {{color}}" alt="{{ hoverColor }}" style="background-color: {{ hex }};"></div>
                         </div>
                     </div>
                     <p class="product-hover-color-text"> {{ hoverColor }} </p>
@@ -36,16 +35,18 @@
                         <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="/pdf/{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
                             <p>Data Sheet</p>
                         </li>
-                        <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="/pdf/{{ productIdObj.quoteSheetLink }}" target="_blank" ><i class="material-icons small">format_quote</i></a>
+                        <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="/pdf/{{ productIdObj.quoteSheetLink }}" target="_blank"><i class="material-icons small">format_quote</i></a>
                             <p>Quote Request</p>
                         </li>
                         <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}" target="_blank"><i class="material-icons small">attach_file</i></a>
                             <p>Spec Sheet</p>
                         </li>
-                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/firestone_color_chart.pdf" target="_blank"><i class="material-icons dp48">invert_colors</i></a>
+                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/firestone_color_chart.pdf"
+                                target="_blank"><i class="material-icons dp48">invert_colors</i></a>
                             <p>Firestone Color Chart</p>
                         </li>
-                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/fabral_color_chart.pdf" target="_blank"><i class="material-icons dp48">format_color_fill</i></a>
+                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/fabral_color_chart.pdf"
+                                target="_blank"><i class="material-icons dp48">format_color_fill</i></a>
                             <p>Fabral Color Chart</p>
                         </li>
                     </ul>
@@ -84,14 +85,8 @@
                             <i class="material-icons dp48 portfolio-left-icon" ng-click="prevSlide()">chevron_left</i>
                             <i class="material-icons dp48 portfolio-right-icon" ng-click="nextSlide()">chevron_right</i>
                         </div>
-                        <!-- <span class="card-title">Card Title</span> -->
                     </div>
-                    <!-- <div class="card-content">
-                          <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
-                        </div> -->
                 </div>
             </div>
-        </div>
     </section>
 </main>
