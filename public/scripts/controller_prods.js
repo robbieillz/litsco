@@ -29,7 +29,6 @@ angular.module('app_litsco')
             if (selectedHover.hex) {
                 $scope.hoverColor = selectedHover.color;
                 updateGradient(selectedHover.hex);
-                updateSvgFill();
             }
         };
 
