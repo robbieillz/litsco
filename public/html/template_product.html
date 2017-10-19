@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div ng-if="productIdObj.colors" class="row flex-row-wrap">
-                <div class="prod-illustration-div col s12" ng-class="{l8: productIdObj.colors}">
+                <div class="prod-illustration-div col s12 l8">
                     <div class="prod-svg-wrapper" ng-include="'/img/illustrations/illustration_' + productIdObj.illustration + '.svg'" onload="defaultFill(productIdObj.colors)"></div>
                 </div>
                 <div class="col s12 l4 product-button-card">
