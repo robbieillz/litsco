@@ -28,18 +28,19 @@ angular.module('app_litsco')
         $scope.hoverColorText = function (selectedHover) {
             if (selectedHover.hex) {
                 $scope.hoverColor = selectedHover.color;
-                updateGradient(selectedHover.hex);
+                updateSvgFill(selectedHover.hex);
+                // updateGradient(selectedHover.hex);
             }
         };
 
         $scope.defaultFill = function (colors) {
             if (colors) {
                 var defaultColor = colors[Object.keys(colors)[0]];
-                createGradient($('svg')[0], 'MyGradient', [
-                    { offset: '10%', 'stop-color': createShade(defaultColor, 0.2) },
-                    { offset: '100%', 'stop-color': defaultColor }
-                ]);
-                updateSvgFill();
+                // createGradient($('svg')[0], 'MyGradient', [
+                //     { offset: '10%', 'stop-color': createShade(defaultColor, 0.2) },
+                //     { offset: '100%', 'stop-color': defaultColor }
+                // ]);
+                updateSvgFill(defaultColor);
                 return true;
             }
         };
@@ -74,7 +75,7 @@ angular.module('app_litsco')
         }
 
         function updateSvgFill(hex) {
-            $('.hover_color_change').attr('fill', 'url(#MyGradient)');
+            $('.hover_color_change').attr('fill', hex);
         }
 
         if ($scope.productIdObj.portfolio) {
