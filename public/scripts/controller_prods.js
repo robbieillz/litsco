@@ -1,6 +1,7 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', 'factory_meta', function ($scope, $state, $stateParams, factory_litsco, factory_meta) { 
+    .controller('controller_prods', ['$scope', '$state', '$stateParams', '$window', 'factory_litsco', 'factory_meta', function ($scope, $state, $stateParams, $window, factory_litsco, factory_meta) { 
 
+        var userAgentChromeOrFireFox = $window.navigator.userAgent.indexOf('Chrome') !== -1 || $window.navigator.userAgent.indexOf('Firefox') !== -1;
         var allData = factory_litsco;
         var id = $stateParams.id;
 
@@ -30,19 +31,27 @@ angular.module('app_litsco')
         $scope.hoverColorText = function (selectedHover) {
             if (selectedHover.hex) {
                 $scope.hoverColor = selectedHover.color;
-                updateSvgFill(selectedHover.hex);
-                // updateGradient(selectedHover.hex);
+
+                if (userAgentChromeOrFireFox) {
+                    updateGradient(selectedHover.hex);
+                } else {
+                    updateSvgFill(selectedHover.hex);
+                }
             }
         };
 
         $scope.defaultFill = function (colors) {
             if (colors) {
                 var defaultColor = colors[Object.keys(colors)[0]];
-                // createGradient($('svg')[0], 'MyGradient', [
-                //     { offset: '10%', 'stop-color': createShade(defaultColor, 0.2) },
-                //     { offset: '100%', 'stop-color': defaultColor }
-                // ]);
-                updateSvgFill(defaultColor);
+                if (userAgentChromeOrFireFox) {
+                    createGradient($('svg')[0], 'MyGradient', [
+                        { offset: '10%', 'stop-color': createShade(defaultColor, 0.2) },
+                        { offset: '100%', 'stop-color': defaultColor }
+                    ]);
+                    updateSvgFill();
+                } else {
+                    updateSvgFill(defaultColor);                    
+                }
                 return true;
             }
         };
@@ -77,7 +86,7 @@ angular.module('app_litsco')
         }
 
         function updateSvgFill(hex) {
-            $('.hover_color_change').attr('fill', hex);
+            $('.hover_color_change').attr('fill', userAgentChromeOrFireFox ? 'url(#MyGradient)' : hex);
         }
 
         if ($scope.productIdObj.portfolio) {
