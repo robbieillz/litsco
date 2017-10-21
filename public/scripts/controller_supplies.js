@@ -1,14 +1,18 @@
 angular.module('app_litsco')
-	.controller('controller_supplies', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
+	.controller('controller_supplies', ['$scope', '$state', '$stateParams', 'factory_litsco', 'factory_meta', function ($scope, $state, $stateParams, factory_litsco, factory_meta) {
 
 		var allData = factory_litsco;
 		var cat = $stateParams.vendorType;
 		var catInt = getCategoryInteger(cat);
+		var productListNameArray = [];
 		$scope.vendorList = allData.filter(function (obj) {
 			if (obj.cat === catInt) {
+				productListNameArray.push(obj.vendorName);
 				return obj;
 			}
-		});		
+		});
+
+		factory_meta.supply('LITSCO supplies ' + productListNameArray.join(', ') + ', with options for boom truck deliveries to your site.', 'LITSCO, ' + productListNameArray.join(', ') + ', Roofing Supplies, Waterproofing Supplies, Commecial Metal Panels, Building Envelope, Division 7 Specialties, Division 7 Building Products');
 
 		function getCategoryInteger(cat) {
 			if (cat === 'roofing') {

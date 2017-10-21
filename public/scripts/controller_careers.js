@@ -1,5 +1,7 @@
 angular.module('app_litsco')
-    .controller('controller_careers', ['$scope', '$state', '$http', function ($scope, $state, $http) {
+    .controller('controller_careers', ['$scope', '$state', '$http', 'factory_meta', function ($scope, $state, $http, factory_meta) {
+        factory_meta.careers();
+        
         $('.collapsible').collapsible();
 
         angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("img/jumbo_contact.jpg")');

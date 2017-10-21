@@ -1,5 +1,5 @@
 angular.module('app_litsco')
-    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) { 
+    .controller('controller_prods', ['$scope', '$state', '$stateParams', 'factory_litsco', 'factory_meta', function ($scope, $state, $stateParams, factory_litsco, factory_meta) { 
 
         var allData = factory_litsco;
         var id = $stateParams.id;
@@ -9,6 +9,8 @@ angular.module('app_litsco')
                 return obj;
             }
         });
+        
+        factory_meta.product('LITSCO manufacturers ' + $scope.productIdObj.productName + ' in Queens, NY.  Download our data sheet for more information.', 'LITSCO, streamline metal panels, streamline metal flashing, metal cladding, custom metal flashing, custom metal panels, roof panels, wall panels');
 
         angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("img/jumbo_' + $scope.productIdObj.jumboImg + '")').attr('alt', $scope.productIdObj.productName);       
 

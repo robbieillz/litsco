@@ -1,15 +1,19 @@
 angular.module('app_litsco')
-    .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', function ($scope, $state, $stateParams, factory_litsco) {
+    .controller('controller_productlist', ['$scope', '$state', '$stateParams', 'factory_litsco', 'factory_meta', function ($scope, $state, $stateParams, factory_litsco, factory_meta) {
 
         var allData = factory_litsco;
         var cat = $stateParams.cat;
         var catInt = getCategoryInteger(cat);
+        var productListNameArray = [];
         $scope.productList = allData.filter(function (obj) {
             if (obj.cat === catInt) {
+                productListNameArray.push(obj.productName);
                 return obj;
             }
         });
 
+        factory_meta.productList('LITSCO manufacturers these metal products: ' + productListNameArray.join(', '), 'LITSCO, streamline metal panels, streamline metal flashing, metal cladding, custom metal flashing, custom metal panels, roof panels, wall panels');
+        
         function getCategoryInteger(cat) {
             if (cat === 'streamline_metal_panels') {
                 $scope.productHeader = 'Streamline Metal Panels';
