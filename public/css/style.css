@@ -873,7 +873,11 @@ map {
     }
 
     .card-title.home-cards-title {
-        font-size: 2em;
+        font-size: 0.8em;
+    }
+
+    .about-svg-wrapper {
+        width: 80px;
     }
 }
 
