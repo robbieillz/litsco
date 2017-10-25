@@ -796,13 +796,8 @@ map {
         font-size: 1.1em;
     }
 
-    .card-content.index-3-cards-content {
-        height: 300px;
-    }
-
-
     #index-banner-card-text {
-        font-size: 2.5em;
+        font-size: 2.3em;
     }
 }
 
@@ -821,7 +816,6 @@ map {
         margin: 0;
         float: none;
     }
-
 }
 
 @media only screen and (max-width: 993px) {
@@ -846,7 +840,6 @@ map {
     .contact-map map {
         height: 200px;
     }
-    
 }
 
 @media only screen and (min-width: 993px) {
@@ -891,14 +884,13 @@ map {
     .product-color-chip-container {
         width: 18%;
     }
-
-    .index-cards-text {
-        font-size: 1.75em;
-    }
 }
 
 @media only screen and (min-width: 1025px) {   
     .index-cards-text {
         height: 9em;
+    }
+    .card-content.index-3-cards-content {
+        height: 300px;
     }
 }
