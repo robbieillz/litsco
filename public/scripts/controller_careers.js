@@ -19,7 +19,20 @@ angular.module('app_litsco')
         };
         $scope.files = [];
         
-		$scope.postData = {};
+        $scope.postData = {};
+        
+        $scope.validateFileType = function(file) {
+            var ext = file.type;
+            var inputEl = angular.element(document.querySelector('#input-career-file-upload'));
+            
+            if(ext === 'application/pdf' || ext === 'application/msword' || ext === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                inputEl.addClass('valid-file');
+                return true;
+            } else {
+                inputEl.value = 'Please select PDF or DOC file type.';
+                inputEl.addClass('invalid');
+            }
+        },
 
         $scope.applicationClick = function(name, event) {
             $scope.selectedPosition = true;

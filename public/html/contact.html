@@ -18,28 +18,28 @@
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input class="form-contact-input-field" id="icon_prefix" type="text" ng-model="contactData.name">
+                            <input required aria-required="true" class="validate form-contact-input-field" id="icon_prefix" type="text" ng-model="contactData.name">
                             <label for="icon_prefix">Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">phone</i>
-                            <input class="form-contact-input-field" id="icon_telephone" type="tel" class="validate" ng-model="contactData.phone">
+                            <input class="validate form-contact-input-field" id="icon_telephone" type="tel" ng-model="contactData.phone">
                             <label for="icon_telephone" data-error="Please enter a valid phone number">Telephone</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">email</i>
-                            <input class="form-contact-input-field" id="icon_email" type="email" class="validate" ng-model="contactData.email">
-                            <label for="icon_email" data-error="Please enter a valid Email address">Email</label>
+                            <input required class="validate form-contact-input-field" id="icon_email" type="email" ng-model="contactData.email">
+                            <label for="icon_email" data-error="Please enter a valid Email address" aria-required="true">Email</label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">business</i>
-                            <input class="form-contact-input-field" id="icon_business" type="tel" ng-model="contactData.company">
+                            <input class="form-contact-input-field" id="icon_business" type="text" ng-model="contactData.company">
                             <label for="icon_business">Company</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea form-contact-input-field" ng-model="contactData.message"></textarea>
+                            <textarea id="textarea1" required class="validate materialize-textarea form-contact-input-field" ng-model="contactData.message" aria-required="true"></textarea>
                             <label for="textarea1">Tell us why you are contacting us</label>
                         </div>
                     </div>

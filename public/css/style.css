@@ -764,6 +764,14 @@ map {
     text-transform: uppercase;
 }
 
+textarea.valid.validate, input.valid.validate {
+    border-bottom: 1px solid #0D47A1;
+    box-shadow: 0 1px 0 0 #0D47A1;
+}
+
+.form-career-submit#career-submit-button, .form-contact-submit#contact-submit-button {
+    background-color: #0D47A1;
+}
 /***** FOOTER *****/
 
 .footer-small-text {

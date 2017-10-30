@@ -26,9 +26,15 @@ angular.module('app_litsco', [
             var modelSetter = model.assign;
 
             element.bind('change', function(){
+              if (!element[0].files[0]) {
+                return;
+              } else if (scope.validateFileType(element[0].files[0])) {
                 scope.$apply(function(){
                     modelSetter(scope, element[0].files[0]);
                 });
+              } else {
+                return false;
+              }
             });
         }
     };
