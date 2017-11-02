@@ -81,11 +81,15 @@
                 <div class="card" ng-repeat="pictureItem in photoList">
                     <div class="card-image portfolio-item" ng-show="$index === activeImg">
                         <img class="portfolio-image" alt="{{ pictureItem.alt }}" ng-src="/img/portfolio/portfolio_{{ pictureItem.url }}.jpg">
-                        <div class="">
-                            <i class="material-icons dp48 portfolio-left-icon" ng-click="prevSlide()">chevron_left</i>
-                            <i class="material-icons dp48 portfolio-right-icon" ng-click="nextSlide()">chevron_right</i>
-                        </div>
                     </div>
+                </div>
+                <div class="portfolio-info-wrapper">
+                    <i ng-class="activeImg !== 0 ? 'clickable' : ''" class="material-icons dp48 portfolio-left-icon" ng-click="prevSlide()">chevron_left</i>
+                    <div class="portfolio-item-description row">
+                        <div><b>Project Name: </b>{{ photoList[activeImg].projectName }}</div>
+                        <div><b>Details: </b>{{ photoList[activeImg].projectDetails }}</div>
+                    </div>
+                    <i ng-class="activeImg !== photoList.length - 1 ? 'clickable' : ''" class="material-icons dp48 portfolio-right-icon" ng-click="nextSlide()">chevron_right</i>
                 </div>
             </div>
     </section>

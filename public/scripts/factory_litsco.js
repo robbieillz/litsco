@@ -62,19 +62,29 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'classic_cr_0',
-                    alt: 'Streamline Classic CR metal panel'
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'Eastchester Houses',
+                    projectDetails: '.032" Baked Enamel Bronze',
                 }, {
                     url: 'classic_cr_1',
-                    alt: 'Streamline Classic CR metal panel'
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'Eastchester Houses',
+                    projectDetails: '.032" Baked Enamel Bronze',
                 }, {
                     url: 'classic_cr_2',
-                    alt: 'Streamline Classic CR metal panel'
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'Gates Houses',
+                    projectDetails: '.040" Dark Ivy',
                 }, {
                     url: 'classic_cr_4',
-                    alt: 'Streamline Classic CR metal panel'
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'Pershing Crescent',
+                    projectDetails: '.032" Baked Enamel Bronze',
                 }, {
                     url: 'classic_cr_5',
-                    alt: 'Streamline Classic CR metal panel'
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'Eastchester Houses',
+                    projectDetails: '.032" Baked Enamel Bronze',
                 }
             ]
         },
@@ -140,25 +150,39 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'omniwall_md_0',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'West 60th St',
+                    projectDetails: '.040" Kynar Teal'
                 }, {
                     url: 'omniwall_md_1',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'West 60th St',
+                    projectDetails: '.040" Kynar Teal'
                 }, {
                     url: 'omniwall_md_2',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'West 60th St',
+                    projectDetails: '.040" Kynar Teal'
                 }, {
                     url: 'omniwall_md_3',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'Bronx Lighthouse Charter School',
+                    projectDetails: '.040" Kynar Silver Metallic'
                 }, {
                     url: 'omniwall_md_4',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'Bronx Lighthouse Charter School',
+                    projectDetails: '.040" Kynar Silver Metallic'
                 }, {
                     url: 'omniwall_md_5',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'Lafayette St',
+                    projectDetails: '.040" Kynar Sandstone'
                 }, {
                     url: 'omniwall_md_6',
-                    alt: 'Streamline Omniwall MD metal panel'
+                    alt: 'Streamline Omniwall MD metal panel',
+                    projectName: 'Lafayette St',
+                    projectDetails: '.040" Kynar Sandstone'
                 }
             ]
         },
@@ -209,16 +233,24 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'omniwall_cl_0',
-                    alt: 'Streamline Omniwall CL metal panel'
+                    alt: 'Streamline Omniwall CL metal panel',
+                    projectName: 'Grand @ Sky View Parc',
+                    projectDetails: '.063" Kynar Slate Blue'
                 }, {
                     url: 'omniwall_cl_1',
-                    alt: 'Streamline Omniwall CL metal panel'
+                    alt: 'Streamline Omniwall CL metal panel',
+                    projectName: 'Grand @ Sky View Parc',
+                    projectDetails: '.063" Kynar Slate Blue'
                 }, {
                     url: 'omniwall_cl_2',
-                    alt: 'Streamline Omniwall CL metal panel'
+                    alt: 'Streamline Omniwall CL metal panel',
+                    projectName: 'Kutztown University',
+                    projectDetails: '.063" Kynar Bone White'
                 }, {
                     url: 'omniwall_cl_3',
-                    alt: 'Streamline Omniwall CL metal panel'
+                    alt: 'Streamline Omniwall CL metal panel',
+                    projectName: 'Kutztown University',
+                    projectDetails: '.063" Kynar Bone White'
                 }
             ]
         },
@@ -281,25 +313,39 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'flushwall_tg_0',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flushwall_tg_1',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flushwall_tg_2',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flushwall_tg_3',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flushwall_tg_4',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Manhasset Public Library',
+                    projectDetails: '0.18" Follansbee Terne Coated Stainless Steel'
                 }, {
                     url: 'flushwall_tg_5',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Austrian Cultrual Forum',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flushwall_tg_6',
-                    alt: 'Streamline Flushwall TG metal panel'
+                    alt: 'Streamline Flushwall TG metal panel',
+                    projectName: 'Austrian Cultrual Forum',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }
             ]
         },
@@ -365,31 +411,49 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'flatwall_sm_0',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CAMBA Gardens',
+                    projectDetails: '16oz Aurubis Nordic Green Copper'
                 }, {
                     url: 'flatwall_sm_1',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CAMBA Gardens',
+                    projectDetails: '16oz Aurubis Nordic Green Copper'
                 }, {
                     url: 'flatwall_sm_2',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CAMBA Gardens',
+                    projectDetails: '16oz Aurubis Nordic Green Copper'
                 }, {
                     url: 'flatwall_sm_3',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CUNY CEWIT',
+                    projectDetails: '16oz Revere Copper'
                 }, {
                     url: 'flatwall_sm_4',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CUNY CEWIT',
+                    projectDetails: '16oz Revere Copper'
                 }, {
                     url: 'flatwall_sm_5',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'CUNY CEWIT',
+                    projectDetails: '16oz Revere Copper'
                 }, {
                     url: 'flatwall_sm_6',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'United Nations',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'flatwall_sm_7',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'United Nations',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc' 
                 }, {
                     url: 'flatwall_sm_8',
-                    alt: 'Streamline Flatwall SM metal panel'
+                    alt: 'Streamline Flatwall SM metal panel',
+                    projectName: 'United Nations',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }
             ]
         },
@@ -452,25 +516,39 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'standing_sm_0',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'standing_sm_1',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'standing_sm_2',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Laight Street',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }, {
                     url: 'standing_sm_3',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Marrymount',
+                    projectDetails: '16oz Aurubis Nordic Brown Copper'
                 }, {
                     url: 'standing_sm_4',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Manhasset Public Library',
+                    projectDetails: '0.18" Follansbee Terne Coated Stainless Steel'
                 }, {
                     url: 'standing_sm_5',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Manhasset Public Library',
+                    projectDetails: '0.18" Follansbee Terne Coated Stainless Steel'
                 }, {
                     url: 'standing_sm_6',
-                    alt: 'Streamline Standing SM metal panel'
+                    alt: 'Streamline Standing SM metal panel',
+                    projectName: 'Private Residence',
+                    projectDetails: '0.8m Rheinzink Pre-Patina Zinc'
                 }
             ]
         }, {
@@ -527,25 +605,39 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'locktight_0',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_1',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_2',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_3',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_4',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_5',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Bronx Riverside Houses',
+                    projectDetails: '0.40" Kynar Silver Metallic'
                 }, {
                     url: 'locktight_6',
-                    alt: 'Locktight Coping by LITSCO'
+                    alt: 'Locktight Coping by LITSCO',
+                    projectName: 'Kutztown University',
+                    projectDetails: '.063" Kynar Bone White'
                 }
             ]
         }, {
@@ -602,16 +694,24 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'flashdown_0',
-                    alt: 'Flashdown Fascia by LITSCO'
+                    alt: 'Flashdown Fascia by LITSCO',
+                    projectName: 'Public Houses',
+                    projectDetails: '.040" Kynar Dark Bronze'
                 }, {
                     url: 'flashdown_1',
-                    alt: 'Flashdown Fascia by LITSCO'
+                    alt: 'Flashdown Fascia by LITSCO',
+                    projectName: 'Public Houses',
+                    projectDetails: '.040" Kynar Dark Bronze'
                 }, {
                     url: 'flashdown_2',
-                    alt: 'Flashdown Fascia by LITSCO'
+                    alt: 'Flashdown Fascia by LITSCO',
+                    projectName: 'Public Houses',
+                    projectDetails: '.040" Kynar Dark Bronze'
                 }, {
                     url: 'flashdown_3',
-                    alt: 'Flashdown Fascia by LITSCO'
+                    alt: 'Flashdown Fascia by LITSCO',
+                    projectName: 'Public Houses',
+                    projectDetails: '.040" Kynar Dark Bronze'
                 }
             ]
         }, {
@@ -706,10 +806,14 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'litlok_0',
-                    alt: 'LitLok ThruWall Flashing by LITSCO'
+                    alt: 'LitLok ThruWall Flashing by LITSCO',
+                    projectName: 'NYC Public School',
+                    projectDetails: '26GA Type 316 Stainless Steel'
                 }, {
                     url: 'litlok_1',
-                    alt: 'LitLok ThruWall Flashing by LITSCO'
+                    alt: 'LitLok ThruWall Flashing by LITSCO',
+                    projectName: 'NYC Public School',
+                    projectDetails: '26GA Type 316 Stainless Steel'
                 }
             ]
         }, {
@@ -791,13 +895,19 @@ angular.module('app_litsco')
             "portfolio": [
                 {
                     url: 'gardnedge_0',
-                    alt: 'Gard-n-Edge by LITSCO'
+                    alt: 'Gard-n-Edge by LITSCO',
+                    projectName: 'NYC Rooftop',
+                    projectDetails: '0.050" Mill Finish Aluminum'
                 }, {
                     url: 'gardnedge_1',
-                    alt: 'Gard-n-Edge by LITSCO'
+                    alt: 'Gard-n-Edge by LITSCO',
+                    projectName: 'NYC Rooftop',
+                    projectDetails: '0.050" Mill Finish Aluminum'
                 }, {
                     url: 'gardnedge_2',
-                    alt: 'Gard-n-Edge by LITSCO'
+                    alt: 'Gard-n-Edge by LITSCO',
+                    projectName: 'NYC Rooftop',
+                    projectDetails: '0.050" Mill Finish Aluminum'
                 },
             ]
         }, {
@@ -1141,7 +1251,7 @@ angular.module('app_litsco')
             "cat": 8,
             "vendorName": "Rheinzink Zinc",
             "vendorLogo": "rheinzink.png",
-            "vendorUrl": "https://www.rheinzink.com/en/home/",
+            "vendorUrl": "https://www.rheinzink.us/",
             "subHeader": "RHEINZINK produces top-quality titanium zinc offering different surface qualities",
             "alt": "Rheinzink Zinc"
         }, {

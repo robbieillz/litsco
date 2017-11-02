@@ -635,35 +635,45 @@ map {
     margin-top: 64px;
 }
 
-.portfolio-left, .portfolio-right {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    width: 4em;
+.portfolio-container .card {
+    margin:0;
+}
+
+.portfolio-info-wrapper {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
 }
 
-.portfolio-left {
-    left: 0;
-    z-index: 100;
-}
-
-.portfolio-right {
-    right: 0;
+.portfolio-item-description {
+    flex-grow: 2;
+    margin: 0px 20px;
+    align-self: center;
+    font-size: 1.15em;
 }
 
 .portfolio-left-icon, .portfolio-right-icon {
-    cursor: pointer;
     font-size: 4em;
     line-height: inherit;
+    color: #d9d9d9;
 }
 
-.portfolio-right-icon {
-    float: right
+.clickable {
+    cursor: pointer;
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
 }
 
-.portfolio-right-icon:hover {
-    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+.portfolio-left-icon {
+    margin-right: 10px;
+}
+
+.clickable:hover, .clickable:hover {
+    /* box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2); */
+    color: #0D47A1;
 }
 
 .portfolio-image {
