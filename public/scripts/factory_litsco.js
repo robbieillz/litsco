@@ -85,6 +85,11 @@ angular.module('app_litsco')
                     alt: 'Streamline Classic CR metal panel',
                     projectName: 'Eastchester Houses',
                     projectDetails: '.032" Baked Enamel Bronze',
+                }, {
+                    url: 'classic_cr_6',
+                    alt: 'Streamline Classic CR metal panel',
+                    projectName: 'The Arrivals\' Pop-Up Store',
+                    projectDetails: '.032" Mill Finish Aluminum',
                 }
             ]
         },
@@ -235,12 +240,12 @@ angular.module('app_litsco')
                     url: 'omniwall_cl_0',
                     alt: 'Streamline Omniwall CL metal panel',
                     projectName: 'Grand @ Sky View Parc',
-                    projectDetails: '.063" Kynar Slate Blue'
+                    projectDetails: '.080" Kynar Charcoal'
                 }, {
                     url: 'omniwall_cl_1',
                     alt: 'Streamline Omniwall CL metal panel',
                     projectName: 'Grand @ Sky View Parc',
-                    projectDetails: '.063" Kynar Slate Blue'
+                    projectDetails: '.080" Kynar Charcoal'
                 }, {
                     url: 'omniwall_cl_2',
                     alt: 'Streamline Omniwall CL metal panel',
@@ -757,6 +762,24 @@ angular.module('app_litsco')
             "thumbImg": "mortartight.png",
             "quoteSheetLink": "print_approval_mortartight.pdf",
             "dataSheetLink": "mortartight_flashing.pdf",
+            "portfolio": [
+                {
+                    url: 'mortartight_0',
+                    alt: 'Mortartight Through Wall Flashing',
+                    projectName: 'Public Houses',
+                    projectDetails: '26GA Stainless Steel / Welded mitre'
+                }, {
+                    url: 'mortartight_1',
+                    alt: 'Mortartight Through Wall Flashing',
+                    projectName: 'Public School',
+                    projectDetails: '26GA Type 316 Stainless Steel receiver (insert not shown)'
+                }, {
+                    url: 'mortartight_2',
+                    alt: 'Mortartight Through Wall Flashing',
+                    projectName: 'Public School',
+                    projectDetails: '26GA Type 316 Stainless Steel receiver (insert not shown)'
+                }
+            ]
         }, {
             "id": "2-piece_litlok",
             "cat": 2,
