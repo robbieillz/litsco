@@ -10,9 +10,9 @@
   },
   "watch": [
     "./app/**/*.js",
-    "./public/**/*.css",
-    "./public/**/*.js",
-    "./public/**/*.html"
+    "./src/**/*.css",
+    "./src/**/*.js",
+    "./src/**/*.html"
   ],
   "env": {
     "NODE_ENV": "development"
