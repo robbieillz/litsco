@@ -1,12 +1,11 @@
 // server.js
-
 // set up ======================================================================
 var express = require('express');
 var apiRoutes = require('./app/routes.js');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var app = express();
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 5000;
 
 // configuration ===============================================================
 // set up our express application

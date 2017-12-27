@@ -19,12 +19,18 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.21.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-order": "^1.1.1",
     "livereload": "^0.6.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",    
+    "gulp-watch": "gulp watch"
   },
   "author": "philip lucks",
   "license": "ISC"
