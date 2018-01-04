@@ -5,7 +5,6 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var nodemon = require('gulp-nodemon');
 
-
 var paths = {
     // Source
     srcVendorStyles: ['node_modules/materialize-css/dist/css/materialize.css'],
@@ -187,6 +186,11 @@ var paths = {
 // 	console.log('---Starting Copy task---');
 // });
 
+// ENV Setters
+gulp.task('set-dev-node-env', function() {
+    process.env.NODE_ENV = 'development';
+});
+
 // Static server
 gulp.task('browser-sync',  ['nodemon'], function () {
     browserSync.init(null, {
@@ -222,20 +226,12 @@ gulp.task('nodemon', function (cb) {
 });
 
 // Watch Local Dev task
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['set-dev-node-env', 'browser-sync'], function () {
     console.log('---Starting DEV Watch task---');
     gulp.watch(['./src/**/*.*'], reload);    
 });
 
-    // gulp.watch(paths.srcVendorStyles, ['watchDevSrcVendorStyles']);
-    // gulp.watch(paths.srcStyles, ['watchDevSrcStyles']);
-    // gulp.watch(paths.srcVendorScripts, ['watchDevSrcVendorScripts']);
-    // gulp.watch(paths.srcFrameworkScripts, ['watchDevSrcFrameworkScripts']);
-    // gulp.watch(paths.srcAppScripts, ['watchDevSrcAppScripts']);
-    // gulp.watch(paths.srcAppScripts, ['watchDevSrcComponentScripts']);
-    // gulp.watch(paths.srcHTMLIndex, ['watchDevSrcIndex']);
-    // gulp.watch(paths.srcHTMLPartials, ['watchDevSrcHTMLPartials']);
-    // gulp.watch(paths.srcFonts, ['watchDevSrcFonts']);
-    // gulp.watch(paths.srcDocs, ['watchDevSrcDocs']);
-    // gulp.watch(paths.srcImg, ['watchDevSrcImg']);
-    // gulp.watch(paths.srcPDF, ['watchDevSrcPDF']);
+//Build for production
+gulp.task('build', ['set-prod-node-env'], function() {
+
+});
