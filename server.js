@@ -23,7 +23,7 @@ var app = express();
 app.use(express.static(__dirname + useFolder));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 app.use('/scripts', express.static(__dirname + useFolder + 'scripts/'));
-app.use('/css', express.static(__dirname + useFolder + 'css/'));
+app.use('/styles', express.static(__dirname + useFolder + 'styles/'));
 app.use('/html', express.static(__dirname + useFolder + 'html'));
 app.use('/img', express.static(__dirname + useFolder + 'img'));
 app.use('/fonts', express.static(__dirname + useFolder + 'fonts'));

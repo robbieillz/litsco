@@ -7,9 +7,12 @@ var nodemon = require('gulp-nodemon');
 
 var paths = {
     // Source
-    srcVendorStyles: ['node_modules/materialize-css/dist/css/materialize.css'],
-    srcStyles: 'src/css/**/*.css',
-    distStyles: '/css',
+    // srcVendorStyles: ['node_modules/materialize-css/dist/css/materialize.css'],
+    srcStyles: [
+        'node_modules/materialize-css/dist/css/materialize.css',
+        'src/styles/**/*.css'
+    ],
+    distStyles: '/styles',
     srcHTMLIndex: 'src/index.html',
     // distHTMLIndex: ,
     srcHTMLPartials: ['src/**/*.html', '!src/index.html'],
@@ -53,12 +56,7 @@ var paths = {
     srcPDF: 'src/pdf/**/*',
     distPDF: 'pdf/',
     // Dist
-    dist: 'dist/',
-    distScriptsHTML: './dist.prod/html',
-    distScriptsProd: './dist.prod/scripts',
-    distStylesProd: './dist.prod/css',
-    distAssetsProd: './dist.prod/assets',
-    scriptsDevServer: 'devServer/**/*.js'
+    dist: 'dist/'
 };
 
 // // Styles
@@ -226,7 +224,10 @@ gulp.task('nodemon', function (cb) {
 });
 
 // Watch Local Dev task
-gulp.task('watch', ['set-dev-node-env', 'browser-sync'], function () {
+gulp.task('watch', [
+    'set-dev-node-env', 
+    'browser-sync'
+], function () {
     console.log('---Starting DEV Watch task---');
     gulp.watch(['./src/**/*.*'], reload);    
 });
