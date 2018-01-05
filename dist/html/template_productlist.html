@@ -1,0 +1,27 @@
+<main class="top-margin-nav-height" id="main-product-list">
+    <div class="container row center">
+        <div class="col s12">
+            <h1 class="product-name-heading oswald">{{ productHeader }}</h1>
+            <div class="divider"></div>
+            <h2 class="product-subheader">{{ productSubheader }}</h2>
+            <p>{{ productDescription }}</p>
+        </div>
+    </div>
+    <div class="container row">
+        <div class="col s12 m4 product-list-wrapper" ng-repeat="product in productList">
+            <div class="card product-list-cards">
+                <div class="card-image product-list flex-center">
+                    <img id="productlist-image" src="/img/illustrations/detail_thumb_{{product.thumbImg}}" alt="{{product.productName}}">
+                    <!-- <a ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })" class="btn-floating btn-large halfway-fab waves-effect waves-light amber darken-3"><i class="material-icons">link</i></a> -->
+                </div>
+                <div class="card-content">
+                    <a class="card-title card-link oswald" ui-sref="{{goToItemLink(product)}}({ id: product.id })">{{ product.productName }}</a>
+                    <p ng-if=product.subHeader>{{ product.subHeader }}</p>
+                </div>
+                <div class="card-action center">
+                    <a class="waves-effect waves-light btn blue darken-4" ui-sref="{{goToItemLink(product)}}({ id: product.id })">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,23 @@
+<main class="top-margin-nav-height" id="main-product-table-of-contents">
+    <div class="container row center">
+        <div class="col s12">
+            <h1 class="product-name-heading oswald">{{ productHeader }}</h1>
+            <div class="divider"></div>
+            <h2 class="product-name-subhead">Distrbutor for the roofing & waterproofing industry</h2>
+        </div>
+    </div>
+    <div class="container row">
+        <div class="col s12 l4 product-list-wrapper" ng-repeat="vendor in vendorList  | orderBy : 'vendorName'">
+            <div class="card product-list-cards">
+                <div class="card-image supplies flex-center">
+                    <img ng-src="/img/vendor_img/logo_{{ vendor.vendorLogo}}" alt="{{vendor.alt}}">
+                    <a href="{{vendor.vendorUrl}}" class="link-button btn-floating btn-large halfway-fab waves-effect waves-light amber darken-3"><i class="material-icons">link</i></a>
+                </div>
+                <div class="card-content">
+                    <a href="{{vendor.vendorUrl}}" target="_blank" class="card-title card-link oswald">{{ vendor.vendorName }}</a>
+                    <p>{{ vendor.subHeader }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

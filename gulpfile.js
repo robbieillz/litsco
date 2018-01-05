@@ -1,9 +1,18 @@
 var gulp = require('gulp');
 var order = require('gulp-order');
 var del = require('del');
+var nodemon = require('gulp-nodemon');
+var concat = require('gulp-concat');
+var ngAnnotate = require('gulp-ng-annotate');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var angularFilesort = require('gulp-angular-filesort');
+var minifyCss = require('gulp-clean-css');
+var useref = require('gulp-useref');
+var gulpif = require('gulp-if');
+
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
-var nodemon = require('gulp-nodemon');
 
 var paths = {
     // Source
@@ -12,7 +21,7 @@ var paths = {
         'node_modules/materialize-css/dist/css/materialize.css',
         'src/styles/**/*.css'
     ],
-    distStyles: '/styles',
+    distStyles: 'styles/',
     srcHTMLIndex: 'src/index.html',
     // distHTMLIndex: ,
     srcHTMLPartials: ['src/**/*.html', '!src/index.html'],
@@ -59,10 +68,13 @@ var paths = {
     dist: 'dist/'
 };
 
-// // Styles
-// gulp.task('watchDevSrcVendorStyles', function () {
-//     console.log('---Starting Vendor Styles task---');
-//     return gulp.src(paths.srcVendorStyles)
+// Styles
+// gulp.task('copyStyles', function () {
+//     console.log('---Starting Styles task---');
+//     return gulp.src(paths.srcHTMLIndex)
+//         .pipe(useref())
+//         .pipe(gulpif(paths.srcVendorScripts, minifyCss()))
+//         .pipe(gulp.dest(paths.dist));
 //         // .pipe(browserSync.stream())
 //         // .pipe(gulp.dest('dist'))
 //         // .pipe(livereload());
@@ -75,10 +87,14 @@ var paths = {
 //         // .pipe(livereload()); 
 // });
 
-// // Scripts
-// gulp.task('watchDevSrcVendorScripts', function () {
+// Scripts
+// gulp.task('copySrcVendorScripts', function () {
 //     console.log('---Starting Vendor Scripts Watch task---');
-//     return gulp.src(paths.srcVendorScripts)
+//     return gulp.src(paths.srcHTMLIndex)
+//         .pipe(useref())
+//         .pipe(gulpif('*.js', uglify()))
+//         .pipe(gulp.dest(paths.dist))
+//         .pipe(gulpif('*.js', uglify()));
 //         // .pipe(browserSync.stream())
 //     // .pipe(gulp.dest('dist'))
 //         // .pipe(livereload());
@@ -105,21 +121,24 @@ var paths = {
 //     // .pipe(livereload());
 // });
 
-// // HTML
-// gulp.task('watchDevSrcIndex', function () {
-//     console.log('---Starting Index Watch task---');
-//     return gulp.src(paths.srcHTMLIndex)
-//     .pipe(gulp.dest(paths.dist))
-//     .pipe(browserSync.stream())
-//         // .pipe(livereload());
-// });
-// gulp.task('watchDevSrcHTMLPartials', function () {
-//     console.log('---Starting Index Templates Watch task---');
-//     return gulp.src(paths.srcHTMLPartials)
-//     .pipe(gulp.dest(paths.dist + paths.distHTMLPartials))
-//     // .pipe(browserSync.stream())
-//         // .pipe(livereload());
-// });
+// HTML
+gulp.task('copyDevSrcHTMLPartials', function () {
+    console.log('---Starting HTML Templates Copy task---');
+    return gulp.src(paths.srcHTMLPartials)
+    .pipe(gulp.dest(paths.dist));
+    // .pipe(browserSync.stream())
+        // .pipe(livereload());
+});
+gulp.task('copyDevSrcIndex', function () {
+    console.log('---Starting Index Copy & Injection task---');
+    return gulp.src(paths.srcHTMLIndex)
+        .pipe(useref())
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulp.dest(paths.dist));
+
+        // .pipe(livereload());
+});
 
 // // Fonts
 // gulp.task('watchDevSrcFonts', function () {
@@ -156,37 +175,44 @@ var paths = {
 // });
 
 
-// // Clean
-// gulp.task('clean', function () {
-//     return del.sync([
-//             // .pipe(browserSync.stream())
-//         'dist/'
-//     ]);
-// });
+// Clean
+gulp.task('clean', function () {
+    return del.sync([
+            // .pipe(browserSync.stream())
+        'dist/'
+    ]);
+});
 
-// // Default
-// gulp.task('copy', [
-//     'watchDevSrcVendorStyles',
+// Default
+gulp.task('copy', [
+    // 'copyStyles',
+    // 'copySrcVendorScripts'
+    'copyDevSrcHTMLPartials',
+    'copyDevSrcIndex'
 //     'watchDevSrcStyles',
 //     'watchDevSrcVendorScripts',
 //     'watchDevSrcFrameworkScripts',
 //     'watchDevSrcAppScripts',
 //     'watchDevSrcComponentScripts',
 //     'watchDevSrcIndex',
-//     'watchDevSrcHTMLPartials',
 //     'watchDevSrcFonts',
 //     'watchDevSrcDocs',
 //     'watchDevSrcImg',
 //     'watchDevSrcPDF'
-// ], function (done) {
-//     browserSync.reload();
-//     done();
-// 	console.log('---Starting Copy task---');
-// });
+], function (done) {
+    browserSync.reload();
+    done();
+	console.log('---Starting Copy task---');
+});
 
 // ENV Setters
 gulp.task('set-dev-node-env', function() {
     process.env.NODE_ENV = 'development';
+});
+
+gulp.task('set-prod-node-env', function() {
+    process.env.NODE_ENV = 'production';
+    return;
 });
 
 // Static server
@@ -233,6 +259,10 @@ gulp.task('watch', [
 });
 
 //Build for production
-gulp.task('build', ['set-prod-node-env'], function() {
-
+gulp.task('build', [
+    'set-prod-node-env', 
+    'clean',
+    'copy'
+], function() {
+    console.log('---Starting production BUILD task---')
 });
