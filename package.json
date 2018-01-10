@@ -39,8 +39,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "gulp-watch": "gulp watch",
-    "gulp-build-production": "gulp build"
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "author": "philip lucks",
   "license": "ISC"

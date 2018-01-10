@@ -6,7 +6,6 @@ var concat = require('gulp-concat');
 var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
-var angularFilesort = require('gulp-angular-filesort');
 var minifyCss = require('gulp-clean-css');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
@@ -60,7 +59,8 @@ var paths = {
     distFonts: 'fonts/',
     srcDocs: 'src/docs/**/*',
     distDocs: 'docs/',
-    srcImg: 'src/img/**/*',
+    srcImg: ['src/img/**/*', '!src/img/**/*.svg'],
+    srcSvg: ['src/img/**/*.svg'],
     distImg: 'img/',
     srcPDF: 'src/pdf/**/*',
     distPDF: 'pdf/',
@@ -68,146 +68,78 @@ var paths = {
     dist: 'dist/'
 };
 
-// Styles
-// gulp.task('copyStyles', function () {
-//     console.log('---Starting Styles task---');
-//     return gulp.src(paths.srcHTMLIndex)
-//         .pipe(useref())
-//         .pipe(gulpif(paths.srcVendorScripts, minifyCss()))
-//         .pipe(gulp.dest(paths.dist));
-//         // .pipe(browserSync.stream())
-//         // .pipe(gulp.dest('dist'))
-//         // .pipe(livereload());
-// });
-// gulp.task('watchDevSrcStyles', function () {
-//     console.log('---Starting Gen Styles task---');
-//     return gulp.src(paths.srcStyles)
-//     .pipe(gulp.dest(paths.dist + paths.distStyles))
-//     // .pipe(browserSync.stream())
-//         // .pipe(livereload()); 
-// });
-
-// Scripts
-// gulp.task('copySrcVendorScripts', function () {
-//     console.log('---Starting Vendor Scripts Watch task---');
-//     return gulp.src(paths.srcHTMLIndex)
-//         .pipe(useref())
-//         .pipe(gulpif('*.js', uglify()))
-//         .pipe(gulp.dest(paths.dist))
-//         .pipe(gulpif('*.js', uglify()));
-//         // .pipe(browserSync.stream())
-//     // .pipe(gulp.dest('dist'))
-//         // .pipe(livereload());
-// });
-// gulp.task('watchDevSrcFrameworkScripts', function () {
-//     console.log('---Starting Framework Scripts Watch task---');
-//     return gulp.src(paths.srcFrameworkScripts)
-//         // .pipe(browserSync.stream())
-//     // .pipe(gulp.dest('dist'))
-//         // .pipe(livereload());
-// });
-// gulp.task('watchDevSrcAppScripts', function () {
-//     console.log('---Starting App Scripts Watch task---');
-//     return gulp.src(paths.srcAppScripts)
-//     .pipe(gulp.dest(paths.dist + paths.distAppScripts))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
-// gulp.task('watchDevSrcComponentScripts', function () {
-//     console.log('---Starting App Scripts Watch task---');
-//     return gulp.src(paths.srcComponentScripts)
-//     .pipe(gulp.dest(paths.dist + paths.distComponentScripts))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
-
 // HTML
 gulp.task('copyDevSrcHTMLPartials', function () {
     console.log('---Starting HTML Templates Copy task---');
     return gulp.src(paths.srcHTMLPartials)
     .pipe(gulp.dest(paths.dist));
-    // .pipe(browserSync.stream())
-        // .pipe(livereload());
 });
 gulp.task('copyDevSrcIndex', function () {
     console.log('---Starting Index Copy & Injection task---');
     return gulp.src(paths.srcHTMLIndex)
         .pipe(useref())
         .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulpif('scripts/app.min.js', ngAnnotate()))
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest(paths.dist));
-
-        // .pipe(livereload());
 });
 
-// // Fonts
-// gulp.task('watchDevSrcFonts', function () {
-//     console.log('---Starting Fonts Watch task---');
-//     return gulp.src(paths.srcFonts)
-//     .pipe(gulp.dest(paths.dist + paths.distFonts))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
+// Fonts
+gulp.task('copyDevSrcFonts', function () {
+    console.log('---Starting Fonts Copy task---');
+    return gulp.src(paths.srcFonts)
+    .pipe(gulp.dest(paths.dist + paths.distFonts))
+});
 
-// // Assets - DOCS
-// gulp.task('watchDevSrcDocs', function () {
-//     console.log('---Starting Docs Watch task---');
-//     return gulp.src(paths.srcDocs)
-//     .pipe(gulp.dest(paths.dist + paths.distDocs))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
-// // Assets - IMG
-// gulp.task('watchDevSrcImg', function () {
-//     console.log('---Starting Img Watch task---');
-//     return gulp.src(paths.srcImg)
-//     .pipe(gulp.dest(paths.dist + paths.distImg))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
-// // Assets - PDF
-// gulp.task('watchDevSrcPDF', function () {
-//     console.log('---Starting PDF Watch task---');
-//     return gulp.src(paths.srcPDF)
-//     .pipe(gulp.dest(paths.dist + paths.distPDF))
-//     // .pipe(browserSync.stream())
-//     // .pipe(livereload());
-// });
-
+// Assets - DOCS
+gulp.task('copyDevSrcDocs', function () {
+    console.log('---Starting Docs Copy task---');
+    return gulp.src(paths.srcDocs)
+    .pipe(gulp.dest(paths.dist + paths.distDocs))
+});
+// Assets - IMG
+gulp.task('copyDevSrcImg', function () {
+    console.log('---Starting Img Copy task---');
+    return gulp.src(paths.srcImg)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.dist + paths.distImg))
+});
+gulp.task('copyDevSrcSVG', function () {
+    console.log('---Starting SVG Copy task---');
+    return gulp.src(paths.srcSvg)
+    .pipe(gulp.dest(paths.dist + paths.distImg))
+});
+// Assets - PDF
+gulp.task('copyDevSrcPDF', function () {
+    console.log('---Starting PDF Copy task---');
+    return gulp.src(paths.srcPDF)
+    .pipe(gulp.dest(paths.dist + paths.distPDF))
+});
 
 // Clean
 gulp.task('clean', function () {
     return del.sync([
-            // .pipe(browserSync.stream())
         'dist/'
     ]);
 });
 
-// Default
+// Default Build-Copy
 gulp.task('copy', [
-    // 'copyStyles',
-    // 'copySrcVendorScripts'
+    'copyDevSrcImg',
+    'copyDevSrcSVG',
+    'copyDevSrcDocs',
+    'copyDevSrcPDF',
     'copyDevSrcHTMLPartials',
-    'copyDevSrcIndex'
-//     'watchDevSrcStyles',
-//     'watchDevSrcVendorScripts',
-//     'watchDevSrcFrameworkScripts',
-//     'watchDevSrcAppScripts',
-//     'watchDevSrcComponentScripts',
-//     'watchDevSrcIndex',
-//     'watchDevSrcFonts',
-//     'watchDevSrcDocs',
-//     'watchDevSrcImg',
-//     'watchDevSrcPDF'
+    'copyDevSrcIndex',
 ], function (done) {
-    browserSync.reload();
     done();
-	console.log('---Starting Copy task---');
+	console.log('---Finished Copy task---');
 });
 
 // ENV Setters
 gulp.task('set-dev-node-env', function() {
     process.env.NODE_ENV = 'development';
+    return;
 });
 
 gulp.task('set-prod-node-env', function() {
@@ -220,7 +152,7 @@ gulp.task('browser-sync',  ['nodemon'], function () {
     browserSync.init(null, {
 		proxy: 'http://localhost:5000',
         files: ['src/**/*.*'],
-        port: 7000,
+        port: 7000, 
         notify: false
 	});
 });
@@ -230,19 +162,23 @@ gulp.task('nodemon', function (cb) {
 	
 	return nodemon({
         script: './server.js',
+        watch: ['./src/**'],
         ignore: [
             'gulpfile.js',
-            'node_modules/'
-          ]
+            'node_modules',
+            'dist'
+          ],
+          ext: "js json html css"
 	}).on('start', function () {
-		// to avoid nodemon being started multiple times
-		// thanks @matthisk
+        // to avoid nodemon being started multiple times
+        console.log('starting nodemon');
 		if (!started) {
 			cb();
 			started = true; 
 		} 
     })
     .on('restart', function () {
+        console.log('REstarting nodemon');
         setTimeout(function () {
           reload({ stream: false });
         }, 1000);
@@ -262,7 +198,9 @@ gulp.task('watch', [
 gulp.task('build', [
     'set-prod-node-env', 
     'clean',
-    'copy'
+    'copyDevSrcFonts',
+    'copy',
+    'nodemon'
 ], function() {
     console.log('---Starting production BUILD task---')
 });

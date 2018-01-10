@@ -1,6 +1,6 @@
 angular.module('app_litsco')
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
-//lskjksjldsdsdsasddsdsasdasdsddsd
+
         $urlRouterProvider.otherwise('/');
 
         $stateProvider

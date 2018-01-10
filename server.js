@@ -2,6 +2,7 @@
 // environment checker
 var port;
 var useFolder;
+
 if (process.env.NODE_ENV === 'development') {
     port = process.env.PORT = 5000;
     useFolder = '/src/';
@@ -16,7 +17,6 @@ var apiRoutes = require('./app/routes.js');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var app = express();
-
 
 // configuration ===============================================================
 // set up our express application

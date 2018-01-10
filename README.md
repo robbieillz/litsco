@@ -3,8 +3,8 @@ This is built with Angular 1.6, including Node.js and Express, using Materialize
 
 ### For Development ###
 - `npm install`
-- `npm run gulp-watch`
+- `npm run watch`
 
 ### For Production ###
 - `npm install`
-- `npm run gulp-build-production`
+- `npm run build`
