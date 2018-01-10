@@ -1,4 +1,15 @@
 // server.js
+// environment checker
+var port;
+var useFolder;
+
+if (process.env.NODE_ENV === 'development') {
+    port = process.env.PORT = 5000;
+    useFolder = '/src/';
+} else if (process.env.NODE_ENV === 'production') {
+    port = process.env.PORT = 80;
+    useFolder = '/dist/';
+}
 
 // set up ======================================================================
 var express = require('express');
@@ -6,23 +17,22 @@ var apiRoutes = require('./app/routes.js');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var app = express();
-var port = process.env.PORT || 80;
 
 // configuration ===============================================================
 // set up our express application
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + useFolder));
 app.use('/node_modules', express.static(__dirname + '/node_modules/'));
-app.use('/scripts', express.static(__dirname + '/public/scripts/'));
-app.use('/css', express.static(__dirname + '/public/css/'));
-app.use('/html', express.static(__dirname + '/public/html'));
-app.use('/img', express.static(__dirname + '/public/img'));
-app.use('/fonts', express.static(__dirname + '/public/fonts'));
+app.use('/scripts', express.static(__dirname + useFolder + 'scripts/'));
+app.use('/styles', express.static(__dirname + useFolder + 'styles/'));
+app.use('/html', express.static(__dirname + useFolder + 'html'));
+app.use('/img', express.static(__dirname + useFolder + 'img'));
+app.use('/fonts', express.static(__dirname + useFolder + 'fonts'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/*', function (req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
-    res.sendFile('index.html', { root: __dirname + '/public/html' });
+    res.sendFile('index.html', { root: __dirname + '/src' });
 });
 
 // // routes ======================================================================
