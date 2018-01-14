@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var order = require('gulp-order');
 var del = require('del');
 var nodemon = require('gulp-nodemon');
 var concat = require('gulp-concat');
