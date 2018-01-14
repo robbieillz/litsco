@@ -6,7 +6,7 @@ angular.module('app_litsco')
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '/html/home.html',
+                templateUrl: 'html/home.html',
                 controller: 'controller_home',
                 resolve: {
                     $title: function () { return 'LITSCO, since 1918'; }
@@ -14,7 +14,7 @@ angular.module('app_litsco')
             })
             .state('product_streamline', {
                 url: '/streamline_metal_panels/:id',
-                templateUrl: '/html/template_product.html',
+                templateUrl: 'html/template_product.html',
                 controller: 'controller_prods',
                 resolve: {
                     product: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
@@ -32,7 +32,7 @@ angular.module('app_litsco')
             })
             .state('product_flashing', {
                 url: '/metal_flashing/:id',
-                templateUrl: '/html/template_product.html',
+                templateUrl: 'html/template_product.html',
                 controller: 'controller_prods',
                 resolve: {
                     product: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
@@ -50,7 +50,7 @@ angular.module('app_litsco')
             })
             .state('streamline_panels', {
                 url: '/:cat',
-                templateUrl: '/html/template_productlist.html',
+                templateUrl: 'html/template_productlist.html',
                 controller: 'controller_productlist',
                 resolve: {
                     productlist: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
@@ -70,7 +70,7 @@ angular.module('app_litsco')
             })
             .state('metal_flashing', {
                 url: '/:cat',
-                templateUrl: '/html/template_productlist.html',
+                templateUrl: 'html/template_productlist.html',
                 controller: 'controller_productlist',
                 resolve: {
                     productlist: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
@@ -90,7 +90,7 @@ angular.module('app_litsco')
             })
             .state('contact', {
                 url: '/contact/',
-                templateUrl: '/html/contact.html',
+                templateUrl: 'html/contact.html',
                 controller: 'controller_contact',
                 resolve: {
                     $title: function () { return 'Contact Us'; }
@@ -98,7 +98,7 @@ angular.module('app_litsco')
             })
             .state('supply_item', {
                 url: '/division_7_supplies/:vendorType/',
-                templateUrl: '/html/template_supplies.html',
+                templateUrl: 'html/template_supplies.html',
                 controller: 'controller_supplies',
                 resolve: {
                     vendorList: ['factory_litsco', '$stateParams', function (factory_litsco, $stateParams) {
@@ -131,7 +131,7 @@ angular.module('app_litsco')
                 params: {
                     type: 'division_7_supplies'
                 },
-                templateUrl: '/html/template_supplylist.html',
+                templateUrl: 'html/template_supplylist.html',
                 controller: 'controller_supplylist',
                 resolve: {
                     $title: function () { return 'Division 7 Products & Supplies'; }
@@ -139,7 +139,7 @@ angular.module('app_litsco')
             })
             .state('about', {
                 url: '/about/',
-                templateUrl: '/html/about.html',
+                templateUrl: 'html/about.html',
                 controller: 'controller_about',
                 resolve: {
                     $title: function () { return 'About Us'; }
@@ -147,7 +147,7 @@ angular.module('app_litsco')
             })
             .state('careers', {
                 url: '/careers/',
-                templateUrl: '/html/careers.html',
+                templateUrl: 'html/careers.html',
                 controller: 'controller_careers',
                 resolve: {
                     $title: function () { return 'Careers and Employment'; }
@@ -155,7 +155,7 @@ angular.module('app_litsco')
             })
             .state('privacy', {
                 url: '/privacy_policy/',
-                templateUrl: '/html/privacy_policy.html',
+                templateUrl: 'html/privacy_policy.html',
                 controller: 'controller_privacy',
                 resolve: {
                     $title: function () { return 'Privacy Policy'; }
@@ -163,7 +163,7 @@ angular.module('app_litsco')
             })
             .state('copyright', {
                 url: '/copyright/',
-                templateUrl: '/html/copyright.html',
+                templateUrl: 'html/copyright.html',
                 controller: 'controller_copyright',
                 resolve: {
                     $title: function () { return 'Privacy Policy'; }
