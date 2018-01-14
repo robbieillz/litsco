@@ -34,8 +34,10 @@
   },
   "scripts": {
     "gulp": "gulp",
+    "npm": "npm",
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build && npm run serve",
+    "serve": "NODE_ENV=production node server.js"
   },
   "author": "philip lucks",
   "license": "ISC"

@@ -2,6 +2,7 @@
 // environment checker
 var port;
 var useFolder;
+console.log('NODE_ENV', process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'development') {
     port = process.env.PORT = 5000;

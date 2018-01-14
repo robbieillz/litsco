@@ -198,7 +198,7 @@ gulp.task('watch', [
 
 //Build for production
 gulp.task('build', [
-    'set-prod-node-env', 
+    // 'set-prod-node-env', 
     'clean',
     'copyDevSrcFonts',
     'copy'
