@@ -87,32 +87,35 @@ gulp.task('copyDevSrcIndex', function () {
 gulp.task('copyDevSrcFonts', function () {
     console.log('---Starting Fonts Copy task---');
     return gulp.src(paths.srcFonts)
-    .pipe(gulp.dest(paths.dist + paths.distFonts))
+    .pipe(gulp.dest(paths.dist + paths.distFonts));
 });
 
 // Assets - DOCS
 gulp.task('copyDevSrcDocs', function () {
     console.log('---Starting Docs Copy task---');
     return gulp.src(paths.srcDocs)
-    .pipe(gulp.dest(paths.dist + paths.distDocs))
+    .pipe(gulp.dest(paths.dist + paths.distDocs));
 });
 // Assets - IMG
 gulp.task('copyDevSrcImg', function () {
     console.log('---Starting Img Copy task---');
     return gulp.src(paths.srcImg)
-    .pipe(imagemin())
-    .pipe(gulp.dest(paths.dist + paths.distImg))
+        .pipe(imagemin(
+            {
+                verbose: true
+            }))
+        .pipe(gulp.dest(paths.dist + paths.distImg));
 });
 gulp.task('copyDevSrcSVG', function () {
     console.log('---Starting SVG Copy task---');
     return gulp.src(paths.srcSvg)
-    .pipe(gulp.dest(paths.dist + paths.distImg))
+    .pipe(gulp.dest(paths.dist + paths.distImg));
 });
 // Assets - PDF
 gulp.task('copyDevSrcPDF', function () {
     console.log('---Starting PDF Copy task---');
     return gulp.src(paths.srcPDF)
-    .pipe(gulp.dest(paths.dist + paths.distPDF))
+    .pipe(gulp.dest(paths.dist + paths.distPDF));
 });
 
 // Clean
