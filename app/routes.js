@@ -21,7 +21,7 @@ apiRouter.use(bodyParser.json());
 
 // Page Routes
 apiRouter.get('/', function (req, res, next) {
-    res.sendFile('index.html', { root: './public/html' });
+    res.sendFile('index.html', { root: './src' });
 });
 
 apiRouter.post('/api/contact', function (req, res) {
