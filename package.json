@@ -9,6 +9,7 @@
     "angular-ui-router-title": "^0.1.1",
     "body-parser": "^1.18.1",
     "express": "^4.14.1",
+    "forever": "^0.15.3",
     "install": "^0.10.1",
     "jquery": "^2.2.4",
     "materialize-css": "^0.98.0",
@@ -37,7 +38,7 @@
     "npm": "npm",
     "watch": "gulp watch",
     "build": "gulp build && npm run serve",
-    "serve": "NODE_ENV=production node server.js"
+    "serve": "NODE_ENV=production forever start server.js"
   },
   "author": "philip lucks",
   "license": "ISC"

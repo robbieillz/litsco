@@ -100,10 +100,11 @@ gulp.task('copyDevSrcDocs', function () {
 gulp.task('copyDevSrcImg', function () {
     console.log('---Starting Img Copy task---');
     return gulp.src(paths.srcImg)
-        .pipe(imagemin(
-            {
-                verbose: true
-            }))
+        // .pipe(imagemin(
+        //     {
+        //         verbose: true
+        //     }))
+        // TODO - imagemin creates throw err on production, find out why
         .pipe(gulp.dest(paths.dist + paths.distImg));
 });
 gulp.task('copyDevSrcSVG', function () {
