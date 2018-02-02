@@ -238,6 +238,13 @@ a.collection-item.mobile-nav-link-item:last-child {
     border-bottom: 1px solid #e0e0e0;
 }
 
+#mobile-nav.side-nav .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
 .product-color-chip.Custom_Painted {
     background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
     /* FF3.6-15 */
@@ -684,6 +691,10 @@ map {
 
 .contact-map {
     width: 100%;
+}
+
+.contact_social_icon {
+    width: 64px;
 }
 
 .contact-form-success {
