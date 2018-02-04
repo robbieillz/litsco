@@ -2,6 +2,10 @@
 
 /***** GENERAL SITE *****/
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+  }
+
 body {
     display: flex;
     min-height: 100vh;
@@ -236,6 +240,13 @@ a.collection-item.mobile-nav-link-item {
 
 a.collection-item.mobile-nav-link-item:last-child {
     border-bottom: 1px solid #e0e0e0;
+}
+
+#mobile-nav.side-nav .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
 }
 
 .product-color-chip.Custom_Painted {
@@ -686,6 +697,10 @@ map {
     width: 100%;
 }
 
+.contact_social_icon {
+    width: 64px;
+}
+
 .contact-form-success {
     display: flex;
     align-items: center;
@@ -797,11 +812,52 @@ textarea.valid.validate, input.valid.validate {
     padding: 0;
 }
 
+.button-news {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+}
+.card-news {
+    z-index: 10;
+    position: fixed;
+    width: 224px;
+    right: 0;
+    bottom: 0;
+    margin: 16px;
+}
+
+.card-news .card {
+    margin: none;
+}
+
+.card-news .close {
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    z-index: 1;
+}
+
+.card-news .card-action {
+    color: 
+}
 /**** MEDIA QUERIES ****/
 
 @media only screen and (max-width: 768px) {
     #index-banner-card-text {
         font-size: 1.5em;
+    }
+
+    .card-news {
+        width: calc(100% - 32px);
     }
 }
 

@@ -5,29 +5,29 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108152863-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-108152863-1');
+        gtag('config', 'UA-108152863-1');
     </script>
 
     <base href="/">
 
     <title ng-bind="($title) + ' | LITSCO'">LITSCO</title>
     <meta name="description" content={{metaTag.content().description}}>
-    <meta name="keywords" content={{metaTag.content().keywords}} />    
+    <meta name="keywords" content={{metaTag.content().keywords}} />
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="img/logo/litsco_favicon.png">
-    
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Oswald');
     </style>
-    
+
     <!-- build:css styles/combined.css -->
     <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css" media="screen,projection"
     />
@@ -35,15 +35,19 @@
     <!-- endbuild -->
 </head>
 
-<body ng-controller="controller_index">
+<body>
     <!-- NAVIGATION -->
     <div class="navbar-fixed">
         <nav role="navigation">
             <div class="blue-grey lighten-5" id="nav-background"></div>
             <div class="nav-wrapper">
                 <div class="col s12">
-                    <a href="/" class="brand-logo"><img src="/img/logo/litsco_logo_wide.svg" class=".show-on-large logo-img" alt=""></a>
-                    <a href="#" data-activates="mobile-nav" class="button-collapse flex-center" id="hamburger"><i class="material-icons" id="menu-icon">menu</i></a>
+                    <a href="/" class="brand-logo">
+                        <img src="/img/logo/litsco_logo_wide.svg" class=".show-on-large logo-img" alt="">
+                    </a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse flex-center" id="hamburger">
+                        <i class="material-icons" id="menu-icon">menu</i>
+                    </a>
                     <!-- START: Navbar MAIN menu -->
                     <ul class="right hide-on-med-and-down nav-list" id="nav-bar">
                         <li class="link">
@@ -133,7 +137,9 @@
                                 </div>
                             </div>
                         </li>
-                        <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down" id="log-in-navbar">Log In</a>
+                        <li id="nav-button-log-in">
+                            <a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4 hide-on-med-lrg-and-down"
+                                id="log-in-navbar">Log In</a>
                         </li>
                     </ul>
                     <!-- END: Navbar MAIN menu -->
@@ -144,7 +150,9 @@
     <!-- START: Navbar menu mobile -->
     <ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-nav" style="transform: translateX(-100%);">
         <li class="mobile-nav-logo">
-            <a href="/" class="side-nav-logo" id="side-logo"><img src="/img/logo/litsco_logo_mobile.svg" class="center" alt=""></a>
+            <a href="/" class="side-nav-logo" id="side-logo">
+                <img src="/img/logo/litsco_logo_mobile.svg" class="center" alt="">
+            </a>
         </li>
         <li class="divider"></li>
         <li class="product-link">
@@ -188,9 +196,18 @@
             <div class="collapsible-header mobile-accordian active" ui-sref="contact" ui-sref="contact">CONTACT US</div>
         </li>
         <div class="mobile-nav-link-btns flex-row-around-center">
-            <li id="nav-button-log-in"><a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4"
+            <li id="nav-button-log-in">
+                <a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4"
                     id="log-in-navbar">Log In</a>
             </li>
+        </div>
+        <div class="social-link">
+            <a href="https://www.facebook.com/LITSCO" target="_blank">
+                <img class="footer_social_icon" src="/img/if-facebook.svg" alt="social media link Facebook">
+            </a>
+            <a href="https://www.linkedin.com/company/long-island-tinsmith-supply-corp-litsco-/" target="_blank">
+                <img class="footer_social_icon" src="/img/if_linkedin.svg" alt="social media link LinkedIn">
+            </a>
         </div>
     </ul>
     <!-- END: Navbar menu mobile -->
@@ -204,16 +221,23 @@
                     <h5 class="white-text">LITSCO</h5>
                     <div class="col s6 footer-col-contents">
                         <ul>
-                            <li class="blue-grey-text text-lighten-5">76-11 88th St. <br>Glendale, NY 11385</li>
-                            <li class="grey-text text-lighten-4">Hours:<br>M - F: 7am - 5pm</li>
+                            <li class="blue-grey-text text-lighten-5">76-11 88th St.
+                                <br>Glendale, NY 11385</li>
+                            <li class="grey-text text-lighten-4">Hours:
+                                <br>M - F: 7am - 5pm</li>
                         </ul>
                     </div>
                     <div class="col s6 footer-col-contents">
                         <div class="flex-center" id="footer_tel">
                             <ul>
-                                <li class="flex-center"><i class="material-icons grey-text text-lighten-4">phone</i><a class="grey-text text-lighten-4"
-                                        href="tel:718-846-0400">718-846-0400</a></li>
-                                <li class="flex-center"><i class="material-icons dp48 grey-text text-lighten-4">print</i><a class="grey-text text-lighten-4">718-846-7803</a></li>
+                                <li class="flex-center">
+                                    <i class="material-icons grey-text text-lighten-4">phone</i>
+                                    <a class="grey-text text-lighten-4" href="tel:718-846-0400">718-846-0400</a>
+                                </li>
+                                <li class="flex-center">
+                                    <i class="material-icons dp48 grey-text text-lighten-4">print</i>
+                                    <a class="grey-text text-lighten-4">718-846-7803</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -222,35 +246,77 @@
                     <h5 class="white-text">Links</h5>
                     <div class="col s6 footer-col-contents">
                         <ul>
-                            <li><a class="blue-grey-text text-lighten-5" ui-sref="contact">Contact Us</a></li>
-                            <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a></li>
-                            <li><a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'metal_flashing' })">Metal Flashing</a></li>
-                            <li><a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a></li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" ui-sref="contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })">Streamline Metal Panels</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" ui-sref="streamline_panels({ cat: 'metal_flashing' })">Metal Flashing</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" href="https://accounts.litsco.com/signon.php">Account Login</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col s6 footer-col-contents">
                         <ul>
-                            <li><a class="blue-grey-text text-lighten-5" ui-sref="about">About Us</a></li>
-                            <li><a class="blue-grey-text text-lighten-5" ui-sref="careers">Careers</a></li>
-                            <li><a class="blue-grey-text text-lighten-5" href="/pdf/litsco_linecard.pdf" target="_blank">Download our Line Card</a></li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" ui-sref="about">About Us</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" ui-sref="careers">Careers</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-text text-lighten-5" href="/pdf/litsco_linecard.pdf" target="_blank">Download our Line Card</a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/LITSCO" target="_blank">
+                                    <img class="footer_social_icon" src="/img/if-facebook.svg" alt="social media link Facebook">
+                                </a>
+                                <a href="https://www.linkedin.com/company/long-island-tinsmith-supply-corp-litsco-/" target="_blank">
+                                    <img class="footer_social_icon" src="/img/if_linkedin.svg" alt="social media link LinkedIn">
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col s12 m6 l2">
                     <img src="/img/vendor_img/logo_nemeon.png">
-                    <p class="blue-grey-text text-lighten-5">LITSCO is a proud partner of the <a href="http://www.nemeon.com/" target="_blank">NEMEON</a> Co-Op which supports independent roofing distributors like us.</p>
+                    <p class="blue-grey-text text-lighten-5">LITSCO is a proud partner of the
+                        <a href="http://www.nemeon.com/" target="_blank">NEMEON</a> Co-Op which supports independent roofing distributors like us.</p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container footer-small-text">
-                <div class="left"><a ui-sref="copyright" class="grey-text text-lighten-2">© 2017 Long Island Tinsmith Supply Corp.</a><span> | </span>
+                <div class="left">
+                    <a ui-sref="copyright" class="grey-text text-lighten-2">© 2017 Long Island Tinsmith Supply Corp.</a>
+                    <span> | </span>
                     <a ui-sref="privacy" class="grey-text text-lighten-2">Privacy Policy</a>
                 </div>
-                <div class="grey-text text-lighten-2 right">Site by: <a class="grey-text text-lighten-4" href="http://phillucks.me" target="_blank">phillucks.me</a></div>                
+                <div class="grey-text text-lighten-2 right">Site by:
+                    <a class="grey-text text-lighten-4" href="http://phillucks.me" target="_blank">phillucks.me</a>
+                </div>
             </div>
         </div>
     </footer>
+    <div ng-show="showNews" class="card-news" ng-cloak>
+            <div ng-click="toggleNews()" class="close purple">
+                <i class="material-icons white-text">close</i>
+            </div>
+            <div class="card blue-grey lighten-2">
+                <div class="card-content white-text">
+                    <span class="card-title">LITSCO U</span>
+                    <p>The 2018 schedule for LITSCO University is available. Join us for informational sessions from leading building manufacturers: WillSeal, Firestone, Johns Manville, Laurenco, Soprema, Pecora.</p>
+                </div>
+                <div class="card-action">
+                    <a href="/pdf/litsco_university_schedule_2018.pdf" target="_blank" class="purple-text text-darken-3">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    <a ng-hide="showNews" ng-click="toggleNews()" class="btn-floating btn-large waves-effect waves-light purple button-news"><i class="material-icons">launch</i></a>
     <!--Imports-->
 
     <!-- build:js scripts/vendor.min.js -->
@@ -266,7 +332,7 @@
     <script src="../node_modules/ngmap/build/scripts/ng-map.js"></script>
     <script src="../node_modules/angular-ui-router-title/angular-ui-router-title.js"></script>
     <!-- endbuild -->
-    
+
     <!-- Local AngularJS Scripts -->
     <!-- build:js components scripts/app.min.js -->
     <script src="scripts/app.js"></script>

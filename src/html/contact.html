@@ -1,6 +1,6 @@
 <main id="main-contact-content">
     <section id="product-banner" class="flex-center">
-        <div class="jumbo-div"></div>            
+        <div class="jumbo-div"></div>
     </section>
     <div class="full-width-slider-divider"></div>
     <section id="section-contact" class="section-with-padding">
@@ -9,8 +9,17 @@
                 <div class="col s12">
                     <h1 class="product-name-heading oswald">Contact Us</h1>
                     <div class="divider"></div>
-                    <h2 class="product-name-subhead">Use the form below to send us a message. Or call us at <a class="" href="tel:718-846-0400">718-846-0400</a>
+                    <h2 class="product-name-subhead">Use the form below to send us a message.  Looking for directions?  Scroll down.</h2>
+                    <h2 class="product-name-subhead">Call us at
+                        <a href="tel:718-846-0400">718-846-0400</a>
                     </h2>
+                    <div>
+                        <h2 class="product-name-subhead">Or connect with us:
+                        </h2>
+                        <div>
+                            <a href="https://www.facebook.com/LITSCO" target="_blank"><img class="contact_social_icon" src="/img/if-facebook.svg" alt="social media link Facebook"></a>  <a href="https://www.linkedin.com/company/long-island-tinsmith-supply-corp-litsco-/" target="_blank"><img class="contact_social_icon" src="/img/if_linkedin.svg" alt="social media link LinkedIn"></a> 
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row contact-form-wrapper">
@@ -39,7 +48,8 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" required class="validate materialize-textarea form-contact-input-field" ng-model="contactData.message" aria-required="true"></textarea>
+                            <textarea id="textarea1" required class="validate materialize-textarea form-contact-input-field" ng-model="contactData.message"
+                                aria-required="true"></textarea>
                             <label for="textarea1">Tell us why you are contacting us</label>
                         </div>
                     </div>
@@ -55,8 +65,8 @@
                             <div class="col s6">
                                 <button class="btn waves-effect waves-light form-contact-submit right" type="submit" name="action" id="contact-submit-button"
                                     disabled>Submit
-                            <i class="material-icons right">send</i>
-                        </button>
+                                    <i class="material-icons right">send</i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -71,11 +81,7 @@
         <div class="flex-row-around-center container col s12" id="contact-map-wrapper">
             <div class="contact-map">
                 <map id="" center="{{ litsco }}" zoom="12" pan-control="false" zoom-control="true">
-                    <directions 
-                    panel="directions-panel" 
-                    travel-mode="DRIVING" 
-                    origin="{{ originAddress }}" 
-                    destination="{{ litscoAddress }}">
+                    <directions panel="directions-panel" travel-mode="DRIVING" origin="{{ originAddress }}" destination="{{ litscoAddress }}">
                     </directions>
                     <marker position="{{ litsco }}">
                 </map>
@@ -96,7 +102,8 @@
                 <button ng-show="originTrue" ng-click="hideDirections()" class="btn waves-effect waves-light" type="button">Start Over
                     <i class="material-icons dp48 right">refresh</i>
                 </button>
-                <a href="http://www.google.com/maps/dir/?api=1&origin={{ originAddress }}&destination={{ litscoAddress }}" target="_blank" type="button" ng-show="originTrue" class="btn waves-effect waves-light amber darken-4" type="button">Open in Maps
+                <a href="http://www.google.com/maps/dir/?api=1&origin={{ originAddress }}&destination={{ litscoAddress }}" target="_blank"
+                    type="button" ng-show="originTrue" class="btn waves-effect waves-light amber darken-4" type="button">Open in Maps
                     <i class="material-icons dp48 right">place</i>
                 </a>
                 <div ng-show="originTrue" id="directions-panel" style="height: 100%; overflow: auto; padding: 0px 5px">
