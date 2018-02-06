@@ -197,8 +197,7 @@
         </li>
         <div class="mobile-nav-link-btns flex-row-around-center">
             <li id="nav-button-log-in">
-                <a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4"
-                    id="log-in-navbar">Log In</a>
+                <a href="https://accounts.litsco.com/signon.php" data-activates="" class="waves-effect waves-light btn blue darken-4" id="log-in-navbar">Log In</a>
             </li>
         </div>
         <div class="social-link">
@@ -303,20 +302,23 @@
         </div>
     </footer>
     <div ng-show="showNews" class="card-news" ng-cloak>
-            <div ng-click="toggleNews()" class="close purple">
-                <i class="material-icons white-text">close</i>
+        <div ng-click="closeNews()" class="close blue">
+            <i class="material-icons white-text">close</i>
+        </div>
+        <div class="card blue-grey lighten-2">
+            <div class="card-content white-text">
+                <span class="card-title">LITSCO U</span>
+                <p>The 2018 schedule for LITSCO University is available. Join us for informational sessions from leading building
+                    manufacturers: WillSeal, Firestone, Johns Manville, Laurenco, Soprema, Pecora.</p>
             </div>
-            <div class="card blue-grey lighten-2">
-                <div class="card-content white-text">
-                    <span class="card-title">LITSCO U</span>
-                    <p>The 2018 schedule for LITSCO University is available. Join us for informational sessions from leading building manufacturers: WillSeal, Firestone, Johns Manville, Laurenco, Soprema, Pecora.</p>
-                </div>
-                <div class="card-action">
-                    <a href="/pdf/litsco_university_schedule_2018.pdf" target="_blank" class="purple-text text-darken-3">Download PDF</a>
-                </div>
+            <div class="card-action">
+                <a href="/pdf/litsco_university_schedule_2018.pdf" target="_blank" class="blue-text text-darken-3">Download PDF</a>
             </div>
         </div>
-    <a ng-hide="showNews" ng-click="toggleNews()" class="btn-floating btn-large waves-effect waves-light purple button-news"><i class="material-icons">launch</i></a>
+    </div>
+    <a ng-hide="showNews" ng-click="openNews()" class="btn-floating btn-large waves-effect waves-light blue button-news">
+        <i class="material-icons">launch</i>
+    </a>
     <!--Imports-->
 
     <!-- build:js scripts/vendor.min.js -->
