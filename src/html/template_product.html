@@ -32,21 +32,34 @@
                         <li class="bullet-download">
                             <h5 class="download oswald">Downloads:</h5>
                         </li>
-                        <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light"><a href="/pdf/{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3"><i class="material-icons small">insert_chart</i></a>
+                        <li ng-if="productIdObj.dataSheetLink" class="product-download-btns waves-effect waves-light">
+                            <a href="/pdf/{{ productIdObj.dataSheetLink }}" target="_blank" class="btn-floating btn-large amber darken-3">
+                                <i class="material-icons small">insert_chart</i>
+                            </a>
                             <p>Data Sheet</p>
                         </li>
-                        <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="/pdf/{{ productIdObj.quoteSheetLink }}" target="_blank"><i class="material-icons small">format_quote</i></a>
+                        <li ng-if="productIdObj.quoteSheetLink" class="product-download-btns waves-effect waves-light">
+                            <a class="btn-floating btn-large amber darken-3" href="/pdf/{{ productIdObj.quoteSheetLink }}" target="_blank">
+                                <i class="material-icons small">format_quote</i>
+                            </a>
                             <p>Quote Request</p>
                         </li>
-                        <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light"><a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}" target="_blank"><i class="material-icons small">attach_file</i></a>
+                        <li ng-if="productIdObj.specPageLink" class="product-download-btns waves-effect waves-light">
+                            <a class="btn-floating btn-large amber darken-3" href="{{ productIdObj.specPageLink }}" target="_blank">
+                                <i class="material-icons small">attach_file</i>
+                            </a>
                             <p>Spec Sheet</p>
                         </li>
-                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/firestone_color_chart.pdf"
-                                target="_blank"><i class="material-icons dp48">invert_colors</i></a>
+                        <li ng-if="productIdObj.colors && !productIdObj.id === 'lead_tees'" class="waves-effect waves-light">
+                            <a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/firestone_color_chart.pdf" target="_blank">
+                                <i class="material-icons dp48">invert_colors</i>
+                            </a>
                             <p>Firestone Color Chart</p>
                         </li>
-                        <li ng-if="productIdObj.colors" class="waves-effect waves-light"><a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/fabral_color_chart.pdf"
-                                target="_blank"><i class="material-icons dp48">format_color_fill</i></a>
+                        <li ng-if="productIdObj.colors && !productIdObj.id === 'lead_tees'" class="waves-effect waves-light">
+                            <a class="product-download-btns btn-floating btn-large amber darken-3" href="/pdf/fabral_color_chart.pdf" target="_blank">
+                                <i class="material-icons dp48">format_color_fill</i>
+                            </a>
                             <p>Fabral Color Chart</p>
                         </li>
                     </ul>
@@ -63,7 +76,9 @@
                 <h5 class="collection-header features oswald" ng-init="calculateColumns()">Features:</h5>
                 <ul class="collection with-header col sm12 l6 product-features-list" ng-repeat="column in columns">
                     <li class="collection-item" ng-repeat="feature in productIdObj.features | slice:column.start:column.end">
-                        <a class="left"><i class="material-icons dp48 blue-text text-darken-4">play_circle_filled</i></a>
+                        <a class="left">
+                            <i class="material-icons dp48 blue-text text-darken-4">play_circle_filled</i>
+                        </a>
                         <div>{{ feature }}</div>
                     </li>
                 </ul>
@@ -86,8 +101,10 @@
                 <div class="portfolio-info-wrapper">
                     <i ng-class="activeImg !== 0 ? 'clickable' : ''" class="material-icons dp48 portfolio-left-icon" ng-click="prevSlide()">chevron_left</i>
                     <div class="portfolio-item-description row">
-                        <div><b>Project Name: </b>{{ photoList[activeImg].projectName }}</div>
-                        <div><b>Details: </b>{{ photoList[activeImg].projectDetails }}</div>
+                        <div>
+                            <b>Project Name: </b>{{ photoList[activeImg].projectName }}</div>
+                        <div>
+                            <b>Details: </b>{{ photoList[activeImg].projectDetails }}</div>
                     </div>
                     <i ng-class="activeImg !== photoList.length - 1 ? 'clickable' : ''" class="material-icons dp48 portfolio-right-icon" ng-click="nextSlide()">chevron_right</i>
                 </div>
