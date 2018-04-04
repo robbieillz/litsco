@@ -455,6 +455,10 @@ map {
   height: 500px;
 }
 
+.news-item {
+  margin-top: 8px;
+}
+
 /**** PRODUCT ****/
 
 .card-link {

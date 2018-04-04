@@ -13,7 +13,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Stocked in Baked Enamel Painted Dark Bronze",
           '12"o.c. spacing improves load spans',
           "Can be applied to multiple substrates",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Custom painted panels available",
           "Integrates with our LockTight Coping or Flashdown Fascia"
         ],
@@ -110,7 +110,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "ASTM E330 tested for structural integrity",
           "Heavier gauge materials result in a stronger panel",
           "Standard panels sizes in both small and large modules",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Custom painted panels available",
           "Can be rear insulated."
         ],
@@ -216,7 +216,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "ASTM E283 tested for water infiltration resistance",
           "Heavier gauge materials result in a stronger panel",
           "Standard panels sizes in both small and large modules",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Custom painted panels available",
           "Can be rear insulated"
         ],
@@ -291,7 +291,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Vertical panel allows for easy installation side-by-side",
           "Standard 8ft or 10ft lengths",
           "Economical Baked Enamel Paint option",
-          "Kynar pained standard 20yr finish warranty"
+          "Kynar painted standard 20yr finish warranty"
         ],
         installation: {
           Trim:
@@ -392,7 +392,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Square, Rectangle, or Diamond shape allows for wide variety of designs and applications",
           "Ideal for wall and low-slope roofing projects",
           "Natural metals patina over time providing a unique finish for each project",
-          "Kynar pained standard 20yr finish warranty"
+          "Kynar painted standard 20yr finish warranty"
         ],
         installation: {
           Trim:
@@ -506,7 +506,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Standard 8ft or 10ft lengths",
           'The 1" high seam conceals both the one-piece clip and fastener.',
           "Can be installed on roofs or walls",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Widths available to optimize pricing based on material selection"
         ],
         installation: {
@@ -609,7 +609,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Easy snap-on installation with all concealed fastening",
           "Coping covers are manufactured for positive drainage",
           "Aluminum / Galvanized Steel anchor plates can accommodate inconsistencies in wall width",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Face extenders, custom miters and profiles available."
         ],
         installation: {
@@ -711,7 +711,7 @@ angular.module("app_litsco").factory("factory_litsco", [
           "Easy snap-on installation with all concealed fastening",
           "Face-only fastening ties down roof system edge without stripping in flashing",
           "Stainless steel anchor cleat can be installed first to stage roof construction",
-          "Kynar pained standard 20yr finish warranty",
+          "Kynar painted standard 20yr finish warranty",
           "Face extenders, custom miters and profiles available."
         ],
         installation: {
