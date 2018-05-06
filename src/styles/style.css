@@ -461,7 +461,11 @@ map {
 }
 
 .news-item {
-  margin-top: 8px;
+  margin: 8px 0;
+}
+
+.news-item .waves-effect {
+  width: 100%;
 }
 
 /**** PRODUCT ****/
