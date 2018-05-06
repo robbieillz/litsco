@@ -278,6 +278,11 @@ a.collection-item.mobile-nav-link-item:last-child {
   line-height: 15px;
 }
 
+.registered {
+  font-size: 0.3em;
+  top: -2.2em;
+}
+
 /***** HOME PAGE *****/
 
 #index-banner {

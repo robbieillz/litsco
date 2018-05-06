@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row center">
                 <div class="col s12">
-                    <h1 class="product-name-heading oswald">{{ productIdObj.productName }}</h1>
+                    <h1 class="product-name-heading oswald" ng-bind-html="productIdObj.productName | renderHTMLCorrectly"></h1>
                     <div class="divider"></div>
                     <h2 class="product-name-subhead">{{ productIdObj.subHeader }}</h2>
                 </div>
