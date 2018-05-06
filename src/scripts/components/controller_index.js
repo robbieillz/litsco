@@ -3,6 +3,8 @@ angular.module("app_litsco").controller("controller_index", [
   "factory_meta",
   "$timeout",
   function($scope, factory_meta, $timeout) {
+    $("#modal1").modal();
+
     $scope.metaTag = factory_meta;
 
     $scope.showNews = false;

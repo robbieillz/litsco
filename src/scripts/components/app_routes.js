@@ -36,7 +36,10 @@ angular.module("app_litsco").config([
           $title: [
             "product",
             function(product) {
-              return product.productName;
+              return product.productName.replace(
+                "<sup class='registered'>®</sup>",
+                "®"
+              );
             }
           ]
         }

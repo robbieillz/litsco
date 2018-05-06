@@ -169,8 +169,15 @@ angular.module("app_litsco").controller("controller_prods", [
   }
 ]);
 
-angular.module("app_litsco").filter("slice", function() {
-  return function(arr, start, end) {
-    return arr.slice(start, end);
-  };
-});
+angular
+  .module("app_litsco")
+  .filter("slice", function() {
+    return function(arr, start, end) {
+      return arr.slice(start, end);
+    };
+  })
+  .filter("renderHTMLCorrectly", function($sce) {
+    return function(stringToParse) {
+      return $sce.trustAsHtml(stringToParse);
+    };
+  });

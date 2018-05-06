@@ -171,7 +171,7 @@
             <div class="collection collapsible-body mobile-nav-link-body">
                 <a ui-sref="product_flashing({ id: 'locktight_coping' })" class="collection-item mobile-nav-link-item">Locktight Coping</a>
                 <a ui-sref="product_flashing({ id: 'flashdown_fascia' })" class="collection-item mobile-nav-link-item">Flashdown Fascia</a>
-                <a ui-sref="product_flashing({ id: 'mortartight_thuwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
+                <a ui-sref="product_flashing({ id: 'mortartight_thruwall' })" class="collection-item mobile-nav-link-item">Mortartight</a>
                 <a ui-sref="product_flashing({ id: '2-piece_litlok' })" class="collection-item mobile-nav-link-item">2-Piece Lit-Lok</a>
                 <a ui-sref="product_flashing({ id: 'lead_tees' })" class="collection-item mobile-nav-link-item">Lead Tees</a>
                 <a ui-sref="product_flashing({ id: 'gard_n_edge' })" class="collection-item mobile-nav-link-item">Gard-n-Edge</a>
@@ -310,6 +310,14 @@
                 <span class="card-title">News & Info</span>
                 <div class="divider"></div>
                 <div class="news-item">
+                    <p>LITSCO will be at the OJBA Expo: Visit us at Booth #724</p>
+                    <button data-target="modal1" class="waves-effect waves-light btn blue">
+                        <i class="material-icons left">info_outline
+                        </i>Details</button>
+                </div>
+                <div class="divider"></div>
+                <div class="news-item">
+                    <p>Here are the high quality products we carry:</p>
                     <a class="waves-effect waves-light btn blue" href="/pdf/litsco_linecard.pdf" target="_blank">
                         <i class="material-icons left">cloud_download
                         </i>Linecard</a>
@@ -320,6 +328,16 @@
     <a ng-hide="showNews" ng-click="openNews()" class="btn-floating btn-large waves-effect waves-light blue button-news">
         <i class="material-icons">launch</i>
     </a>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <!-- <h4>Modal Header</h4> -->
+            <!-- <p>A bunch of text</p> -->
+            <img ng-src="../img/promo_pop.png" style="width: 100%;" /> </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
     <!--Imports-->
 
     <!-- build:js scripts/vendor.min.js -->

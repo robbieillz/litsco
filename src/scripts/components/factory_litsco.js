@@ -4,10 +4,10 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "classic_cr",
         cat: 1,
-        productName: "Streamline Classic CR",
+        productName: "Streamline<sup class='registered'>®</sup> Classic CR",
         subHeader: "Corrugated, Exposed Fastener, Lap Seam Metal Wall Panel",
         overview:
-          "LITSCO's Streamline CR wall panel is an economical solution for exterior or parapet walls in need of restoration.  The narrow rib profile provides a clean, consistent appearance.  The panels be used in conjunction with Streamline Edge metal systems for a waterproof encapsulation of the structure while still allowing the structure to breath.",
+          "LITSCO's Streamline CR wall panel is an economical solution for exterior or parapet walls in need of restoration.  The narrow rib profile provides a clean, consistent appearance.  The panels can be used in conjunction with Streamline Edge metal systems for a waterproof encapsulation of the structure while still allowing the structure to breath.",
         features: [
           "Standard 8ft or 10ft lengths",
           "Stocked in Baked Enamel Painted Dark Bronze",
@@ -100,7 +100,7 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "omniwall_md",
         cat: 1,
-        productName: "Streamline Omniwall MD",
+        productName: "Streamline<sup class='registered'>®</sup> Omniwall MD",
         subHeader:
           "Multi-Directional, Concealed Fastener, Lap Seam Metal Wall Panel.  ASTM E-330",
         overview:
@@ -204,7 +204,7 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "omniwall_cl",
         cat: 1,
-        productName: "Streamline Omniwall CL",
+        productName: "Streamline<sup class='registered'>®</sup> Omniwall CL",
         subHeader:
           "Clip & Concealed Fastener, Heavy Duty Rainscreen Panel. ASTM E330, 331 & ASTM 283",
         overview:
@@ -281,7 +281,7 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "flushwall_tg",
         cat: 1,
-        productName: "Streamline Flushwall TG",
+        productName: "Streamline<sup class='registered'>®</sup> Flushwall TG",
         subHeader: "Concealed Fastener, Lap Seam Metal Panel.  Flush or reveal",
         overview:
           "LITSCO's Streamline Flush TG panel is an ideal solution for exterior, parapet walls or soffits in need of restoration.  The interlocking Tongue-n-Groove installation is fast and hides the fasteners making the 11\" wide profile a clean, consistent appearance.",
@@ -381,7 +381,7 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "flatwall_sm",
         cat: 1,
-        productName: "Streamline Flatwall SM",
+        productName: "Streamline<sup class='registered'>®</sup> Flatwall SM",
         subHeader:
           "Flat Seam, Concealed Fastener, Overlapping Metal Panel.  ASTM E-330",
         overview:
@@ -498,7 +498,7 @@ angular.module("app_litsco").factory("factory_litsco", [
       {
         id: "standing_sm",
         cat: 1,
-        productName: "Streamline Standing Seam",
+        productName: "Streamline<sup class='registered'>®</sup> Standing Seam",
         subHeader: "Concealed Fastener, Vertical / Standing Seam Metal Panel",
         overview:
           "LITSCO's Standing Seam panel is an ideal solution for both vertical & low slope roof applications.  The standard 1\" high seam blends architectural design with superior craftsmanship.  This is a non-structural panel with a double lock seam which still provides superior weathertighness on greater than 2:12 slopes.",
