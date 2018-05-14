@@ -947,7 +947,7 @@ angular.module("app_litsco").factory("factory_litsco", [
         id: "gard_n_edge",
         cat: 2,
         productName: "Gard-N-Edge",
-        subHeader: "Green Roof and Plaza Edge Restraintrs",
+        subHeader: "Green Roof and Plaza Edge Restraints",
         overview:
           "Gard-N-Edge is the ideal solution for garden roof projects where transition and soil retention is needed between the vegetation and hardscapes such as conventional roofing systems or plaza pavers.",
         features: [
