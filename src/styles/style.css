@@ -468,6 +468,10 @@ map {
   width: 100%;
 }
 
+#modal1 .modal-content {
+  height: 70vh;
+}
+
 /**** PRODUCT ****/
 
 .card-link {
