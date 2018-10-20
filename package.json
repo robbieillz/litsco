@@ -38,7 +38,8 @@
     "npm": "npm",
     "watch": "gulp watch",
     "build": "gulp build && npm run serve",
-    "serve": "NODE_ENV=production pm2 start server.js --watch"
+    "serve": "NODE_ENV=production pm2 start server.js",
+    "restart": "pm2 restart all"
   },
   "author": "philip lucks",
   "license": "ISC"
