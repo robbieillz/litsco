@@ -9,7 +9,8 @@
                 <div class="col s12">
                     <h1 class="product-name-heading oswald">Contact Us</h1>
                     <div class="divider"></div>
-                    <h2 class="product-name-subhead">Use the form below to send us a message.  Looking for directions?  Scroll down.</h2>
+                    <h2 class="product-name-subhead">Use the form below to send us a message. Looking for directions?
+                        Scroll down.</h2>
                     <h2 class="product-name-subhead">Call us at
                         <a href="tel:718-846-0400">718-846-0400</a>
                     </h2>
@@ -17,7 +18,9 @@
                         <h2 class="product-name-subhead">Or connect with us:
                         </h2>
                         <div>
-                            <a href="https://www.facebook.com/LITSCO" target="_blank"><img class="contact_social_icon" src="/img/if-facebook.svg" alt="social media link Facebook"></a>  <a href="https://www.linkedin.com/company/long-island-tinsmith-supply-corp-litsco-/" target="_blank"><img class="contact_social_icon" src="/img/if_linkedin.svg" alt="social media link LinkedIn"></a> 
+                            <a href="https://www.facebook.com/LITSCO" target="_blank"><img class="contact_social_icon"
+                                    src="/img/if-facebook.svg" alt="social media link Facebook"></a> <a href="https://www.linkedin.com/company/long-island-tinsmith-supply-corp-litsco-/"
+                                target="_blank"><img class="contact_social_icon" src="/img/if_linkedin.svg" alt="social media link LinkedIn"></a>
                         </div>
                     </div>
                 </div>
@@ -27,8 +30,9 @@
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">account_circle</i>
-                            <input required aria-required="true" class="validate form-contact-input-field" id="icon_prefix" type="text" ng-model="contactData.name">
-                            <label for="icon_prefix">Name</label>
+                            <input required aria-required="true" class="validate form-contact-input-field" id="icon_prefix"
+                                type="text" ng-model="contactData.name">
+                            <label for="icon_prefix">Name<sup>*</sup></label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">phone</i>
@@ -37,8 +41,9 @@
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">email</i>
-                            <input required class="validate form-contact-input-field" id="icon_email" type="email" ng-model="contactData.email">
-                            <label for="icon_email" data-error="Please enter a valid Email address" aria-required="true">Email</label>
+                            <input required class="validate form-contact-input-field" id="icon_email" type="email"
+                                ng-model="contactData.email">
+                            <label for="icon_email" data-error="Please enter a valid Email address" aria-required="true">Email<sup>*</sup></label>
                         </div>
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">business</i>
@@ -48,9 +53,9 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" required class="validate materialize-textarea form-contact-input-field" ng-model="contactData.message"
-                                aria-required="true"></textarea>
-                            <label for="textarea1">Tell us why you are contacting us</label>
+                            <textarea id="textarea1" required class="validate materialize-textarea form-contact-input-field"
+                                ng-model="contactData.message" aria-required="true"></textarea>
+                            <label for="textarea1">Tell us why you are contacting us <sup>*</sup></label>
                         </div>
                     </div>
                     <div class="row col s12">
@@ -60,11 +65,11 @@
                         <div>
                             <div class="input-field col s6">
                                 <input id="human" type="text" class="validate" ng-model="human" ng-change="validateHuman(human)">
-                                <label for="human">What is 2 + 2?</label>
+                                <label for="human">What is 2 + 2?<sup>*</sup></label>
                             </div>
                             <div class="col s6">
-                                <button class="btn waves-effect waves-light form-contact-submit right" type="submit" name="action" id="contact-submit-button"
-                                    disabled>Submit
+                                <button class="btn waves-effect waves-light form-contact-submit right" type="submit"
+                                    name="action" id="contact-submit-button" disabled>Submit
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>
@@ -96,14 +101,17 @@
                     <input id="start_address" type="text" class="validate" ng-model="originAddress">
                     <label for="start_address">Your Address</label>
                 </div>
-                <button ng-hide="originTrue" class="btn waves-effect waves-light amber darken-3" type="button" ng-click="showDirections(originAddress)">Let's Go
+                <button ng-hide="originTrue" class="btn waves-effect waves-light amber darken-3" type="button" ng-click="showDirections(originAddress)">Let's
+                    Go
                     <i class="material-icons right">send</i>
                 </button>
-                <button ng-show="originTrue" ng-click="hideDirections()" class="btn waves-effect waves-light" type="button">Start Over
+                <button ng-show="originTrue" ng-click="hideDirections()" class="btn waves-effect waves-light" type="button">Start
+                    Over
                     <i class="material-icons dp48 right">refresh</i>
                 </button>
-                <a href="http://www.google.com/maps/dir/?api=1&origin={{ originAddress }}&destination={{ litscoAddress }}" target="_blank"
-                    type="button" ng-show="originTrue" class="btn waves-effect waves-light amber darken-4" type="button">Open in Maps
+                <a href="http://www.google.com/maps/dir/?api=1&origin={{ originAddress }}&destination={{ litscoAddress }}"
+                    target="_blank" type="button" ng-show="originTrue" class="btn waves-effect waves-light amber darken-4"
+                    type="button">Open in Maps
                     <i class="material-icons dp48 right">place</i>
                 </a>
                 <div ng-show="originTrue" id="directions-panel" style="height: 100%; overflow: auto; padding: 0px 5px">
