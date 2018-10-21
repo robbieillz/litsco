@@ -1,5 +1,5 @@
 angular
-  .module("app_litsco", ["ui.router", "ngMap", "ui.router.title", 'ngSanitize'])
+  .module("app_litsco", ["ui.router", "ngMap", "ui.router.title"])
   .directive("myYoutube", function($sce) {
     return {
       restrict: "EA",

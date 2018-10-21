@@ -32,7 +32,7 @@ var paths = {
         'node_modules/angular/angular.js',
         'node_modules/angular-ui-router/release/angular-ui-router.js',
         'node_modules/ngmap/build/scripts/ng-map.js',
-        'node_modules/angular-ui-router-title/angular-ui-router-title.js',
+        'node_modules/angular-ui-router-title/angular-ui-router-title.js'
     ],
     srcAppScripts: [
         'src/scripts/app.js',
