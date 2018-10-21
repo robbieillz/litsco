@@ -15,7 +15,7 @@
                     <!-- <a ui-sref="streamline_panels({ cat: 'streamline_metal_panels' })" class="btn-floating btn-large halfway-fab waves-effect waves-light amber darken-3"><i class="material-icons">link</i></a> -->
                 </div>
                 <div class="card-content">
-                    <a class="product-title card-title card-link oswald" ui-sref="{{goToItemLink(product)}}({ id: product.id })"  ng-bind-html="renderHTML(product.productName)"></a>
+                    <a class="card-title card-link oswald" ui-sref="{{goToItemLink(product)}}({ id: product.id })" ng-bind-html="product.productName | trusted"></a>
                     <p ng-if=product.subHeader>{{ product.subHeader }}</p>
                 </div>
                 <div class="card-action center">

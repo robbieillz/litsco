@@ -1,5 +1,5 @@
 angular
-  .module("app_litsco", ["ui.router", "ngMap", "ui.router.title", 'ngSanitize'])
+  .module("app_litsco", ["ui.router", "ngMap", "ui.router.title"])
   .directive("myYoutube", function($sce) {
     return {
       restrict: "EA",
@@ -55,4 +55,11 @@ angular
         optimized: false
       }
     });
-  });
+  })
+  .filter('trusted', ['$sce', function($sce) {
+    var div = document.createElement('div');
+    return function(text) {
+        div.innerHTML = text;
+        return $sce.trustAsHtml(div.textContent);
+    };
+}]);
