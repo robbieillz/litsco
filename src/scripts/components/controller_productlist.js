@@ -39,4 +39,8 @@ angular.module('app_litsco')
 
             return cat_name;
         };
+
+        $scope.renderHTML = function(html) {
+            return html;
+        }
     }]);
