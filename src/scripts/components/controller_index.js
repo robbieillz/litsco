@@ -22,11 +22,11 @@ angular.module("app_litsco").controller("controller_index", [
       $scope.showNews = false;
     };
 
-    // $timeout(function() {
-    //   if (opened) {
-    //     return false;
-    //   }
-    //   $scope.openNews();
-    // }, 2000);
+    $timeout(function() {
+      if (opened) {
+        return false;
+      }
+      $scope.openNews();
+    }, 2000);
   }
 ]);
