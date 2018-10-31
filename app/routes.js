@@ -35,7 +35,7 @@ apiRouter.post("/api/contact", function(req, res) {
       "<ul>" +
       "<li><b>E-mail: </b><a href='mailto:'" +
       formData.email +
-      "?Subject=LITSCO%20Employment%20Inquiry%20Response' target='_top'>" +
+      "?Subject=LITSCO%Contact%20Form' target='_top'>" +
       formData.email +
       "</a></li>" +
       "<li><b>Name: </b>" +
