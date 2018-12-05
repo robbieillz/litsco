@@ -222,6 +222,16 @@ angular.module("app_litsco").config([
             return "Privacy Policy";
           }
         }
+      })
+      .state("terms", {
+        url: "/terms_and_conditions/",
+        templateUrl: "/html/terms.html",
+        controller: "controller_terms",
+        resolve: {
+          $title: function() {
+            return "Terms & Conditions";
+          }
+        }
       });
 
     $locationProvider.html5Mode(true);

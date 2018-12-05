@@ -275,6 +275,13 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall CL metal panel",
             projectName: "Kutztown University",
             projectDetails: '.063" Kynar Bone White'
+          },
+          {
+            url: "omniwall_cl_4",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Fieldstone Ave",
+            projectDetails:
+              'CL Fusion Rainscreen System: .063" Kynar Dark Bronze'
           }
         ]
       },
@@ -375,6 +382,12 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Flushwall TG metal panel",
             projectName: "Austrian Cultrual Forum",
             projectDetails: "0.8m Rheinzink Pre-Patina Zinc"
+          },
+          {
+            url: "flushwall_tg_7",
+            alt: "Streamline Flushwall TG metal panel",
+            projectName: "Pier 17",
+            projectDetails: "1.0m Rheinzink Pre-Patina Zinc"
           }
         ]
       },
@@ -490,8 +503,8 @@ angular.module("app_litsco").factory("factory_litsco", [
           {
             url: "flatwall_sm_8",
             alt: "Streamline Flatwall SM metal panel",
-            projectName: "United Nations",
-            projectDetails: "0.8m Rheinzink Pre-Patina Zinc"
+            projectName: "Pier 17",
+            projectDetails: "1.0m Rheinzink Pre-Patina Zinc"
           }
         ]
       },

@@ -37,7 +37,7 @@
   "scripts": {
     "gulp": "gulp",
     "npm": "npm",
-    "watch": "gulp watch",
+    "dev": "gulp watch",
     "build": "gulp build && npm run serve",
     "serve": "NODE_ENV=production pm2 start server.js --watch"
   },
