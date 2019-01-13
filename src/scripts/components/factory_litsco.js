@@ -282,6 +282,12 @@ angular.module("app_litsco").factory("factory_litsco", [
             projectName: "Fieldstone Ave",
             projectDetails:
               'CL Fusion Rainscreen System: .063" Kynar Dark Bronze'
+          },
+          {
+            url: "omniwall_cl_5",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Livonia Ave, Brooklyn, NY",
+            projectDetails: '.063" Kynar Silver Metallic'
           }
         ]
       },
