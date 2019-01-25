@@ -22,5 +22,8 @@ angular.module("app_litsco").controller("controller_index", [
       $scope.showNews = false;
     };
 
+    $timeout(function() {
+      $scope.openNews();
+    }, 2000);
   }
 ]);
