@@ -288,6 +288,12 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall CL metal panel",
             projectName: "Livonia Ave, Brooklyn, NY",
             projectDetails: '.063" Kynar Silver Metallic'
+          },
+          {
+            url: "omniwall_cl_6",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Livonia Ave, Brooklyn, NY",
+            projectDetails: '.063" Kynar Silver Metallic'
           }
         ]
       },
