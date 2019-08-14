@@ -122,14 +122,14 @@
             <div class="home-map">
                 <div map-lazy-load="https://maps.google.com/maps/api/js"
                 map-lazy-load-params="{{googleMapsUrl}}">
-                    <ng-map center="{{litsco}}" zoom="10">
+                    <ng-map center="{{litsco}}" zoom="10" >
                         <directions 
-                    panel="directions-panel" 
-                    travel-mode="DRIVING" 
-                    origin="{{ originAddress }}" 
-                    destination="{{ litscoAddress }}">
-                    </directions>
-                    <marker position="{{ litsco }}">
+                            panel="directions-panel" 
+                            travel-mode="DRIVING" 
+                            origin="{{ originAddress }}" 
+                            destination="{{ litscoAddress }}">
+                        </directions>
+                        <marker position="{{ litsco }}">
                     </ng-map>
                 </div>
             </div>

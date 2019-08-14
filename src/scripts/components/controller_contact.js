@@ -9,7 +9,7 @@ angular.module('app_litsco')
 		$scope.formSubmitSuccess = false;
 		$scope.formSubmit = false;
 
-		$scope.googleMapsUrl=gMapAPIkey
+		$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?&key=" + gMapAPIkey
 		$scope.litsco = '40.706940, -73.8613';
 		$scope.litscoAddress = 'LITSCO, 76-11 88th St, Glendale, NY 11385';
 		

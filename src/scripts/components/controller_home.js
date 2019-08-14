@@ -2,7 +2,7 @@ angular.module('app_litsco')
 	.controller('controller_home', ['$scope', "gMapAPIkey",
 	function ($scope, gMapAPIkey) {
 
-		$scope.googleMapsUrl=gMapAPIkey
+		$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?&key=" + gMapAPIkey
 
 		$scope.originTrue = false;
 		$scope.litsco = '40.706940, -73.8613';
