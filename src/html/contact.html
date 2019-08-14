@@ -80,11 +80,18 @@
         </div>
         <div class="flex-row-around-center container col s12" id="contact-map-wrapper">
             <div class="contact-map">
-                <map id="" center="{{ litsco }}" zoom="12" pan-control="false" zoom-control="true">
-                    <directions panel="directions-panel" travel-mode="DRIVING" origin="{{ originAddress }}" destination="{{ litscoAddress }}">
+                <div map-lazy-load="https://maps.google.com/maps/api/js"
+                map-lazy-load-params="{{googleMapsUrl}}">
+                    <ng-map center="{{litsco}}" zoom="10">
+                        <directions 
+                    panel="directions-panel" 
+                    travel-mode="DRIVING" 
+                    origin="{{ originAddress }}" 
+                    destination="{{ litscoAddress }}">
                     </directions>
                     <marker position="{{ litsco }}">
-                </map>
+                    </ng-map>
+                </div>
             </div>
         </div>
         <div class="container row col s12">

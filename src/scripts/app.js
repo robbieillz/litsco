@@ -1,5 +1,10 @@
 angular
-  .module("app_litsco", ["ui.router", "ngMap", "ui.router.title"])
+  .module("app_litsco", [
+    "ui.router",
+    "ngMap",
+    "ui.router.title",
+    "app_litsco.api_key"
+  ])
   .directive("myYoutube", function($sce) {
     return {
       restrict: "EA",
@@ -56,10 +61,22 @@ angular
       }
     });
   })
-  .filter('trusted', ['$sce', function($sce) {
-    var div = document.createElement('div');
-    return function(text) {
+  .filter("trusted", [
+    "$sce",
+    function($sce) {
+      var div = document.createElement("div");
+      return function(text) {
         div.innerHTML = text;
         return $sce.trustAsHtml(div.textContent);
-    };
-}]);
+      };
+    }
+  ])
+  .filter("trustMap", [
+    "$sce",
+    function($sce) {
+      // return function(url) {
+        debugger;
+        return $sce.trustAsResourceUrl;
+      // };
+    }
+  ]);

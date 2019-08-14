@@ -1,8 +1,17 @@
 angular.module("app_litsco").controller("controller_index", [
   "$scope",
+  "$sce",
   "factory_meta",
   "$timeout",
-  function($scope, factory_meta, $timeout) {
+  "gMapAPIkey",
+  function($scope, $sce, factory_meta, $timeout, gMapAPIkey) {
+    // debugger;
+    // $scope.gMapAPIkey = gMapAPIkey;
+
+    // $scope.trustSrc = function(src) {
+    //   return $sce.trustAsResourceUrl(src);
+    // }
+
     $("#modal1").modal();
 
     $scope.opened = false;
