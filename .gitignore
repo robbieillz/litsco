@@ -5,3 +5,4 @@ node_modules
 safekey.json
 apikey.json
 dist
+/scripts/apikey.js
