@@ -4,7 +4,7 @@ angular.module('app_litsco')
 		factory_meta.contact();
 
 		angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("/img/jumbo_contact.jpg")');		
-			
+
 		$scope.originTrue = false;
 		$scope.formSubmitSuccess = false;
 		$scope.formSubmit = false;

@@ -1,4 +1,5 @@
-var gulp = require("gulp");
+var { del, dest, pipe, task, series, src, watch } = require("gulp");
+
 var del = require("del");
 var nodemon = require("gulp-nodemon");
 var ngAnnotate = require("gulp-ng-annotate");
@@ -34,7 +35,11 @@ var paths = {
     "node_modules/ngmap/build/scripts/ng-map.js",
     "node_modules/angular-ui-router-title/angular-ui-router-title.js"
   ],
-  srcAppScripts: ["src/scripts/app.js", "src/scripts/scripts.js"],
+  srcAppScripts: [
+    "src/scripts/app.js",
+    "src/scripts/apikey.js",
+    "src/scripts/scripts.js"
+  ],
   distAppScripts: "scripts/",
   srcComponentScripts: [
     "src/scripts/components/app_routes.js",
@@ -65,111 +70,106 @@ var paths = {
 };
 
 // inject Keys
-gulp.task("envKeys", function() {
-  gulp
-    .src("apikey.json")
+function envKeys() {
+  console.log("--- Making ENV keys ---");
+  return src("apikey.json")
     .pipe(gulpNgConfig("app_litsco.api_key"))
-    .pipe(gulp.dest("src/scripts"));
-});
+    .pipe(dest("src/scripts"));
+}
 
 // HTML
-gulp.task("copyDevSrcHTMLPartials", function() {
+task("copyDevSrcHTMLPartials", function() {
   console.log("---Starting HTML Templates Copy task---");
-  return gulp.src(paths.srcHTMLPartials).pipe(gulp.dest(paths.dist));
+  return src(paths.srcHTMLPartials).pipe(dest(paths.dist));
 });
-gulp.task("copyDevSrcIndex", function() {
+task("copyDevSrcIndex", function() {
   console.log("---Starting Index Copy & Injection task---");
-  return gulp
-    .src(paths.srcHTMLIndex)
+  return src(paths.srcHTMLIndex)
     .pipe(useref())
     .pipe(gulpif("*.css", minifyCss()))
     .pipe(gulpif("scripts/app.min.js", ngAnnotate()))
     .pipe(gulpif("*.js", uglify()))
-    .pipe(gulp.dest(paths.dist));
+    .pipe(dest(paths.dist));
 });
 
 // Fonts
-gulp.task("copyDevSrcFonts", function() {
+task("copyDevSrcFonts", function() {
   console.log("---Starting Fonts Copy task---");
-  return gulp.src(paths.srcFonts).pipe(gulp.dest(paths.dist + paths.distFonts));
+  return src(paths.srcFonts).pipe(dest(paths.dist + paths.distFonts));
 });
 
 // Assets - DOCS
-gulp.task("copyDevSrcDocs", function() {
+task("copyDevSrcDocs", function() {
   console.log("---Starting Docs Copy task---");
-  return gulp.src(paths.srcDocs).pipe(gulp.dest(paths.dist + paths.distDocs));
+  return src(paths.srcDocs).pipe(dest(paths.dist + paths.distDocs));
 });
 // Assets - IMG
-gulp.task("copyDevSrcImg", function() {
+task("copyDevSrcImg", function() {
   console.log("---Starting Img Copy task---");
   return (
-    gulp
-      .src(paths.srcImg)
+    src(paths.srcImg)
       // .pipe(imagemin(
       //     {
       //         verbose: true
       //     }))
       // TODO - imagemin creates throw err on production, find out why
-      .pipe(gulp.dest(paths.dist + paths.distImg))
+      .pipe(dest(paths.dist + paths.distImg))
   );
 });
-gulp.task("copyDevSrcSVG", function() {
+task("copyDevSrcSVG", function() {
   console.log("---Starting SVG Copy task---");
-  return gulp.src(paths.srcSvg).pipe(gulp.dest(paths.dist + paths.distImg));
+  return src(paths.srcSvg).pipe(dest(paths.dist + paths.distImg));
 });
 // Assets - PDF
-gulp.task("copyDevSrcPDF", function() {
+task("copyDevSrcPDF", function() {
   console.log("---Starting PDF Copy task---");
-  return gulp.src(paths.srcPDF).pipe(gulp.dest(paths.dist + paths.distPDF));
+  return src(paths.srcPDF).pipe(dest(paths.dist + paths.distPDF));
 });
 
 // Clean
-gulp.task("clean", function() {
+task("clean", function() {
   return del.sync(["dist/"]);
 });
 
 // Default Build-Copy
-gulp.task(
-  "copy",
-  [
+task("copy", function() {
+  return series(
     "copyDevSrcImg",
     "copyDevSrcSVG",
     "copyDevSrcDocs",
     "copyDevSrcPDF",
     "copyDevSrcHTMLPartials",
     "copyDevSrcIndex"
-  ],
-  function(done) {
-    done();
-    console.log("---Finished Copy task---");
-  }
-);
-
-// ENV Setters
-gulp.task("set-dev-node-env", function() {
-  process.env.NODE_ENV = "development";
-  return;
+  );
 });
 
-gulp.task("set-prod-node-env", function() {
+// ENV Setters
+function setDevEnv(cb) {
+  process.env.NODE_ENV = "development";
+  return cb();
+};
+
+task("set-prod-node-env", function() {
   process.env.NODE_ENV = "production";
   return;
 });
 
 // Static server
-gulp.task("browser-sync", ["nodemon"], function() {
-  browserSync.init(null, {
+function runBrowserSync(cb){
+  runNodemon(cb);
+
+  return browserSync.init(null, {
     proxy: "http://localhost:5000",
     files: ["src/**/*.*"],
     port: 7000,
     notify: false
   });
-});
+};
 
-gulp.task("nodemon", function(cb) {
+function runNodemon(cb) {
   var started = false;
 
-  return nodemon({
+  nodemon({
     script: "./server.js",
     watch: ["./src/**"],
     ignore: ["gulpfile.js", "node_modules", "dist"],
@@ -179,8 +179,8 @@ gulp.task("nodemon", function(cb) {
       // to avoid nodemon being started multiple times
       console.log("starting nodemon");
       if (!started) {
-        cb();
         started = true;
+        return cb();
       }
     })
     .on("restart", function() {
@@ -189,24 +189,29 @@ gulp.task("nodemon", function(cb) {
         reload({ stream: false });
       }, 1000);
     });
-});
+    return cb();
+};
 
 // Watch Local Dev task
-gulp.task("watch", ["envKeys", "set-dev-node-env", "browser-sync"], function() {
+function watchDev(cb) {
+  // series(envKeys, "set-dev-node-env", "browser-sync");
   console.log("---Starting DEV Watch task---");
-  gulp.watch(["./src/**/*.*"], reload);
-});
+  return watch('src/*.js', { events: 'all' }, function(cb) {
+    // body omitted
+    return cb();
+  });
+};
 
 //Build for production
-gulp.task(
-  "build",
-  [
+task("build", function() {
+  series(
     // 'set-prod-node-env',
+    envKeys,
     "clean",
     "copyDevSrcFonts",
     "copy"
-  ],
-  function() {
-    console.log("---Starting production BUILD task---");
-  }
-);
+  );
+  console.log("---Starting production BUILD task---");
+});
+
+exports.dev = series(envKeys, setDevEnv, runBrowserSync, watchDev);
