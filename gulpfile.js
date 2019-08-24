@@ -1,4 +1,4 @@
-var { del, dest, pipe, task, series, src, watch } = require("gulp");
+var { del, dest, pipe, task, series, src, watch, parallel } = require("gulp");
 
 var del = require("del");
 var nodemon = require("gulp-nodemon");
@@ -70,11 +70,14 @@ var paths = {
 };
 
 // inject Keys
-function envKeys() {
+async function envKeys() {
   console.log("--- Making ENV keys ---");
-  return src("apikey.json")
+  return await src("apikey.json")
     .pipe(gulpNgConfig("app_litsco.api_key"))
-    .pipe(dest("src/scripts"));
+    .pipe(dest("src/scripts"))
+    .on("done", function() {
+      console.log("done")
+    });
 }
 
 // HTML
@@ -93,10 +96,11 @@ task("copyDevSrcIndex", function() {
 });
 
 // Fonts
-task("copyDevSrcFonts", function() {
+function copyDevSrcFonts(cb) {
   console.log("---Starting Fonts Copy task---");
-  return src(paths.srcFonts).pipe(dest(paths.dist + paths.distFonts));
-});
+  src(paths.srcFonts).pipe(dest(paths.dist + paths.distFonts));
+  return cb();
+};
 
 // Assets - DOCS
 task("copyDevSrcDocs", function() {
@@ -127,12 +131,13 @@ task("copyDevSrcPDF", function() {
 });
 
 // Clean
-task("clean", function() {
-  return del.sync(["dist/"]);
-});
+function clean(cb) {
+  del.sync(["dist/"]);
+  return cb();
+}
 
 // Default Build-Copy
-task("copy", function() {
+function copy() {
   return series(
     "copyDevSrcImg",
     "copyDevSrcSVG",
@@ -141,21 +146,21 @@ task("copy", function() {
     "copyDevSrcHTMLPartials",
     "copyDevSrcIndex"
   );
-});
+};
 
 // ENV Setters
 function setDevEnv(cb) {
   process.env.NODE_ENV = "development";
   return cb();
-};
+}
 
-task("set-prod-node-env", function() {
+function setProdEnv(cb) {
   process.env.NODE_ENV = "production";
-  return;
-});
+  return cb();
+}
 
 // Static server
-function runBrowserSync(cb){
+function runBrowserSync(cb) {
   runNodemon(cb);
 
   return browserSync.init(null, {
@@ -164,7 +169,7 @@ function runBrowserSync(cb){
     port: 7000,
     notify: false
   });
-};
+}
 
 function runNodemon(cb) {
   var started = false;
@@ -189,29 +194,26 @@ function runNodemon(cb) {
         reload({ stream: false });
       }, 1000);
     });
-    return cb();
-};
+  return cb();
+}
 
 // Watch Local Dev task
 function watchDev(cb) {
   // series(envKeys, "set-dev-node-env", "browser-sync");
   console.log("---Starting DEV Watch task---");
-  return watch('src/*.js', { events: 'all' }, function(cb) {
+  return watch("src/*.js", { events: "all" }, function(cb) {
     // body omitted
     return cb();
   });
-};
-
-//Build for production
-task("build", function() {
-  series(
-    // 'set-prod-node-env',
-    envKeys,
-    "clean",
-    "copyDevSrcFonts",
-    "copy"
-  );
-  console.log("---Starting production BUILD task---");
-});
+}
 
 exports.dev = series(envKeys, setDevEnv, runBrowserSync, watchDev);
+
+exports.build = series(setProdEnv, clean, envKeys, copyDevSrcFonts, 
+  "copyDevSrcImg",
+  "copyDevSrcSVG",
+  "copyDevSrcDocs",
+  "copyDevSrcPDF",
+  "copyDevSrcHTMLPartials",
+  "copyDevSrcIndex"
+);

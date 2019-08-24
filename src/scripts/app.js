@@ -70,13 +70,5 @@ angular
         return $sce.trustAsHtml(div.textContent);
       };
     }
-  ])
-  .filter("trustMap", [
-    "$sce",
-    function($sce) {
-      // return function(url) {
-        debugger;
-        return $sce.trustAsResourceUrl;
-      // };
-    }
   ]);
+  
