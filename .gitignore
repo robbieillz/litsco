@@ -3,4 +3,6 @@ node_modules
 /scripts/LICENSE
 /scripts/README.md
 safekey.json
+apikey.json
 dist
+/scripts/apikey.js

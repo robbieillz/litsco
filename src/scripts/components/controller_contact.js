@@ -1,15 +1,18 @@
 angular.module('app_litsco')
-	.controller('controller_contact', ['$scope', '$state', '$http', 'factory_meta', function ($scope, $state, $http, factory_meta) {
+	.controller('controller_contact', ['$scope', '$http', 'factory_meta', 'gMapAPIkey', function ($scope, $http, factory_meta, gMapAPIkey) {
 
 		factory_meta.contact();
 
 		angular.element(document.querySelector('.jumbo-div')).css('backgroundImage', 'url("/img/jumbo_contact.jpg")');		
-			
+
 		$scope.originTrue = false;
 		$scope.formSubmitSuccess = false;
 		$scope.formSubmit = false;
+
+		$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?&key=" + gMapAPIkey
 		$scope.litsco = '40.706940, -73.8613';
 		$scope.litscoAddress = 'LITSCO, 76-11 88th St, Glendale, NY 11385';
+		
 		$scope.contactData = {
 			phone: '',
 			email: '',

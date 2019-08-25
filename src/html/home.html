@@ -20,7 +20,7 @@
                     </div>
                     <div class="card-content index-3-cards-content">
                         <h3 class="index-cards-text">Our Streamline panels are the original series of metal cladding, always handmade in Queens, New York.
-                            We've since expanded to a variety of panel systems for roofs and walls.</h3 class="index-cards-text">
+                            We've since expanded to a variety of panel systems for roofs and walls.</h3>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="card-content index-3-cards-content">
                         <h3 class="index-cards-text">To ensure your wall cladding systems and waterproofing applications remain protected from the elements, our ANSI/SPRI-ES1
-                            tested metal flashings tie into a variety of systems.</h3 class="index-cards-text">
+                            tested metal flashings tie into a variety of systems.</h3>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="card-content index-3-cards-content">
                         <h3 class="index-cards-text">From below grade waterproofing, to air-and-vapor building wraps, to flat roofing, we are aligned
-                            with the best manufacturers of Division 7 building products in the industry.</h3 class="index-cards-text">
+                            with the best manufacturers of Division 7 building products in the industry.</h3>
                     </div>
                 </div>
             </div>
@@ -120,15 +120,18 @@
     <section id="index-map" class="section-with-padding">
         <div class="flex-row-around-center container col s12" id="home-map-wrapper">
             <div class="home-map">
-                <map id="" center="{{ litsco }}" zoom="12" pan-control="false" zoom-control="true">
-                    <directions 
-                    panel="directions-panel" 
-                    travel-mode="DRIVING" 
-                    origin="{{ originAddress }}" 
-                    destination="{{ litscoAddress }}">
-                    </directions>
-                    <marker position="{{ litsco }}">
-                </map>
+                <div map-lazy-load="https://maps.google.com/maps/api/js"
+                map-lazy-load-params="{{googleMapsUrl}}">
+                    <ng-map center="{{litsco}}" zoom="12" >
+                        <directions 
+                            panel="directions-panel" 
+                            travel-mode="DRIVING" 
+                            origin="{{ originAddress }}" 
+                            destination="{{ litscoAddress }}">
+                        </directions>
+                        <marker position="{{ litsco }}">
+                    </ng-map>
+                </div>
             </div>
         </div>
         <div class="container row col s12">
