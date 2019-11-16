@@ -1522,9 +1522,9 @@ angular.module("app_litsco").factory("factory_litsco", [
         cat: 99,
         type: "division_7_supplies",
         linkTo: 5,
-        productName: "Commecial Metal Panels",
+        productName: "Commercial Metal Panels",
         detailImg: "commercialmetal.jpg",
-        alt: "LITSCO supplies Commecial Metal panels",
+        alt: "LITSCO supplies Commercial Metal panels",
         description:
           "Insulated Metal Wall Panels, Insulated Metal Roof Panels, Standing Seam, Concealed Fastener Systems"
       },

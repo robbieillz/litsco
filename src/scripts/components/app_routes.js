@@ -149,7 +149,7 @@ angular.module("app_litsco").config([
               } else if (vendorType === "waterproofing") {
                 vendorTitle = "Waterproofing Supplies";
               } else if (vendorType === "commercial_metal") {
-                vendorTitle = "Commecial Metal Panels";
+                vendorTitle = "Commercial Metal Panels";
               } else if (vendorType === "envelope") {
                 vendorTitle = "Building Envelope";
               } else if (vendorType === "division_7_specialties") {
