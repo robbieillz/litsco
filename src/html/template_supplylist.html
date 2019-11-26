@@ -1,25 +1,41 @@
 <main class="top-margin-nav-height" id="main-product-list">
-    <div class="container row center">
-        <div class="col s12">
-            <h1 class="product-name-heading oswald">{{ productHeader }}</h1>
-            <div class="divider"></div>
-            <h2 class="product-name-subhead">Distrbutor for the roofing & waterproofing industry</h2>
-        </div>
+  <div class="container row center">
+    <div class="col s12">
+      <h1 class="product-name-heading oswald">{{ productHeader }}</h1>
+      <div class="divider"></div>
+      <h2 class="product-name-subhead">
+        Distributor for the roofing & waterproofing industry
+      </h2>
     </div>
-    <div class="container row">
-        <div class="col l4 m6 product-list-wrapper" ng-repeat="vendor in vendorList">
-            <div class="card product-list-cards">
-                <div class="card-image vendor-list flex-center">
-                    <img ng-src="/img/vendor_img/supplies_{{vendor.detailImg}}" alt="{{vendor.productName}}">
-                </div>
-                <div class="card-content">
-                    <a class="card-title card-link oswald" ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })">{{ vendor.productName }}</a>
-                    <p>{{ vendor.description }}</p>
-                </div>
-                <div class="card-action center">
-                    <a class="waves-effect waves-light btn blue darken-4" ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })">learn more</a>
-                </div>
-            </div>
+  </div>
+  <div class="container row">
+    <div
+      class="col l4 m6 product-list-wrapper"
+      ng-repeat="vendor in vendorList"
+    >
+      <div class="card product-list-cards">
+        <div class="card-image vendor-list flex-center">
+          <img
+            ng-src="/img/vendor_img/supplies_{{vendor.detailImg}}"
+            alt="{{vendor.productName}}"
+          />
         </div>
+        <div class="card-content">
+          <a
+            class="card-title card-link oswald"
+            ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })"
+            >{{ vendor.productName }}</a
+          >
+          <p>{{ vendor.description }}</p>
+        </div>
+        <div class="card-action center">
+          <a
+            class="waves-effect waves-light btn blue darken-4"
+            ui-sref="supply_item({ vendorType: '{{ vendor.id }}' })"
+            >learn more</a
+          >
+        </div>
+      </div>
     </div>
+  </div>
 </main>
