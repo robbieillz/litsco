@@ -1210,7 +1210,7 @@ angular.module("app_litsco").factory("factory_litsco", [
         vendorName: "Carlisle CCW",
         vendorLogo: "ccw.png",
         vendorUrl: "http://www.carlisleccw.com/",
-        subHeader: "Waterpoofing and Coatings for wide range of applications",
+        subHeader: "Waterproofing and Coatings for wide range of applications",
         alt: "Carlisle Coatings and Waterproofing"
       },
       {
@@ -1511,7 +1511,7 @@ angular.module("app_litsco").factory("factory_litsco", [
         cat: 99,
         type: "division_7_supplies",
         linkTo: 4,
-        productName: "Waterpoofing Supplies",
+        productName: "Waterproofing Supplies",
         detailImg: "waterproofing.jpg",
         alt: "LITSCO supplies Waterproofing products",
         description:
