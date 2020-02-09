@@ -2,7 +2,18 @@ angular.module("app_litsco").config([
   "$stateProvider",
   "$urlRouterProvider",
   "$locationProvider",
-  function($stateProvider, $urlRouterProvider, $locationProvider) {
+  "$urlMatcherFactoryProvider",
+  function(
+    $stateProvider,
+    $urlRouterProvider,
+    $locationProvider,
+    $urlMatcherFactoryProvider
+  ) {
+    $urlRouterProvider.rule(function($injector, $location) {
+      if ($location.path() === "/terms") {
+        return "/terms/";
+      }
+    });
     $urlRouterProvider.otherwise("/");
 
     $stateProvider
@@ -224,7 +235,17 @@ angular.module("app_litsco").config([
         }
       })
       .state("terms", {
-        url: "/terms_and_conditions/",
+        url: "/terms/{nan}",
+        templateUrl: "/html/terms.html",
+        controller: "controller_terms",
+        resolve: {
+          $title: function() {
+            return "Terms & Conditions";
+          }
+        }
+      })
+      .state("terms2", {
+        url: "/terms",
         templateUrl: "/html/terms.html",
         controller: "controller_terms",
         resolve: {
