@@ -18,6 +18,14 @@ main {
   flex: 1 0 auto;
   height: 100%;
   min-height: 100vh;
+  margin-top: 50px;
+}
+
+#banner-update {
+  padding: 8px 16px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+  line-height: initial;
+  color: initial;
 }
 
 #index-banner-card-text {
@@ -906,9 +914,6 @@ input.valid.validate {
   z-index: 1;
 }
 
-.card-news .card-action {
-  color: ;
-}
 /**** MEDIA QUERIES ****/
 
 @media only screen and (max-width: 768px) {
