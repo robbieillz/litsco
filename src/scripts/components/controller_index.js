@@ -4,7 +4,7 @@ angular.module("app_litsco").controller("controller_index", [
   "factory_meta",
   "$timeout",
   "gMapAPIkey",
-  function($scope, $sce, factory_meta, $timeout, gMapAPIkey) {
+  function ($scope, $sce, factory_meta, $timeout, gMapAPIkey) {
     // debugger;
     // $scope.gMapAPIkey = gMapAPIkey;
 
@@ -20,19 +20,15 @@ angular.module("app_litsco").controller("controller_index", [
 
     $scope.showNews = false;
 
-    $scope.openNews = function() {
+    $scope.openNews = function () {
       if (!$scope.showNews) {
         $scope.opened = true;
         $scope.showNews = true;
       }
     };
 
-    $scope.closeNews = function() {
+    $scope.closeNews = function () {
       $scope.showNews = false;
     };
-
-    $timeout(function() {
-      $scope.openNews();
-    }, 2000);
-  }
+  },
 ]);
