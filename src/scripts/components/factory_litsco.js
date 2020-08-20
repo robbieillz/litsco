@@ -330,7 +330,31 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall CL metal panel",
             projectName: "165 Vanderbilt Ave, Brooklyn, NY",
             projectDetails: '.050 Aluminium'
-          }
+          },
+          {
+            url: "omniwall_cl_10",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Residence Inn, Garden City NY",
+            projectDetails: '.050 Aluminium'
+          },
+          {
+            url: "omniwall_cl_11",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Residence Inn, Garden City NY",
+            projectDetails: '.050 Aluminium'
+          },
+          {
+            url: "omniwall_cl_12",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Residence Inn, Garden City NY",
+            projectDetails: '.050 Aluminium'
+          },
+          {
+            url: "omniwall_cl_13",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "3600 Fieldston Rd, Bronx NY",
+            projectDetails: '.050 Aluminium'
+          },
         ]
       },
       {
