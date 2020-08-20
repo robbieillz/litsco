@@ -354,7 +354,7 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall CL metal panel",
             projectName: "3600 Fieldston Rd, Bronx NY",
             projectDetails: '.050 Aluminium'
-          },
+          }
         ]
       },
       {
