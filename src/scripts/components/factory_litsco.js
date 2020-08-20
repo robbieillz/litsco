@@ -198,6 +198,24 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall MD metal panel",
             projectName: "Lafayette St",
             projectDetails: '.040" Kynar Sandstone'
+          },
+          {
+            url: "omniwall_md_7",
+            alt: "Streamline Omniwall MD metal panel",
+            projectName: "4525 Henry Hudson Parkway",
+            projectDetails: '22GA Galvanized Steel'
+          },
+          {
+            url: "omniwall_md_8",
+            alt: "Streamline Omniwall MD metal panel",
+            projectName: "4525 Henry Hudson Parkway",
+            projectDetails: '22GA Galvanized Steel'
+          },
+          {
+            url: "omniwall_md_9",
+            alt: "Streamline Omniwall MD metal panel",
+            projectName: "129 Lafayette St",
+            projectDetails: ' .040 Aluminium'
           }
         ]
       },
@@ -294,6 +312,24 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Omniwall CL metal panel",
             projectName: "Livonia Ave, Brooklyn, NY",
             projectDetails: '.063" Kynar Silver Metallic'
+          },
+          {
+            url: "omniwall_cl_7",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Livonia Ave, Brooklyn, NY",
+            projectDetails: '.063 Aluminium'
+          },
+          {
+            url: "omniwall_cl_8",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "Livonia Ave, Brooklyn, NY",
+            projectDetails: '.063 Aluminum Custom Shaped'
+          },
+          {
+            url: "omniwall_cl_9",
+            alt: "Streamline Omniwall CL metal panel",
+            projectName: "165 Vanderbilt Ave, Brooklyn, NY",
+            projectDetails: '.050 Aluminium'
           }
         ]
       },
@@ -400,6 +436,30 @@ angular.module("app_litsco").factory("factory_litsco", [
             alt: "Streamline Flushwall TG metal panel",
             projectName: "Pier 17",
             projectDetails: "1.0m Rheinzink Pre-Patina Zinc"
+          },
+          {
+            url: "flushwall_tg_8",
+            alt: "Streamline Flushwall TG metal panel",
+            projectName: "11 East 52nd St, NYC",
+            projectDetails: " 1.0mm Pre-weathered Zinc"
+          },
+          {
+            url: "flushwall_tg_9",
+            alt: "Streamline Flushwall TG metal panel",
+            projectName: "Pier 17, NYC",
+            projectDetails: " 1.0mm Pre-weathered Zinc"
+          },
+          {
+            url: "flushwall_tg_10",
+            alt: "Streamline Flushwall TG metal panel",
+            projectName: "Molloy College, Rockville Center NY",
+            projectDetails: " 1.0mm Pre-weathered Zinc"
+          },
+          {
+            url: "flushwall_tg_11",
+            alt: "Streamline Flushwall TG metal panel",
+            projectName: "Molloy College, Rockville Center NY",
+            projectDetails: " 1.0mm Pre-weathered Zinc"
           }
         ]
       },

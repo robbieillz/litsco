@@ -6,3 +6,4 @@ safekey.json
 apikey.json
 dist
 src/scripts/apikey.js
+package-lock.json
