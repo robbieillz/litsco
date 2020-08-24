@@ -462,12 +462,6 @@ angular.module("app_litsco").factory("factory_litsco", [
             projectDetails: "1.0m Rheinzink Pre-Patina Zinc"
           },
           {
-            url: "flushwall_tg_9",
-            alt: "Streamline Flushwall TG metal panel",
-            projectName: "Pier 17, NYC",
-            projectDetails: " 1.0mm Pre-weathered Zinc"
-          },
-          {
             url: "flushwall_tg_10",
             alt: "Streamline Flushwall TG metal panel",
             projectName: "Molloy College, Rockville Center NY",
