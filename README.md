@@ -3,7 +3,7 @@ This is built with Angular 1.6, including Node.js and Express, using Materialize
 
 ### For Development ###
 - `npm install`
-- `npm run watch`
+- `npm run dev`
 
 ### For Production ###
 - `npm install`
