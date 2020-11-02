@@ -29,7 +29,14 @@ angular.module("app_litsco").config([
       })
       .state("product_streamline", {
         url: "/streamline_metal_panels/:id",
-        templateUrl: "/html/template_product.html",
+        templateUrl: function (){
+          if($stateParams.id == "omniwall_cl") {
+            return "/html/template_product_fusion.html"
+          } else {
+            return "/html/template_product.html"
+          }
+        },
+      
         controller: "controller_prods",
         resolve: {
           product: [
