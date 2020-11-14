@@ -5,7 +5,7 @@ angular.module("app_litsco").controller("controller_prods", [
   "$window",
   "factory_litsco",
   "factory_meta",
-  function(
+  function (
     $scope,
     $state,
     $stateParams,
@@ -19,7 +19,7 @@ angular.module("app_litsco").controller("controller_prods", [
     var allData = factory_litsco;
     var id = $stateParams.id;
 
-    $scope.productIdObj = allData.filter(function(obj) {
+    $scope.productIdObj = allData.filter(function (obj) {
       if (obj.id === id) {
         return obj;
       }
@@ -44,7 +44,7 @@ angular.module("app_litsco").controller("controller_prods", [
     $scope.columns = [];
     $scope.columnCount = 2;
 
-    $scope.calculateColumns = function() {
+    $scope.calculateColumns = function () {
       var itemsPerColumn = Math.ceil(
         $scope.productIdObj.features.length / $scope.columnCount
       );
@@ -55,14 +55,17 @@ angular.module("app_litsco").controller("controller_prods", [
       ) {
         var col = {
           start: i,
-          end: Math.min(i + itemsPerColumn, $scope.productIdObj.features.length)
+          end: Math.min(
+            i + itemsPerColumn,
+            $scope.productIdObj.features.length
+          ),
         };
         $scope.columns.push(col);
       }
     };
 
     $scope.hoverColor = " ";
-    $scope.hoverColorText = function(selectedHover) {
+    $scope.hoverColorText = function (selectedHover) {
       if (selectedHover.hex) {
         $scope.hoverColor = selectedHover.color;
 
@@ -74,13 +77,13 @@ angular.module("app_litsco").controller("controller_prods", [
       }
     };
 
-    $scope.defaultFill = function(colors) {
+    $scope.defaultFill = function (colors) {
       if (colors) {
         var defaultColor = colors[Object.keys(colors)[0]];
         if (userAgentChromeOrFireFox) {
           createGradient($("svg")[0], "MyGradient", [
             { offset: "10%", "stop-color": createShade(defaultColor, 0.2) },
-            { offset: "100%", "stop-color": defaultColor }
+            { offset: "100%", "stop-color": defaultColor },
           ]);
           updateSvgFill();
         } else {
@@ -152,32 +155,32 @@ angular.module("app_litsco").controller("controller_prods", [
       $scope.photoList = $scope.productIdObj.portfolio;
     }
     $scope.activeImg = 0;
-    $scope.nextSlide = function() {
+    $scope.nextSlide = function () {
       if ($scope.activeImg !== $scope.photoList.length - 1) {
         $scope.activeImg++;
       }
     };
-    $scope.prevSlide = function() {
+    $scope.prevSlide = function () {
       if ($scope.activeImg > 0) {
         $scope.activeImg--;
       }
     };
 
-    $scope.modalImg = function() {
+    $scope.modalImg = function () {
       $(".materialboxed").materialbox();
     };
-  }
+  },
 ]);
 
 angular
   .module("app_litsco")
-  .filter("slice", function() {
-    return function(arr, start, end) {
+  .filter("slice", function () {
+    return function (arr, start, end) {
       return arr.slice(start, end);
     };
   })
-  .filter("renderHTMLCorrectly", function($sce) {
-    return function(stringToParse) {
+  .filter("renderHTMLCorrectly", function ($sce) {
+    return function (stringToParse) {
       return $sce.trustAsHtml(stringToParse);
     };
   });
